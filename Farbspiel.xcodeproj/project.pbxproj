@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41D925D113D8A76B007612E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D013D8A76B007612E6 /* UIKit.framework */; };
+		41D925D313D8A76B007612E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D213D8A76B007612E6 /* Foundation.framework */; };
+		41D925D513D8A76B007612E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D413D8A76B007612E6 /* CoreGraphics.framework */; };
+		41D925DB13D8A76B007612E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D925D913D8A76B007612E6 /* InfoPlist.strings */; };
+		41D925DD13D8A76B007612E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D925DC13D8A76B007612E6 /* main.m */; };
+		41D925E113D8A76B007612E6 /* FarbspielAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D925E013D8A76B007612E6 /* FarbspielAppDelegate.m */; };
+		41D925E413D8A76B007612E6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D925E213D8A76B007612E6 /* MainWindow.xib */; };
+		41D925E713D8A76B007612E6 /* FarbspielViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D925E613D8A76B007612E6 /* FarbspielViewController.m */; };
+		41D925EA13D8A76B007612E6 /* FarbspielViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D925E813D8A76B007612E6 /* FarbspielViewController.xib */; };
+		41D925F213D8A76B007612E6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925F113D8A76B007612E6 /* SenTestingKit.framework */; };
+		41D925F313D8A76B007612E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D013D8A76B007612E6 /* UIKit.framework */; };
+		41D925F413D8A76B007612E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D213D8A76B007612E6 /* Foundation.framework */; };
+		41D925F513D8A76B007612E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D413D8A76B007612E6 /* CoreGraphics.framework */; };
+		41D925FD13D8A76B007612E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D925FB13D8A76B007612E6 /* InfoPlist.strings */; };
+		41D925FF13D8A76B007612E6 /* FarbspielTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 41D925FE13D8A76B007612E6 /* FarbspielTests.h */; };
+		41D9260113D8A76B007612E6 /* FarbspielTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9260013D8A76B007612E6 /* FarbspielTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		41D925F613D8A76B007612E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41D925C313D8A76B007612E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41D925CB13D8A76B007612E6;
+			remoteInfo = Farbspiel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		41D925CC13D8A76B007612E6 /* Farbspiel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Farbspiel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41D925D013D8A76B007612E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		41D925D213D8A76B007612E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		41D925D413D8A76B007612E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		41D925D813D8A76B007612E6 /* Farbspiel-Info.plist */ = {isa = PBXFileReference; path = "Farbspiel-Info.plist"; sourceTree = "<group>"; };
+		41D925DA13D8A76B007612E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		41D925DC13D8A76B007612E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		41D925DE13D8A76B007612E6 /* Farbspiel-Prefix.pch */ = {isa = PBXFileReference; path = "Farbspiel-Prefix.pch"; sourceTree = "<group>"; };
+		41D925DF13D8A76B007612E6 /* FarbspielAppDelegate.h */ = {isa = PBXFileReference; path = FarbspielAppDelegate.h; sourceTree = "<group>"; };
+		41D925E013D8A76B007612E6 /* FarbspielAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarbspielAppDelegate.m; sourceTree = "<group>"; };
+		41D925E313D8A76B007612E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		41D925E513D8A76B007612E6 /* FarbspielViewController.h */ = {isa = PBXFileReference; path = FarbspielViewController.h; sourceTree = "<group>"; };
+		41D925E613D8A76B007612E6 /* FarbspielViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarbspielViewController.m; sourceTree = "<group>"; };
+		41D925E913D8A76B007612E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FarbspielViewController.xib; sourceTree = "<group>"; };
+		41D925F013D8A76B007612E6 /* FarbspielTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarbspielTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		41D925F113D8A76B007612E6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		41D925FA13D8A76B007612E6 /* FarbspielTests-Info.plist */ = {isa = PBXFileReference; path = "FarbspielTests-Info.plist"; sourceTree = "<group>"; };
+		41D925FC13D8A76B007612E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		41D925FE13D8A76B007612E6 /* FarbspielTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FarbspielTests.h; sourceTree = "<group>"; };
+		41D9260013D8A76B007612E6 /* FarbspielTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarbspielTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41D925C913D8A76B007612E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D925D113D8A76B007612E6 /* UIKit.framework in Frameworks */,
+				41D925D313D8A76B007612E6 /* Foundation.framework in Frameworks */,
+				41D925D513D8A76B007612E6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41D925EC13D8A76B007612E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D925F213D8A76B007612E6 /* SenTestingKit.framework in Frameworks */,
+				41D925F313D8A76B007612E6 /* UIKit.framework in Frameworks */,
+				41D925F413D8A76B007612E6 /* Foundation.framework in Frameworks */,
+				41D925F513D8A76B007612E6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41D925C113D8A76B007612E6 = {
+			isa = PBXGroup;
+			children = (
+				41D925D613D8A76B007612E6 /* Farbspiel */,
+				41D925F813D8A76B007612E6 /* FarbspielTests */,
+				41D925CF13D8A76B007612E6 /* Frameworks */,
+				41D925CD13D8A76B007612E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		41D925CD13D8A76B007612E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41D925CC13D8A76B007612E6 /* Farbspiel.app */,
+				41D925F013D8A76B007612E6 /* FarbspielTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41D925CF13D8A76B007612E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41D925D013D8A76B007612E6 /* UIKit.framework */,
+				41D925D213D8A76B007612E6 /* Foundation.framework */,
+				41D925D413D8A76B007612E6 /* CoreGraphics.framework */,
+				41D925F113D8A76B007612E6 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41D925D613D8A76B007612E6 /* Farbspiel */ = {
+			isa = PBXGroup;
+			children = (
+				41D925DF13D8A76B007612E6 /* FarbspielAppDelegate.h */,
+				41D925E013D8A76B007612E6 /* FarbspielAppDelegate.m */,
+				41D925E213D8A76B007612E6 /* MainWindow.xib */,
+				41D925E513D8A76B007612E6 /* FarbspielViewController.h */,
+				41D925E613D8A76B007612E6 /* FarbspielViewController.m */,
+				41D925E813D8A76B007612E6 /* FarbspielViewController.xib */,
+				41D925D713D8A76B007612E6 /* Supporting Files */,
+			);
+			path = Farbspiel;
+			sourceTree = "<group>";
+		};
+		41D925D713D8A76B007612E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				41D925D813D8A76B007612E6 /* Farbspiel-Info.plist */,
+				41D925D913D8A76B007612E6 /* InfoPlist.strings */,
+				41D925DC13D8A76B007612E6 /* main.m */,
+				41D925DE13D8A76B007612E6 /* Farbspiel-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		41D925F813D8A76B007612E6 /* FarbspielTests */ = {
+			isa = PBXGroup;
+			children = (
+				41D925FE13D8A76B007612E6 /* FarbspielTests.h */,
+				41D9260013D8A76B007612E6 /* FarbspielTests.m */,
+				41D925F913D8A76B007612E6 /* Supporting Files */,
+			);
+			path = FarbspielTests;
+			sourceTree = "<group>";
+		};
+		41D925F913D8A76B007612E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				41D925FA13D8A76B007612E6 /* FarbspielTests-Info.plist */,
+				41D925FB13D8A76B007612E6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		41D925CB13D8A76B007612E6 /* Farbspiel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41D9260413D8A76B007612E6 /* Build configuration list for PBXNativeTarget "Farbspiel" */;
+			buildPhases = (
+				41D925C813D8A76B007612E6 /* Sources */,
+				41D925C913D8A76B007612E6 /* Frameworks */,
+				41D925CA13D8A76B007612E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Farbspiel;
+			productName = Farbspiel;
+			productReference = 41D925CC13D8A76B007612E6 /* Farbspiel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		41D925EF13D8A76B007612E6 /* FarbspielTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41D9260713D8A76B007612E6 /* Build configuration list for PBXNativeTarget "FarbspielTests" */;
+			buildPhases = (
+				41D925EB13D8A76B007612E6 /* Sources */,
+				41D925EC13D8A76B007612E6 /* Frameworks */,
+				41D925ED13D8A76B007612E6 /* Resources */,
+				41D925EE13D8A76B007612E6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41D925F713D8A76B007612E6 /* PBXTargetDependency */,
+			);
+			name = FarbspielTests;
+			productName = FarbspielTests;
+			productReference = 41D925F013D8A76B007612E6 /* FarbspielTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		41D925C313D8A76B007612E6 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 41D925C613D8A76B007612E6 /* Build configuration list for PBXProject "Farbspiel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 41D925C113D8A76B007612E6;
+			productRefGroup = 41D925CD13D8A76B007612E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41D925CB13D8A76B007612E6 /* Farbspiel */,
+				41D925EF13D8A76B007612E6 /* FarbspielTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41D925CA13D8A76B007612E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D925DB13D8A76B007612E6 /* InfoPlist.strings in Resources */,
+				41D925E413D8A76B007612E6 /* MainWindow.xib in Resources */,
+				41D925EA13D8A76B007612E6 /* FarbspielViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41D925ED13D8A76B007612E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D925FD13D8A76B007612E6 /* InfoPlist.strings in Resources */,
+				41D925FF13D8A76B007612E6 /* FarbspielTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41D925EE13D8A76B007612E6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41D925C813D8A76B007612E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D925DD13D8A76B007612E6 /* main.m in Sources */,
+				41D925E113D8A76B007612E6 /* FarbspielAppDelegate.m in Sources */,
+				41D925E713D8A76B007612E6 /* FarbspielViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41D925EB13D8A76B007612E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D9260113D8A76B007612E6 /* FarbspielTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		41D925F713D8A76B007612E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41D925CB13D8A76B007612E6 /* Farbspiel */;
+			targetProxy = 41D925F613D8A76B007612E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		41D925D913D8A76B007612E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41D925DA13D8A76B007612E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		41D925E213D8A76B007612E6 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41D925E313D8A76B007612E6 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		41D925E813D8A76B007612E6 /* FarbspielViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41D925E913D8A76B007612E6 /* en */,
+			);
+			name = FarbspielViewController.xib;
+			sourceTree = "<group>";
+		};
+		41D925FB13D8A76B007612E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41D925FC13D8A76B007612E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		41D9260213D8A76B007612E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		41D9260313D8A76B007612E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		41D9260513D8A76B007612E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Farbspiel/Farbspiel-Prefix.pch";
+				INFOPLIST_FILE = "Farbspiel/Farbspiel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		41D9260613D8A76B007612E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Farbspiel/Farbspiel-Prefix.pch";
+				INFOPLIST_FILE = "Farbspiel/Farbspiel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		41D9260813D8A76B007612E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Farbspiel.app/Farbspiel";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Farbspiel/Farbspiel-Prefix.pch";
+				INFOPLIST_FILE = "FarbspielTests/FarbspielTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		41D9260913D8A76B007612E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Farbspiel.app/Farbspiel";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Farbspiel/Farbspiel-Prefix.pch";
+				INFOPLIST_FILE = "FarbspielTests/FarbspielTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41D925C613D8A76B007612E6 /* Build configuration list for PBXProject "Farbspiel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41D9260213D8A76B007612E6 /* Debug */,
+				41D9260313D8A76B007612E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41D9260413D8A76B007612E6 /* Build configuration list for PBXNativeTarget "Farbspiel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41D9260513D8A76B007612E6 /* Debug */,
+				41D9260613D8A76B007612E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		41D9260713D8A76B007612E6 /* Build configuration list for PBXNativeTarget "FarbspielTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41D9260813D8A76B007612E6 /* Debug */,
+				41D9260913D8A76B007612E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 41D925C313D8A76B007612E6 /* Project object */;
+}
