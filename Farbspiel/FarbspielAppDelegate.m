@@ -9,6 +9,8 @@
 #import "FarbspielAppDelegate.h"
 
 #import "FarbspielViewController.h"
+#import "Prefkeys.h"
+#import "Spielmodel.h"
 
 @implementation FarbspielAppDelegate
 
@@ -19,7 +21,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    NSNumber* zero = [NSNumber numberWithInt:0];
+    // since no default values have been set (i.e. no preferences file created), create it here		
+    NSDictionary *appDefaults = [NSDictionary dictionaryWithObjectsAndKeys:
+                                 zero, [NSString stringWithFormat:PREFKEY_GEWONNENZAEHLER_FORMAT,EASY],
+                                 zero, [NSString stringWithFormat:PREFKEY_SPIELZAEHLER_FORMAT,EASY],
+                                 zero, [NSString stringWithFormat:PREFKEY_GEWONNENZAEHLER_FORMAT,MEDIUM],
+                                 zero, [NSString stringWithFormat:PREFKEY_SPIELZAEHLER_FORMAT,MEDIUM],
+                                 zero, [NSString stringWithFormat:PREFKEY_GEWONNENZAEHLER_FORMAT,HARD],
+                                 zero, [NSString stringWithFormat:PREFKEY_SPIELZAEHLER_FORMAT,HARD],
+                                 nil];
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+    [[NSUserDefaults standardUserDefaults] synchronize];
      
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];

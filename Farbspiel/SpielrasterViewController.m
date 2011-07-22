@@ -8,6 +8,7 @@
 
 #import "SpielrasterViewController.h"
 #import "SoundManager.h"
+#import "Datenhaltung.h"
 
 
 @implementation SpielrasterViewController
@@ -54,6 +55,17 @@
     }
 }
 
+-(void)neuesSpielZaehlenFuerLevel:(SpielLevel)level {
+    NSString* key = [NSString stringWithFormat:PREFKEY_SPIELZAEHLER_FORMAT, level];
+    NSLog(@"Gezaehlt: Level %d, Count %d", self.model.level, [[Datenhaltung sharedInstance] erhoeheIntegerFuerKey:key]);
+}
+
+
+- (void)spielstart {
+    [self startTimer];
+    [self neuesSpielZaehlenFuerLevel:self.model.level];
+}
+
 - (void)spielende {
   [self stopAndClearTimer];
   [self.delegate spielrasterViewController:self spielEndeMitModel:self.model];
@@ -61,7 +73,9 @@
 
 
 -(void) colorClicked:(int)colorNumber {
-    [self startTimer];
+    if (self.model.zuege == 0) {
+        [self spielstart];
+    }
     [[SoundManager sharedManager] playSound:BUTTON];
     [self.model farbeGewaehlt:colorNumber];
     [self updateZuegeDisplay];

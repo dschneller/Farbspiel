@@ -11,6 +11,7 @@
 #import "SpielrasterView.h"
 #import "Farbmapping.h"
 #import "SoundManager.h"
+#import "Datenhaltung.h"
 #import "UIColor+Tools.h" 
 #import <QuartzCore/QuartzCore.h>
 
@@ -79,8 +80,41 @@
     Spielmodel* model = [[Spielmodel alloc] initWithLevel:EASY];
     self.rasterController.model = model;
     [model release];
-
 }
+
+#pragma mark - Shake to undo
+
+
+-(void) undo {
+    NSLog(@"UNDO", nil);
+}
+
+-(void) frageNachUndo {
+    // TODO: Nicht direkt durchgreifen
+    if (self.rasterController.model.zuege == 0) { 
+        NSLog(@"Noch keine Zuege, ignoriere Undo Request", nil);
+        return;
+    }
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Undo?" message:@"Möchten Sie den letzten Spielzug zurücknehmen?" delegate:self cancelButtonTitle:@"Nein" otherButtonTitles:@"Ja!", nil];
+    
+    [alert show];
+    [alert release];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+	// NO = 0, YES = 1
+	if(buttonIndex == 0) {
+        NSLog(@"Undo nicht gewuenscht",nil);
+    } else {
+        [self undo];
+    }
+}
+
+
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+   [self frageNachUndo];
+}
+
 
 #pragma mark - View lifecycle
 
@@ -115,6 +149,14 @@
 #endif
 
     [self starteNeuesSpiel];
+}
+
+-(BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    NSLog(@"Became first responder: %d", [self becomeFirstResponder]);
 }
 
 - (void)viewDidUnload
@@ -242,11 +284,27 @@
             break;
     }
     
-    // Temporaer
-    int anzahlSpiele = 105;
-    int anzahlGewonnen = 55;
+    
+
+    NSString* anzahlSpieleKey = [NSString stringWithFormat:PREFKEY_SPIELZAEHLER_FORMAT, model.level];
+    NSString* anzahlGewonnenKey = [NSString stringWithFormat:PREFKEY_GEWONNENZAEHLER_FORMAT, model.level];
+
+    
+    int anzahlSpiele = [[Datenhaltung sharedInstance] integerFuerKey:anzahlSpieleKey];
+    
+    int anzahlGewonnen = [[Datenhaltung sharedInstance] integerFuerKey:anzahlGewonnenKey];
+    
     int anzahlVerloren = anzahlSpiele - anzahlGewonnen;
-    float prozentGewonnen = (float)anzahlGewonnen / (float)anzahlSpiele* 100.0f;
+
+    float prozentGewonnen;
+    
+    if (anzahlSpiele>0) {
+        prozentGewonnen = (float)anzahlGewonnen / (float)anzahlSpiele* 100.0f;
+        prozentGewonnenLabel.hidden = NO;
+    } else {
+        prozentGewonnen = NAN;
+        prozentGewonnenLabel.hidden = YES;
+    }
     
     long dauer = model.spieldauer;
     int minuten = dauer / 60;
@@ -267,7 +325,6 @@
     
 
     [self.view.layer addSublayer:[self blurLayer]];
-//    [self.view.layer insertSublayer:[self makeBlurLayer] atIndex:0];
 
     [self.view addSubview:gewonnenView];
     
@@ -339,7 +396,8 @@
     
 }
 
-#pragma - SpielrasterViewControllerDelegate protocol
+#pragma mark - SpielrasterViewControllerDelegate protocol
+
 -(void)spielrasterViewController:(SpielrasterViewController*)controller modelDidChange:(Spielmodel*)model {
     long dauer = model.spieldauer;
     int minuten = dauer / 60;

@@ -41,6 +41,7 @@
     
     CAGradientLayer *blurLayer_;
     
+    
 //    BOOL displayingPrimary;
 }
 
