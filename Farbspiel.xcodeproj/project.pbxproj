@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		418E613713D9C2260028A3D9 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613613D9C2260028A3D9 /* SoundManager.m */; };
+		418E613B13D9CE290028A3D9 /* Datenhaltung.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613A13D9CE290028A3D9 /* Datenhaltung.m */; };
 		41D925D113D8A76B007612E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D013D8A76B007612E6 /* UIKit.framework */; };
 		41D925D313D8A76B007612E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D213D8A76B007612E6 /* Foundation.framework */; };
 		41D925D513D8A76B007612E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D413D8A76B007612E6 /* CoreGraphics.framework */; };
@@ -55,6 +56,9 @@
 /* Begin PBXFileReference section */
 		418E613513D9C2260028A3D9 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
 		418E613613D9C2260028A3D9 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
+		418E613913D9CE290028A3D9 /* Datenhaltung.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Datenhaltung.h; sourceTree = "<group>"; };
+		418E613A13D9CE290028A3D9 /* Datenhaltung.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Datenhaltung.m; sourceTree = "<group>"; };
+		418E613C13D9D4DD0028A3D9 /* Prefkeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefkeys.h; sourceTree = "<group>"; };
 		41D925CC13D8A76B007612E6 /* Farbspiel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Farbspiel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D925D013D8A76B007612E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		41D925D213D8A76B007612E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -183,6 +187,9 @@
 				41D925DF13D8A76B007612E6 /* FarbspielAppDelegate.h */,
 				41D925E013D8A76B007612E6 /* FarbspielAppDelegate.m */,
 				41D925D713D8A76B007612E6 /* Supporting Files */,
+				418E613913D9CE290028A3D9 /* Datenhaltung.h */,
+				418E613A13D9CE290028A3D9 /* Datenhaltung.m */,
+				418E613C13D9D4DD0028A3D9 /* Prefkeys.h */,
 			);
 			path = Farbspiel;
 			sourceTree = "<group>";
@@ -406,6 +413,7 @@
 				41D9264113D8A8C3007612E6 /* SpielrasterViewController.m in Sources */,
 				41D9264213D8A8C3007612E6 /* UIColor+Tools.m in Sources */,
 				418E613713D9C2260028A3D9 /* SoundManager.m in Sources */,
+				418E613B13D9CE290028A3D9 /* Datenhaltung.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
