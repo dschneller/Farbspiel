@@ -2,7 +2,7 @@
 //  FarbspielAppDelegate.m
 //  Farbspiel
 //
-//  Created by Schneller Daniel on 21.07.11.
+//  Created by Daniel Schneller on 08.07.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -12,8 +12,10 @@
 
 @implementation FarbspielAppDelegate
 
-@synthesize window = _window;
-@synthesize viewController = _viewController;
+
+@synthesize window=_window;
+
+@synthesize viewController=_viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

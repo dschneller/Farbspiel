@@ -10,8 +10,6 @@
 		41D925D113D8A76B007612E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D013D8A76B007612E6 /* UIKit.framework */; };
 		41D925D313D8A76B007612E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D213D8A76B007612E6 /* Foundation.framework */; };
 		41D925D513D8A76B007612E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D413D8A76B007612E6 /* CoreGraphics.framework */; };
-		41D925DB13D8A76B007612E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D925D913D8A76B007612E6 /* InfoPlist.strings */; };
-		41D925DD13D8A76B007612E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D925DC13D8A76B007612E6 /* main.m */; };
 		41D925E113D8A76B007612E6 /* FarbspielAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D925E013D8A76B007612E6 /* FarbspielAppDelegate.m */; };
 		41D925E413D8A76B007612E6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D925E213D8A76B007612E6 /* MainWindow.xib */; };
 		41D925E713D8A76B007612E6 /* FarbspielViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D925E613D8A76B007612E6 /* FarbspielViewController.m */; };
@@ -23,6 +21,24 @@
 		41D925FD13D8A76B007612E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D925FB13D8A76B007612E6 /* InfoPlist.strings */; };
 		41D925FF13D8A76B007612E6 /* FarbspielTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 41D925FE13D8A76B007612E6 /* FarbspielTests.h */; };
 		41D9260113D8A76B007612E6 /* FarbspielTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9260013D8A76B007612E6 /* FarbspielTests.m */; };
+		41D9263213D8A8C3007612E6 /* FarbspielViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D9261313D8A8C3007612E6 /* FarbspielViewController.xib */; };
+		41D9263513D8A8C3007612E6 /* ColorfulButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9261A13D8A8C3007612E6 /* ColorfulButton.m */; };
+		41D9263613D8A8C3007612E6 /* Farbmapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9261C13D8A8C3007612E6 /* Farbmapping.m */; };
+		41D9263A13D8A8C3007612E6 /* gearButtonGlyph.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D9262313D8A8C3007612E6 /* gearButtonGlyph.png */; };
+		41D9263B13D8A8C3007612E6 /* GewonnenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D9262413D8A8C3007612E6 /* GewonnenView.xib */; };
+		41D9263C13D8A8C3007612E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262513D8A8C3007612E6 /* main.m */; };
+		41D9263D13D8A8C3007612E6 /* NSMutableArray+StackMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262713D8A8C3007612E6 /* NSMutableArray+StackMethods.m */; };
+		41D9263E13D8A8C3007612E6 /* Pair.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262913D8A8C3007612E6 /* Pair.m */; };
+		41D9263F13D8A8C3007612E6 /* Spielmodel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262B13D8A8C3007612E6 /* Spielmodel.m */; };
+		41D9264013D8A8C3007612E6 /* SpielrasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262D13D8A8C3007612E6 /* SpielrasterView.m */; };
+		41D9264113D8A8C3007612E6 /* SpielrasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262F13D8A8C3007612E6 /* SpielrasterViewController.m */; };
+		41D9264213D8A8C3007612E6 /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9263113D8A8C3007612E6 /* UIColor+Tools.m */; };
+		41D9264913D8AAE8007612E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D9264813D8AAE8007612E6 /* QuartzCore.framework */; };
+		41D9264E13D8ED4F007612E6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D9264D13D8ED4F007612E6 /* AudioToolbox.framework */; };
+		41D9265013D8EE67007612E6 /* 210.caf in Resources */ = {isa = PBXBuildFile; fileRef = 41D9264F13D8EE67007612E6 /* 210.caf */; };
+		41D9265713D8F704007612E6 /* 215.caf in Resources */ = {isa = PBXBuildFile; fileRef = 41D9265513D8F703007612E6 /* 215.caf */; };
+		41D9265813D8F704007612E6 /* 225.caf in Resources */ = {isa = PBXBuildFile; fileRef = 41D9265613D8F703007612E6 /* 225.caf */; };
+		41D9265B13D8F9E9007612E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D9265A13D8F9E9007612E6 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,22 +56,48 @@
 		41D925D013D8A76B007612E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		41D925D213D8A76B007612E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		41D925D413D8A76B007612E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		41D925D813D8A76B007612E6 /* Farbspiel-Info.plist */ = {isa = PBXFileReference; path = "Farbspiel-Info.plist"; sourceTree = "<group>"; };
-		41D925DA13D8A76B007612E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		41D925DC13D8A76B007612E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		41D925DE13D8A76B007612E6 /* Farbspiel-Prefix.pch */ = {isa = PBXFileReference; path = "Farbspiel-Prefix.pch"; sourceTree = "<group>"; };
-		41D925DF13D8A76B007612E6 /* FarbspielAppDelegate.h */ = {isa = PBXFileReference; path = FarbspielAppDelegate.h; sourceTree = "<group>"; };
+		41D925D813D8A76B007612E6 /* Farbspiel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Farbspiel-Info.plist"; sourceTree = "<group>"; };
+		41D925DE13D8A76B007612E6 /* Farbspiel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Farbspiel-Prefix.pch"; sourceTree = "<group>"; };
+		41D925DF13D8A76B007612E6 /* FarbspielAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FarbspielAppDelegate.h; sourceTree = "<group>"; };
 		41D925E013D8A76B007612E6 /* FarbspielAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarbspielAppDelegate.m; sourceTree = "<group>"; };
 		41D925E313D8A76B007612E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		41D925E513D8A76B007612E6 /* FarbspielViewController.h */ = {isa = PBXFileReference; path = FarbspielViewController.h; sourceTree = "<group>"; };
+		41D925E513D8A76B007612E6 /* FarbspielViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FarbspielViewController.h; sourceTree = "<group>"; };
 		41D925E613D8A76B007612E6 /* FarbspielViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarbspielViewController.m; sourceTree = "<group>"; };
 		41D925E913D8A76B007612E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FarbspielViewController.xib; sourceTree = "<group>"; };
 		41D925F013D8A76B007612E6 /* FarbspielTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarbspielTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D925F113D8A76B007612E6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		41D925FA13D8A76B007612E6 /* FarbspielTests-Info.plist */ = {isa = PBXFileReference; path = "FarbspielTests-Info.plist"; sourceTree = "<group>"; };
+		41D925FA13D8A76B007612E6 /* FarbspielTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FarbspielTests-Info.plist"; sourceTree = "<group>"; };
 		41D925FC13D8A76B007612E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		41D925FE13D8A76B007612E6 /* FarbspielTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FarbspielTests.h; sourceTree = "<group>"; };
 		41D9260013D8A76B007612E6 /* FarbspielTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarbspielTests.m; sourceTree = "<group>"; };
+		41D9261413D8A8C3007612E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = FarbspielViewController.xib; sourceTree = "<group>"; };
+		41D9261913D8A8C3007612E6 /* ColorfulButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorfulButton.h; sourceTree = "<group>"; };
+		41D9261A13D8A8C3007612E6 /* ColorfulButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorfulButton.m; sourceTree = "<group>"; };
+		41D9261B13D8A8C3007612E6 /* Farbmapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Farbmapping.h; sourceTree = "<group>"; };
+		41D9261C13D8A8C3007612E6 /* Farbmapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Farbmapping.m; sourceTree = "<group>"; };
+		41D9262113D8A8C3007612E6 /* FarbspielViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FarbspielViewController.h; sourceTree = "<group>"; };
+		41D9262213D8A8C3007612E6 /* FarbspielViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FarbspielViewController.m; sourceTree = "<group>"; };
+		41D9262313D8A8C3007612E6 /* gearButtonGlyph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gearButtonGlyph.png; sourceTree = "<group>"; };
+		41D9262413D8A8C3007612E6 /* GewonnenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GewonnenView.xib; path = ../GewonnenView.xib; sourceTree = "<group>"; };
+		41D9262513D8A8C3007612E6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		41D9262613D8A8C3007612E6 /* NSMutableArray+StackMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+StackMethods.h"; sourceTree = "<group>"; };
+		41D9262713D8A8C3007612E6 /* NSMutableArray+StackMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+StackMethods.m"; sourceTree = "<group>"; };
+		41D9262813D8A8C3007612E6 /* Pair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pair.h; sourceTree = "<group>"; };
+		41D9262913D8A8C3007612E6 /* Pair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pair.m; sourceTree = "<group>"; };
+		41D9262A13D8A8C3007612E6 /* Spielmodel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spielmodel.h; sourceTree = "<group>"; };
+		41D9262B13D8A8C3007612E6 /* Spielmodel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spielmodel.m; sourceTree = "<group>"; };
+		41D9262C13D8A8C3007612E6 /* SpielrasterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpielrasterView.h; sourceTree = "<group>"; };
+		41D9262D13D8A8C3007612E6 /* SpielrasterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpielrasterView.m; sourceTree = "<group>"; };
+		41D9262E13D8A8C3007612E6 /* SpielrasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpielrasterViewController.h; sourceTree = "<group>"; };
+		41D9262F13D8A8C3007612E6 /* SpielrasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpielrasterViewController.m; sourceTree = "<group>"; };
+		41D9263013D8A8C3007612E6 /* UIColor+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Tools.h"; sourceTree = "<group>"; };
+		41D9263113D8A8C3007612E6 /* UIColor+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Tools.m"; sourceTree = "<group>"; };
+		41D9264813D8AAE8007612E6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		41D9264D13D8ED4F007612E6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		41D9264F13D8EE67007612E6 /* 210.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 210.caf; sourceTree = "<group>"; };
+		41D9265513D8F703007612E6 /* 215.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 215.caf; sourceTree = "<group>"; };
+		41D9265613D8F703007612E6 /* 225.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 225.caf; sourceTree = "<group>"; };
+		41D9265A13D8F9E9007612E6 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41D9264E13D8ED4F007612E6 /* AudioToolbox.framework in Frameworks */,
+				41D9264913D8AAE8007612E6 /* QuartzCore.framework in Frameworks */,
 				41D925D113D8A76B007612E6 /* UIKit.framework in Frameworks */,
 				41D925D313D8A76B007612E6 /* Foundation.framework in Frameworks */,
 				41D925D513D8A76B007612E6 /* CoreGraphics.framework in Frameworks */,
@@ -105,6 +149,8 @@
 		41D925CF13D8A76B007612E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41D9264D13D8ED4F007612E6 /* AudioToolbox.framework */,
+				41D9264813D8AAE8007612E6 /* QuartzCore.framework */,
 				41D925D013D8A76B007612E6 /* UIKit.framework */,
 				41D925D213D8A76B007612E6 /* Foundation.framework */,
 				41D925D413D8A76B007612E6 /* CoreGraphics.framework */,
@@ -116,12 +162,23 @@
 		41D925D613D8A76B007612E6 /* Farbspiel */ = {
 			isa = PBXGroup;
 			children = (
+				41D9265913D8F965007612E6 /* Sounds */,
+				41D9261213D8A8C3007612E6 /* en.lproj */,
+				41D9264413D8A8D1007612E6 /* Colorful Button */,
+				41D9264513D8A9C3007612E6 /* Categories */,
+				41D9264613D8AA09007612E6 /* FarbspielViewController */,
+				41D9264713D8AA21007612E6 /* SpielrasterView */,
+				41D9261B13D8A8C3007612E6 /* Farbmapping.h */,
+				41D9261C13D8A8C3007612E6 /* Farbmapping.m */,
+				41D9262113D8A8C3007612E6 /* FarbspielViewController.h */,
+				41D9262213D8A8C3007612E6 /* FarbspielViewController.m */,
+				41D9262313D8A8C3007612E6 /* gearButtonGlyph.png */,
+				41D9262813D8A8C3007612E6 /* Pair.h */,
+				41D9262913D8A8C3007612E6 /* Pair.m */,
+				41D9262A13D8A8C3007612E6 /* Spielmodel.h */,
+				41D9262B13D8A8C3007612E6 /* Spielmodel.m */,
 				41D925DF13D8A76B007612E6 /* FarbspielAppDelegate.h */,
 				41D925E013D8A76B007612E6 /* FarbspielAppDelegate.m */,
-				41D925E213D8A76B007612E6 /* MainWindow.xib */,
-				41D925E513D8A76B007612E6 /* FarbspielViewController.h */,
-				41D925E613D8A76B007612E6 /* FarbspielViewController.m */,
-				41D925E813D8A76B007612E6 /* FarbspielViewController.xib */,
 				41D925D713D8A76B007612E6 /* Supporting Files */,
 			);
 			path = Farbspiel;
@@ -130,9 +187,9 @@
 		41D925D713D8A76B007612E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				41D9262513D8A8C3007612E6 /* main.m */,
 				41D925D813D8A76B007612E6 /* Farbspiel-Info.plist */,
-				41D925D913D8A76B007612E6 /* InfoPlist.strings */,
-				41D925DC13D8A76B007612E6 /* main.m */,
+				41D9265A13D8F9E9007612E6 /* InfoPlist.strings */,
 				41D925DE13D8A76B007612E6 /* Farbspiel-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -155,6 +212,67 @@
 				41D925FB13D8A76B007612E6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		41D9261213D8A8C3007612E6 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				41D9262413D8A8C3007612E6 /* GewonnenView.xib */,
+				41D9261313D8A8C3007612E6 /* FarbspielViewController.xib */,
+				41D925E213D8A76B007612E6 /* MainWindow.xib */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		41D9264413D8A8D1007612E6 /* Colorful Button */ = {
+			isa = PBXGroup;
+			children = (
+				41D9261913D8A8C3007612E6 /* ColorfulButton.h */,
+				41D9261A13D8A8C3007612E6 /* ColorfulButton.m */,
+			);
+			name = "Colorful Button";
+			sourceTree = "<group>";
+		};
+		41D9264513D8A9C3007612E6 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				41D9262613D8A8C3007612E6 /* NSMutableArray+StackMethods.h */,
+				41D9262713D8A8C3007612E6 /* NSMutableArray+StackMethods.m */,
+				41D9263013D8A8C3007612E6 /* UIColor+Tools.h */,
+				41D9263113D8A8C3007612E6 /* UIColor+Tools.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		41D9264613D8AA09007612E6 /* FarbspielViewController */ = {
+			isa = PBXGroup;
+			children = (
+				41D925E513D8A76B007612E6 /* FarbspielViewController.h */,
+				41D925E613D8A76B007612E6 /* FarbspielViewController.m */,
+				41D925E813D8A76B007612E6 /* FarbspielViewController.xib */,
+			);
+			name = FarbspielViewController;
+			sourceTree = "<group>";
+		};
+		41D9264713D8AA21007612E6 /* SpielrasterView */ = {
+			isa = PBXGroup;
+			children = (
+				41D9262C13D8A8C3007612E6 /* SpielrasterView.h */,
+				41D9262D13D8A8C3007612E6 /* SpielrasterView.m */,
+				41D9262E13D8A8C3007612E6 /* SpielrasterViewController.h */,
+				41D9262F13D8A8C3007612E6 /* SpielrasterViewController.m */,
+			);
+			name = SpielrasterView;
+			sourceTree = "<group>";
+		};
+		41D9265913D8F965007612E6 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				41D9265513D8F703007612E6 /* 215.caf */,
+				41D9265613D8F703007612E6 /* 225.caf */,
+				41D9264F13D8EE67007612E6 /* 210.caf */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +319,9 @@
 /* Begin PBXProject section */
 		41D925C313D8A76B007612E6 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = 41D925C613D8A76B007612E6 /* Build configuration list for PBXProject "Farbspiel" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -224,9 +345,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41D925DB13D8A76B007612E6 /* InfoPlist.strings in Resources */,
 				41D925E413D8A76B007612E6 /* MainWindow.xib in Resources */,
 				41D925EA13D8A76B007612E6 /* FarbspielViewController.xib in Resources */,
+				41D9263213D8A8C3007612E6 /* FarbspielViewController.xib in Resources */,
+				41D9263A13D8A8C3007612E6 /* gearButtonGlyph.png in Resources */,
+				41D9263B13D8A8C3007612E6 /* GewonnenView.xib in Resources */,
+				41D9265013D8EE67007612E6 /* 210.caf in Resources */,
+				41D9265713D8F704007612E6 /* 215.caf in Resources */,
+				41D9265813D8F704007612E6 /* 225.caf in Resources */,
+				41D9265B13D8F9E9007612E6 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +389,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41D925DD13D8A76B007612E6 /* main.m in Sources */,
 				41D925E113D8A76B007612E6 /* FarbspielAppDelegate.m in Sources */,
 				41D925E713D8A76B007612E6 /* FarbspielViewController.m in Sources */,
+				41D9263513D8A8C3007612E6 /* ColorfulButton.m in Sources */,
+				41D9263613D8A8C3007612E6 /* Farbmapping.m in Sources */,
+				41D9263C13D8A8C3007612E6 /* main.m in Sources */,
+				41D9263D13D8A8C3007612E6 /* NSMutableArray+StackMethods.m in Sources */,
+				41D9263E13D8A8C3007612E6 /* Pair.m in Sources */,
+				41D9263F13D8A8C3007612E6 /* Spielmodel.m in Sources */,
+				41D9264013D8A8C3007612E6 /* SpielrasterView.m in Sources */,
+				41D9264113D8A8C3007612E6 /* SpielrasterViewController.m in Sources */,
+				41D9264213D8A8C3007612E6 /* UIColor+Tools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,20 +422,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		41D925D913D8A76B007612E6 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				41D925DA13D8A76B007612E6 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		41D925E213D8A76B007612E6 /* MainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				41D925E313D8A76B007612E6 /* en */,
 			);
 			name = MainWindow.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		41D925E813D8A76B007612E6 /* FarbspielViewController.xib */ = {
@@ -317,6 +445,14 @@
 				41D925FC13D8A76B007612E6 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		41D9261313D8A8C3007612E6 /* FarbspielViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41D9261413D8A8C3007612E6 /* en */,
+			);
+			name = FarbspielViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -440,6 +576,7 @@
 				41D9260613D8A76B007612E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		41D9260713D8A76B007612E6 /* Build configuration list for PBXNativeTarget "FarbspielTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +585,7 @@
 				41D9260913D8A76B007612E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
