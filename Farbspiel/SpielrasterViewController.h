@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AudioToolbox/AudioToolbox.h>
 #import "SpielrasterView.h"
 #import "Spielmodel.h"
 
@@ -19,9 +18,6 @@
     id<SpielrasterViewControllerDelegate> delegate_;
     NSTimer* timer_;
     UILabel *zuegeLabel;
-    SystemSoundID buttonAudioEffect_;
-
-
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *zuegeLabel;

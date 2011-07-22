@@ -10,27 +10,15 @@
 #import "FarbspielViewController.h"
 #import "SpielrasterView.h"
 #import "Farbmapping.h"
+#import "SoundManager.h"
 #import "UIColor+Tools.h" 
 #import <QuartzCore/QuartzCore.h>
-#import <AudioToolbox/AudioToolbox.h>
 
 @implementation FarbspielViewController
 
 @synthesize rasterController;
 
 
-- (void)disposeSoundEffects {
-  if (gewonnenAudioEffect_) {
-        AudioServicesDisposeSystemSoundID(gewonnenAudioEffect_);
-    }
-    gewonnenAudioEffect_ = 0;
-    
-    if (verlorenAudioEffect_) {
-        AudioServicesDisposeSystemSoundID(verlorenAudioEffect_);
-    }
-    verlorenAudioEffect_ = 0;
-
-}
 - (void)dealloc
 {
     [farbe5Button_ release];
@@ -55,8 +43,6 @@
     [blurLayer_ release];
     [uhrLabel release];
     
-    [self disposeSoundEffects];
-
     [super dealloc];
 }
 
@@ -178,8 +164,6 @@
     [uhrLabel release];
     uhrLabel = nil;
     
-    [self disposeSoundEffects];
-    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -234,22 +218,7 @@
 
 }
 
--(void) playSound:(NSString*)filename ext:(NSString*)ext withId:(SystemSoundID)soundId;
-{
-    if (!soundId) {
-        NSString *path  = [[NSBundle mainBundle] pathForResource:filename ofType:ext];
-        if ([[NSFileManager defaultManager] fileExistsAtPath : path])
-        {
-            NSURL *pathURL = [NSURL fileURLWithPath : path];
-            AudioServicesCreateSystemSoundID((CFURLRef) pathURL, &soundId);
-        }
-        else
-        {
-            NSLog(@"error, file not found: %@", path);
-        }
-    }
-    AudioServicesPlayAlertSound(soundId);
-}
+
 
 - (void) zeigeGewonnenInZuegen:(Spielmodel*)model {
     [self loadAndInitGewonnenView];
@@ -307,9 +276,9 @@
         gewonnenView.alpha = 0.85f;
         gewonnenView.center = CGPointMake(self.view.center.x, self.view.center.y - 30);
         if (model.siegErreicht) {
-            [self playSound:@"215" ext:@"caf" withId:gewonnenAudioEffect_];
+            [[SoundManager sharedManager] playSound:GEWONNEN];
         } else {
-            [self playSound:@"225" ext:@"caf" withId:verlorenAudioEffect_];
+            [[SoundManager sharedManager] playSound:VERLOREN];
         }
     } completion:^(BOOL finished) {
         NSLog(@"Fade In Animation Done", nil);

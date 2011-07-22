@@ -41,8 +41,6 @@
     
     CAGradientLayer *blurLayer_;
     
-    SystemSoundID gewonnenAudioEffect_;
-    SystemSoundID verlorenAudioEffect_;
 //    BOOL displayingPrimary;
 }
 

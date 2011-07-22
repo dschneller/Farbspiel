@@ -7,7 +7,7 @@
 //
 
 #import "SpielrasterViewController.h"
-#import <AudioToolbox/AudioToolbox.h>
+#import "SoundManager.h"
 
 
 @implementation SpielrasterViewController
@@ -56,32 +56,13 @@
 
 - (void)spielende {
   [self stopAndClearTimer];
-  AudioServicesDisposeSystemSoundID(buttonAudioEffect_);
-  buttonAudioEffect_ = 0;
   [self.delegate spielrasterViewController:self spielEndeMitModel:self.model];
 }
 
 
--(void) playButtonSound
-{
-    if (!buttonAudioEffect_) {
-        NSString *path  = [[NSBundle mainBundle] pathForResource:@"210" ofType:@"caf"];
-        if ([[NSFileManager defaultManager] fileExistsAtPath : path])
-        {
-            NSURL *pathURL = [NSURL fileURLWithPath : path];
-            AudioServicesCreateSystemSoundID((CFURLRef) pathURL, &buttonAudioEffect_);
-        }
-        else
-        {
-            NSLog(@"error, file not found: %@", path);
-        }
-    }
-    AudioServicesPlayAlertSound(buttonAudioEffect_);
-}
-
 -(void) colorClicked:(int)colorNumber {
     [self startTimer];
-    [self playButtonSound];
+    [[SoundManager sharedManager] playSound:BUTTON];
     [self.model farbeGewaehlt:colorNumber];
     [self updateZuegeDisplay];
     if ([self.model siegErreicht] || self.model.zuege >= self.model.maximaleZuege) {
@@ -114,10 +95,6 @@
 - (void)dealloc
 {
     [self stopAndClearTimer];
-    if (buttonAudioEffect_) {
-        AudioServicesDisposeSystemSoundID(buttonAudioEffect_);
-    }
-    buttonAudioEffect_ = 0;
     [zuegeLabel release];
     [super dealloc];
 }

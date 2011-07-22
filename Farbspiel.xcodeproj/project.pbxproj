@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		418E613713D9C2260028A3D9 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613613D9C2260028A3D9 /* SoundManager.m */; };
 		41D925D113D8A76B007612E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D013D8A76B007612E6 /* UIKit.framework */; };
 		41D925D313D8A76B007612E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D213D8A76B007612E6 /* Foundation.framework */; };
 		41D925D513D8A76B007612E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D413D8A76B007612E6 /* CoreGraphics.framework */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		418E613513D9C2260028A3D9 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
+		418E613613D9C2260028A3D9 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
 		41D925CC13D8A76B007612E6 /* Farbspiel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Farbspiel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D925D013D8A76B007612E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		41D925D213D8A76B007612E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -268,6 +271,8 @@
 		41D9265913D8F965007612E6 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				418E613513D9C2260028A3D9 /* SoundManager.h */,
+				418E613613D9C2260028A3D9 /* SoundManager.m */,
 				41D9265513D8F703007612E6 /* 215.caf */,
 				41D9265613D8F703007612E6 /* 225.caf */,
 				41D9264F13D8EE67007612E6 /* 210.caf */,
@@ -400,6 +405,7 @@
 				41D9264013D8A8C3007612E6 /* SpielrasterView.m in Sources */,
 				41D9264113D8A8C3007612E6 /* SpielrasterViewController.m in Sources */,
 				41D9264213D8A8C3007612E6 /* UIColor+Tools.m in Sources */,
+				418E613713D9C2260028A3D9 /* SoundManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
