@@ -289,6 +289,10 @@
     NSString* anzahlSpieleKey = [NSString stringWithFormat:PREFKEY_SPIELZAEHLER_FORMAT, model.level];
     NSString* anzahlGewonnenKey = [NSString stringWithFormat:PREFKEY_GEWONNENZAEHLER_FORMAT, model.level];
 
+    if (model.siegErreicht) {
+        [[Datenhaltung sharedInstance] erhoeheIntegerFuerKey:anzahlGewonnenKey];
+    }
+    
     
     int anzahlSpiele = [[Datenhaltung sharedInstance] integerFuerKey:anzahlSpieleKey];
     
