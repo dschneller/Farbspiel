@@ -22,6 +22,8 @@
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];    
+
     [farbe5Button_ release];
     [farbe4Button_ release];
     [farbe3Button_ release];
@@ -44,6 +46,7 @@
     [blurLayer_ release];
     [uhrLabel release];
     
+    [soundAnAusButton_ release];
     [super dealloc];
 }
 
@@ -116,7 +119,17 @@
 }
 
 
+
 #pragma mark - View lifecycle
+
+- (void)updateSoundButton:(BOOL)an {
+    if (an) {
+        [soundAnAusButton_ setImage:[UIImage imageNamed:@"speaker"] forState:UIControlStateNormal];
+    } else {
+        [soundAnAusButton_ setImage:[UIImage imageNamed:@"speaker_off"] forState:UIControlStateNormal];
+    }
+}
+
 
 - (void)viewDidLoad
 {
@@ -141,15 +154,50 @@
 
     [farbe5Button_ setHighColor:[Farbmapping farbeMitNummer:5]];
     [farbe5Button_ setLowColor:[Farbmapping shadeFarbeMitNummer:5]];
+    
+     // Set the layer's corner radius
+     [[spielrasterView_ layer] setCornerRadius:8.0f];
+     // Turn on masking
+     [[spielrasterView_ layer] setMasksToBounds:YES];
+     // Display a border around the button 
+     // with a 1.0 pixel width
+     [[spielrasterView_ layer] setBorderWidth:1.0f];
 
-    [self.view.layer insertSublayer:[self makeBackgroundGradientLayer] atIndex:0];
+  //  [self.view.layer insertSublayer:[self makeBackgroundGradientLayer] atIndex:0];
     
 #if !DEBUG
         [debugButtonVerlieren removeFromSuperview];
 #endif
-
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(soundStatusDidChange:) 
+                                                 name:SOUNDMANAGER_NOTIFICATION_SOUNDAN
+                                               object:nil];
+    
+    [self updateSoundButton:[SoundManager sharedManager].soundAn];
+    
     [self starteNeuesSpiel];
 }
+
+
+- (void) soundStatusDidChange:(NSNotification *)notification {
+    if ([[notification name] isEqualToString:SOUNDMANAGER_NOTIFICATION_SOUNDAN]) {
+        NSLog (@"Successfully received the test notification!");
+        NSNumber* wrappedBool = [notification object];
+        [self updateSoundButton:[wrappedBool boolValue]];
+    }
+}
+
+- (IBAction)soundAnAus:(id)sender {
+    [[SoundManager sharedManager] schalteSound];
+}
+
+- (IBAction)gitterAnAus:(id)sender {
+    BOOL an = ![[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN];
+    [[Datenhaltung sharedInstance] setBool:an forKey:PREFKEY_GITTER_AN];
+    [self.rasterController.view setNeedsDisplay];
+}
+
 
 -(BOOL)canBecomeFirstResponder {
     return YES;
@@ -206,6 +254,8 @@
     [uhrLabel release];
     uhrLabel = nil;
     
+    [soundAnAusButton_ release];
+    soundAnAusButton_ = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -372,6 +422,9 @@
     [self enableColorButtons];
 }
 
+- (IBAction)einstellungen:(id)sender {
+}
+
 - (IBAction)colorButtonPressed:(id)sender {
     int colorNumber = ((UIButton*)sender).tag;
     
@@ -400,6 +453,8 @@
     
 }
 
+
+
 #pragma mark - SpielrasterViewControllerDelegate protocol
 
 -(void)spielrasterViewController:(SpielrasterViewController*)controller modelDidChange:(Spielmodel*)model {
@@ -415,6 +470,5 @@
     [self disableColorButtons];
     [self zeigeGewonnenInZuegen:model];
 }
-
 
 @end

@@ -10,6 +10,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 #define NUMSOUNDS 3
+#define SOUNDMANAGER_NOTIFICATION_SOUNDAN @"soundAn"
 
 typedef enum {
     BUTTON = 0,
@@ -20,11 +21,14 @@ typedef enum {
 
 @interface SoundManager : NSObject {
     SystemSoundID sounds_[NUMSOUNDS];
+    BOOL soundAn_;
 }
 
+@property (nonatomic,assign) BOOL soundAn;
+
 +(SoundManager*) sharedManager;
-
 -(void)playSound:(SoundType)sound;
-
+-(BOOL)schalteSound;
 
 @end
+

@@ -45,10 +45,9 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="IBUILabel" id="66998412">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{26, 0}, {227, 55}}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{47, 0}, {227, 55}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="667281367"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -77,10 +76,9 @@
 					</object>
 					<object class="IBUILabel" id="667281367">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{26, 54}, {70, 21}}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{47, 54}, {70, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="573150664"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -103,10 +101,9 @@
 					</object>
 					<object class="IBUILabel" id="485344182">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{182, 54}, {70, 21}}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{203, 54}, {70, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1009982132"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -125,10 +122,9 @@
 					</object>
 					<object class="IBUILabel" id="956950">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{104, 54}, {70, 21}}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{125, 54}, {70, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="352865284"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -147,10 +143,9 @@
 					</object>
 					<object class="IBUILabel" id="162395159">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{17, 126}, {70, 22}}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{38, 126}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="641624033"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -169,10 +164,9 @@
 					</object>
 					<object class="IBUILabel" id="485532709">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{107, 126}, {70, 22}}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{128, 126}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="507461229"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -191,10 +185,9 @@
 					</object>
 					<object class="IBUILabel" id="436676532">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{191, 126}, {70, 22}}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{212, 126}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="890338423"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -213,10 +206,9 @@
 					</object>
 					<object class="IBUILabel" id="282209306">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{107, 144}, {70, 22}}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{128, 144}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="436676532"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -239,10 +231,9 @@
 					</object>
 					<object class="IBUILabel" id="1065659924">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{17, 108}, {70, 22}}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{38, 108}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="162395159"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -261,10 +252,9 @@
 					</object>
 					<object class="IBUILabel" id="641624033">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{107, 108}, {70, 22}}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{128, 108}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="485532709"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -283,10 +273,9 @@
 					</object>
 					<object class="IBUILabel" id="573150664">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{26, 71}, {70, 22}}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{47, 71}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="956950"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -305,10 +294,9 @@
 					</object>
 					<object class="IBUILabel" id="352865284">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{104, 71}, {70, 22}}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{125, 71}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="485344182"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -327,10 +315,9 @@
 					</object>
 					<object class="IBUILabel" id="1009982132">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{182, 71}, {70, 22}}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{203, 71}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="97431732"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -349,10 +336,9 @@
 					</object>
 					<object class="IBUILabel" id="507461229">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{191, 108}, {70, 22}}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{212, 108}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="282209306"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -371,10 +357,36 @@
 					</object>
 					<object class="IBUIButton" id="890338423">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{62, 174}, {155, 37}}</string>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{20, 174}, {125, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="633476519"/>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<object class="NSFont" key="IBUIFont" id="623468261">
+							<string key="NSName">Helvetica-Bold</string>
+							<double key="NSSize">15</double>
+							<int key="NSfFlags">16</int>
+						</object>
+						<string key="IBUINormalTitle">Neues Spiel</string>
+						<reference key="IBUIHighlightedTitleColor" ref="688613378"/>
+						<reference key="IBUINormalTitleColor" ref="688613378"/>
+						<object class="NSColor" key="IBUINormalTitleShadowColor" id="550784634">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MC41AA</bytes>
+						</object>
+					</object>
+					<object class="IBUIButton" id="633476519">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">265</int>
+						<string key="NSFrame">{{175, 174}, {125, 37}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -384,25 +396,17 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Helvetica-Bold</string>
-							<double key="NSSize">15</double>
-							<int key="NSfFlags">16</int>
-						</object>
-						<string key="IBUINormalTitle">Neues Spiel</string>
+						<reference key="IBUIFont" ref="623468261"/>
+						<string key="IBUINormalTitle">Einstellungen</string>
 						<reference key="IBUIHighlightedTitleColor" ref="688613378"/>
 						<reference key="IBUINormalTitleColor" ref="688613378"/>
-						<object class="NSColor" key="IBUINormalTitleShadowColor">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MC41AA</bytes>
-						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="550784634"/>
 					</object>
 					<object class="IBUIView" id="97431732">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{62, 101}, {160, 2}}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrame">{{83, 101}, {160, 2}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1065659924"/>
 						<string key="NSReuseIdentifierKey">_NS:180</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
@@ -413,9 +417,8 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</object>
-				<string key="NSFrameSize">{278, 231}</string>
+				<string key="NSFrameSize">{320, 231}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="66998412"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">10</int>
@@ -4908,6 +4911,24 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					</object>
 					<int key="connectionID">30</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">neuesSpiel:</string>
+						<reference key="source" ref="633476519"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">32</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">einstellungen:</string>
+						<reference key="source" ref="633476519"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">33</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -4924,21 +4945,22 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="66998412"/>
-							<reference ref="890338423"/>
+							<reference ref="667281367"/>
+							<reference ref="485344182"/>
+							<reference ref="956950"/>
 							<reference ref="162395159"/>
 							<reference ref="485532709"/>
 							<reference ref="436676532"/>
 							<reference ref="282209306"/>
 							<reference ref="1065659924"/>
 							<reference ref="641624033"/>
-							<reference ref="507461229"/>
+							<reference ref="573150664"/>
 							<reference ref="352865284"/>
 							<reference ref="1009982132"/>
-							<reference ref="573150664"/>
-							<reference ref="667281367"/>
-							<reference ref="485344182"/>
-							<reference ref="956950"/>
+							<reference ref="507461229"/>
 							<reference ref="97431732"/>
+							<reference ref="890338423"/>
+							<reference ref="633476519"/>
 						</object>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">GewonnenView</string>
@@ -5043,6 +5065,11 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<reference key="parent" ref="191373211"/>
 						<string key="objectName">Separator</string>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">31</int>
+						<reference key="object" ref="633476519"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -5068,6 +5095,8 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					<string>23.IBPluginDependency</string>
 					<string>24.IBPluginDependency</string>
 					<string>3.IBPluginDependency</string>
+					<string>31.CustomClassName</string>
+					<string>31.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>5.CustomClassName</string>
 					<string>5.IBPluginDependency</string>
@@ -5093,6 +5122,8 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>ColorfulButton</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>ColorfulButton</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -5110,268 +5141,9 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">30</int>
+			<int key="maxID">33</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="IBPartialClassDescription">
-					<string key="className">ColorfulButton</string>
-					<string key="superclassName">UIButton</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/ColorfulButton.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">FarbspielViewController</string>
-					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>colorButtonPressed:</string>
-							<string>neuesSpiel:</string>
-							<string>settingsButtonPressed:</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>colorButtonPressed:</string>
-							<string>neuesSpiel:</string>
-							<string>settingsButtonPressed:</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBActionInfo">
-								<string key="name">colorButtonPressed:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">neuesSpiel:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">settingsButtonPressed:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="outlets">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>anzahlGewonnenLabel</string>
-							<string>anzahlSpieleLabel</string>
-							<string>anzahlVerlorenLabel</string>
-							<string>debugButtonVerlieren</string>
-							<string>farbe0Button_</string>
-							<string>farbe1Button_</string>
-							<string>farbe2Button_</string>
-							<string>farbe3Button_</string>
-							<string>farbe4Button_</string>
-							<string>farbe5Button_</string>
-							<string>gewonnenInXZuegenLabel</string>
-							<string>gewonnenVerlorenLabel</string>
-							<string>gewonnenView</string>
-							<string>levelLabel</string>
-							<string>neuesSpielButton_</string>
-							<string>prozentGewonnenLabel</string>
-							<string>rasterController</string>
-							<string>spieldauerLabel</string>
-							<string>spielrasterView_</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>UILabel</string>
-							<string>UILabel</string>
-							<string>UILabel</string>
-							<string>UIButton</string>
-							<string>ColorfulButton</string>
-							<string>ColorfulButton</string>
-							<string>ColorfulButton</string>
-							<string>ColorfulButton</string>
-							<string>ColorfulButton</string>
-							<string>ColorfulButton</string>
-							<string>UILabel</string>
-							<string>UILabel</string>
-							<string>UIView</string>
-							<string>UILabel</string>
-							<string>ColorfulButton</string>
-							<string>UILabel</string>
-							<string>SpielrasterViewController</string>
-							<string>UILabel</string>
-							<string>SpielrasterView</string>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>anzahlGewonnenLabel</string>
-							<string>anzahlSpieleLabel</string>
-							<string>anzahlVerlorenLabel</string>
-							<string>debugButtonVerlieren</string>
-							<string>farbe0Button_</string>
-							<string>farbe1Button_</string>
-							<string>farbe2Button_</string>
-							<string>farbe3Button_</string>
-							<string>farbe4Button_</string>
-							<string>farbe5Button_</string>
-							<string>gewonnenInXZuegenLabel</string>
-							<string>gewonnenVerlorenLabel</string>
-							<string>gewonnenView</string>
-							<string>levelLabel</string>
-							<string>neuesSpielButton_</string>
-							<string>prozentGewonnenLabel</string>
-							<string>rasterController</string>
-							<string>spieldauerLabel</string>
-							<string>spielrasterView_</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBToOneOutletInfo">
-								<string key="name">anzahlGewonnenLabel</string>
-								<string key="candidateClassName">UILabel</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">anzahlSpieleLabel</string>
-								<string key="candidateClassName">UILabel</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">anzahlVerlorenLabel</string>
-								<string key="candidateClassName">UILabel</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">debugButtonVerlieren</string>
-								<string key="candidateClassName">UIButton</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">farbe0Button_</string>
-								<string key="candidateClassName">ColorfulButton</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">farbe1Button_</string>
-								<string key="candidateClassName">ColorfulButton</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">farbe2Button_</string>
-								<string key="candidateClassName">ColorfulButton</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">farbe3Button_</string>
-								<string key="candidateClassName">ColorfulButton</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">farbe4Button_</string>
-								<string key="candidateClassName">ColorfulButton</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">farbe5Button_</string>
-								<string key="candidateClassName">ColorfulButton</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">gewonnenInXZuegenLabel</string>
-								<string key="candidateClassName">UILabel</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">gewonnenVerlorenLabel</string>
-								<string key="candidateClassName">UILabel</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">gewonnenView</string>
-								<string key="candidateClassName">UIView</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">levelLabel</string>
-								<string key="candidateClassName">UILabel</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">neuesSpielButton_</string>
-								<string key="candidateClassName">ColorfulButton</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">prozentGewonnenLabel</string>
-								<string key="candidateClassName">UILabel</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">rasterController</string>
-								<string key="candidateClassName">SpielrasterViewController</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">spieldauerLabel</string>
-								<string key="candidateClassName">UILabel</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">spielrasterView_</string>
-								<string key="candidateClassName">SpielrasterView</string>
-							</object>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/FarbspielViewController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">SpielrasterView</string>
-					<string key="superclassName">UIView</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">raster</string>
-						<string key="NS.object.0">UIView</string>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">raster</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">raster</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/SpielrasterView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">SpielrasterViewController</string>
-					<string key="superclassName">NSObject</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">verlieren:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">verlieren:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">verlieren:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">zuegeLabel</string>
-						<string key="NS.object.0">UILabel</string>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">zuegeLabel</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">zuegeLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/SpielrasterViewController.h</string>
-					</object>
-				</object>
-			</object>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">

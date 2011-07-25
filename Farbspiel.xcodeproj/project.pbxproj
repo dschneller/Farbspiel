@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		412BFEBC13DE14F400159AD4 /* ledertextur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBA13DE14F300159AD4 /* ledertextur@2x.png */; };
+		412BFEBD13DE14F400159AD4 /* ledertextur.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBB13DE14F300159AD4 /* ledertextur.png */; };
 		418E613713D9C2260028A3D9 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613613D9C2260028A3D9 /* SoundManager.m */; };
 		418E613B13D9CE290028A3D9 /* Datenhaltung.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613A13D9CE290028A3D9 /* Datenhaltung.m */; };
+		419DCB2513DA5FB500745241 /* preferences.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2313DA5FB500745241 /* preferences.png */; };
+		419DCB2613DA5FB500745241 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2413DA5FB500745241 /* speaker.png */; };
+		419DCB2913DA60EF00745241 /* speaker_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2813DA60EF00745241 /* speaker_off.png */; };
 		41D925D113D8A76B007612E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D013D8A76B007612E6 /* UIKit.framework */; };
 		41D925D313D8A76B007612E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D213D8A76B007612E6 /* Foundation.framework */; };
 		41D925D513D8A76B007612E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D413D8A76B007612E6 /* CoreGraphics.framework */; };
@@ -54,11 +59,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		412BFEBA13DE14F300159AD4 /* ledertextur@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ledertextur@2x.png"; sourceTree = "<group>"; };
+		412BFEBB13DE14F300159AD4 /* ledertextur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ledertextur.png; sourceTree = "<group>"; };
 		418E613513D9C2260028A3D9 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
 		418E613613D9C2260028A3D9 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
 		418E613913D9CE290028A3D9 /* Datenhaltung.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Datenhaltung.h; sourceTree = "<group>"; };
 		418E613A13D9CE290028A3D9 /* Datenhaltung.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Datenhaltung.m; sourceTree = "<group>"; };
 		418E613C13D9D4DD0028A3D9 /* Prefkeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefkeys.h; sourceTree = "<group>"; };
+		419DCB2313DA5FB500745241 /* preferences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferences.png; sourceTree = "<group>"; };
+		419DCB2413DA5FB500745241 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
+		419DCB2813DA60EF00745241 /* speaker_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_off.png; sourceTree = "<group>"; };
 		41D925CC13D8A76B007612E6 /* Farbspiel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Farbspiel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D925D013D8A76B007612E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		41D925D213D8A76B007612E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -257,6 +267,11 @@
 		41D9264613D8AA09007612E6 /* FarbspielViewController */ = {
 			isa = PBXGroup;
 			children = (
+				412BFEBA13DE14F300159AD4 /* ledertextur@2x.png */,
+				412BFEBB13DE14F300159AD4 /* ledertextur.png */,
+				419DCB2313DA5FB500745241 /* preferences.png */,
+				419DCB2413DA5FB500745241 /* speaker.png */,
+				419DCB2813DA60EF00745241 /* speaker_off.png */,
 				41D925E513D8A76B007612E6 /* FarbspielViewController.h */,
 				41D925E613D8A76B007612E6 /* FarbspielViewController.m */,
 				41D925E813D8A76B007612E6 /* FarbspielViewController.xib */,
@@ -366,6 +381,11 @@
 				41D9265713D8F704007612E6 /* 215.caf in Resources */,
 				41D9265813D8F704007612E6 /* 225.caf in Resources */,
 				41D9265B13D8F9E9007612E6 /* InfoPlist.strings in Resources */,
+				419DCB2513DA5FB500745241 /* preferences.png in Resources */,
+				419DCB2613DA5FB500745241 /* speaker.png in Resources */,
+				419DCB2913DA60EF00745241 /* speaker_off.png in Resources */,
+				412BFEBC13DE14F400159AD4 /* ledertextur@2x.png in Resources */,
+				412BFEBD13DE14F400159AD4 /* ledertextur.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

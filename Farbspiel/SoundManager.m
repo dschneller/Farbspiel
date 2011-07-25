@@ -7,10 +7,11 @@
 //
 
 #import "SoundManager.h"
+#import "Datenhaltung.h"
 #import <AudioToolbox/AudioToolbox.h>
 
 @implementation SoundManager
-
+@synthesize soundAn = soundAn_;
 static SoundManager *sharedSingleton;
 
 + (void)initialize {
@@ -27,6 +28,7 @@ static SoundManager *sharedSingleton;
         for (int i=0; i<NUMSOUNDS; i++) {
             sounds_[i] = 0;
         }
+        soundAn_ = [[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_SOUND_AN];    
     }
     return self;
 }
@@ -35,9 +37,19 @@ static SoundManager *sharedSingleton;
     return sharedSingleton;
 }
 
+-(BOOL)schalteSound {
+    soundAn_ = !soundAn_;
+    [[Datenhaltung sharedInstance] setBool:self.soundAn forKey:PREFKEY_SOUND_AN];
+    [[NSNotificationCenter defaultCenter] postNotificationName:SOUNDMANAGER_NOTIFICATION_SOUNDAN object:[NSNumber numberWithBool:soundAn_]];
+    return soundAn_;
+    
+}
 
 -(void) playSound:(NSString*)filename ext:(NSString*)ext forSoundType:(SoundType)type //withId:(SystemSoundID)soundId;
 {
+    if (!soundAn_) {
+        return;
+    }
     if (!sounds_[type]) {
         SystemSoundID newSoundId;
         NSString *path  = [[NSBundle mainBundle] pathForResource:filename ofType:ext];

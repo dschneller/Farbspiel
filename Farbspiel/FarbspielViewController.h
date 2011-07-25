@@ -10,6 +10,7 @@
 #import "SpielrasterView.h"
 #import "SpielrasterViewController.h"
 #import "ColorfulButton.h"
+#import "SoundManager.h"
 
 @interface FarbspielViewController : UIViewController <SpielrasterViewControllerDelegate> {
     
@@ -39,17 +40,19 @@
     IBOutlet ColorfulButton *farbe4Button_;
     IBOutlet ColorfulButton *farbe5Button_;
     
+    IBOutlet UIButton *soundAnAusButton_;
     CAGradientLayer *blurLayer_;
     
-    
-//    BOOL displayingPrimary;
+    BOOL displayingPrimary;
 }
 
 @property (nonatomic,retain) SpielrasterViewController* rasterController;
 
-
 - (IBAction)neuesSpiel:(id)sender;
+- (IBAction)einstellungen:(id)sender;
 - (IBAction)colorButtonPressed:(id)sender;
 - (IBAction)settingsButtonPressed:(id)sender;
+- (IBAction)soundAnAus:(id)sender;
+- (IBAction)gitterAnAus:(id)sender;
 
 @end

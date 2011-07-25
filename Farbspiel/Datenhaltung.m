@@ -39,6 +39,19 @@ static Datenhaltung *sharedSingleton;
     return [[NSUserDefaults standardUserDefaults] integerForKey:key];
 }
 
+-(void)setBool:(BOOL)newBool forKey:(NSString *)key {
+    [[NSUserDefaults standardUserDefaults] setBool:newBool forKey:key];
+    BOOL success = [[NSUserDefaults standardUserDefaults] synchronize];
+    if (success) {
+        NSLog(@"Konnte BOOL Wert nicht persistieren fuer Key %@", key);
+    }
+
+}
+
+-(BOOL)boolFuerKey:(NSString*)key {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:key];
+}
+
 
 
 

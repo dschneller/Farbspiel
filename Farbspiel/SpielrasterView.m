@@ -8,7 +8,7 @@
 
 #import "SpielrasterView.h"
 #import "Farbmapping.h"
-
+#import "Datenhaltung.h"
 
 @implementation SpielrasterView
 
@@ -24,6 +24,7 @@
     return self;
 }
 
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
@@ -31,8 +32,7 @@
     if (!self.dataSource) {
         return;
     }
-    
-    
+  
     int numRows = [self.dataSource rasterZeilen];
     int numCols = [self.dataSource rasterSpalten];
     
@@ -53,43 +53,46 @@
         }
     }
     
-    
-    
-    //Get the CGContext from this view
-	CGContextRef context = UIGraphicsGetCurrentContext();
-	//Set the stroke (pen) color
-	CGContextSetStrokeColorWithColor(context, [UIColor darkGrayColor].CGColor);
-	//Set the width of the pen mark
-	CGContextSetLineWidth(context, 2.0);
-    
-    for (int row=1; row<numRows; row++) {
-        for (int col=1; col<numCols; col++) {
-            CGFloat x = col * fieldWidth;
+    // Gitter zeichnen
+    if ([[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN]) {
+        
+        //Get the CGContext from this view
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        //Set the stroke (pen) color
+        CGContextSetStrokeColorWithColor(context, [UIColor darkGrayColor].CGColor);
+        //Set the width of the pen mark
+        CGContextSetLineWidth(context, 2.0);
+        
+        for (int row=1; row<numRows; row++) {
+            for (int col=1; col<numCols; col++) {
+                CGFloat x = col * fieldWidth;
+                
+                // Draw a line
+                //Start at this point
+                CGContextMoveToPoint(context, x, 0);
+                
+                //Give instructions to the CGContext
+                //(move "pen" around the screen)
+                CGContextAddLineToPoint(context, x, self.bounds.size.height);
+                
+                //Draw it
+                CGContextStrokePath(context);
+            }
+            CGFloat y = row * fieldHeight;
             
             // Draw a line
             //Start at this point
-            CGContextMoveToPoint(context, x, 0);
+            CGContextMoveToPoint(context, 0, y);
             
             //Give instructions to the CGContext
             //(move "pen" around the screen)
-            CGContextAddLineToPoint(context, x, self.bounds.size.height);
+            CGContextAddLineToPoint(context, self.bounds.size.width, y);
             
             //Draw it
             CGContextStrokePath(context);
+            
         }
-        CGFloat y = row * fieldHeight;
         
-        // Draw a line
-        //Start at this point
-        CGContextMoveToPoint(context, 0, y);
-        
-        //Give instructions to the CGContext
-        //(move "pen" around the screen)
-        CGContextAddLineToPoint(context, self.bounds.size.width, y);
-        
-        //Draw it
-        CGContextStrokePath(context);
-
     }
     
     
