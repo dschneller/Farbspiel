@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		412BFEBC13DE14F400159AD4 /* ledertextur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBA13DE14F300159AD4 /* ledertextur@2x.png */; };
 		412BFEBD13DE14F400159AD4 /* ledertextur.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBB13DE14F300159AD4 /* ledertextur.png */; };
+		412BFEFA13DE242400159AD4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412BFEF813DE242300159AD4 /* SettingsViewController.m */; };
+		412BFEFB13DE242400159AD4 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEF913DE242400159AD4 /* SettingsViewController.xib */; };
 		418E613713D9C2260028A3D9 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613613D9C2260028A3D9 /* SoundManager.m */; };
 		418E613B13D9CE290028A3D9 /* Datenhaltung.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613A13D9CE290028A3D9 /* Datenhaltung.m */; };
 		419DCB2513DA5FB500745241 /* preferences.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2313DA5FB500745241 /* preferences.png */; };
@@ -61,6 +63,9 @@
 /* Begin PBXFileReference section */
 		412BFEBA13DE14F300159AD4 /* ledertextur@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ledertextur@2x.png"; sourceTree = "<group>"; };
 		412BFEBB13DE14F300159AD4 /* ledertextur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ledertextur.png; sourceTree = "<group>"; };
+		412BFEF713DE242300159AD4 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		412BFEF813DE242300159AD4 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		412BFEF913DE242400159AD4 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		418E613513D9C2260028A3D9 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
 		418E613613D9C2260028A3D9 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
 		418E613913D9CE290028A3D9 /* Datenhaltung.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Datenhaltung.h; sourceTree = "<group>"; };
@@ -144,6 +149,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		412BFEFC13DE242900159AD4 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				412BFEF713DE242300159AD4 /* SettingsViewController.h */,
+				412BFEF813DE242300159AD4 /* SettingsViewController.m */,
+				412BFEF913DE242400159AD4 /* SettingsViewController.xib */,
+			);
+			name = SettingsView;
+			sourceTree = "<group>";
+		};
 		41D925C113D8A76B007612E6 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +215,7 @@
 				418E613913D9CE290028A3D9 /* Datenhaltung.h */,
 				418E613A13D9CE290028A3D9 /* Datenhaltung.m */,
 				418E613C13D9D4DD0028A3D9 /* Prefkeys.h */,
+				412BFEFC13DE242900159AD4 /* SettingsView */,
 			);
 			path = Farbspiel;
 			sourceTree = "<group>";
@@ -386,6 +402,7 @@
 				419DCB2913DA60EF00745241 /* speaker_off.png in Resources */,
 				412BFEBC13DE14F400159AD4 /* ledertextur@2x.png in Resources */,
 				412BFEBD13DE14F400159AD4 /* ledertextur.png in Resources */,
+				412BFEFB13DE242400159AD4 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +451,7 @@
 				41D9264213D8A8C3007612E6 /* UIColor+Tools.m in Sources */,
 				418E613713D9C2260028A3D9 /* SoundManager.m in Sources */,
 				418E613B13D9CE290028A3D9 /* Datenhaltung.m in Sources */,
+				412BFEFA13DE242400159AD4 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

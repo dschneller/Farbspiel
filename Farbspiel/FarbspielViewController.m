@@ -13,6 +13,7 @@
 #import "SoundManager.h"
 #import "Datenhaltung.h"
 #import "UIColor+Tools.h" 
+#import "SettingsViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation FarbspielViewController
@@ -432,25 +433,17 @@
 }
 
 - (IBAction)settingsButtonPressed:(id)sender {
-//    [self loadAndInitGewonnenView];
-//    
-//    
-//    
-//    
-//    [UIView transitionFromView:(displayingPrimary ? self.view : gewonnenView)
-//                        toView:(displayingPrimary ? gewonnenView : self.view)
-//                      duration:1.0
-//                       options:(displayingPrimary ? 
-//                                UIViewAnimationOptionTransitionFlipFromRight :
-//                                UIViewAnimationOptionTransitionFlipFromLeft)
-//                    completion:^(BOOL finished) {
-//                        if (finished) {
-//                            displayingPrimary = !displayingPrimary;
-//                        }
-//                    }
-//     ];
-//    
+    [self loadAndInitGewonnenView];
+    SettingsViewController* settingsController = [[[SettingsViewController alloc] initWithNibName:nil bundle:nil] autorelease];
     
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationTransition: UIViewAnimationTransitionFlipFromRight 
+                           forView:self.navigationController.view cache:NO];
+    [self.navigationController 
+     pushViewController:settingsController animated:NO];
+    [UIView commitAnimations];
 }
 
 

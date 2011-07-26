@@ -16,6 +16,7 @@
 
 
 @synthesize window=_window;
+@synthesize navigationController = _navigationController;
 
 @synthesize viewController=_viewController;
 
@@ -38,7 +39,10 @@
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
     [[NSUserDefaults standardUserDefaults] synchronize];
      
-    self.window.rootViewController = self.viewController;
+    self.window.rootViewController = self.navigationController;
+    self.window.backgroundColor = [UIColor blackColor];
+    
+//    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -87,6 +91,7 @@
 {
     [_window release];
     [_viewController release];
+    [_navigationController release];
     [super dealloc];
 }
 
