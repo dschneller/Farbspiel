@@ -12,10 +12,10 @@
 #define ZUEGE_EASY 22
   
 
-#define SPALTEN_MEDIUM 17
+#define SPALTEN_MEDIUM 18
 #define ZUEGE_MEDIUM 30  
 
-#define SPALTEN_HARD 22
+#define SPALTEN_HARD 24
 #define ZUEGE_HARD 36   
 
 

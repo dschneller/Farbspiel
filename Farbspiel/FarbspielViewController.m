@@ -423,9 +423,6 @@
     [self enableColorButtons];
 }
 
-- (IBAction)einstellungen:(id)sender {
-}
-
 - (IBAction)colorButtonPressed:(id)sender {
     int colorNumber = ((UIButton*)sender).tag;
     
@@ -440,7 +437,7 @@
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationTransition: UIViewAnimationTransitionFlipFromRight 
-                           forView:self.navigationController.view cache:NO];
+                           forView:self.navigationController.view cache:YES];
     [self.navigationController 
      pushViewController:settingsController animated:NO];
     [UIView commitAnimations];

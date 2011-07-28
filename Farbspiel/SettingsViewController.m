@@ -111,7 +111,7 @@
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationTransition: UIViewAnimationTransitionFlipFromLeft 
-                           forView:self.navigationController.view cache:NO];
+                           forView:self.navigationController.view cache:YES];
     [self.navigationController popViewControllerAnimated:NO];
     [UIView commitAnimations];
 

@@ -8,7 +8,6 @@
 
 #import "FarbspielAppDelegate.h"
 
-#import "FarbspielViewController.h"
 #import "Prefkeys.h"
 #import "Spielmodel.h"
 
@@ -18,7 +17,6 @@
 @synthesize window=_window;
 @synthesize navigationController = _navigationController;
 
-@synthesize viewController=_viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -41,8 +39,7 @@
      
     self.window.rootViewController = self.navigationController;
     self.window.backgroundColor = [UIColor blackColor];
-    
-//    self.window.rootViewController = self.viewController;
+
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -90,7 +87,6 @@
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
     [_navigationController release];
     [super dealloc];
 }

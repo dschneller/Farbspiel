@@ -49,7 +49,6 @@
 @property (nonatomic,retain) SpielrasterViewController* rasterController;
 
 - (IBAction)neuesSpiel:(id)sender;
-- (IBAction)einstellungen:(id)sender;
 - (IBAction)colorButtonPressed:(id)sender;
 - (IBAction)settingsButtonPressed:(id)sender;
 - (IBAction)soundAnAus:(id)sender;

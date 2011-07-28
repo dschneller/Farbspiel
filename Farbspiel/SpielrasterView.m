@@ -37,18 +37,23 @@
     int numCols = [self.dataSource rasterSpalten];
     
     CGFloat fieldWidth = rect.size.width / numCols;
+    int fieldWidthI = [[NSNumber numberWithFloat:fieldWidth] intValue];
+    
     CGFloat fieldHeight = rect.size.height / numRows;
-    [[UIColor clearColor] setStroke];
+    int fieldHeightI = [[NSNumber numberWithFloat:fieldHeight] intValue];
+
+    
     for (int row=0; row<numRows; row++) {
         for (int col=0; col<numCols; col++) {
-            CGFloat x = col * fieldWidth;
-            CGFloat y = row * fieldHeight;
+            CGFloat x = col * fieldWidthI;
+            CGFloat y = row * fieldHeightI;
             
             int colorNum = [[self.dataSource farbeFuerRasterfeldZeile:row spalte:col] intValue];
             
-            CGRect rectangle = CGRectMake(x,y,fieldWidth,fieldHeight);
+            CGRect rectangle = CGRectMake(x,y,fieldWidthI,fieldHeightI);
             UIColor* color = [Farbmapping farbeMitNummer:colorNum]; 
             [color setFill];
+            [color setStroke];
             UIRectFill(rectangle);
         }
     }
