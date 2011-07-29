@@ -403,7 +403,6 @@
 						<string key="NSFrame">{{175, 174}, {125, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
@@ -4938,6 +4937,14 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					</object>
 					<int key="connectionID">34</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">einstellungenButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="633476519"/>
+					</object>
+					<int key="connectionID">35</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -5150,7 +5157,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">34</int>
+			<int key="maxID">35</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -5234,6 +5241,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 							<string>anzahlSpieleLabel</string>
 							<string>anzahlVerlorenLabel</string>
 							<string>debugButtonVerlieren</string>
+							<string>einstellungenButton</string>
 							<string>farbe0Button_</string>
 							<string>farbe1Button_</string>
 							<string>farbe2Button_</string>
@@ -5264,6 +5272,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 							<string>ColorfulButton</string>
 							<string>ColorfulButton</string>
 							<string>ColorfulButton</string>
+							<string>ColorfulButton</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
 							<string>UIView</string>
@@ -5285,6 +5294,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 							<string>anzahlSpieleLabel</string>
 							<string>anzahlVerlorenLabel</string>
 							<string>debugButtonVerlieren</string>
+							<string>einstellungenButton</string>
 							<string>farbe0Button_</string>
 							<string>farbe1Button_</string>
 							<string>farbe2Button_</string>
@@ -5320,6 +5330,10 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 							<object class="IBToOneOutletInfo">
 								<string key="name">debugButtonVerlieren</string>
 								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">einstellungenButton</string>
+								<string key="candidateClassName">ColorfulButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">farbe0Button_</string>

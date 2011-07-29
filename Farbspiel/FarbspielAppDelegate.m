@@ -32,6 +32,7 @@
                                  zero, [NSString stringWithFormat:PREFKEY_SPIELZAEHLER_FORMAT,HARD],
                                  [NSNumber numberWithBool:YES], PREFKEY_SOUND_AN,
                                  [NSNumber numberWithBool:YES], PREFKEY_GITTER_AN,
+                                 [NSNumber numberWithInt:EASY], PREFKEY_SPIELLEVEL,
                                  nil];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];

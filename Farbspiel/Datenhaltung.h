@@ -19,6 +19,7 @@
 
 -(NSInteger)erhoeheIntegerFuerKey:(NSString*)key;
 -(NSInteger)integerFuerKey:(NSString*)key;
+-(void)setInteger:(NSInteger)value fuerKey:(NSString*)key;
 -(void)setBool:(BOOL)newBool forKey:(NSString *)key;
 -(BOOL)boolFuerKey:(NSString*)key;
 

@@ -35,17 +35,18 @@ static Datenhaltung *sharedSingleton;
     }
 }
 
+-(void)setInteger:(NSInteger)value fuerKey:(NSString*)key {
+    [[NSUserDefaults standardUserDefaults] setInteger:value forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 -(NSInteger)integerFuerKey:(NSString*)key {
     return [[NSUserDefaults standardUserDefaults] integerForKey:key];
 }
 
 -(void)setBool:(BOOL)newBool forKey:(NSString *)key {
     [[NSUserDefaults standardUserDefaults] setBool:newBool forKey:key];
-    BOOL success = [[NSUserDefaults standardUserDefaults] synchronize];
-    if (success) {
-        NSLog(@"Konnte BOOL Wert nicht persistieren fuer Key %@", key);
-    }
-
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 -(BOOL)boolFuerKey:(NSString*)key {

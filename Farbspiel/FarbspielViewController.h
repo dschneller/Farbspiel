@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIAlertView-BKAdditions.h"
 #import "SpielrasterView.h"
 #import "SpielrasterViewController.h"
 #import "ColorfulButton.h"
@@ -30,6 +31,7 @@
     IBOutlet UILabel *prozentGewonnenLabel;
     IBOutlet UILabel *anzahlVerlorenLabel;
     
+    IBOutlet ColorfulButton *einstellungenButton;
     IBOutlet ColorfulButton *neuesSpielButton_;
     IBOutlet SpielrasterViewController *rasterController;
     IBOutlet SpielrasterView *spielrasterView_;
@@ -42,16 +44,20 @@
     
     IBOutlet UIButton *soundAnAusButton_;
     CAGradientLayer *blurLayer_;
-    
-    BOOL displayingPrimary;
+
+    Spielmodel* neuesModel_;
+    SpielLevel defaultLevel_;
 }
 
 @property (nonatomic,retain) SpielrasterViewController* rasterController;
+@property (nonatomic,assign) SpielLevel defaultLevel;
 
 - (IBAction)neuesSpiel:(id)sender;
 - (IBAction)colorButtonPressed:(id)sender;
 - (IBAction)settingsButtonPressed:(id)sender;
 - (IBAction)soundAnAus:(id)sender;
 - (IBAction)gitterAnAus:(id)sender;
+
+- (void)settingsGeaendert:(Spielmodel*)modelAusSettings;
 
 @end

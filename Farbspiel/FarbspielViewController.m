@@ -19,6 +19,7 @@
 @implementation FarbspielViewController
 
 @synthesize rasterController;
+@synthesize defaultLevel = defaultLevel_;
 
 
 - (void)dealloc
@@ -48,6 +49,8 @@
     [uhrLabel release];
     
     [soundAnAusButton_ release];
+    [einstellungenButton release];
+    [neuesModel_ release];
     [super dealloc];
 }
 
@@ -77,11 +80,11 @@
     return blurLayer_;
 }
 
--(void) starteNeuesSpiel {
+-(void) starteNeuesSpielMitLevel:(SpielLevel)level {
     self.rasterController.view = spielrasterView_;
     self.rasterController.delegate = self;
     
-    Spielmodel* model = [[Spielmodel alloc] initWithLevel:EASY];
+    Spielmodel* model = [[Spielmodel alloc] initWithLevel:level];
     self.rasterController.model = model;
     [model release];
 }
@@ -99,20 +102,23 @@
         NSLog(@"Noch keine Zuege, ignoriere Undo Request", nil);
         return;
     }
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Undo?" message:@"Möchten Sie den letzten Spielzug zurücknehmen?" delegate:self cancelButtonTitle:@"Nein" otherButtonTitles:@"Ja!", nil];
     
-    [alert show];
+    
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Undo?" message:@"Möchten Sie den letzten Spielzug zurücknehmen?" delegate:nil cancelButtonTitle:@"Nein" otherButtonTitles:@"Ja!", nil];
+
+    [alert showUsingButtonBlock:^(NSInteger buttonIndex) {
+        // NO = 0, YES = 1
+        if(buttonIndex == 0) {
+            NSLog(@"Undo nicht gewuenscht",nil);
+        } else {
+            [self undo];
+        }
+    }];
+    
     [alert release];
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-	// NO = 0, YES = 1
-	if(buttonIndex == 0) {
-        NSLog(@"Undo nicht gewuenscht",nil);
-    } else {
-        [self undo];
-    }
-}
+
 
 
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
@@ -171,29 +177,15 @@
                                              selector:@selector(soundStatusDidChange:) 
                                                  name:SOUNDMANAGER_NOTIFICATION_SOUNDAN
                                                object:nil];
-    [self starteNeuesSpiel];
+
+    self.defaultLevel = [[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL];
+    [self starteNeuesSpielMitLevel:self.defaultLevel];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
     [self updateSoundButton:[SoundManager sharedManager].soundAn];
 }
 
-- (void) soundStatusDidChange:(NSNotification *)notification {
-    if ([[notification name] isEqualToString:SOUNDMANAGER_NOTIFICATION_SOUNDAN]) {
-        NSNumber* wrappedBool = [notification object];
-        [self updateSoundButton:[wrappedBool boolValue]];
-    }
-}
-
-- (IBAction)soundAnAus:(id)sender {
-    [[SoundManager sharedManager] schalteSound];
-}
-
-- (IBAction)gitterAnAus:(id)sender {
-    BOOL an = ![[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN];
-    [[Datenhaltung sharedInstance] setBool:an forKey:PREFKEY_GITTER_AN];
-    [self.rasterController.view setNeedsDisplay];
-}
 
 
 -(BOOL)canBecomeFirstResponder {
@@ -202,6 +194,33 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     NSLog(@"Became first responder: %d", [self becomeFirstResponder]);
+    
+    // Liegt ein neues Model aus den Settings vor?
+    if (neuesModel_) {
+        NSLog(@"Neues Model mit Level %d", neuesModel_.level);
+        
+        if (rasterController.model.zuege > 0) {
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Neue Einstellungen" message:@"Wenn Sie ein neues Spiel beginnen, gilt das derzeitige als verloren!" delegate:nil cancelButtonTitle:@"Weiterspielen" otherButtonTitles:@"Neues Spiel", nil];
+            
+            [alert showUsingButtonBlock:^(NSInteger buttonIndex) {
+                // NO = 0, YES = 1
+                if(buttonIndex == 0) {
+                    NSLog(@"Weiterspielen",nil);
+                    [neuesModel_ release];
+                    neuesModel_ = nil;
+                } else {
+                    [self.rasterController spielAbbrechen];
+                    NSLog(@"Neues Spiel",nil);
+                }
+            }];
+            [alert release];
+        } else {
+            SpielLevel level = neuesModel_.level;
+            [neuesModel_ release];
+            neuesModel_ = nil;
+            [self starteNeuesSpielMitLevel:level];
+        }
+    }
 }
 
 - (void)viewDidUnload
@@ -253,6 +272,8 @@
     
     [soundAnAusButton_ release];
     soundAnAusButton_ = nil;
+    [einstellungenButton release];
+    einstellungenButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -374,6 +395,7 @@
     spieldauerLabel.text = [NSString stringWithFormat:@"%d:%02d", minuten, sekunden];
     levelLabel.text = level;
     
+    einstellungenButton.hidden = model.abgebrochen;
 
     [self.view.layer addSublayer:[self blurLayer]];
 
@@ -410,11 +432,28 @@
     [self setColorButtonState:YES];
 }
 
+#pragma mark - Notification Center
+
+- (void) soundStatusDidChange:(NSNotification *)notification {
+    if ([[notification name] isEqualToString:SOUNDMANAGER_NOTIFICATION_SOUNDAN]) {
+        NSNumber* wrappedBool = [notification object];
+        [self updateSoundButton:[wrappedBool boolValue]];
+    }
+}
+
 
 #pragma mark - IBActions
 
 - (IBAction)neuesSpiel:(id)sender {
-    [self starteNeuesSpiel];
+    SpielLevel level;
+    if (neuesModel_) {
+        level = neuesModel_.level;
+        [neuesModel_ release];
+        neuesModel_ = nil;
+    } else {
+        level = self.defaultLevel;
+    };
+    [self starteNeuesSpielMitLevel:level];
     [self fadeOutGewonnenView];
     [self enableColorButtons];
 }
@@ -429,6 +468,9 @@
     [self loadAndInitGewonnenView];
     SettingsViewController* settingsController = [[[SettingsViewController alloc] initWithNibName:nil bundle:nil] autorelease];
     
+    settingsController.passedInModel = self.rasterController.model;
+    settingsController.aufrufenderController = self;
+    
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
@@ -437,6 +479,18 @@
     [self.navigationController 
      pushViewController:settingsController animated:NO];
     [UIView commitAnimations];
+}
+
+
+
+- (IBAction)soundAnAus:(id)sender {
+    [[SoundManager sharedManager] schalteSound];
+}
+
+- (IBAction)gitterAnAus:(id)sender {
+    BOOL an = ![[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN];
+    [[Datenhaltung sharedInstance] setBool:an forKey:PREFKEY_GITTER_AN];
+    [self.rasterController.view setNeedsDisplay];
 }
 
 
@@ -453,8 +507,23 @@
 }
 
 -(void)spielrasterViewController:(SpielrasterViewController*)controller spielEndeMitModel:(Spielmodel*)model {
-    [self disableColorButtons];
+    [self disableColorButtons]; // TODO ALLE BUTTONS
     [self zeigeGewonnenInZuegen:model];
+}
+
+#pragma mark - SettingsViewcontroller callback
+- (void)settingsGeaendert:(Spielmodel*)modelAusSettings {
+    // Eventuell schon vorher erhaltenen Settings-Change verwerfen
+    if (neuesModel_) {
+        [neuesModel_ release];
+        neuesModel_ = nil;
+    }
+
+    if (modelAusSettings.level != rasterController.model.level) {
+        neuesModel_ = modelAusSettings;
+        [neuesModel_ retain];
+        [[Datenhaltung sharedInstance] setInteger:neuesModel_.level fuerKey:PREFKEY_SPIELLEVEL];
+    }
 }
 
 @end

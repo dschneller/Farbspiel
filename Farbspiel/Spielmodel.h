@@ -35,6 +35,7 @@ typedef enum {
     
     int zuege_;
     long spieldauer_;
+    BOOL abgebrochen_;
     
 }
 
@@ -44,6 +45,7 @@ typedef enum {
 @property (assign)            int             zuege;
 @property (readonly)          int             maximaleZuege;
 @property (assign)            long            spieldauer;
+@property (assign)            BOOL            abgebrochen;
 
 -(id)initWithLevel:(SpielLevel)level;
 -(NSNumber*) farbeAnPositionZeile:(int)row spalte:(int)col;

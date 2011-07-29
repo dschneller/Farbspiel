@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "FarbspielViewController.h"
 
 @interface SettingsViewController : UIViewController {
     UISegmentedControl *schwierigkeitsGrad;
@@ -24,10 +25,14 @@
     UIView *farbe6_;
 
     UIView *farbPreviewRahmen;
+    
+    Spielmodel* passedInModel_;
+    FarbspielViewController *aufrufenderController_;
 }
 
 
-
+@property (nonatomic, retain) Spielmodel *passedInModel;
+@property (nonatomic, retain) FarbspielViewController *aufrufenderController;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *schwierigkeitsGrad;
 @property (nonatomic, retain) IBOutlet UILabel *feldgroesseLabel;
 @property (nonatomic, retain) IBOutlet UILabel *anzahlZuegeLabel;
@@ -44,6 +49,7 @@
 
 - (IBAction)zurueckZumSpiel:(id)sender;
 - (IBAction)soundAnAus:(id)sender;
+- (IBAction)levelGewaehlt:(id)sender;
 
 
 @end

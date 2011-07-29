@@ -19,7 +19,7 @@
 @synthesize zuege = zuege_;
 @synthesize maximaleZuege = maximaleZuege_;
 @synthesize spieldauer = spieldauer_;
-
+@synthesize abgebrochen = abgebrochen_;
 
 
 
@@ -33,22 +33,22 @@
 
 -(void) debugMatrix {
     if (NO) {
-    for (int row = 0; row<12; row++) {
-       NSLog(@"%@ %@ %@ %@ %@ %@ %@ %@ %@ %@ %@ %@", 
-             [self farbeAnPositionZeile:row spalte:0], 
-             [self farbeAnPositionZeile:row spalte:1], 
-             [self farbeAnPositionZeile:row spalte:2], 
-             [self farbeAnPositionZeile:row spalte:3], 
-             [self farbeAnPositionZeile:row spalte:4], 
-             [self farbeAnPositionZeile:row spalte:5], 
-             [self farbeAnPositionZeile:row spalte:6], 
-             [self farbeAnPositionZeile:row spalte:7], 
-             [self farbeAnPositionZeile:row spalte:8], 
-             [self farbeAnPositionZeile:row spalte:9], 
-             [self farbeAnPositionZeile:row spalte:10], 
-             [self farbeAnPositionZeile:row spalte:11]
-             );
-    }
+        for (int row = 0; row<12; row++) {
+            NSLog(@"%@ %@ %@ %@ %@ %@ %@ %@ %@ %@ %@ %@", 
+                  [self farbeAnPositionZeile:row spalte:0], 
+                  [self farbeAnPositionZeile:row spalte:1], 
+                  [self farbeAnPositionZeile:row spalte:2], 
+                  [self farbeAnPositionZeile:row spalte:3], 
+                  [self farbeAnPositionZeile:row spalte:4], 
+                  [self farbeAnPositionZeile:row spalte:5], 
+                  [self farbeAnPositionZeile:row spalte:6], 
+                  [self farbeAnPositionZeile:row spalte:7], 
+                  [self farbeAnPositionZeile:row spalte:8], 
+                  [self farbeAnPositionZeile:row spalte:9], 
+                  [self farbeAnPositionZeile:row spalte:10], 
+                  [self farbeAnPositionZeile:row spalte:11]
+                  );
+        }
     }
 }
 
@@ -75,7 +75,7 @@
         return;
     }
     [self zaehleZug];
-
+    
     [self debugMatrix];
     
     NSMutableArray* stack = [NSMutableArray array];
@@ -121,7 +121,7 @@
             return NO;
         }
     }
-
+    
     return YES;
 }
 
@@ -153,9 +153,10 @@
                 maximaleZuege_  = ZUEGE_EASY;
                 break;
         }
-
+        
         self.farbfelder = [NSMutableArray arrayWithCapacity:(felderProKante_*felderProKante_)];
         self.zuege = 0;
+        self.abgebrochen = NO;
         
         [self randomizeSpielfeld];
     }

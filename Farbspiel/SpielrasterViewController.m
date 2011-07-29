@@ -85,6 +85,11 @@
     [self.view setNeedsDisplay];
 }
 
+-(void) spielAbbrechen {
+    self.model.abgebrochen = YES;
+    [self spielende];
+}
+
 - (IBAction)verlieren:(id)sender {
     [self spielende];
     [self.view setNeedsDisplay];

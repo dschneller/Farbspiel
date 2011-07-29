@@ -8,8 +8,13 @@
 
 #import "SettingsViewController.h"
 #import "SoundManager.h"
+#import "Spielmodel.h"
 
 @implementation SettingsViewController
+
+@synthesize passedInModel = passedInModel_;
+@synthesize aufrufenderController = aufrufenderController_;
+
 @synthesize schwierigkeitsGrad;
 @synthesize feldgroesseLabel;
 @synthesize anzahlZuegeLabel;
@@ -51,6 +56,7 @@
 
 - (void) initValues {
     self.soundEffekteSwitch.on = [[SoundManager sharedManager] soundAn];
+    self.schwierigkeitsGrad.selectedSegmentIndex = self.passedInModel.level;
 }
 
 - (void)viewDidLoad
@@ -66,10 +72,13 @@
     [self setupLayerPropsForView:self.farbe6];
     
     [self setupLayerPropsForView:farbPreviewRahmen_];
-    
-    [self initValues];
-    
+
 }
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self initValues];
+}
+                                    
 
 - (void)viewDidUnload
 {
@@ -125,5 +134,33 @@
 
 - (IBAction)soundAnAus:(id)sender {
     [[SoundManager sharedManager] setSoundAn:self.soundEffekteSwitch.on];
+}
+
+- (IBAction)levelGewaehlt:(id)sender {
+    SpielLevel level = self.schwierigkeitsGrad.selectedSegmentIndex;
+    int kantenlaenge;
+    int zuege;
+    switch (level) {
+        case HARD:
+            kantenlaenge = SPALTEN_HARD;
+            zuege = ZUEGE_HARD;
+            break;
+            
+        case MEDIUM:
+            kantenlaenge = SPALTEN_MEDIUM;
+            zuege = ZUEGE_MEDIUM;
+            break;
+            
+        case EASY:
+        default:
+            kantenlaenge = SPALTEN_EASY;
+            zuege = ZUEGE_EASY;
+            break;
+    }
+    self.feldgroesseLabel.text = [NSString stringWithFormat:@"%d x %d", kantenlaenge, kantenlaenge];
+    self.anzahlZuegeLabel.text = [NSString stringWithFormat:@"%d", zuege];
+    
+    Spielmodel* newModel = [[[Spielmodel alloc] initWithLevel:level] autorelease];
+    [self.aufrufenderController settingsGeaendert:newModel];
 }
 @end
