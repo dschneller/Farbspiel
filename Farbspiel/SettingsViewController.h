@@ -43,6 +43,7 @@
 @property (nonatomic, retain) IBOutlet UIView *farbPreviewRahmen;
 
 - (IBAction)zurueckZumSpiel:(id)sender;
+- (IBAction)soundAnAus:(id)sender;
 
 
 @end

@@ -136,8 +136,6 @@
 {
     [super viewDidLoad];
     
-//    displayingPrimary = YES;
-    
     [farbe0Button_ setHighColor:[Farbmapping farbeMitNummer:0]];
     [farbe0Button_ setLowColor:[Farbmapping shadeFarbeMitNummer:0]];
 
@@ -164,7 +162,6 @@
      // with a 1.0 pixel width
      [[spielrasterView_ layer] setBorderWidth:1.0f];
 
-  //  [self.view.layer insertSublayer:[self makeBackgroundGradientLayer] atIndex:0];
     
 #if !DEBUG
         [debugButtonVerlieren removeFromSuperview];
@@ -174,16 +171,15 @@
                                              selector:@selector(soundStatusDidChange:) 
                                                  name:SOUNDMANAGER_NOTIFICATION_SOUNDAN
                                                object:nil];
-    
-    [self updateSoundButton:[SoundManager sharedManager].soundAn];
-    
     [self starteNeuesSpiel];
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    [self updateSoundButton:[SoundManager sharedManager].soundAn];
+}
 
 - (void) soundStatusDidChange:(NSNotification *)notification {
     if ([[notification name] isEqualToString:SOUNDMANAGER_NOTIFICATION_SOUNDAN]) {
-        NSLog (@"Successfully received the test notification!");
         NSNumber* wrappedBool = [notification object];
         [self updateSoundButton:[wrappedBool boolValue]];
     }

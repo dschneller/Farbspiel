@@ -7,6 +7,7 @@
 //
 
 #import "SettingsViewController.h"
+#import "SoundManager.h"
 
 @implementation SettingsViewController
 @synthesize schwierigkeitsGrad;
@@ -48,6 +49,10 @@
     aView.layer.borderWidth = 1.0f;
 }
 
+- (void) initValues {
+    self.soundEffekteSwitch.on = [[SoundManager sharedManager] soundAn];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -62,6 +67,7 @@
     
     [self setupLayerPropsForView:farbPreviewRahmen_];
     
+    [self initValues];
     
 }
 
@@ -115,5 +121,9 @@
     [self.navigationController popViewControllerAnimated:NO];
     [UIView commitAnimations];
 
+}
+
+- (IBAction)soundAnAus:(id)sender {
+    [[SoundManager sharedManager] setSoundAn:self.soundEffekteSwitch.on];
 }
 @end
