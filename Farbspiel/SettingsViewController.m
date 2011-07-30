@@ -9,6 +9,8 @@
 #import "SettingsViewController.h"
 #import "SoundManager.h"
 #import "Spielmodel.h"
+#import "Farbmapping.h"
+#import "Datenhaltung.h"
 
 @implementation SettingsViewController
 
@@ -54,9 +56,24 @@
     aView.layer.borderWidth = 1.0f;
 }
 
+-(void) updateFarbschemaPreview {
+    int schema = self.farbschema.selectedSegmentIndex;
+    [Farbmapping sharedInstance].farbschema=schema;
+    
+    self.farbe1.backgroundColor = [[Farbmapping sharedInstance] farbeMitNummer:0];
+    self.farbe2.backgroundColor = [[Farbmapping sharedInstance] farbeMitNummer:1];
+    self.farbe3.backgroundColor = [[Farbmapping sharedInstance] farbeMitNummer:2];
+    self.farbe4.backgroundColor = [[Farbmapping sharedInstance] farbeMitNummer:3];
+    self.farbe5.backgroundColor = [[Farbmapping sharedInstance] farbeMitNummer:4];
+    self.farbe6.backgroundColor = [[Farbmapping sharedInstance] farbeMitNummer:5];
+    [self.farbPreviewRahmen setNeedsDisplay];
+}
+
 - (void) initValues {
     self.soundEffekteSwitch.on = [[SoundManager sharedManager] soundAn];
     self.schwierigkeitsGrad.selectedSegmentIndex = self.passedInModel.level;
+    self.farbschema.selectedSegmentIndex = [Farbmapping sharedInstance].farbschema;
+    [self updateFarbschemaPreview];
 }
 
 - (void)viewDidLoad
@@ -64,21 +81,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [self setupLayerPropsForView:farbPreviewRahmen_];
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self initValues];
     [self setupLayerPropsForView:self.farbe1];
     [self setupLayerPropsForView:self.farbe2];
     [self setupLayerPropsForView:self.farbe3];
     [self setupLayerPropsForView:self.farbe4];
     [self setupLayerPropsForView:self.farbe5];
     [self setupLayerPropsForView:self.farbe6];
-    
-    [self setupLayerPropsForView:farbPreviewRahmen_];
-
 }
 
--(void)viewWillAppear:(BOOL)animated {
-    [self initValues];
-}
-                                    
 
 - (void)viewDidUnload
 {
@@ -129,7 +145,7 @@
                            forView:self.navigationController.view cache:YES];
     [self.navigationController popViewControllerAnimated:NO];
     [UIView commitAnimations];
-
+    
 }
 
 - (IBAction)soundAnAus:(id)sender {
@@ -162,5 +178,9 @@
     
     Spielmodel* newModel = [[[Spielmodel alloc] initWithLevel:level] autorelease];
     [self.aufrufenderController settingsGeaendert:newModel];
+}
+
+- (IBAction)farbschemaGewaehlt:(id)sender {
+    [self updateFarbschemaPreview];
 }
 @end

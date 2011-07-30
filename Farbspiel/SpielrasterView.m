@@ -51,7 +51,7 @@
             int colorNum = [[self.dataSource farbeFuerRasterfeldZeile:row spalte:col] intValue];
             
             CGRect rectangle = CGRectMake(x,y,fieldWidthI,fieldHeightI);
-            UIColor* color = [Farbmapping farbeMitNummer:colorNum]; 
+            UIColor* color = [[Farbmapping sharedInstance] farbeMitNummer:colorNum]; 
             [color setFill];
             [color setStroke];
             UIRectFill(rectangle);

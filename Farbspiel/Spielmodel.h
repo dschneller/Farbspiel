@@ -51,6 +51,9 @@ typedef enum {
 -(NSNumber*) farbeAnPositionZeile:(int)row spalte:(int)col;
 -(void)farbeGewaehlt:(int)colorNum;
 -(BOOL) siegErreicht;
-
+-(BOOL) verloren;
+-(int) spaltenFuerLevel:(SpielLevel)level;
+-(int) maximaleZuegeFuerLevel:(SpielLevel)level;
+-(BOOL) spielLaeuft;
 
 @end

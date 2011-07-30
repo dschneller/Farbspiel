@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface Farbmapping : NSObject {
-    
+    int farbschema_;
 }
 
-+(UIColor*) farbeMitNummer:(int)farbnummer;
-+(UIColor*) shadeFarbeMitNummer:(int)farbnummer;
++(Farbmapping*) sharedInstance;
 
+@property (nonatomic) int farbschema;
+
+-(UIColor*) farbeMitNummer:(int)farbnummer;
+-(UIColor*) shadeFarbeMitNummer:(int)farbnummer;
 
 @end

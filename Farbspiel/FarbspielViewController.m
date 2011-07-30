@@ -141,25 +141,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [farbe0Button_ setHighColor:[Farbmapping farbeMitNummer:0]];
-    [farbe0Button_ setLowColor:[Farbmapping shadeFarbeMitNummer:0]];
-
-    [farbe1Button_ setHighColor:[Farbmapping farbeMitNummer:1]];
-    [farbe1Button_ setLowColor:[Farbmapping shadeFarbeMitNummer:1]];
-
-    [farbe2Button_ setHighColor:[Farbmapping farbeMitNummer:2]];
-    [farbe2Button_ setLowColor:[Farbmapping shadeFarbeMitNummer:2]];
-
-    [farbe3Button_ setHighColor:[Farbmapping farbeMitNummer:3]];
-    [farbe3Button_ setLowColor:[Farbmapping shadeFarbeMitNummer:3]];
-
-    [farbe4Button_ setHighColor:[Farbmapping farbeMitNummer:4]];
-    [farbe4Button_ setLowColor:[Farbmapping shadeFarbeMitNummer:4]];
-
-    [farbe5Button_ setHighColor:[Farbmapping farbeMitNummer:5]];
-    [farbe5Button_ setLowColor:[Farbmapping shadeFarbeMitNummer:5]];
-    
      // Set the layer's corner radius
      [[spielrasterView_ layer] setCornerRadius:8.0f];
      // Turn on masking
@@ -184,6 +165,26 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [self updateSoundButton:[SoundManager sharedManager].soundAn];
+    [farbe0Button_ setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:0]];
+    [farbe0Button_ setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:0]];
+    
+    [farbe1Button_ setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:1]];
+    [farbe1Button_ setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:1]];
+    
+    [farbe2Button_ setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:2]];
+    [farbe2Button_ setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:2]];
+    
+    [farbe3Button_ setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:3]];
+    [farbe3Button_ setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:3]];
+    
+    [farbe4Button_ setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:4]];
+    [farbe4Button_ setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:4]];
+    
+    [farbe5Button_ setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:5]];
+    [farbe5Button_ setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:5]];
+    
+    [self.rasterController.view setNeedsDisplay];
+
 }
 
 
@@ -199,7 +200,14 @@
     if (neuesModel_) {
         NSLog(@"Neues Model mit Level %d", neuesModel_.level);
         
-        if (rasterController.model.zuege > 0) {
+        if (rasterController.model.siegErreicht ||
+            rasterController.model.verloren ||
+            !rasterController.model.spielLaeuft) {
+            SpielLevel level = neuesModel_.level;
+            [neuesModel_ release];
+            neuesModel_ = nil;
+            [self starteNeuesSpielMitLevel:level];
+        } else {
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Neue Einstellungen" message:@"Wenn Sie ein neues Spiel beginnen, gilt das derzeitige als verloren!" delegate:nil cancelButtonTitle:@"Weiterspielen" otherButtonTitles:@"Neues Spiel", nil];
             
             [alert showUsingButtonBlock:^(NSInteger buttonIndex) {
@@ -214,11 +222,6 @@
                 }
             }];
             [alert release];
-        } else {
-            SpielLevel level = neuesModel_.level;
-            [neuesModel_ release];
-            neuesModel_ = nil;
-            [self starteNeuesSpielMitLevel:level];
         }
     }
 }
@@ -394,8 +397,6 @@
     prozentGewonnenLabel.text = [NSString stringWithFormat:@"(%2.1f%%)", prozentGewonnen];
     spieldauerLabel.text = [NSString stringWithFormat:@"%d:%02d", minuten, sekunden];
     levelLabel.text = level;
-    
-    einstellungenButton.hidden = model.abgebrochen;
 
     [self.view.layer addSublayer:[self blurLayer]];
 

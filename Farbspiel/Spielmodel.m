@@ -125,6 +125,40 @@
     return YES;
 }
 
+-(BOOL) verloren {
+    return (self.zuege == [self maximaleZuegeFuerLevel:self.level] &&
+            !self.siegErreicht);
+}
+
+-(BOOL)spielLaeuft {
+    return self.zuege > 0;
+}
+
+-(int) spaltenFuerLevel:(SpielLevel)level {
+    switch (level) {
+        case HARD:
+            return SPALTEN_HARD;
+        case MEDIUM:
+            return SPALTEN_MEDIUM;
+            
+        case EASY:
+        default:
+            return SPALTEN_EASY;
+    }
+}
+
+-(int) maximaleZuegeFuerLevel:(SpielLevel)level {
+    switch (level) {
+        case HARD:
+            return ZUEGE_HARD;
+        case MEDIUM:
+            return ZUEGE_MEDIUM;
+            
+        case EASY:
+        default:
+            return ZUEGE_EASY;
+    }
+}
 
 
 -(void)farbeGewaehlt:(int)colorNum {

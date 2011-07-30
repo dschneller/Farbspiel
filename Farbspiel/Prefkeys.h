@@ -3,3 +3,4 @@
 #define PREFKEY_SOUND_AN @"soundAn"
 #define PREFKEY_GITTER_AN @"gitterAn"
 #define PREFKEY_SPIELLEVEL @"spielLevel"
+#define PREFKEY_FARBSCHEMA @"farbschema"

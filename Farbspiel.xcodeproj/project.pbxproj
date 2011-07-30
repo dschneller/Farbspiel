@@ -15,6 +15,7 @@
 		412BFEBD13DE14F400159AD4 /* ledertextur.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBB13DE14F300159AD4 /* ledertextur.png */; };
 		412BFEFA13DE242400159AD4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412BFEF813DE242300159AD4 /* SettingsViewController.m */; };
 		412BFEFB13DE242400159AD4 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEF913DE242400159AD4 /* SettingsViewController.xib */; };
+		413A1E6F13E360D600DAD8A3 /* UIAlertView-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 413A1E6E13E360D600DAD8A3 /* UIAlertView-BKAdditions.m */; };
 		415A8A4C13DF58A100FF0F3A /* farbkloetzchen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 415A8A4B13DF58A100FF0F3A /* farbkloetzchen@2x.png */; };
 		418E613713D9C2260028A3D9 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613613D9C2260028A3D9 /* SoundManager.m */; };
 		418E613B13D9CE290028A3D9 /* Datenhaltung.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613A13D9CE290028A3D9 /* Datenhaltung.m */; };
@@ -77,6 +78,9 @@
 		412BFEF713DE242300159AD4 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		412BFEF813DE242300159AD4 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		412BFEF913DE242400159AD4 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = ../SettingsViewController.xib; sourceTree = "<group>"; };
+		413A1E6D13E360D600DAD8A3 /* UIAlertView-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView-BKAdditions.h"; sourceTree = "<group>"; };
+		413A1E6E13E360D600DAD8A3 /* UIAlertView-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView-BKAdditions.m"; sourceTree = "<group>"; };
+		413A1E7013E360EF00DAD8A3 /* BKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTypes.h; sourceTree = "<group>"; };
 		415A8A4B13DF58A100FF0F3A /* farbkloetzchen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen@2x.png"; sourceTree = "<group>"; };
 		418E613513D9C2260028A3D9 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
 		418E613613D9C2260028A3D9 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
@@ -294,6 +298,9 @@
 		41D9264513D8A9C3007612E6 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				413A1E7013E360EF00DAD8A3 /* BKTypes.h */,
+				413A1E6D13E360D600DAD8A3 /* UIAlertView-BKAdditions.h */,
+				413A1E6E13E360D600DAD8A3 /* UIAlertView-BKAdditions.m */,
 				41D9262613D8A8C3007612E6 /* NSMutableArray+StackMethods.h */,
 				41D9262713D8A8C3007612E6 /* NSMutableArray+StackMethods.m */,
 				41D9263013D8A8C3007612E6 /* UIColor+Tools.h */,
@@ -485,6 +492,7 @@
 				418E613713D9C2260028A3D9 /* SoundManager.m in Sources */,
 				418E613B13D9CE290028A3D9 /* Datenhaltung.m in Sources */,
 				412BFEFA13DE242400159AD4 /* SettingsViewController.m in Sources */,
+				413A1E6F13E360D600DAD8A3 /* UIAlertView-BKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -50,6 +50,7 @@
 - (IBAction)zurueckZumSpiel:(id)sender;
 - (IBAction)soundAnAus:(id)sender;
 - (IBAction)levelGewaehlt:(id)sender;
+- (IBAction)farbschemaGewaehlt:(id)sender;
 
 
 @end
