@@ -19,6 +19,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.navigationItem.title = @")_________(";
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -52,7 +53,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return 20;
 }
 
 // Customize the appearance of table view cells.
@@ -64,6 +65,7 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
+    cell.textLabel.text = [NSString stringWithFormat:@"%d", indexPath.row];
 
     // Configure the cell.
     return cell;
