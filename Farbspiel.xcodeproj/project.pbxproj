@@ -184,6 +184,17 @@
 			name = Persistenz;
 			sourceTree = "<group>";
 		};
+		413A1E7113E5CC9F00DAD8A3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				41065C6A13E216C400725686 /* IconRetina.png */,
+				41065C6813E216A600725686 /* Icon.png */,
+				41065C6213E20D7200725686 /* Default@2x.png */,
+				41065C6013E20D6B00725686 /* Default.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		41D925C113D8A76B007612E6 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +230,7 @@
 		41D925D613D8A76B007612E6 /* Farbspiel */ = {
 			isa = PBXGroup;
 			children = (
+				413A1E7113E5CC9F00DAD8A3 /* Resources */,
 				41D9265913D8F965007612E6 /* Sounds */,
 				41D9261213D8A8C3007612E6 /* de.lproj */,
 				41D9264413D8A8D1007612E6 /* Colorful Button */,
@@ -243,10 +255,6 @@
 			children = (
 				41D925DF13D8A76B007612E6 /* FarbspielAppDelegate.h */,
 				41D925E013D8A76B007612E6 /* FarbspielAppDelegate.m */,
-				41065C6A13E216C400725686 /* IconRetina.png */,
-				41065C6813E216A600725686 /* Icon.png */,
-				41065C6213E20D7200725686 /* Default@2x.png */,
-				41065C6013E20D6B00725686 /* Default.png */,
 				41D9262513D8A8C3007612E6 /* main.m */,
 				41D925D813D8A76B007612E6 /* Farbspiel-Info.plist */,
 				41D9265A13D8F9E9007612E6 /* InfoPlist.strings */,
