@@ -95,6 +95,14 @@
     [self.view setNeedsDisplay];
 }
 
+- (IBAction)gewinnen:(id)sender {
+#if DEBUG
+    self.model.debugErzwungenerSieg = YES;
+    [self spielende];
+    [self.view setNeedsDisplay];
+#endif
+}
+
 
 #pragma - SpielrasterViewDataSource
 -(NSNumber *) farbeFuerRasterfeldZeile:(NSUInteger)row spalte:(NSUInteger)col {

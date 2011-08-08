@@ -23,4 +23,8 @@
 -(void)setBool:(BOOL)newBool forKey:(NSString *)key;
 -(BOOL)boolFuerKey:(NSString*)key;
 
+-(void)speichereSpielAusgang:(Spielmodel*)model;
+-(NSUInteger) anzahlSpieleGesamtFuerLevel:(SpielLevel)level;
+-(NSUInteger) anzahlSpieleGewonnen:(BOOL)gewonnen fuerLevel:(SpielLevel)level;
+
 @end

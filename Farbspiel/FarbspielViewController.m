@@ -47,6 +47,7 @@
     
     [soundAnAusButton_ release];
     [einstellungenButton release];
+    [debugButtonGewinnen release];
     [super dealloc];
 }
 
@@ -147,7 +148,8 @@
 
     
 #if !DEBUG
-        [debugButtonVerlieren removeFromSuperview];
+    [debugButtonVerlieren removeFromSuperview];
+    [debugButtonGewinnen removeFromSuperview];
 #endif
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -268,6 +270,8 @@
     soundAnAusButton_ = nil;
     [einstellungenButton release];
     einstellungenButton = nil;
+    [debugButtonGewinnen release];
+    debugButtonGewinnen = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -326,6 +330,7 @@
 
 - (void) zeigeGewonnenInZuegen:(Spielmodel*)model {
     [self loadAndInitGewonnenView];
+    [[Datenhaltung sharedInstance] speichereSpielAusgang:model];
     
     int zuege = model.zuege;
 
@@ -346,21 +351,9 @@
             break;
     }
     
-    
-
-    NSString* anzahlSpieleKey = [NSString stringWithFormat:PREFKEY_SPIELZAEHLER_FORMAT, model.level];
-    NSString* anzahlGewonnenKey = [NSString stringWithFormat:PREFKEY_GEWONNENZAEHLER_FORMAT, model.level];
-
-    if (model.siegErreicht) {
-        [[Datenhaltung sharedInstance] erhoeheIntegerFuerKey:anzahlGewonnenKey];
-    }
-    
-    
-    int anzahlSpiele = [[Datenhaltung sharedInstance] integerFuerKey:anzahlSpieleKey];
-    
-    int anzahlGewonnen = [[Datenhaltung sharedInstance] integerFuerKey:anzahlGewonnenKey];
-    
-    int anzahlVerloren = anzahlSpiele - anzahlGewonnen;
+    NSUInteger anzahlSpiele = [[Datenhaltung sharedInstance] anzahlSpieleGesamtFuerLevel:model.level];
+    NSUInteger anzahlGewonnen = [[Datenhaltung sharedInstance] anzahlSpieleGewonnen:YES fuerLevel:model.level];
+    NSUInteger anzahlVerloren = anzahlSpiele - anzahlGewonnen;
 
     float prozentGewonnen;
     

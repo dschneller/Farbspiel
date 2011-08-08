@@ -19,6 +19,9 @@
 @synthesize maximaleZuege = maximaleZuege_;
 @synthesize spieldauer = spieldauer_;
 @synthesize abgebrochen = abgebrochen_;
+#if DEBUG
+@synthesize debugErzwungenerSieg = debugErzwungenerSieg_;
+#endif
 
 
 
@@ -112,6 +115,11 @@
 
 
 -(BOOL) siegErreicht {
+#if DEBUG
+    if (self.debugErzwungenerSieg) {
+        return YES;
+    }
+#endif
     NSNumber* first = nil;
     for (NSNumber* color in self.farbfelder) {
         if (!first) {
@@ -190,6 +198,9 @@
         self.farbfelder = [NSMutableArray arrayWithCapacity:(NSUInteger) (felderProKante_*felderProKante_)];
         self.zuege = 0;
         self.abgebrochen = NO;
+#if DEBUG
+        self.debugErzwungenerSieg = NO;
+#endif
         
         [self randomizeSpielfeld];
     }

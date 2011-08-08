@@ -18,6 +18,7 @@
 //    SpielrasterViewController *rasterController_;
     
     IBOutlet UIButton *debugButtonVerlieren;
+    IBOutlet UIButton *debugButtonGewinnen;
     IBOutlet UIView *gewonnenView;
     
     IBOutlet UILabel *gewonnenVerlorenLabel;

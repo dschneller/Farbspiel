@@ -29,6 +29,7 @@
 -(void) spielAbbrechen;
 
 - (IBAction)verlieren:(id)sender;
+- (IBAction)gewinnen:(id)sender;
 
 @end
 

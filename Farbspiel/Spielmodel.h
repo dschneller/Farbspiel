@@ -37,15 +37,23 @@ typedef enum {
     long spieldauer_;
     BOOL abgebrochen_;
     
+#if DEBUG
+    BOOL debugErzwungenerSieg_;
+#endif
+    
 }
 
-@property (nonatomic, retain) NSMutableArray* farbfelder;
-@property (assign)            SpielLevel      level;
-@property (readonly)          NSUInteger felderProKante;
-@property (assign)            NSUInteger             zuege;
-@property (readonly)          NSUInteger             maximaleZuege;
-@property (assign)            long            spieldauer;
-@property (assign)            BOOL            abgebrochen;
+@property (nonatomic, retain) NSMutableArray*   farbfelder;
+@property (assign)            SpielLevel        level;
+@property (readonly)          NSUInteger        felderProKante;
+@property (assign)            NSUInteger        zuege;
+@property (readonly)          NSUInteger        maximaleZuege;
+@property (assign)            long              spieldauer;
+@property (assign)            BOOL              abgebrochen;
+#if DEBUG
+@property (assign)            BOOL              debugErzwungenerSieg;
+#endif
+
 
 -(id)initWithLevel:(SpielLevel)level;
 -(NSNumber *) farbeAnPositionZeile:(NSUInteger)row spalte:(NSUInteger)col;

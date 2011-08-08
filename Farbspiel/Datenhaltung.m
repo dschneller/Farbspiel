@@ -7,7 +7,8 @@
 //
 
 #import "Datenhaltung.h"
-
+#import "FarbspielAppDelegate.h"
+#import "Spiel.h"
 
 @implementation Datenhaltung
 
@@ -54,7 +55,84 @@ static Datenhaltung *sharedSingleton;
 }
 
 
+-(void)speichereSpielAusgang:(Spielmodel *)model {
+    FarbspielAppDelegate *app = [UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *ctx = app.managedObjectContext;
+    Spiel *spielAusgang = [NSEntityDescription
+                                    insertNewObjectForEntityForName:@"Spiel"
+                                    inManagedObjectContext:ctx];
 
+    spielAusgang.level = [NSNumber numberWithUnsignedInteger:model.level];
+    spielAusgang.zuege = [NSNumber numberWithUnsignedInteger:model.zuege];
+    spielAusgang.abgebrochen = [NSNumber numberWithBool:model.abgebrochen];
+    spielAusgang.gewonnen = [NSNumber numberWithBool:model.siegErreicht];
+    spielAusgang.dauer = [NSNumber numberWithLong:model.spieldauer];
+    spielAusgang.datum = [NSDate date];
+    
+
+    NSError *error = NULL;
+    
+    [ctx save:&error];
+    if (error) {
+        NSLog(@"Fehler beim Speichern des Spielausgangs: %@", error.description);
+    }
+}
+
+-(NSUInteger) anzahlSpieleGesamtFuerLevel:(SpielLevel)level {
+    FarbspielAppDelegate *app = [UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *ctx = app.managedObjectContext;
+
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Spiel"
+                                              inManagedObjectContext:ctx];
+    fetchRequest.includesSubentities = NO;
+    [fetchRequest setEntity:entity];
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"level == %@",
+                              [NSNumber numberWithUnsignedInteger:(NSUInteger)level]];
+    [fetchRequest setPredicate:predicate];
+
+    NSError *error = nil;
+    NSUInteger count = [ctx countForFetchRequest:fetchRequest error:&error];
+    if (count == NSNotFound) {
+        count = 0;
+    }
+    if (error) {
+        NSLog(@"Fehler beim Zaehlen der Spiele fuer Level %d: %@", level, error);
+    }
+    [fetchRequest release];
+    
+    return count;
+}
+
+-(NSUInteger) anzahlSpieleGewonnen:(BOOL)gewonnen fuerLevel:(SpielLevel)level {
+    FarbspielAppDelegate *app = [UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *ctx = app.managedObjectContext;
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Spiel"
+                                              inManagedObjectContext:ctx];
+    fetchRequest.includesSubentities = NO;
+    [fetchRequest setEntity:entity];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"level == %@ && gewonnen = %@",
+                              [NSNumber numberWithUnsignedInteger:(NSUInteger)level], [NSNumber numberWithBool:gewonnen]];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSUInteger count = [ctx countForFetchRequest:fetchRequest error:&error];
+    if (count == NSNotFound) {
+        count = 0;
+    }
+    if (error) {
+        NSLog(@"Fehler beim Zaehlen der %@ Spiele fuer Level %d: %@", (gewonnen ? @"gewonnenen" : @"verlorenen"), level, error);
+    }
+    [fetchRequest release];
+    
+    return count;
+
+    
+}
 
 +(Datenhaltung*) sharedInstance {
     return sharedSingleton;

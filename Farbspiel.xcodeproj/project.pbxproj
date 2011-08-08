@@ -56,6 +56,9 @@
 		41D9265713D8F704007612E6 /* 215.caf in Resources */ = {isa = PBXBuildFile; fileRef = 41D9265513D8F703007612E6 /* 215.caf */; };
 		41D9265813D8F704007612E6 /* 225.caf in Resources */ = {isa = PBXBuildFile; fileRef = 41D9265613D8F703007612E6 /* 225.caf */; };
 		41D9265B13D8F9E9007612E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D9265A13D8F9E9007612E6 /* InfoPlist.strings */; };
+		41FE192913F06D7700BF4656 /* JengoColor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41FE192713F06D7700BF4656 /* JengoColor.xcdatamodeld */; };
+		41FE195A13F0740A00BF4656 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FE195913F0740A00BF4656 /* CoreData.framework */; };
+		41FE196313F0845900BF4656 /* Spiel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FE196213F0845900BF4656 /* Spiel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +139,10 @@
 		41D9265513D8F703007612E6 /* 215.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 215.caf; sourceTree = "<group>"; };
 		41D9265613D8F703007612E6 /* 225.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 225.caf; sourceTree = "<group>"; };
 		41D9265A13D8F9E9007612E6 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		41FE192813F06D7700BF4656 /* JengoColor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JengoColor.xcdatamodel; sourceTree = "<group>"; };
+		41FE195913F0740A00BF4656 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		41FE196113F0845900BF4656 /* Spiel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spiel.h; sourceTree = "<group>"; };
+		41FE196213F0845900BF4656 /* Spiel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spiel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41FE195A13F0740A00BF4656 /* CoreData.framework in Frameworks */,
 				41D9264E13D8ED4F007612E6 /* AudioToolbox.framework in Frameworks */,
 				41D9264913D8AAE8007612E6 /* QuartzCore.framework in Frameworks */,
 				41D925D113D8A76B007612E6 /* UIKit.framework in Frameworks */,
@@ -180,6 +188,9 @@
 				418E613913D9CE290028A3D9 /* Datenhaltung.h */,
 				418E613A13D9CE290028A3D9 /* Datenhaltung.m */,
 				418E613C13D9D4DD0028A3D9 /* Prefkeys.h */,
+				41FE192713F06D7700BF4656 /* JengoColor.xcdatamodeld */,
+				41FE196113F0845900BF4656 /* Spiel.h */,
+				41FE196213F0845900BF4656 /* Spiel.m */,
 			);
 			name = Persistenz;
 			sourceTree = "<group>";
@@ -198,6 +209,7 @@
 		41D925C113D8A76B007612E6 = {
 			isa = PBXGroup;
 			children = (
+				41FE195913F0740A00BF4656 /* CoreData.framework */,
 				41D925D613D8A76B007612E6 /* Farbspiel */,
 				41D925F813D8A76B007612E6 /* FarbspielTests */,
 				41D925CF13D8A76B007612E6 /* Frameworks */,
@@ -501,6 +513,8 @@
 				418E613B13D9CE290028A3D9 /* Datenhaltung.m in Sources */,
 				412BFEFA13DE242400159AD4 /* SettingsViewController.m in Sources */,
 				413A1E6F13E360D600DAD8A3 /* UIAlertView-BKAdditions.m in Sources */,
+				41FE192913F06D7700BF4656 /* JengoColor.xcdatamodeld in Sources */,
+				41FE196313F0845900BF4656 /* Spiel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +695,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		41FE192713F06D7700BF4656 /* JengoColor.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				41FE192813F06D7700BF4656 /* JengoColor.xcdatamodel */,
+			);
+			currentVersion = 41FE192813F06D7700BF4656 /* JengoColor.xcdatamodel */;
+			path = JengoColor.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 41D925C313D8A76B007612E6 /* Project object */;
 }
