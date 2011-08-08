@@ -8,13 +8,10 @@
 
 
 #import "FarbspielViewController.h"
-#import "SpielrasterView.h"
 #import "Farbmapping.h"
-#import "SoundManager.h"
 #import "Datenhaltung.h"
 #import "UIColor+Tools.h" 
 #import "SettingsViewController.h"
-#import <QuartzCore/QuartzCore.h>
 
 @implementation FarbspielViewController
 
@@ -50,7 +47,6 @@
     
     [soundAnAusButton_ release];
     [einstellungenButton release];
-    [neuesModel_ release];
     [super dealloc];
 }
 
@@ -159,7 +155,7 @@
                                                  name:SOUNDMANAGER_NOTIFICATION_SOUNDAN
                                                object:nil];
 
-    self.defaultLevel = [[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL];
+    self.defaultLevel = (SpielLevel) [[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL];
     [self starteNeuesSpielMitLevel:self.defaultLevel];
 }
 
@@ -195,18 +191,15 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     NSLog(@"Became first responder: %d", [self becomeFirstResponder]);
-    
-    // Liegt ein neues Model aus den Settings vor?
-    if (neuesModel_) {
-        NSLog(@"Neues Model mit Level %d", neuesModel_.level);
+    SpielLevel storedLevel = (SpielLevel) [[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL];
+    // Neuer Level gewaehlt?
+    if (self.rasterController.model.level != storedLevel) {
+        NSLog(@"Neues Model mit Level %d", storedLevel);
         
         if (rasterController.model.siegErreicht ||
             rasterController.model.verloren ||
             !rasterController.model.spielLaeuft) {
-            SpielLevel level = neuesModel_.level;
-            [neuesModel_ release];
-            neuesModel_ = nil;
-            [self starteNeuesSpielMitLevel:level];
+            [self starteNeuesSpielMitLevel:storedLevel];
         } else {
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Neue Einstellungen" message:@"Wenn Sie ein neues Spiel beginnen, gilt das derzeitige als verloren!" delegate:nil cancelButtonTitle:@"Weiterspielen" otherButtonTitles:@"Neues Spiel", nil];
             
@@ -214,8 +207,6 @@
                 // NO = 0, YES = 1
                 if(buttonIndex == 0) {
                     NSLog(@"Weiterspielen",nil);
-                    [neuesModel_ release];
-                    neuesModel_ = nil;
                 } else {
                     [self.rasterController spielAbbrechen];
                     NSLog(@"Neues Spiel",nil);
@@ -446,23 +437,18 @@
 #pragma mark - IBActions
 
 - (IBAction)neuesSpiel:(id)sender {
-    SpielLevel level;
-    if (neuesModel_) {
-        level = neuesModel_.level;
-        [neuesModel_ release];
-        neuesModel_ = nil;
-    } else {
-        level = self.defaultLevel;
-    };
-    [self starteNeuesSpielMitLevel:level];
+    [self starteNeuesSpielMitLevel:[[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL]];
     [self fadeOutGewonnenView];
     [self enableColorButtons];
 }
 
 - (IBAction)colorButtonPressed:(id)sender {
-    int colorNumber = ((UIButton*)sender).tag;
+    NSInteger colorNumber = ((UIButton*)sender).tag;
+    if (colorNumber < 0) {
+        colorNumber = 0;
+    }
     
-    [self.rasterController colorClicked:colorNumber];
+    [self.rasterController colorClicked:(NSUInteger)colorNumber];
 }
 
 - (IBAction)settingsButtonPressed:(id)sender {
@@ -514,17 +500,6 @@
 
 #pragma mark - SettingsViewcontroller callback
 - (void)settingsGeaendert:(Spielmodel*)modelAusSettings {
-    // Eventuell schon vorher erhaltenen Settings-Change verwerfen
-    if (neuesModel_) {
-        [neuesModel_ release];
-        neuesModel_ = nil;
-    }
-
-    if (modelAusSettings.level != rasterController.model.level) {
-        neuesModel_ = modelAusSettings;
-        [neuesModel_ retain];
-        [[Datenhaltung sharedInstance] setInteger:neuesModel_.level fuerKey:PREFKEY_SPIELLEVEL];
-    }
 }
 
 @end

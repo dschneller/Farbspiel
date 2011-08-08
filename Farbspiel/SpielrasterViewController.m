@@ -72,7 +72,7 @@
 }
 
 
--(void) colorClicked:(int)colorNumber {
+-(void) colorClicked:(NSUInteger)colorNumber {
     if (self.model.zuege == 0) {
         [self spielstart];
     }
@@ -97,14 +97,14 @@
 
 
 #pragma - SpielrasterViewDataSource
--(NSNumber*) farbeFuerRasterfeldZeile:(int)row spalte:(int)col {
+-(NSNumber *) farbeFuerRasterfeldZeile:(NSUInteger)row spalte:(NSUInteger)col {
     return [self.model farbeAnPositionZeile:row spalte:col];
 }
 
--(int) rasterZeilen {
+-(NSUInteger)rasterZeilen {
     return self.model.felderProKante;
 }
--(int) rasterSpalten {
+-(NSUInteger)rasterSpalten {
     return self.model.felderProKante;    
 }
 
@@ -115,6 +115,10 @@
 {
     [self stopAndClearTimer];
     [zuegeLabel release];
+    [view_ release];
+    [model_ release];
+    [delegate_ release];
+    [model_ release];
     [super dealloc];
 }
 

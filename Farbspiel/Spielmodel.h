@@ -30,10 +30,10 @@ typedef enum {
 @interface Spielmodel : NSObject {
     SpielLevel level_;
     NSMutableArray *farbfelder_;
-    int felderProKante_;
-    int maximaleZuege_;
+    NSUInteger felderProKante_;
+    NSUInteger maximaleZuege_;
     
-    int zuege_;
+    NSUInteger zuege_;
     long spieldauer_;
     BOOL abgebrochen_;
     
@@ -41,15 +41,15 @@ typedef enum {
 
 @property (nonatomic, retain) NSMutableArray* farbfelder;
 @property (assign)            SpielLevel      level;
-@property (readonly)          int             felderProKante;
-@property (assign)            int             zuege;
-@property (readonly)          int             maximaleZuege;
+@property (readonly)          NSUInteger felderProKante;
+@property (assign)            NSUInteger             zuege;
+@property (readonly)          NSUInteger             maximaleZuege;
 @property (assign)            long            spieldauer;
 @property (assign)            BOOL            abgebrochen;
 
 -(id)initWithLevel:(SpielLevel)level;
--(NSNumber*) farbeAnPositionZeile:(int)row spalte:(int)col;
--(void)farbeGewaehlt:(int)colorNum;
+-(NSNumber *) farbeAnPositionZeile:(NSUInteger)row spalte:(NSUInteger)col;
+-(void)farbeGewaehlt:(NSUInteger)colorNum;
 -(BOOL) siegErreicht;
 -(BOOL) verloren;
 -(int) spaltenFuerLevel:(SpielLevel)level;

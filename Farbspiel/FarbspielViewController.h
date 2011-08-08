@@ -45,7 +45,6 @@
     IBOutlet UIButton *soundAnAusButton_;
     CAGradientLayer *blurLayer_;
 
-    Spielmodel* neuesModel_;
     SpielLevel defaultLevel_;
 }
 

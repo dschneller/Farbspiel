@@ -25,7 +25,7 @@
 @property (nonatomic, retain) Spielmodel* model;
 @property (nonatomic, retain) id<SpielrasterViewControllerDelegate> delegate;
 
--(void) colorClicked:(int)colorNumber;
+-(void) colorClicked:(NSUInteger)colorNumber;
 -(void) spielAbbrechen;
 
 - (IBAction)verlieren:(id)sender;

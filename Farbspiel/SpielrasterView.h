@@ -23,8 +23,8 @@
 
 @protocol SpielrasterViewDatasource <NSObject>
 
--(NSNumber*) farbeFuerRasterfeldZeile:(int)row spalte:(int)col;
--(int) rasterZeilen;
--(int) rasterSpalten;
+-(NSNumber *) farbeFuerRasterfeldZeile:(NSUInteger)row spalte:(NSUInteger)col;
+-(NSUInteger)rasterZeilen;
+-(NSUInteger)rasterSpalten;
 
 @end

@@ -43,8 +43,8 @@
     int fieldHeightI = [[NSNumber numberWithFloat:fieldHeight] intValue];
 
     
-    for (int row=0; row<numRows; row++) {
-        for (int col=0; col<numCols; col++) {
+    for (NSUInteger row=0; row<numRows; row++) {
+        for (NSUInteger col=0; col<numCols; col++) {
             CGFloat x = col * fieldWidthI;
             CGFloat y = row * fieldHeightI;
             
@@ -68,8 +68,8 @@
         //Set the width of the pen mark
         CGContextSetLineWidth(context, 2.0);
         
-        for (int row=1; row<numRows; row++) {
-            for (int col=1; col<numCols; col++) {
+        for (NSUInteger row=1; row<numRows; row++) {
+            for (NSUInteger col=1; col<numCols; col++) {
                 CGFloat x = col * fieldWidth;
                 
                 // Draw a line
@@ -101,6 +101,12 @@
     }
     
     
+}
+
+- (void)dealloc {
+    [raster_ release];
+    [dataSource_ release];
+    [super dealloc];
 }
 
 

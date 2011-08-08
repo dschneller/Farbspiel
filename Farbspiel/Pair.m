@@ -14,7 +14,7 @@
 @synthesize y = y_;
 
 
--(id)initWithX:(int)x Y:(int)y {
+-(id)initWithX:(NSUInteger)x Y:(NSUInteger)y {
     if ((self = [super init])) {
         x_ = x;
         y_ = y;
@@ -22,7 +22,7 @@
     return self;
 }
 
-+(Pair*)pairWithX:(int)x Y:(int)y {
++(Pair*)pairWithX:(NSUInteger )x Y:(NSUInteger )y {
     Pair* p = [[[Pair alloc] initWithX:x Y:y] autorelease];
     return p;
 }

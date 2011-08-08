@@ -7,8 +7,6 @@
 //
 
 #import "SettingsViewController.h"
-#import "SoundManager.h"
-#import "Spielmodel.h"
 #import "Farbmapping.h"
 #import "Datenhaltung.h"
 
@@ -110,7 +108,7 @@
 
 - (void) initValues {
     self.soundEffekteSwitch.on = [[SoundManager sharedManager] soundAn];
-    self.schwierigkeitsGrad.selectedSegmentIndex = self.passedInModel.level;
+    self.schwierigkeitsGrad.selectedSegmentIndex = [[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL];
     self.farbschema.selectedSegmentIndex = [Farbmapping sharedInstance].farbschema;
     self.rasterSwitch.on = [[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN];
     [self updateFarbschemaPreview];
@@ -189,6 +187,8 @@
     [farbe5bg_ release];
     [farbe6bg_ release];
     [rasterSwitch_ release];
+    [passedInModel_ release];
+    [aufrufenderController_ release];
     [super dealloc];
 }
 
@@ -208,7 +208,7 @@
 }
 
 - (IBAction)levelGewaehlt:(id)sender {
-    SpielLevel level = self.schwierigkeitsGrad.selectedSegmentIndex;
+    SpielLevel level = (SpielLevel) self.schwierigkeitsGrad.selectedSegmentIndex;
     int kantenlaenge;
     int zuege;
     switch (level) {
@@ -230,7 +230,7 @@
     }
     self.feldgroesseLabel.text = [NSString stringWithFormat:@"%d x %d", kantenlaenge, kantenlaenge];
     self.anzahlZuegeLabel.text = [NSString stringWithFormat:@"%d", zuege];
-    
+    [[Datenhaltung sharedInstance] setInteger:level fuerKey:PREFKEY_SPIELLEVEL];
     Spielmodel* newModel = [[[Spielmodel alloc] initWithLevel:level] autorelease];
     [self.aufrufenderController settingsGeaendert:newModel];
 }

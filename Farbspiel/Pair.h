@@ -10,16 +10,16 @@
 
 
 @interface Pair : NSObject {
-    int x_;
-    int y_;
+    NSUInteger x_;
+    NSUInteger y_;
 }
 
 
-@property (readonly, nonatomic) int x;
-@property (readonly, nonatomic) int y;
+@property (readonly, nonatomic) NSUInteger x;
+@property (readonly, nonatomic) NSUInteger y;
 
 
-+(Pair*)pairWithX:(int)x Y:(int)y;
++(Pair*)pairWithX:(NSUInteger )x Y:(NSUInteger )y;
 
 
 @end

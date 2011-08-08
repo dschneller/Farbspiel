@@ -8,7 +8,6 @@
 
 #import "SoundManager.h"
 #import "Datenhaltung.h"
-#import <AudioToolbox/AudioToolbox.h>
 
 @implementation SoundManager
 @synthesize soundAn = soundAn_;

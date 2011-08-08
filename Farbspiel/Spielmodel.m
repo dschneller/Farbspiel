@@ -9,7 +9,6 @@
 #import "Spielmodel.h"
 #import "Pair.h"
 #import "NSMutableArray+StackMethods.h"
-#import "Farbmapping.h"
 
 @implementation Spielmodel
 
@@ -24,16 +23,16 @@
 
 
 
--(int) arrayIndexFuerZeile:(int)row spalte:(int)col {
+-(NSUInteger) arrayIndexFuerZeile:(NSUInteger)row spalte:(NSUInteger)col {
     return row+col*self.felderProKante;
 }
--(NSNumber*) farbeAnPositionZeile:(int)row spalte:(int)col {
+-(NSNumber *) farbeAnPositionZeile:(NSUInteger)row spalte:(NSUInteger)col {
     return [self.farbfelder objectAtIndex:[self arrayIndexFuerZeile:row spalte:col]];
 }
 
 -(void) debugMatrix {
     if (NO) {
-        for (int row = 0; row<12; row++) {
+        for (NSUInteger row = 0; row<12; row++) {
             NSLog(@"%@ %@ %@ %@ %@ %@ %@ %@ %@ %@ %@ %@", 
                   [self farbeAnPositionZeile:row spalte:0], 
                   [self farbeAnPositionZeile:row spalte:1], 
@@ -52,8 +51,8 @@
     }
 }
 
--(void) faerbePositionZeile:(int)row spalte:(int)col mitFarbe:(int)farbNummer {
-    int idx = [self arrayIndexFuerZeile:row spalte:col];
+-(void) faerbePositionZeile:(NSUInteger)row spalte:(NSUInteger)col mitFarbe:(NSUInteger)farbNummer {
+    NSUInteger idx = [self arrayIndexFuerZeile:row spalte:col];
     NSNumber* neueFarbe = [NSNumber numberWithInt:farbNummer];
     [self.farbfelder replaceObjectAtIndex:idx withObject:neueFarbe];
 }
@@ -66,22 +65,22 @@
     }
 }
 
--(void) zaehleZug {
+-(void)faerbeVonX {
     self.zuege ++;
 }
 
--(void)faerbeVonX:(int)startX Y:(int)startY alteFarbe:(int)alt neueFarbe:(int)neu {
+-(void)faerbeVonX:(NSUInteger)startX Y:(NSUInteger)startY alteFarbe:(NSUInteger)alt neueFarbe:(NSUInteger)neu {
     if (alt == neu) {
         return;
     }
-    [self zaehleZug];
+    [self faerbeVonX];
     
     [self debugMatrix];
     
     NSMutableArray* stack = [NSMutableArray array];
     
     [stack push:[Pair pairWithX:startX Y:startY]];
-    int x,y;
+    NSUInteger x,y;
     while([stack count] > 0) {
         Pair* p = [stack pop];
         x = p.x;
@@ -161,8 +160,8 @@
 }
 
 
--(void)farbeGewaehlt:(int)colorNum {
-    int alt = [[self farbeAnPositionZeile:0 spalte:0] intValue];
+-(void)farbeGewaehlt:(NSUInteger)colorNum {
+    NSUInteger alt = [[self farbeAnPositionZeile:0 spalte:0] unsignedIntValue];
     [self faerbeVonX:0 Y:0 alteFarbe:alt neueFarbe:colorNum];
 }
 
@@ -188,7 +187,7 @@
                 break;
         }
         
-        self.farbfelder = [NSMutableArray arrayWithCapacity:(felderProKante_*felderProKante_)];
+        self.farbfelder = [NSMutableArray arrayWithCapacity:(NSUInteger) (felderProKante_*felderProKante_)];
         self.zuege = 0;
         self.abgebrochen = NO;
         
