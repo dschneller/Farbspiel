@@ -12,6 +12,8 @@
 #import "SpielrasterViewController.h"
 #import "ColorfulButton.h"
 #import "SoundManager.h"
+#import "StatistikView.h"
+#import "StatistikViewController.h"
 
 @interface FarbspielViewController : UIViewController <SpielrasterViewControllerDelegate> {
     
@@ -26,12 +28,15 @@
     IBOutlet UILabel *spieldauerLabel;
     IBOutlet UILabel *uhrLabel;
     IBOutlet UILabel *levelLabel;
+
     
-    IBOutlet UILabel *anzahlSpieleLabel;
-    IBOutlet UILabel *anzahlGewonnenLabel;
-    IBOutlet UILabel *prozentGewonnenLabel;
-    IBOutlet UILabel *anzahlVerlorenLabel;
+//    IBOutlet UILabel *anzahlSpieleLabel;
+//    IBOutlet UILabel *anzahlGewonnenLabel;
+//    IBOutlet UILabel *prozentGewonnenLabel;
+//    IBOutlet UILabel *anzahlVerlorenLabel;
     
+    IBOutlet StatistikViewController *statistikViewController_;
+    IBOutlet StatistikView *statistikPlaceholder_;
     IBOutlet ColorfulButton *einstellungenButton;
     IBOutlet ColorfulButton *neuesSpielButton_;
     IBOutlet SpielrasterViewController *rasterController;

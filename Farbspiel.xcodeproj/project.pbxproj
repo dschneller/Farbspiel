@@ -16,6 +16,9 @@
 		412BFEFA13DE242400159AD4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412BFEF813DE242300159AD4 /* SettingsViewController.m */; };
 		412BFEFB13DE242400159AD4 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEF913DE242400159AD4 /* SettingsViewController.xib */; };
 		413A1E6F13E360D600DAD8A3 /* UIAlertView-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 413A1E6E13E360D600DAD8A3 /* UIAlertView-BKAdditions.m */; };
+		415A1F1B14276A8900328122 /* StatistikView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 415A1F1914276A8900328122 /* StatistikView.xib */; };
+		415A1F1E14276BCD00328122 /* StatistikView.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F1D14276BCD00328122 /* StatistikView.m */; };
+		415A1F2114277D9800328122 /* StatistikViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F2014277D9800328122 /* StatistikViewController.m */; };
 		415A8A4C13DF58A100FF0F3A /* farbkloetzchen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 415A8A4B13DF58A100FF0F3A /* farbkloetzchen@2x.png */; };
 		418E613713D9C2260028A3D9 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613613D9C2260028A3D9 /* SoundManager.m */; };
 		418E613B13D9CE290028A3D9 /* Datenhaltung.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613A13D9CE290028A3D9 /* Datenhaltung.m */; };
@@ -84,6 +87,11 @@
 		413A1E6D13E360D600DAD8A3 /* UIAlertView-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView-BKAdditions.h"; sourceTree = "<group>"; };
 		413A1E6E13E360D600DAD8A3 /* UIAlertView-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView-BKAdditions.m"; sourceTree = "<group>"; };
 		413A1E7013E360EF00DAD8A3 /* BKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTypes.h; sourceTree = "<group>"; };
+		415A1F1A14276A8900328122 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = StatistikView.xib; sourceTree = "<group>"; };
+		415A1F1C14276BCD00328122 /* StatistikView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatistikView.h; sourceTree = "<group>"; };
+		415A1F1D14276BCD00328122 /* StatistikView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatistikView.m; sourceTree = "<group>"; };
+		415A1F1F14277D9700328122 /* StatistikViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatistikViewController.h; sourceTree = "<group>"; };
+		415A1F2014277D9800328122 /* StatistikViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatistikViewController.m; sourceTree = "<group>"; };
 		415A8A4B13DF58A100FF0F3A /* farbkloetzchen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen@2x.png"; sourceTree = "<group>"; };
 		418E613513D9C2260028A3D9 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
 		418E613613D9C2260028A3D9 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
@@ -206,10 +214,20 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		415A1F221427905500328122 /* StatistikView */ = {
+			isa = PBXGroup;
+			children = (
+				415A1F1C14276BCD00328122 /* StatistikView.h */,
+				415A1F1D14276BCD00328122 /* StatistikView.m */,
+				415A1F1F14277D9700328122 /* StatistikViewController.h */,
+				415A1F2014277D9800328122 /* StatistikViewController.m */,
+			);
+			name = StatistikView;
+			sourceTree = "<group>";
+		};
 		41D925C113D8A76B007612E6 = {
 			isa = PBXGroup;
 			children = (
-				41FE195913F0740A00BF4656 /* CoreData.framework */,
 				41D925D613D8A76B007612E6 /* Farbspiel */,
 				41D925F813D8A76B007612E6 /* FarbspielTests */,
 				41D925CF13D8A76B007612E6 /* Frameworks */,
@@ -229,6 +247,7 @@
 		41D925CF13D8A76B007612E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41FE195913F0740A00BF4656 /* CoreData.framework */,
 				41D9264D13D8ED4F007612E6 /* AudioToolbox.framework */,
 				41D9264813D8AAE8007612E6 /* QuartzCore.framework */,
 				41D925D013D8A76B007612E6 /* UIKit.framework */,
@@ -258,6 +277,7 @@
 				41D9262B13D8A8C3007612E6 /* Spielmodel.m */,
 				41D925D713D8A76B007612E6 /* Supporting Files */,
 				412BFEFC13DE242900159AD4 /* SettingsView */,
+				415A1F221427905500328122 /* StatistikView */,
 			);
 			path = Farbspiel;
 			sourceTree = "<group>";
@@ -301,6 +321,7 @@
 				41D9262413D8A8C3007612E6 /* GewonnenView.xib */,
 				41D9261313D8A8C3007612E6 /* FarbspielViewController.xib */,
 				41D925E213D8A76B007612E6 /* MainWindow.xib */,
+				415A1F1914276A8900328122 /* StatistikView.xib */,
 			);
 			name = de.lproj;
 			path = en.lproj;
@@ -463,6 +484,7 @@
 				41065C6313E20D7300725686 /* Default@2x.png in Resources */,
 				41065C6913E216A600725686 /* Icon.png in Resources */,
 				41065C6B13E216C400725686 /* IconRetina.png in Resources */,
+				415A1F1B14276A8900328122 /* StatistikView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +537,8 @@
 				413A1E6F13E360D600DAD8A3 /* UIAlertView-BKAdditions.m in Sources */,
 				41FE192913F06D7700BF4656 /* JengoColor.xcdatamodeld in Sources */,
 				41FE196313F0845900BF4656 /* Spiel.m in Sources */,
+				415A1F1E14276BCD00328122 /* StatistikView.m in Sources */,
+				415A1F2114277D9800328122 /* StatistikViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +561,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		415A1F1914276A8900328122 /* StatistikView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				415A1F1A14276A8900328122 /* en */,
+			);
+			name = StatistikView.xib;
+			sourceTree = "<group>";
+		};
 		41D925E213D8A76B007612E6 /* MainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

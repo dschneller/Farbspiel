@@ -38,16 +38,18 @@
     [gewonnenVerlorenLabel release];
     [spieldauerLabel release];
     [levelLabel release];
-    [anzahlSpieleLabel release];
-    [anzahlGewonnenLabel release];
-    [prozentGewonnenLabel release];
-    [anzahlVerlorenLabel release];
+//    [anzahlSpieleLabel release];
+//    [anzahlGewonnenLabel release];
+//    [prozentGewonnenLabel release];
+//    [anzahlVerlorenLabel release];
     [blurLayer_ release];
     [uhrLabel release];
     
     [soundAnAusButton_ release];
     [einstellungenButton release];
     [debugButtonGewinnen release];
+    [statistikPlaceholder_ release];
+    [statistikViewController_ release];
     [super dealloc];
 }
 
@@ -145,7 +147,6 @@
      // Display a border around the button 
      // with a 1.0 pixel width
      [[spielrasterView_ layer] setBorderWidth:1.0f];
-
     
 #if !DEBUG
     [debugButtonVerlieren removeFromSuperview];
@@ -253,14 +254,14 @@
     spieldauerLabel = nil;
     [levelLabel release];
     levelLabel = nil;
-    [anzahlSpieleLabel release];
-    anzahlSpieleLabel = nil;
-    [anzahlGewonnenLabel release];
-    anzahlGewonnenLabel = nil;
-    [prozentGewonnenLabel release];
-    prozentGewonnenLabel = nil;
-    [anzahlVerlorenLabel release];
-    anzahlVerlorenLabel = nil;
+//    [anzahlSpieleLabel release];
+//    anzahlSpieleLabel = nil;
+//    [anzahlGewonnenLabel release];
+//    anzahlGewonnenLabel = nil;
+//    [prozentGewonnenLabel release];
+//    prozentGewonnenLabel = nil;
+//    [anzahlVerlorenLabel release];
+//    anzahlVerlorenLabel = nil;
     [blurLayer_ release];
     blurLayer_ = nil;
     [uhrLabel release];
@@ -272,6 +273,10 @@
     einstellungenButton = nil;
     [debugButtonGewinnen release];
     debugButtonGewinnen = nil;
+    [statistikPlaceholder_ release];
+    statistikPlaceholder_ = nil;
+    [statistikViewController_ release];
+    statistikViewController_ = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -318,7 +323,15 @@
         [[gewonnenView layer] setBorderWidth:1.0f];
         [[gewonnenView layer] setBorderColor:[[[UIColor whiteColor] colorByChangingAlphaTo:0.8f] CGColor]];
         
+        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"StatistikView" owner:statistikViewController_ options:nil];
+        StatistikView *statistikView = (StatistikView *)[views objectAtIndex:0];
+
+        [statistikPlaceholder_ addSubview:statistikView];
+        statistikViewController_.statistikView = statistikView;
+        
         [gewonnenView retain];
+        
+
         
         [neuesSpielButton_ setHighColor:[UIColor greenColor]];
         [neuesSpielButton_ setLowColor:[[UIColor greenColor] colorByDarkeningColor]];
@@ -353,32 +366,21 @@
     
     NSUInteger anzahlSpiele = [[Datenhaltung sharedInstance] anzahlSpieleGesamtFuerLevel:model.level];
     NSUInteger anzahlGewonnen = [[Datenhaltung sharedInstance] anzahlSpieleGewonnen:YES fuerLevel:model.level];
-    NSUInteger anzahlVerloren = anzahlSpiele - anzahlGewonnen;
-
-    float prozentGewonnen;
     
-    if (anzahlSpiele>0) {
-        prozentGewonnen = (float)anzahlGewonnen / (float)anzahlSpiele* 100.0f;
-        prozentGewonnenLabel.hidden = NO;
-    } else {
-        prozentGewonnen = NAN;
-        prozentGewonnenLabel.hidden = YES;
-    }
+    
+    statistikViewController_.anzahlSpiele = anzahlSpiele;
+    statistikViewController_.anzahlGewonnen = anzahlGewonnen;
     
     long dauer = model.spieldauer;
     int minuten = dauer / 60;
     int sekunden = dauer % 60;
-    
     
     gewonnenView.alpha = 0;
     gewonnenView.center = CGPointMake(self.view.center.x, -gewonnenView.frame.size.height);
 
     gewonnenVerlorenLabel.text = gewonnenVerloren;
     gewonnenInXZuegenLabel.text = [NSString stringWithFormat:@"%d", zuege, nil];
-    anzahlSpieleLabel.text = [NSString stringWithFormat:@"%d", anzahlSpiele];
-    anzahlGewonnenLabel.text = [NSString stringWithFormat:@"%d", anzahlGewonnen];
-    anzahlVerlorenLabel.text = [NSString stringWithFormat:@"%d",anzahlVerloren];
-    prozentGewonnenLabel.text = [NSString stringWithFormat:@"(%2.1f%%)", prozentGewonnen];
+    
     spieldauerLabel.text = [NSString stringWithFormat:@"%d:%02d", minuten, sekunden];
     levelLabel.text = level;
 

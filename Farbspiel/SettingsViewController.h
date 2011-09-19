@@ -25,6 +25,8 @@
     UIView *farbe6_;
     UISwitch *rasterSwitch_;
     
+    IBOutlet StatistikViewController *statistikViewController_;
+    IBOutlet StatistikView *statistikPlaceholderView_;
     Spielmodel* passedInModel_;
     FarbspielViewController *aufrufenderController_;
     UIView *farbe1bg_;

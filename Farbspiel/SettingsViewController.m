@@ -106,18 +106,35 @@
     [self.farbPreviewRahmen setNeedsDisplay];
 }
 
+- (void)updateStatsView {
+    NSUInteger anzahlSpiele = [[Datenhaltung sharedInstance] anzahlSpieleGesamtFuerLevel:self.schwierigkeitsGrad.selectedSegmentIndex];
+    NSUInteger anzahlGewonnen = [[Datenhaltung sharedInstance] anzahlSpieleGewonnen:YES fuerLevel:self.schwierigkeitsGrad.selectedSegmentIndex];
+    
+    statistikViewController_.anzahlSpiele = anzahlSpiele;
+    statistikViewController_.anzahlGewonnen = anzahlGewonnen;
+
+}
+
 - (void) initValues {
     self.soundEffekteSwitch.on = [[SoundManager sharedManager] soundAn];
     self.schwierigkeitsGrad.selectedSegmentIndex = [[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL];
     self.farbschema.selectedSegmentIndex = [Farbmapping sharedInstance].farbschema;
     self.rasterSwitch.on = [[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN];
     [self updateFarbschemaPreview];
+    [self updateStatsView];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"StatistikView" owner:statistikViewController_ options:nil];
+    StatistikView *statistikView = [(StatistikView *)[views objectAtIndex:0] retain];
+    
+    [statistikPlaceholderView_ addSubview:statistikView];
+    statistikViewController_.statistikView = statistikView;
+
     
     [self setupLayerPropsForView:farbPreviewRahmen_ showBorder:YES];
     
@@ -156,6 +173,10 @@
     [self setFarbe5bg:nil];
     [self setFarbe6bg:nil];
     [self setRasterSwitch:nil];
+    [statistikViewController_ release];
+    statistikViewController_ = nil;
+    [statistikPlaceholderView_ release];
+    statistikPlaceholderView_ = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -189,6 +210,8 @@
     [rasterSwitch_ release];
     [passedInModel_ release];
     [aufrufenderController_ release];
+    [statistikViewController_ release];
+    [statistikPlaceholderView_ release];
     [super dealloc];
 }
 
@@ -233,6 +256,7 @@
     [[Datenhaltung sharedInstance] setInteger:level fuerKey:PREFKEY_SPIELLEVEL];
     Spielmodel* newModel = [[[Spielmodel alloc] initWithLevel:level] autorelease];
     [self.aufrufenderController settingsGeaendert:newModel];
+    [self updateStatsView];
 }
 
 - (IBAction)farbschemaGewaehlt:(id)sender {
