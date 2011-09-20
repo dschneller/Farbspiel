@@ -10,6 +10,9 @@
 
 #import "Prefkeys.h"
 #import "Spielmodel.h"
+#if RUN_KIF_TESTS
+#import "FarbspielTestController.h"
+#endif
 
 @implementation FarbspielAppDelegate
 
@@ -45,6 +48,12 @@
     self.window.backgroundColor = [UIColor blackColor];
 
     [self.window makeKeyAndVisible];
+    
+#if RUN_KIF_TESTS
+    [[FarbspielTestController sharedInstance] startTestingWithCompletionBlock:^{
+        exit([[FarbspielTestController sharedInstance] failureCount]);
+    }];
+#endif
     return YES;
 }
 

@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>Farbspiel - KIF.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Farbspiel.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +22,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>418812891429D54F00F2BBE8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>41D925CB13D8A76B007612E6</key>
 		<dict>
 			<key>primary</key>

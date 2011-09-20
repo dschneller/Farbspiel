@@ -206,7 +206,6 @@
     [farbe5Button_ setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:5]];
     
     [self.rasterController.view setNeedsDisplay];
-
 }
 
 
@@ -228,8 +227,6 @@
             [self starteNeuesSpielMitLevel:storedLevel];
         } else {
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Q_NEUE_EINSTELLUNGEN_TITEL", @"Title for question after settings change")  message:NSLocalizedString(@"Q_NEUE_EINSTELLUNGEN_ERKLAERUNG", @"New Game now -> Current is counted as lost!") delegate:nil cancelButtonTitle:NSLocalizedString(@"B_WEITERSPIELEN", @"Button text for -continue game-") otherButtonTitles:NSLocalizedString(@"B_NEUES_SPIEL", @"Button text for -new game-"), nil];
-
-//            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Neue Einstellungen" message:@"Wenn Sie ein neues Spiel beginnen, gilt das derzeitige als verloren!" delegate:nil cancelButtonTitle:@"Weiterspielen" otherButtonTitles:@"Neues Spiel", nil];
             
             [alert showUsingButtonBlock:^(NSInteger buttonIndex) {
                 // NO = 0, YES = 1
