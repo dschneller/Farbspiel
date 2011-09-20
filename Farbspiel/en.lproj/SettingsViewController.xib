@@ -69,7 +69,6 @@
 						<string key="NSFrame">{{275, 420}, {18, 19}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<float key="IBUIAlpha">0.5</float>
 						<int key="IBUIContentMode">4</int>
@@ -159,7 +158,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Feldgröße</string>
+						<string key="IBUIText">Grid Size</string>
 						<object class="NSFont" key="IBUIFont" id="250621439">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">12</double>
@@ -185,7 +184,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Farbschema</string>
+						<string key="IBUIText">Color Scheme</string>
 						<reference key="IBUIFont" ref="250621439"/>
 						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
@@ -207,7 +206,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Vorschau</string>
+						<string key="IBUIText">Preview</string>
 						<reference key="IBUIFont" ref="250621439"/>
 						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
@@ -229,7 +228,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Raster</string>
+						<string key="IBUIText">Grid</string>
 						<reference key="IBUIFont" ref="250621439"/>
 						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
@@ -251,7 +250,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Züge</string>
+						<string key="IBUIText">Moves</string>
 						<reference key="IBUIFont" ref="250621439"/>
 						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
@@ -273,7 +272,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Schwierigkeit</string>
+						<string key="IBUIText">Difficulty</string>
 						<object class="NSFont" key="IBUIFont" id="304476208">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">17</double>
@@ -305,7 +304,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Anzeige</string>
+						<string key="IBUIText">Appearance</string>
 						<reference key="IBUIFont" ref="304476208"/>
 						<reference key="IBUITextColor" ref="782204761"/>
 						<nil key="IBUIHighlightedColor"/>
@@ -327,7 +326,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Statistik</string>
+						<string key="IBUIText">Statistics</string>
 						<reference key="IBUIFont" ref="304476208"/>
 						<reference key="IBUITextColor" ref="782204761"/>
 						<nil key="IBUIHighlightedColor"/>
@@ -352,9 +351,9 @@
 						<int key="IBSelectedSegmentIndex">0</int>
 						<object class="NSArray" key="IBSegmentTitles">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>Leicht</string>
-							<string>Mittel</string>
-							<string>Schwer</string>
+							<string>Easy</string>
+							<string>Medium</string>
+							<string>Hard</string>
 						</object>
 						<object class="NSMutableArray" key="IBSegmentWidths">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -982,7 +981,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<reference ref="398762464"/>
 							<reference ref="1010867743"/>
 							<reference ref="827754782"/>
-							<reference ref="624167523"/>
 							<reference ref="986548308"/>
 							<reference ref="747054828"/>
 							<reference ref="994553759"/>
@@ -995,6 +993,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<reference ref="853561509"/>
 							<reference ref="596049218"/>
 							<reference ref="671311764"/>
+							<reference ref="624167523"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1311,7 +1310,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<real value="0.0"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<integer value="0"/>
+					<integer value="2"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -1360,11 +1359,13 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<string>farbschemaGewaehlt:</string>
 							<string>levelGewaehlt:</string>
 							<string>rasterAnAus:</string>
+							<string>resetStats:</string>
 							<string>soundAnAus:</string>
 							<string>zurueckZumSpiel:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -1379,6 +1380,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<string>farbschemaGewaehlt:</string>
 							<string>levelGewaehlt:</string>
 							<string>rasterAnAus:</string>
+							<string>resetStats:</string>
 							<string>soundAnAus:</string>
 							<string>zurueckZumSpiel:</string>
 						</object>
@@ -1394,6 +1396,10 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">rasterAnAus:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">resetStats:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
