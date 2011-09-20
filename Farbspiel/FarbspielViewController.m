@@ -120,12 +120,20 @@
         }
     }];
 }
+-(void) handleSwipeFrom:(UISwipeGestureRecognizer*)recognizer {
+    if (![self.undoManager canUndo]) {
+        [self shakeView:self.rasterController.view];
+    } else {
+        [self.undoManager undo];
+    }
+    
+}
+
 
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     [super motionEnded:motion withEvent:event]; // let undo happen
     if (motion == UIEventSubtypeMotionShake) {
         if (![self.undoManager canUndo]) {
-//            NSLog(@"Cannot undo anymore.");
             [self shakeView:self.rasterController.view];
         }
     }
@@ -134,6 +142,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+    recognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+    [spielrasterView_ addGestureRecognizer:recognizer];
+    [recognizer release];
     
     NSUndoManager *manager = [[NSUndoManager alloc] init];
     self.undoManager = manager;

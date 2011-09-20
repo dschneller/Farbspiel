@@ -26,7 +26,7 @@
 		4184565C1428DD5300C9A68E /* StatistikView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418456491428D76700C9A68E /* StatistikView.xib */; };
 		4184565E1428DEC800C9A68E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD3B1428D2EF0019D98A /* SettingsViewController.xib */; };
 		418456601428DF8500C9A68E /* GewonnenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD3F1428D3B70019D98A /* GewonnenView.xib */; };
-		4184566B1428E86100C9A68E /* smalltrash~iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4184566A1428E86100C9A68E /* smalltrash~iphone@2x.png */; };
+		4184566B1428E86100C9A68E /* smalltrash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4184566A1428E86100C9A68E /* smalltrash@2x.png */; };
 		418E613713D9C2260028A3D9 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613613D9C2260028A3D9 /* SoundManager.m */; };
 		418E613B13D9CE290028A3D9 /* Datenhaltung.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613A13D9CE290028A3D9 /* Datenhaltung.m */; };
 		419DCB2613DA5FB500745241 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2413DA5FB500745241 /* speaker.png */; };
@@ -34,7 +34,7 @@
 		41A114B213DF6CA300B2F0DB /* farbkloetzchen.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B113DF6CA300B2F0DB /* farbkloetzchen.png */; };
 		41A114B513DF6EF100B2F0DB /* farbkloetzchen-jengo.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B313DF6EF100B2F0DB /* farbkloetzchen-jengo.png */; };
 		41A114B613DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B413DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png */; };
-		41C61E2D142898FA00B513EB /* smalltrash~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C61E2C142898FA00B513EB /* smalltrash~iphone.png */; };
+		41C61E2D142898FA00B513EB /* smalltrash.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C61E2C142898FA00B513EB /* smalltrash.png */; };
 		41C61E3114289D4700B513EB /* UIActionSheet-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C61E3014289D4700B513EB /* UIActionSheet-BKAdditions.m */; };
 		41D925D113D8A76B007612E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D013D8A76B007612E6 /* UIKit.framework */; };
 		41D925D313D8A76B007612E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D213D8A76B007612E6 /* Foundation.framework */; };
@@ -102,7 +102,7 @@
 		4184565D1428DEC800C9A68E /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
 		4184565F1428DF8500C9A68E /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/GewonnenView.xib; sourceTree = "<group>"; };
 		418456641428E42600C9A68E /* de */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4184566A1428E86100C9A68E /* smalltrash~iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smalltrash~iphone@2x.png"; sourceTree = "<group>"; };
+		4184566A1428E86100C9A68E /* smalltrash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smalltrash@2x.png"; sourceTree = "<group>"; };
 		418E613513D9C2260028A3D9 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
 		418E613613D9C2260028A3D9 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
 		418E613913D9CE290028A3D9 /* Datenhaltung.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Datenhaltung.h; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		41A114B113DF6CA300B2F0DB /* farbkloetzchen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = farbkloetzchen.png; sourceTree = "<group>"; };
 		41A114B313DF6EF100B2F0DB /* farbkloetzchen-jengo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen-jengo.png"; sourceTree = "<group>"; };
 		41A114B413DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen-jengo@2x.png"; sourceTree = "<group>"; };
-		41C61E2C142898FA00B513EB /* smalltrash~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smalltrash~iphone.png"; sourceTree = "<group>"; };
+		41C61E2C142898FA00B513EB /* smalltrash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smalltrash.png; sourceTree = "<group>"; };
 		41C61E2F14289D4700B513EB /* UIActionSheet-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet-BKAdditions.h"; sourceTree = "<group>"; };
 		41C61E3014289D4700B513EB /* UIActionSheet-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet-BKAdditions.m"; sourceTree = "<group>"; };
 		41D925CC13D8A76B007612E6 /* Farbspiel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Farbspiel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -294,8 +294,8 @@
 		418812781428E9E900F2BBE8 /* Icons and Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				4184566A1428E86100C9A68E /* smalltrash~iphone@2x.png */,
-				41C61E2C142898FA00B513EB /* smalltrash~iphone.png */,
+				4184566A1428E86100C9A68E /* smalltrash@2x.png */,
+				41C61E2C142898FA00B513EB /* smalltrash.png */,
 				419DCB2413DA5FB500745241 /* speaker.png */,
 				419DCB2813DA60EF00745241 /* speaker_off.png */,
 			);
@@ -553,13 +553,13 @@
 				41065C6313E20D7300725686 /* Default@2x.png in Resources */,
 				41065C6913E216A600725686 /* Icon.png in Resources */,
 				41065C6B13E216C400725686 /* IconRetina.png in Resources */,
-				41C61E2D142898FA00B513EB /* smalltrash~iphone.png in Resources */,
+				41C61E2D142898FA00B513EB /* smalltrash.png in Resources */,
 				41EBBD351428D1600019D98A /* Localizable.strings in Resources */,
 				418456501428D76700C9A68E /* GewonnenView.xib in Resources */,
 				4184565C1428DD5300C9A68E /* StatistikView.xib in Resources */,
 				4184565E1428DEC800C9A68E /* SettingsViewController.xib in Resources */,
 				418456601428DF8500C9A68E /* GewonnenView.xib in Resources */,
-				4184566B1428E86100C9A68E /* smalltrash~iphone@2x.png in Resources */,
+				4184566B1428E86100C9A68E /* smalltrash@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

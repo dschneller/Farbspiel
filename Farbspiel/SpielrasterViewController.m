@@ -87,9 +87,15 @@
     if (self.model.zuege == 0) {
         [self spielstart];
     }
+
+    NSNumber* farbeObenLinks = [self.model farbeAnPositionZeile:0 spalte:0];
+    if ([farbeObenLinks unsignedIntValue] == colorNumber) {
+        // gleiche farbe geklickt, wie ohnehin schon oben links
+        return;
+    }
     [[SoundManager sharedManager] playSound:BUTTON];
     [self.view.undoManager registerUndoWithTarget:self selector:@selector(doUndo:) object:[[Spielmodel alloc] initWithModel:self.model]];
-
+    
     [self.model farbeGewaehlt:colorNumber];
     [self updateZuegeDisplay];
     if ([self.model siegErreicht] || self.model.zuege >= self.model.maximaleZuege) {

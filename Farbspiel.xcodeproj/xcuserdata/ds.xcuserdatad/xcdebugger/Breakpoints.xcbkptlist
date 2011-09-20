@@ -135,11 +135,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Farbspiel/FarbspielViewController.m"
-         timestampString = "338219535.145183"
+         timestampString = "338227975.799853"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "326"
-         endingLineNumber = "326"
+         startingLineNumber = "339"
+         endingLineNumber = "339"
          landmarkName = "-loadAndInitGewonnenView"
          landmarkType = "5">
       </FileBreakpoint>
@@ -163,11 +163,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Farbspiel/SpielrasterViewController.m"
-         timestampString = "338215663.166149"
+         timestampString = "338227975.799853"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "93"
-         endingLineNumber = "93"
+         startingLineNumber = "99"
+         endingLineNumber = "99"
          landmarkName = "-colorClicked:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -184,6 +184,20 @@
          endingLineNumber = "29"
          landmarkName = "@interface SettingsViewController"
          landmarkType = "2">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Farbspiel/FarbspielViewController.m"
+         timestampString = "338227975.799853"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "489"
+         endingLineNumber = "489"
+         landmarkName = "-gitterAnAus:"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
