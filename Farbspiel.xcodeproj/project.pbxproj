@@ -14,12 +14,18 @@
 		412BFEBC13DE14F400159AD4 /* ledertextur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBA13DE14F300159AD4 /* ledertextur@2x.png */; };
 		412BFEBD13DE14F400159AD4 /* ledertextur.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBB13DE14F300159AD4 /* ledertextur.png */; };
 		412BFEFA13DE242400159AD4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412BFEF813DE242300159AD4 /* SettingsViewController.m */; };
-		412BFEFB13DE242400159AD4 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEF913DE242400159AD4 /* SettingsViewController.xib */; };
 		413A1E6F13E360D600DAD8A3 /* UIAlertView-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 413A1E6E13E360D600DAD8A3 /* UIAlertView-BKAdditions.m */; };
-		415A1F1B14276A8900328122 /* StatistikView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 415A1F1914276A8900328122 /* StatistikView.xib */; };
 		415A1F1E14276BCD00328122 /* StatistikView.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F1D14276BCD00328122 /* StatistikView.m */; };
 		415A1F2114277D9800328122 /* StatistikViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F2014277D9800328122 /* StatistikViewController.m */; };
 		415A8A4C13DF58A100FF0F3A /* farbkloetzchen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 415A8A4B13DF58A100FF0F3A /* farbkloetzchen@2x.png */; };
+		418456501428D76700C9A68E /* GewonnenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD3F1428D3B70019D98A /* GewonnenView.xib */; };
+		418456561428D83500C9A68E /* FarbspielViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418456471428D76700C9A68E /* FarbspielViewController.xib */; };
+		418456571428D83500C9A68E /* StatistikView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418456491428D76700C9A68E /* StatistikView.xib */; };
+		418456581428D83500C9A68E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD3B1428D2EF0019D98A /* SettingsViewController.xib */; };
+		418456591428D83500C9A68E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D925E213D8A76B007612E6 /* MainWindow.xib */; };
+		4184565C1428DD5300C9A68E /* StatistikView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418456491428D76700C9A68E /* StatistikView.xib */; };
+		4184565E1428DEC800C9A68E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD3B1428D2EF0019D98A /* SettingsViewController.xib */; };
+		418456601428DF8500C9A68E /* GewonnenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD3F1428D3B70019D98A /* GewonnenView.xib */; };
 		418E613713D9C2260028A3D9 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613613D9C2260028A3D9 /* SoundManager.m */; };
 		418E613B13D9CE290028A3D9 /* Datenhaltung.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613A13D9CE290028A3D9 /* Datenhaltung.m */; };
 		419DCB2513DA5FB500745241 /* preferences.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2313DA5FB500745241 /* preferences.png */; };
@@ -34,7 +40,6 @@
 		41D925D313D8A76B007612E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D213D8A76B007612E6 /* Foundation.framework */; };
 		41D925D513D8A76B007612E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D413D8A76B007612E6 /* CoreGraphics.framework */; };
 		41D925E113D8A76B007612E6 /* FarbspielAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D925E013D8A76B007612E6 /* FarbspielAppDelegate.m */; };
-		41D925E413D8A76B007612E6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D925E213D8A76B007612E6 /* MainWindow.xib */; };
 		41D925E713D8A76B007612E6 /* FarbspielViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D925E613D8A76B007612E6 /* FarbspielViewController.m */; };
 		41D925F213D8A76B007612E6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925F113D8A76B007612E6 /* SenTestingKit.framework */; };
 		41D925F313D8A76B007612E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D013D8A76B007612E6 /* UIKit.framework */; };
@@ -43,11 +48,9 @@
 		41D925FD13D8A76B007612E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D925FB13D8A76B007612E6 /* InfoPlist.strings */; };
 		41D925FF13D8A76B007612E6 /* FarbspielTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 41D925FE13D8A76B007612E6 /* FarbspielTests.h */; };
 		41D9260113D8A76B007612E6 /* FarbspielTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9260013D8A76B007612E6 /* FarbspielTests.m */; };
-		41D9263213D8A8C3007612E6 /* FarbspielViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D9261313D8A8C3007612E6 /* FarbspielViewController.xib */; };
 		41D9263513D8A8C3007612E6 /* ColorfulButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9261A13D8A8C3007612E6 /* ColorfulButton.m */; };
 		41D9263613D8A8C3007612E6 /* Farbmapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9261C13D8A8C3007612E6 /* Farbmapping.m */; };
 		41D9263A13D8A8C3007612E6 /* gearButtonGlyph.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D9262313D8A8C3007612E6 /* gearButtonGlyph.png */; };
-		41D9263B13D8A8C3007612E6 /* GewonnenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D9262413D8A8C3007612E6 /* GewonnenView.xib */; };
 		41D9263C13D8A8C3007612E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262513D8A8C3007612E6 /* main.m */; };
 		41D9263D13D8A8C3007612E6 /* NSMutableArray+StackMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262713D8A8C3007612E6 /* NSMutableArray+StackMethods.m */; };
 		41D9263E13D8A8C3007612E6 /* Pair.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262913D8A8C3007612E6 /* Pair.m */; };
@@ -61,6 +64,7 @@
 		41D9265713D8F704007612E6 /* 215.caf in Resources */ = {isa = PBXBuildFile; fileRef = 41D9265513D8F703007612E6 /* 215.caf */; };
 		41D9265813D8F704007612E6 /* 225.caf in Resources */ = {isa = PBXBuildFile; fileRef = 41D9265613D8F703007612E6 /* 225.caf */; };
 		41D9265B13D8F9E9007612E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D9265A13D8F9E9007612E6 /* InfoPlist.strings */; };
+		41EBBD351428D1600019D98A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD371428D1600019D98A /* Localizable.strings */; };
 		41FE192913F06D7700BF4656 /* JengoColor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41FE192713F06D7700BF4656 /* JengoColor.xcdatamodeld */; };
 		41FE195A13F0740A00BF4656 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FE195913F0740A00BF4656 /* CoreData.framework */; };
 		41FE196313F0845900BF4656 /* Spiel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FE196213F0845900BF4656 /* Spiel.m */; };
@@ -85,16 +89,20 @@
 		412BFEBB13DE14F300159AD4 /* ledertextur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ledertextur.png; sourceTree = "<group>"; };
 		412BFEF713DE242300159AD4 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		412BFEF813DE242300159AD4 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		412BFEF913DE242400159AD4 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = ../SettingsViewController.xib; sourceTree = "<group>"; };
 		413A1E6D13E360D600DAD8A3 /* UIAlertView-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView-BKAdditions.h"; sourceTree = "<group>"; };
 		413A1E6E13E360D600DAD8A3 /* UIAlertView-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView-BKAdditions.m"; sourceTree = "<group>"; };
 		413A1E7013E360EF00DAD8A3 /* BKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTypes.h; sourceTree = "<group>"; };
-		415A1F1A14276A8900328122 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = StatistikView.xib; sourceTree = "<group>"; };
 		415A1F1C14276BCD00328122 /* StatistikView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatistikView.h; sourceTree = "<group>"; };
 		415A1F1D14276BCD00328122 /* StatistikView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatistikView.m; sourceTree = "<group>"; };
 		415A1F1F14277D9700328122 /* StatistikViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatistikViewController.h; sourceTree = "<group>"; };
 		415A1F2014277D9800328122 /* StatistikViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatistikViewController.m; sourceTree = "<group>"; };
 		415A8A4B13DF58A100FF0F3A /* farbkloetzchen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen@2x.png"; sourceTree = "<group>"; };
+		4184564B1428D76700C9A68E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FarbspielViewController.xib; sourceTree = "<group>"; };
+		4184564C1428D76700C9A68E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StatistikView.xib; sourceTree = "<group>"; };
+		4184565B1428DD5300C9A68E /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/StatistikView.xib; sourceTree = "<group>"; };
+		4184565D1428DEC800C9A68E /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
+		4184565F1428DF8500C9A68E /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/GewonnenView.xib; sourceTree = "<group>"; };
+		418456641428E42600C9A68E /* de */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		418E613513D9C2260028A3D9 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
 		418E613613D9C2260028A3D9 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
 		418E613913D9CE290028A3D9 /* Datenhaltung.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Datenhaltung.h; sourceTree = "<group>"; };
@@ -126,13 +134,11 @@
 		41D925FC13D8A76B007612E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		41D925FE13D8A76B007612E6 /* FarbspielTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FarbspielTests.h; sourceTree = "<group>"; };
 		41D9260013D8A76B007612E6 /* FarbspielTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarbspielTests.m; sourceTree = "<group>"; };
-		41D9261413D8A8C3007612E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = FarbspielViewController.xib; sourceTree = "<group>"; };
 		41D9261913D8A8C3007612E6 /* ColorfulButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorfulButton.h; sourceTree = "<group>"; };
 		41D9261A13D8A8C3007612E6 /* ColorfulButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorfulButton.m; sourceTree = "<group>"; };
 		41D9261B13D8A8C3007612E6 /* Farbmapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Farbmapping.h; sourceTree = "<group>"; };
 		41D9261C13D8A8C3007612E6 /* Farbmapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Farbmapping.m; sourceTree = "<group>"; };
 		41D9262313D8A8C3007612E6 /* gearButtonGlyph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gearButtonGlyph.png; sourceTree = "<group>"; };
-		41D9262413D8A8C3007612E6 /* GewonnenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GewonnenView.xib; path = ../GewonnenView.xib; sourceTree = "<group>"; };
 		41D9262513D8A8C3007612E6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		41D9262613D8A8C3007612E6 /* NSMutableArray+StackMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+StackMethods.h"; sourceTree = "<group>"; };
 		41D9262713D8A8C3007612E6 /* NSMutableArray+StackMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+StackMethods.m"; sourceTree = "<group>"; };
@@ -152,6 +158,9 @@
 		41D9265513D8F703007612E6 /* 215.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 215.caf; sourceTree = "<group>"; };
 		41D9265613D8F703007612E6 /* 225.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 225.caf; sourceTree = "<group>"; };
 		41D9265A13D8F9E9007612E6 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		41EBBD361428D1600019D98A /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		41EBBD3A1428D2EF0019D98A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
+		41EBBD3E1428D3B70019D98A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GewonnenView.xib; sourceTree = "<group>"; };
 		41FE192813F06D7700BF4656 /* JengoColor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JengoColor.xcdatamodel; sourceTree = "<group>"; };
 		41FE195913F0740A00BF4656 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		41FE196113F0845900BF4656 /* Spiel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spiel.h; sourceTree = "<group>"; };
@@ -231,6 +240,18 @@
 			name = StatistikView;
 			sourceTree = "<group>";
 		};
+		418456611428DFC700C9A68E /* GUIs */ = {
+			isa = PBXGroup;
+			children = (
+				418456471428D76700C9A68E /* FarbspielViewController.xib */,
+				418456491428D76700C9A68E /* StatistikView.xib */,
+				41EBBD3B1428D2EF0019D98A /* SettingsViewController.xib */,
+				41EBBD3F1428D3B70019D98A /* GewonnenView.xib */,
+				41D925E213D8A76B007612E6 /* MainWindow.xib */,
+			);
+			name = GUIs;
+			sourceTree = "<group>";
+		};
 		41D925C113D8A76B007612E6 = {
 			isa = PBXGroup;
 			children = (
@@ -267,9 +288,9 @@
 		41D925D613D8A76B007612E6 /* Farbspiel */ = {
 			isa = PBXGroup;
 			children = (
+				418456611428DFC700C9A68E /* GUIs */,
 				413A1E7113E5CC9F00DAD8A3 /* Resources */,
 				41D9265913D8F965007612E6 /* Sounds */,
-				41D9261213D8A8C3007612E6 /* de.lproj */,
 				41D9264413D8A8D1007612E6 /* Colorful Button */,
 				41D9264513D8A9C3007612E6 /* Categories */,
 				41D9264613D8AA09007612E6 /* FarbspielViewController */,
@@ -291,6 +312,7 @@
 		41D925D713D8A76B007612E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				41EBBD371428D1600019D98A /* Localizable.strings */,
 				41D925DF13D8A76B007612E6 /* FarbspielAppDelegate.h */,
 				41D925E013D8A76B007612E6 /* FarbspielAppDelegate.m */,
 				41D9262513D8A8C3007612E6 /* main.m */,
@@ -318,19 +340,6 @@
 				41D925FB13D8A76B007612E6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		41D9261213D8A8C3007612E6 /* de.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				412BFEF913DE242400159AD4 /* SettingsViewController.xib */,
-				41D9262413D8A8C3007612E6 /* GewonnenView.xib */,
-				41D9261313D8A8C3007612E6 /* FarbspielViewController.xib */,
-				41D925E213D8A76B007612E6 /* MainWindow.xib */,
-				415A1F1914276A8900328122 /* StatistikView.xib */,
-			);
-			name = de.lproj;
-			path = en.lproj;
 			sourceTree = "<group>";
 		};
 		41D9264413D8A8D1007612E6 /* Colorful Button */ = {
@@ -453,6 +462,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				de,
 			);
 			mainGroup = 41D925C113D8A76B007612E6;
 			productRefGroup = 41D925CD13D8A76B007612E6 /* Products */;
@@ -470,10 +480,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41D925E413D8A76B007612E6 /* MainWindow.xib in Resources */,
-				41D9263213D8A8C3007612E6 /* FarbspielViewController.xib in Resources */,
+				418456561428D83500C9A68E /* FarbspielViewController.xib in Resources */,
+				418456571428D83500C9A68E /* StatistikView.xib in Resources */,
+				418456581428D83500C9A68E /* SettingsViewController.xib in Resources */,
+				418456591428D83500C9A68E /* MainWindow.xib in Resources */,
 				41D9263A13D8A8C3007612E6 /* gearButtonGlyph.png in Resources */,
-				41D9263B13D8A8C3007612E6 /* GewonnenView.xib in Resources */,
 				41D9265013D8EE67007612E6 /* 210.caf in Resources */,
 				41D9265713D8F704007612E6 /* 215.caf in Resources */,
 				41D9265813D8F704007612E6 /* 225.caf in Resources */,
@@ -483,7 +494,6 @@
 				419DCB2913DA60EF00745241 /* speaker_off.png in Resources */,
 				412BFEBC13DE14F400159AD4 /* ledertextur@2x.png in Resources */,
 				412BFEBD13DE14F400159AD4 /* ledertextur.png in Resources */,
-				412BFEFB13DE242400159AD4 /* SettingsViewController.xib in Resources */,
 				415A8A4C13DF58A100FF0F3A /* farbkloetzchen@2x.png in Resources */,
 				41A114B213DF6CA300B2F0DB /* farbkloetzchen.png in Resources */,
 				41A114B513DF6EF100B2F0DB /* farbkloetzchen-jengo.png in Resources */,
@@ -492,8 +502,12 @@
 				41065C6313E20D7300725686 /* Default@2x.png in Resources */,
 				41065C6913E216A600725686 /* Icon.png in Resources */,
 				41065C6B13E216C400725686 /* IconRetina.png in Resources */,
-				415A1F1B14276A8900328122 /* StatistikView.xib in Resources */,
 				41C61E2D142898FA00B513EB /* smalltrash~iphone.png in Resources */,
+				41EBBD351428D1600019D98A /* Localizable.strings in Resources */,
+				418456501428D76700C9A68E /* GewonnenView.xib in Resources */,
+				4184565C1428DD5300C9A68E /* StatistikView.xib in Resources */,
+				4184565E1428DEC800C9A68E /* SettingsViewController.xib in Resources */,
+				418456601428DF8500C9A68E /* GewonnenView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,10 +585,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		415A1F1914276A8900328122 /* StatistikView.xib */ = {
+		418456471428D76700C9A68E /* FarbspielViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				415A1F1A14276A8900328122 /* en */,
+				4184564B1428D76700C9A68E /* en */,
+			);
+			name = FarbspielViewController.xib;
+			sourceTree = "<group>";
+		};
+		418456491428D76700C9A68E /* StatistikView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4184564C1428D76700C9A68E /* en */,
+				4184565B1428DD5300C9A68E /* de */,
 			);
 			name = StatistikView.xib;
 			sourceTree = "<group>";
@@ -585,7 +608,6 @@
 				41D925E313D8A76B007612E6 /* en */,
 			);
 			name = MainWindow.xib;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		41D925FB13D8A76B007612E6 /* InfoPlist.strings */ = {
@@ -596,12 +618,31 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		41D9261313D8A8C3007612E6 /* FarbspielViewController.xib */ = {
+		41EBBD371428D1600019D98A /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				41D9261413D8A8C3007612E6 /* en */,
+				41EBBD361428D1600019D98A /* en */,
+				418456641428E42600C9A68E /* de */,
 			);
-			name = FarbspielViewController.xib;
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		41EBBD3B1428D2EF0019D98A /* SettingsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41EBBD3A1428D2EF0019D98A /* en */,
+				4184565D1428DEC800C9A68E /* de */,
+			);
+			name = SettingsViewController.xib;
+			sourceTree = "<group>";
+		};
+		41EBBD3F1428D3B70019D98A /* GewonnenView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41EBBD3E1428D3B70019D98A /* en */,
+				4184565F1428DF8500C9A68E /* de */,
+			);
+			name = GewonnenView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

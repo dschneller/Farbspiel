@@ -39,10 +39,6 @@
     [gewonnenVerlorenLabel release];
     [spieldauerLabel release];
     [levelLabel release];
-//    [anzahlSpieleLabel release];
-//    [anzahlGewonnenLabel release];
-//    [prozentGewonnenLabel release];
-//    [anzahlVerlorenLabel release];
     [blurLayer_ release];
     [uhrLabel release];
     
@@ -101,7 +97,7 @@
 }
 
 -(void)undoManagerDidUndo:(id)object {
-    NSLog(@"Undo Manager did Undo");
+//    NSLog(@"Undo Manager did Undo");
     [self.undoManager removeAllActions];
 }
 
@@ -127,11 +123,9 @@
 
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     [super motionEnded:motion withEvent:event]; // let undo happen
-    
-    // 
     if (motion == UIEventSubtypeMotionShake) {
         if (![self.undoManager canUndo]) {
-            NSLog(@"Cannot undo anymore.");
+//            NSLog(@"Cannot undo anymore.");
             [self shakeView:self.rasterController.view];
         }
     }
@@ -151,10 +145,6 @@
     
     [manager release];
     
-    
-    
-    NSLog(@"Undo Levels: %d", undoManager.levelsOfUndo);
-
      // Set the layer's corner radius
      [[spielrasterView_ layer] setCornerRadius:8.0f];
      // Turn on masking
@@ -224,15 +214,14 @@
             !rasterController.model.spielLaeuft) {
             [self starteNeuesSpielMitLevel:storedLevel];
         } else {
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Neue Einstellungen" message:@"Wenn Sie ein neues Spiel beginnen, gilt das derzeitige als verloren!" delegate:nil cancelButtonTitle:@"Weiterspielen" otherButtonTitles:@"Neues Spiel", nil];
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Q_NEUE_EINSTELLUNGEN_TITEL", @"Title for question after settings change")  message:NSLocalizedString(@"Q_NEUE_EINSTELLUNGEN_ERKLAERUNG", @"New Game now -> Current is counted as lost!") delegate:nil cancelButtonTitle:NSLocalizedString(@"B_WEITERSPIELEN", @"Button text for -continue game-") otherButtonTitles:NSLocalizedString(@"B_NEUES_SPIEL", @"Button text for -new game-"), nil];
+
+//            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Neue Einstellungen" message:@"Wenn Sie ein neues Spiel beginnen, gilt das derzeitige als verloren!" delegate:nil cancelButtonTitle:@"Weiterspielen" otherButtonTitles:@"Neues Spiel", nil];
             
             [alert showUsingButtonBlock:^(NSInteger buttonIndex) {
                 // NO = 0, YES = 1
-                if(buttonIndex == 0) {
-                    NSLog(@"Weiterspielen",nil);
-                } else {
+                if(buttonIndex == 1) {
                     [self.rasterController spielAbbrechen];
-                    NSLog(@"Neues Spiel",nil);
                 }
             }];
             [alert release];
@@ -361,20 +350,20 @@
     
     int zuege = model.zuege;
 
-    NSString* gewonnenVerloren = (model.siegErreicht) ? @"Gewonnen!" : @"Verloren!";
+    NSString* gewonnenVerloren = (model.siegErreicht) ? NSLocalizedString(@"L_GEWONNEN", @"Label for -won-") : NSLocalizedString(@"L_VERLOREN", @"Label for -lost-");
     NSString* level;
     switch (model.level) {
         case HARD:
-            level = @"Hard";
+            level = NSLocalizedString(@"L_SCHWER", @"Level name for -hard-");
             break;
             
         case MEDIUM:
-            level = @"Medium";
+            level = NSLocalizedString(@"L_MITTEL", @"Level name for -medium-");
             break;
             
         case EASY:
         default:
-            level = @"Easy";
+            level = NSLocalizedString(@"L_EASY", @"Level name for -easy-");
             break;
     }
     

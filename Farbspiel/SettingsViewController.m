@@ -126,7 +126,7 @@
 }
 
 - (IBAction)resetStats:(id)sender {
-    UIActionSheet* sheet = [[UIActionSheet alloc] initWithTitle:@"Statistik löschen?" delegate:nil cancelButtonTitle:@"Nein, Werte behalten." destructiveButtonTitle:@"Ja, löschen!" otherButtonTitles:nil];
+    UIActionSheet* sheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"Q_STATISTIK_LOESCHEN", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"Q_STATISTIK_LOESCHEN_NEIN",nil) destructiveButtonTitle:NSLocalizedString(@"Q_STATISTIK_LOESCHEN_JA",nil) otherButtonTitles:nil];
     
     [sheet showFromView:self.view buttonBlock:^(NSInteger buttonIndex) {
         // NO = 1, YES = 0
