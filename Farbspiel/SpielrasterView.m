@@ -99,9 +99,8 @@
         }
         
     }
-    
-    
 }
+
 
 - (void)dealloc {
     [raster_ release];

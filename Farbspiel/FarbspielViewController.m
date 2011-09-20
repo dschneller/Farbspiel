@@ -16,6 +16,7 @@
 @implementation FarbspielViewController
 
 @synthesize rasterController;
+@synthesize undoManager;
 @synthesize defaultLevel = defaultLevel_;
 
 
@@ -88,43 +89,6 @@
     [model release];
 }
 
-#pragma mark - Shake to undo
-
-
--(void) undo {
-    NSLog(@"UNDO", nil);
-}
-
--(void) frageNachUndo {
-    // TODO: Nicht direkt durchgreifen
-    if (self.rasterController.model.zuege == 0) { 
-        NSLog(@"Noch keine Zuege, ignoriere Undo Request", nil);
-        return;
-    }
-    
-    
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Undo?" message:@"Möchten Sie den letzten Spielzug zurücknehmen?" delegate:nil cancelButtonTitle:@"Nein" otherButtonTitles:@"Ja!", nil];
-
-    [alert showUsingButtonBlock:^(NSInteger buttonIndex) {
-        // NO = 0, YES = 1
-        if(buttonIndex == 0) {
-            NSLog(@"Undo nicht gewuenscht",nil);
-        } else {
-            [self undo];
-        }
-    }];
-    
-    [alert release];
-}
-
-
-
-
--(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-   [self frageNachUndo];
-}
-
-
 
 #pragma mark - View lifecycle
 
@@ -136,10 +100,61 @@
     }
 }
 
+-(void)undoManagerDidUndo:(id)object {
+    NSLog(@"Undo Manager did Undo");
+    [self.undoManager removeAllActions];
+}
+
+- (void)shakeView:(UIView *)viewToShake
+{
+    CGFloat t = 5.0;
+    CGAffineTransform translateRight  = CGAffineTransformTranslate(CGAffineTransformIdentity, t, 0.0);
+    CGAffineTransform translateLeft = CGAffineTransformTranslate(CGAffineTransformIdentity, -t, 0.0);
+    
+    viewToShake.transform = translateLeft;
+    
+    [UIView animateWithDuration:0.07 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+        [UIView setAnimationRepeatCount:2.0];
+        viewToShake.transform = translateRight;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [UIView animateWithDuration:0.05 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                viewToShake.transform = CGAffineTransformIdentity;
+            } completion:NULL];
+        }
+    }];
+}
+
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    [super motionEnded:motion withEvent:event]; // let undo happen
+    
+    // 
+    if (motion == UIEventSubtypeMotionShake) {
+        if (![self.undoManager canUndo]) {
+            NSLog(@"Cannot undo anymore.");
+            [self shakeView:self.rasterController.view];
+        }
+    }
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSUndoManager *manager = [[NSUndoManager alloc] init];
+    self.undoManager = manager;
+    self.undoManager.levelsOfUndo = 1;
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(undoManagerDidUndo:)
+                name:NSUndoManagerDidUndoChangeNotification object:manager];
+    
+    [manager release];
+    
+    
+    
+    NSLog(@"Undo Levels: %d", undoManager.levelsOfUndo);
+
      // Set the layer's corner radius
      [[spielrasterView_ layer] setCornerRadius:8.0f];
      // Turn on masking
@@ -160,6 +175,11 @@
 
     self.defaultLevel = (SpielLevel) [[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL];
     [self starteNeuesSpielMitLevel:self.defaultLevel];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self resignFirstResponder];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -254,14 +274,6 @@
     spieldauerLabel = nil;
     [levelLabel release];
     levelLabel = nil;
-//    [anzahlSpieleLabel release];
-//    anzahlSpieleLabel = nil;
-//    [anzahlGewonnenLabel release];
-//    anzahlGewonnenLabel = nil;
-//    [prozentGewonnenLabel release];
-//    prozentGewonnenLabel = nil;
-//    [anzahlVerlorenLabel release];
-//    anzahlVerlorenLabel = nil;
     [blurLayer_ release];
     blurLayer_ = nil;
     [uhrLabel release];
@@ -277,6 +289,8 @@
     statistikPlaceholder_ = nil;
     [statistikViewController_ release];
     statistikViewController_ = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    self.undoManager = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

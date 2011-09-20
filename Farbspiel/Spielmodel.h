@@ -54,7 +54,7 @@ typedef enum {
 @property (assign)            BOOL              debugErzwungenerSieg;
 #endif
 
-
+-(id)initWithModel:(Spielmodel*)templateModel;
 -(id)initWithLevel:(SpielLevel)level;
 -(NSNumber *) farbeAnPositionZeile:(NSUInteger)row spalte:(NSUInteger)col;
 -(void)farbeGewaehlt:(NSUInteger)colorNum;

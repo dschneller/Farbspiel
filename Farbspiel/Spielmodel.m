@@ -68,7 +68,7 @@
     }
 }
 
--(void)faerbeVonX {
+-(void)zaehleSpielzug {
     self.zuege ++;
 }
 
@@ -76,8 +76,8 @@
     if (alt == neu) {
         return;
     }
-    [self faerbeVonX];
     
+    [self zaehleSpielzug];
     [self debugMatrix];
     
     NSMutableArray* stack = [NSMutableArray array];
@@ -203,6 +203,21 @@
 #endif
         
         [self randomizeSpielfeld];
+    }
+    return self;
+}
+
+-(id)initWithModel:(Spielmodel*)templateModel {
+    if ((self = [super init])) {
+        felderProKante_ = templateModel.felderProKante;
+        maximaleZuege_ = templateModel.maximaleZuege;
+        self.level = templateModel.level;
+        self.zuege = templateModel.zuege;
+        self.abgebrochen = templateModel.abgebrochen;
+#if DEBUG
+        self.debugErzwungenerSieg = templateModel.debugErzwungenerSieg;
+#endif
+        self.farbfelder = [templateModel.farbfelder copy];
     }
     return self;
 }

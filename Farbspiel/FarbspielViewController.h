@@ -17,8 +17,6 @@
 
 @interface FarbspielViewController : UIViewController <SpielrasterViewControllerDelegate> {
     
-//    SpielrasterViewController *rasterController_;
-    
     IBOutlet UIButton *debugButtonVerlieren;
     IBOutlet UIButton *debugButtonGewinnen;
     IBOutlet UIView *gewonnenView;
@@ -29,12 +27,6 @@
     IBOutlet UILabel *uhrLabel;
     IBOutlet UILabel *levelLabel;
 
-    
-//    IBOutlet UILabel *anzahlSpieleLabel;
-//    IBOutlet UILabel *anzahlGewonnenLabel;
-//    IBOutlet UILabel *prozentGewonnenLabel;
-//    IBOutlet UILabel *anzahlVerlorenLabel;
-    
     IBOutlet StatistikViewController *statistikViewController_;
     IBOutlet StatistikView *statistikPlaceholder_;
     IBOutlet ColorfulButton *einstellungenButton;
@@ -56,6 +48,8 @@
 
 @property (nonatomic,retain) SpielrasterViewController* rasterController;
 @property (nonatomic,assign) SpielLevel defaultLevel;
+
+@property (retain) NSUndoManager *undoManager; // override to enable writing
 
 - (IBAction)neuesSpiel:(id)sender;
 - (IBAction)colorButtonPressed:(id)sender;

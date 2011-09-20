@@ -9,6 +9,7 @@
 #import "SpielrasterViewController.h"
 #import "SoundManager.h"
 #import "Datenhaltung.h"
+#import "Farbmapping.h"
 
 
 @implementation SpielrasterViewController
@@ -35,7 +36,7 @@
 
 
 -(void) tick {
-    NSLog(@"TICK %ld", self.model.spieldauer);
+//    NSLog(@"TICK %ld", self.model.spieldauer);
     self.model.spieldauer = self.model.spieldauer+1;
     [self.delegate spielrasterViewController:self modelDidChange:self.model];
 }
@@ -71,12 +72,24 @@
   [self.delegate spielrasterViewController:self spielEndeMitModel:self.model];
 }
 
+-(void) doUndo:(Spielmodel*)previousModel {
+    self.model.zuege = previousModel.zuege;
+    for (NSUInteger i=0; i<self.model.farbfelder.count; i++) {
+        [self.model.farbfelder replaceObjectAtIndex:i withObject:[previousModel.farbfelder objectAtIndex:i]];
+    }
+    [self updateZuegeDisplay];
+    [self.view setNeedsDisplay];
+}
+
+
 
 -(void) colorClicked:(NSUInteger)colorNumber {
     if (self.model.zuege == 0) {
         [self spielstart];
     }
     [[SoundManager sharedManager] playSound:BUTTON];
+    [self.view.undoManager registerUndoWithTarget:self selector:@selector(doUndo:) object:[[Spielmodel alloc] initWithModel:self.model]];
+
     [self.model farbeGewaehlt:colorNumber];
     [self updateZuegeDisplay];
     if ([self.model siegErreicht] || self.model.zuege >= self.model.maximaleZuege) {
@@ -128,36 +141,6 @@
     [delegate_ release];
     [model_ release];
     [super dealloc];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
-#pragma mark - View lifecycle
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-*/
-
-- (void)viewDidUnload
-{
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 
