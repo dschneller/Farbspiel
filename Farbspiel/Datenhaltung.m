@@ -54,6 +54,37 @@ static Datenhaltung *sharedSingleton;
     return [[NSUserDefaults standardUserDefaults] boolForKey:key];
 }
 
+-(void)resetLevel:(SpielLevel)level {
+    FarbspielAppDelegate *app = [UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *ctx = app.managedObjectContext;
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Spiel"
+                                              inManagedObjectContext:ctx];
+    fetchRequest.includesSubentities = NO;
+    fetchRequest.entity = entity;
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"level == %@",
+                              [NSNumber numberWithUnsignedInteger:(NSUInteger)level]];
+    fetchRequest.predicate = predicate;
+    fetchRequest.includesPropertyValues = NO;
+    
+    NSError *error = nil;
+    NSArray *spiele = [ctx executeFetchRequest:fetchRequest error:&error];
+    [fetchRequest release];
+    
+    if (error) {
+        NSLog(@"Fehler beim Zuruecksetzen der Statistik fuer Level %d: %@", level, error);
+        return;
+    }
+    
+    //error handling goes here
+    for (NSManagedObject *spiel in spiele) {
+        [ctx deleteObject:spiel];
+    }
+    
+
+}
 
 -(void)speichereSpielAusgang:(Spielmodel *)model {
     FarbspielAppDelegate *app = [UIApplication sharedApplication].delegate;

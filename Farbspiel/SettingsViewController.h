@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "UIActionSheet-BKAdditions.h"
 #import "FarbspielViewController.h"
 
 @interface SettingsViewController : UIViewController {
@@ -24,6 +25,7 @@
     UIView *farbe5_;
     UIView *farbe6_;
     UISwitch *rasterSwitch_;
+    IBOutlet UIButton *statistikLoeschenButton_;
     
     IBOutlet StatistikViewController *statistikViewController_;
     IBOutlet StatistikView *statistikPlaceholderView_;
@@ -66,6 +68,6 @@
 - (IBAction)levelGewaehlt:(id)sender;
 - (IBAction)farbschemaGewaehlt:(id)sender;
 - (IBAction)rasterAnAus:(id)sender;
-
+- (IBAction)resetStats:(id)sender;
 
 @end

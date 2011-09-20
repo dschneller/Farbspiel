@@ -112,6 +112,7 @@
     
     statistikViewController_.anzahlSpiele = anzahlSpiele;
     statistikViewController_.anzahlGewonnen = anzahlGewonnen;
+    statistikLoeschenButton_.hidden = anzahlSpiele == 0;
 
 }
 
@@ -124,6 +125,22 @@
     [self updateStatsView];
 }
 
+- (IBAction)resetStats:(id)sender {
+    UIActionSheet* sheet = [[UIActionSheet alloc] initWithTitle:@"Statistik löschen?" delegate:nil cancelButtonTitle:@"Nein, Werte behalten." destructiveButtonTitle:@"Ja, löschen!" otherButtonTitles:nil];
+    
+    [sheet showFromView:self.view buttonBlock:^(NSInteger buttonIndex) {
+        // NO = 1, YES = 0
+        if(buttonIndex == 1) {
+            NSLog(@"Statistik erhalten gewuenscht",nil);
+        } else {
+            [[Datenhaltung sharedInstance] resetLevel:self.schwierigkeitsGrad.selectedSegmentIndex];
+            [self updateStatsView];
+        }
+    }];
+    [sheet release];
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -132,10 +149,10 @@
     NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"StatistikView" owner:statistikViewController_ options:nil];
     StatistikView *statistikView = [(StatistikView *)[views objectAtIndex:0] retain];
     
+    statistikPlaceholderView_.backgroundColor = [UIColor clearColor];
     [statistikPlaceholderView_ addSubview:statistikView];
     statistikViewController_.statistikView = statistikView;
 
-    
     [self setupLayerPropsForView:farbPreviewRahmen_ showBorder:YES];
     
 }
@@ -177,6 +194,8 @@
     statistikViewController_ = nil;
     [statistikPlaceholderView_ release];
     statistikPlaceholderView_ = nil;
+    [statistikLoeschenButton_ release];
+    statistikLoeschenButton_ = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -212,6 +231,7 @@
     [aufrufenderController_ release];
     [statistikViewController_ release];
     [statistikPlaceholderView_ release];
+    [statistikLoeschenButton_ release];
     [super dealloc];
 }
 

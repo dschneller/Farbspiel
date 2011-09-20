@@ -28,6 +28,8 @@
 		41A114B213DF6CA300B2F0DB /* farbkloetzchen.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B113DF6CA300B2F0DB /* farbkloetzchen.png */; };
 		41A114B513DF6EF100B2F0DB /* farbkloetzchen-jengo.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B313DF6EF100B2F0DB /* farbkloetzchen-jengo.png */; };
 		41A114B613DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B413DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png */; };
+		41C61E2D142898FA00B513EB /* smalltrash~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C61E2C142898FA00B513EB /* smalltrash~iphone.png */; };
+		41C61E3114289D4700B513EB /* UIActionSheet-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C61E3014289D4700B513EB /* UIActionSheet-BKAdditions.m */; };
 		41D925D113D8A76B007612E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D013D8A76B007612E6 /* UIKit.framework */; };
 		41D925D313D8A76B007612E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D213D8A76B007612E6 /* Foundation.framework */; };
 		41D925D513D8A76B007612E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D413D8A76B007612E6 /* CoreGraphics.framework */; };
@@ -104,6 +106,9 @@
 		41A114B113DF6CA300B2F0DB /* farbkloetzchen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = farbkloetzchen.png; sourceTree = "<group>"; };
 		41A114B313DF6EF100B2F0DB /* farbkloetzchen-jengo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen-jengo.png"; sourceTree = "<group>"; };
 		41A114B413DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen-jengo@2x.png"; sourceTree = "<group>"; };
+		41C61E2C142898FA00B513EB /* smalltrash~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smalltrash~iphone.png"; sourceTree = "<group>"; };
+		41C61E2F14289D4700B513EB /* UIActionSheet-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet-BKAdditions.h"; sourceTree = "<group>"; };
+		41C61E3014289D4700B513EB /* UIActionSheet-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet-BKAdditions.m"; sourceTree = "<group>"; };
 		41D925CC13D8A76B007612E6 /* Farbspiel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Farbspiel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D925D013D8A76B007612E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		41D925D213D8A76B007612E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -184,6 +189,7 @@
 		412BFEFC13DE242900159AD4 /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
+				41C61E2C142898FA00B513EB /* smalltrash~iphone.png */,
 				412BFEF713DE242300159AD4 /* SettingsViewController.h */,
 				412BFEF813DE242300159AD4 /* SettingsViewController.m */,
 			);
@@ -339,6 +345,8 @@
 		41D9264513D8A9C3007612E6 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				41C61E2F14289D4700B513EB /* UIActionSheet-BKAdditions.h */,
+				41C61E3014289D4700B513EB /* UIActionSheet-BKAdditions.m */,
 				413A1E7013E360EF00DAD8A3 /* BKTypes.h */,
 				413A1E6D13E360D600DAD8A3 /* UIAlertView-BKAdditions.h */,
 				413A1E6E13E360D600DAD8A3 /* UIAlertView-BKAdditions.m */,
@@ -485,6 +493,7 @@
 				41065C6913E216A600725686 /* Icon.png in Resources */,
 				41065C6B13E216C400725686 /* IconRetina.png in Resources */,
 				415A1F1B14276A8900328122 /* StatistikView.xib in Resources */,
+				41C61E2D142898FA00B513EB /* smalltrash~iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +548,7 @@
 				41FE196313F0845900BF4656 /* Spiel.m in Sources */,
 				415A1F1E14276BCD00328122 /* StatistikView.m in Sources */,
 				415A1F2114277D9800328122 /* StatistikViewController.m in Sources */,
+				41C61E3114289D4700B513EB /* UIActionSheet-BKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
