@@ -24,12 +24,10 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];    
 
-    [farbe5Button_ release];
-    [farbe4Button_ release];
-    [farbe3Button_ release];
-    [farbe2Button_ release];
-    [farbe1Button_ release];
-    [farbe0Button_ release];
+    for (ColorfulButton* b in allColorButtons) {
+        [b release];
+    }
+
     [spielrasterView_ release];
     [rasterController release];
     [gewonnenView release];
@@ -47,6 +45,8 @@
     [debugButtonGewinnen release];
     [statistikPlaceholder_ release];
     [statistikViewController_ release];
+    [allColorButtons release];
+    [settingsToggleButton release];
     [super dealloc];
 }
 
@@ -185,27 +185,19 @@
     [self resignFirstResponder];
 }
 
-- (void) viewWillAppear:(BOOL)animated {
+-(void) updateGUIAusSettings {
     [self updateSoundButton:[SoundManager sharedManager].soundAn];
-    [farbe0Button_ setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:0]];
-    [farbe0Button_ setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:0]];
     
-    [farbe1Button_ setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:1]];
-    [farbe1Button_ setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:1]];
-    
-    [farbe2Button_ setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:2]];
-    [farbe2Button_ setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:2]];
-    
-    [farbe3Button_ setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:3]];
-    [farbe3Button_ setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:3]];
-    
-    [farbe4Button_ setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:4]];
-    [farbe4Button_ setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:4]];
-    
-    [farbe5Button_ setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:5]];
-    [farbe5Button_ setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:5]];
+    for (ColorfulButton *b in allColorButtons) {
+        [b setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:b.tag]];
+        [b setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:b.tag]];
+    }
     
     [self.rasterController.view setNeedsDisplay];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [self updateGUIAusSettings];
 }
 
 
@@ -214,8 +206,8 @@
     return YES;
 }
 
--(void)viewDidAppear:(BOOL)animated {
-    NSLog(@"Became first responder: %d", [self becomeFirstResponder]);
+
+-(void)pruefeObLevelGewechseltWurde {
     SpielLevel storedLevel = (SpielLevel) [[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL];
     // Neuer Level gewaehlt?
     if (self.rasterController.model.level != storedLevel) {
@@ -237,24 +229,29 @@
             [alert release];
         }
     }
+
+}
+
+-(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    [popoverController release];
+    [self updateGUIAusSettings];
+    [self pruefeObLevelGewechseltWurde];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    NSLog(@"Became first responder: %d", [self becomeFirstResponder]);
+    [self pruefeObLevelGewechseltWurde];
 }
 
 - (void)viewDidUnload
 {
     [rasterController release];
     rasterController = nil;
-    [farbe5Button_ release];
-    farbe5Button_ = nil;
-    [farbe4Button_ release];
-    farbe4Button_ = nil;
-    [farbe3Button_ release];
-    farbe3Button_ = nil;
-    [farbe2Button_ release];
-    farbe2Button_ = nil;
-    [farbe1Button_ release];
-    farbe1Button_ = nil;
-    [farbe0Button_ release];
-    farbe0Button_ = nil;
+    
+    for (ColorfulButton* b in allColorButtons) {
+        [b release];
+    }
+    
     [spielrasterView_ release];
     spielrasterView_ = nil;
     [rasterController release];
@@ -290,6 +287,10 @@
     statistikViewController_ = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     self.undoManager = nil;
+    [allColorButtons release];
+    allColorButtons = nil;
+    [settingsToggleButton release];
+    settingsToggleButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -402,7 +403,7 @@
     [self.view addSubview:gewonnenView];
     
     [UIView animateWithDuration:0.5 animations:^{
-        NSLog(@"Fade In Animation Began", nil);
+        NSLog(@"Fade In Animation Began");
         gewonnenView.alpha = 0.85f;
         gewonnenView.center = CGPointMake(self.view.center.x, self.view.center.y - 30);
         if (model.siegErreicht) {
@@ -411,17 +412,14 @@
             [[SoundManager sharedManager] playSound:VERLOREN];
         }
     } completion:^(BOOL finished) {
-        NSLog(@"Fade In Animation Done", nil);
+        NSLog(@"Fade In Animation Done");
     }];
 }
 
 - (void) setColorButtonState:(BOOL)state {
-    farbe0Button_.enabled = state;
-    farbe1Button_.enabled = state;
-    farbe2Button_.enabled = state;
-    farbe3Button_.enabled = state;
-    farbe4Button_.enabled = state;
-    farbe5Button_.enabled = state;
+    for (ColorfulButton* b in allColorButtons) {
+        b.enabled = state;
+    }
 }
 
 - (void) disableColorButtons {
@@ -466,14 +464,25 @@
     settingsController.passedInModel = self.rasterController.model;
     settingsController.aufrufenderController = self;
     
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.5];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    [UIView setAnimationTransition: UIViewAnimationTransitionFlipFromRight 
-                           forView:self.navigationController.view cache:YES];
-    [self.navigationController 
-     pushViewController:settingsController animated:NO];
-    [UIView commitAnimations];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        UIPopoverController* popController = [[UIPopoverController alloc] initWithContentViewController:settingsController];
+        popController.delegate = self;
+        [popController presentPopoverFromRect:settingsToggleButton.frame 
+                                       inView:self.view
+                     permittedArrowDirections:UIPopoverArrowDirectionAny 
+                                     animated:YES];
+        
+    } else {
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.5];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+        [UIView setAnimationTransition: UIViewAnimationTransitionFlipFromRight 
+                               forView:self.navigationController.view cache:YES];
+        [self.navigationController 
+         pushViewController:settingsController animated:NO];
+        [UIView commitAnimations];
+    }
 }
 
 

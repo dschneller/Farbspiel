@@ -116,11 +116,39 @@
 
 }
 
+-(void) updateLevelDetailViewFuerLevel:(SpielLevel)level {
+    int kantenlaenge;
+    int zuege;
+    switch (level) {
+        case HARD:
+            kantenlaenge = SPALTEN_HARD;
+            zuege = ZUEGE_HARD;
+            break;
+            
+        case MEDIUM:
+            kantenlaenge = SPALTEN_MEDIUM;
+            zuege = ZUEGE_MEDIUM;
+            break;
+            
+        case EASY:
+        default:
+            kantenlaenge = SPALTEN_EASY;
+            zuege = ZUEGE_EASY;
+            break;
+    }
+
+    self.feldgroesseLabel.text = [NSString stringWithFormat:@"%d x %d", kantenlaenge, kantenlaenge];
+    self.anzahlZuegeLabel.text = [NSString stringWithFormat:@"%d", zuege];
+
+}
+
 - (void) initValues {
     self.soundEffekteSwitch.on = [[SoundManager sharedManager] soundAn];
-    self.schwierigkeitsGrad.selectedSegmentIndex = [[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL];
+    SpielLevel level = (SpielLevel)[[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL];
+    self.schwierigkeitsGrad.selectedSegmentIndex = level;
     self.farbschema.selectedSegmentIndex = [Farbmapping sharedInstance].farbschema;
     self.rasterSwitch.on = [[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN];
+    [self updateLevelDetailViewFuerLevel:level];
     [self updateFarbschemaPreview];
     [self updateStatsView];
 }
@@ -131,7 +159,7 @@
     [sheet showFromView:self.view buttonBlock:^(NSInteger buttonIndex) {
         // NO = 1, YES = 0
         if(buttonIndex == 1) {
-            NSLog(@"Statistik erhalten gewuenscht",nil);
+            NSLog(@"Statistik erhalten gewuenscht");
         } else {
             [[Datenhaltung sharedInstance] resetLevel:self.schwierigkeitsGrad.selectedSegmentIndex];
             [self updateStatsView];
@@ -154,6 +182,8 @@
     statistikViewController_.statistikView = statistikView;
 
     [self setupLayerPropsForView:farbPreviewRahmen_ showBorder:YES];
+    
+    self.contentSizeForViewInPopover = CGSizeMake(320,480);
     
 }
 
@@ -246,33 +276,14 @@
     
 }
 
+
 - (IBAction)soundAnAus:(id)sender {
     [[SoundManager sharedManager] setSoundAn:self.soundEffekteSwitch.on];
 }
 
 - (IBAction)levelGewaehlt:(id)sender {
     SpielLevel level = (SpielLevel) self.schwierigkeitsGrad.selectedSegmentIndex;
-    int kantenlaenge;
-    int zuege;
-    switch (level) {
-        case HARD:
-            kantenlaenge = SPALTEN_HARD;
-            zuege = ZUEGE_HARD;
-            break;
-            
-        case MEDIUM:
-            kantenlaenge = SPALTEN_MEDIUM;
-            zuege = ZUEGE_MEDIUM;
-            break;
-            
-        case EASY:
-        default:
-            kantenlaenge = SPALTEN_EASY;
-            zuege = ZUEGE_EASY;
-            break;
-    }
-    self.feldgroesseLabel.text = [NSString stringWithFormat:@"%d x %d", kantenlaenge, kantenlaenge];
-    self.anzahlZuegeLabel.text = [NSString stringWithFormat:@"%d", zuege];
+    [self updateLevelDetailViewFuerLevel:level];
     [[Datenhaltung sharedInstance] setInteger:level fuerKey:PREFKEY_SPIELLEVEL];
     Spielmodel* newModel = [[[Spielmodel alloc] initWithLevel:level] autorelease];
     [self.aufrufenderController settingsGeaendert:newModel];

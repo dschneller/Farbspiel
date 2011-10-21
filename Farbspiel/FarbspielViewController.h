@@ -15,7 +15,9 @@
 #import "StatistikView.h"
 #import "StatistikViewController.h"
 
-@interface FarbspielViewController : UIViewController <SpielrasterViewControllerDelegate> {
+@interface FarbspielViewController : UIViewController <SpielrasterViewControllerDelegate, UIPopoverControllerDelegate> {
+    
+    IBOutletCollection(ColorfulButton) NSArray *allColorButtons;
     
     IBOutlet UIButton *debugButtonVerlieren;
     IBOutlet UIButton *debugButtonGewinnen;
@@ -27,19 +29,13 @@
     IBOutlet UILabel *uhrLabel;
     IBOutlet UILabel *levelLabel;
 
+    IBOutlet UIButton *settingsToggleButton;
     IBOutlet StatistikViewController *statistikViewController_;
     IBOutlet StatistikView *statistikPlaceholder_;
     IBOutlet ColorfulButton *einstellungenButton;
     IBOutlet ColorfulButton *neuesSpielButton_;
     IBOutlet SpielrasterViewController *rasterController;
     IBOutlet SpielrasterView *spielrasterView_;
-    IBOutlet ColorfulButton *farbe0Button_;
-    IBOutlet ColorfulButton *farbe1Button_;
-    IBOutlet ColorfulButton *farbe2Button_;
-    IBOutlet ColorfulButton *farbe3Button_;
-    IBOutlet ColorfulButton *farbe4Button_;
-    IBOutlet ColorfulButton *farbe5Button_;
-    
     IBOutlet UIButton *soundAnAusButton_;
     CAGradientLayer *blurLayer_;
 
