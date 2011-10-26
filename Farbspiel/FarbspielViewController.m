@@ -297,9 +297,6 @@
 }
 
 
-#define IPAD() UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
-
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
