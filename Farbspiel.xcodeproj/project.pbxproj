@@ -11,14 +11,23 @@
 		41065C6313E20D7300725686 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41065C6213E20D7200725686 /* Default@2x.png */; };
 		41065C6913E216A600725686 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 41065C6813E216A600725686 /* Icon.png */; };
 		41065C6B13E216C400725686 /* IconRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 41065C6A13E216C400725686 /* IconRetina.png */; };
-		41156F3A1451B226002642CD /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 41156F391451B226002642CD /* Default-Portrait~ipad.png */; };
 		412BFEBC13DE14F400159AD4 /* ledertextur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBA13DE14F300159AD4 /* ledertextur@2x.png */; };
 		412BFEBD13DE14F400159AD4 /* ledertextur.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBB13DE14F300159AD4 /* ledertextur.png */; };
 		412BFEFA13DE242400159AD4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412BFEF813DE242300159AD4 /* SettingsViewController.m */; };
+		4136352E14584E5100D01E1D /* GewonnenView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136352C14584E5100D01E1D /* GewonnenView~ipad.xib */; };
+		4136353014584E5B00D01E1D /* GewonnenView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136352C14584E5100D01E1D /* GewonnenView~ipad.xib */; };
+		4136353514584E9D00D01E1D /* SettingsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353114584E9D00D01E1D /* SettingsViewController~ipad.xib */; };
+		4136353614584E9D00D01E1D /* StatistikView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353314584E9D00D01E1D /* StatistikView~ipad.xib */; };
+		4136353D14584EA600D01E1D /* FarbspielViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353714584EA600D01E1D /* FarbspielViewController~ipad.xib */; };
+		4136353E14584EA600D01E1D /* MainWindow~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353914584EA600D01E1D /* MainWindow~ipad.xib */; };
+		4136353F14584EA600D01E1D /* SettingsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353114584E9D00D01E1D /* SettingsViewController~ipad.xib */; };
+		4136354014584EA600D01E1D /* StatistikView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353314584E9D00D01E1D /* StatistikView~ipad.xib */; };
 		413A1E6F13E360D600DAD8A3 /* UIAlertView-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 413A1E6E13E360D600DAD8A3 /* UIAlertView-BKAdditions.m */; };
 		415A1F1E14276BCD00328122 /* StatistikView.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F1D14276BCD00328122 /* StatistikView.m */; };
 		415A1F2114277D9800328122 /* StatistikViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F2014277D9800328122 /* StatistikViewController.m */; };
 		415A8A4C13DF58A100FF0F3A /* farbkloetzchen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 415A8A4B13DF58A100FF0F3A /* farbkloetzchen@2x.png */; };
+		416C11A9145849670034F3EC /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 41156F391451B226002642CD /* Default-Portrait~ipad.png */; };
+		416C11AD145849DD0034F3EC /* IconIpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 416C11AC145849DC0034F3EC /* IconIpad.png */; };
 		418456501428D76700C9A68E /* GewonnenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD3F1428D3B70019D98A /* GewonnenView.xib */; };
 		418456561428D83500C9A68E /* FarbspielViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418456471428D76700C9A68E /* FarbspielViewController.xib */; };
 		418456571428D83500C9A68E /* StatistikView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418456491428D76700C9A68E /* StatistikView.xib */; };
@@ -82,59 +91,6 @@
 		418F3C47142A170D006B1556 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F3C46142A170D006B1556 /* libKIF.a */; };
 		419DCB2613DA5FB500745241 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2413DA5FB500745241 /* speaker.png */; };
 		419DCB2913DA60EF00745241 /* speaker_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2813DA60EF00745241 /* speaker_off.png */; };
-		419F0F1B1433836F009AF98E /* FarbspielAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D925E013D8A76B007612E6 /* FarbspielAppDelegate.m */; };
-		419F0F1C1433836F009AF98E /* FarbspielViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D925E613D8A76B007612E6 /* FarbspielViewController.m */; };
-		419F0F1D1433836F009AF98E /* ColorfulButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9261A13D8A8C3007612E6 /* ColorfulButton.m */; };
-		419F0F1E1433836F009AF98E /* Farbmapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9261C13D8A8C3007612E6 /* Farbmapping.m */; };
-		419F0F1F1433836F009AF98E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262513D8A8C3007612E6 /* main.m */; };
-		419F0F201433836F009AF98E /* NSMutableArray+StackMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262713D8A8C3007612E6 /* NSMutableArray+StackMethods.m */; };
-		419F0F211433836F009AF98E /* Pair.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262913D8A8C3007612E6 /* Pair.m */; };
-		419F0F221433836F009AF98E /* Spielmodel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262B13D8A8C3007612E6 /* Spielmodel.m */; };
-		419F0F231433836F009AF98E /* SpielrasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262D13D8A8C3007612E6 /* SpielrasterView.m */; };
-		419F0F241433836F009AF98E /* SpielrasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262F13D8A8C3007612E6 /* SpielrasterViewController.m */; };
-		419F0F251433836F009AF98E /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9263113D8A8C3007612E6 /* UIColor+Tools.m */; };
-		419F0F261433836F009AF98E /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613613D9C2260028A3D9 /* SoundManager.m */; };
-		419F0F271433836F009AF98E /* Datenhaltung.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613A13D9CE290028A3D9 /* Datenhaltung.m */; };
-		419F0F281433836F009AF98E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412BFEF813DE242300159AD4 /* SettingsViewController.m */; };
-		419F0F291433836F009AF98E /* UIAlertView-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 413A1E6E13E360D600DAD8A3 /* UIAlertView-BKAdditions.m */; };
-		419F0F2A1433836F009AF98E /* JengoColor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41FE192713F06D7700BF4656 /* JengoColor.xcdatamodeld */; };
-		419F0F2B1433836F009AF98E /* Spiel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FE196213F0845900BF4656 /* Spiel.m */; };
-		419F0F2C1433836F009AF98E /* StatistikView.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F1D14276BCD00328122 /* StatistikView.m */; };
-		419F0F2D1433836F009AF98E /* StatistikViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F2014277D9800328122 /* StatistikViewController.m */; };
-		419F0F2E1433836F009AF98E /* UIActionSheet-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C61E3014289D4700B513EB /* UIActionSheet-BKAdditions.m */; };
-		419F0F301433836F009AF98E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FE195913F0740A00BF4656 /* CoreData.framework */; };
-		419F0F311433836F009AF98E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D9264D13D8ED4F007612E6 /* AudioToolbox.framework */; };
-		419F0F321433836F009AF98E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D9264813D8AAE8007612E6 /* QuartzCore.framework */; };
-		419F0F331433836F009AF98E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D013D8A76B007612E6 /* UIKit.framework */; };
-		419F0F341433836F009AF98E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D213D8A76B007612E6 /* Foundation.framework */; };
-		419F0F351433836F009AF98E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D413D8A76B007612E6 /* CoreGraphics.framework */; };
-		419F0F381433836F009AF98E /* StatistikView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418456491428D76700C9A68E /* StatistikView.xib */; };
-		419F0F391433836F009AF98E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD3B1428D2EF0019D98A /* SettingsViewController.xib */; };
-		419F0F3B1433836F009AF98E /* 210.caf in Resources */ = {isa = PBXBuildFile; fileRef = 41D9264F13D8EE67007612E6 /* 210.caf */; };
-		419F0F3C1433836F009AF98E /* 215.caf in Resources */ = {isa = PBXBuildFile; fileRef = 41D9265513D8F703007612E6 /* 215.caf */; };
-		419F0F3D1433836F009AF98E /* 225.caf in Resources */ = {isa = PBXBuildFile; fileRef = 41D9265613D8F703007612E6 /* 225.caf */; };
-		419F0F3E1433836F009AF98E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D9265A13D8F9E9007612E6 /* InfoPlist.strings */; };
-		419F0F3F1433836F009AF98E /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2413DA5FB500745241 /* speaker.png */; };
-		419F0F401433836F009AF98E /* speaker_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2813DA60EF00745241 /* speaker_off.png */; };
-		419F0F411433836F009AF98E /* ledertextur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBA13DE14F300159AD4 /* ledertextur@2x.png */; };
-		419F0F421433836F009AF98E /* ledertextur.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBB13DE14F300159AD4 /* ledertextur.png */; };
-		419F0F431433836F009AF98E /* farbkloetzchen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 415A8A4B13DF58A100FF0F3A /* farbkloetzchen@2x.png */; };
-		419F0F441433836F009AF98E /* farbkloetzchen.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B113DF6CA300B2F0DB /* farbkloetzchen.png */; };
-		419F0F451433836F009AF98E /* farbkloetzchen-jengo.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B313DF6EF100B2F0DB /* farbkloetzchen-jengo.png */; };
-		419F0F461433836F009AF98E /* farbkloetzchen-jengo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B413DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png */; };
-		419F0F471433836F009AF98E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 41065C6013E20D6B00725686 /* Default.png */; };
-		419F0F481433836F009AF98E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41065C6213E20D7200725686 /* Default@2x.png */; };
-		419F0F491433836F009AF98E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 41065C6813E216A600725686 /* Icon.png */; };
-		419F0F4A1433836F009AF98E /* IconRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 41065C6A13E216C400725686 /* IconRetina.png */; };
-		419F0F4B1433836F009AF98E /* smalltrash.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C61E2C142898FA00B513EB /* smalltrash.png */; };
-		419F0F4C1433836F009AF98E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD371428D1600019D98A /* Localizable.strings */; };
-		419F0F4D1433836F009AF98E /* GewonnenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD3F1428D3B70019D98A /* GewonnenView.xib */; };
-		419F0F511433836F009AF98E /* smalltrash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4184566A1428E86100C9A68E /* smalltrash@2x.png */; };
-		419F0FA7143384C1009AF98E /* GewonnenView~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419F0F9A143384C1009AF98E /* GewonnenView~iPad.xib */; };
-		419F0FA8143384C1009AF98E /* SettingsViewController~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419F0F9C143384C1009AF98E /* SettingsViewController~iPad.xib */; };
-		419F0FA9143384C1009AF98E /* StatistikView~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419F0F9E143384C1009AF98E /* StatistikView~iPad.xib */; };
-		419F0FAA143384C1009AF98E /* FarbspielViewController~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419F0FA0143384C1009AF98E /* FarbspielViewController~iPad.xib */; };
-		419F0FAB143384C1009AF98E /* MainWindow~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419F0FA3143384C1009AF98E /* MainWindow~iPad.xib */; };
 		41A114B213DF6CA300B2F0DB /* farbkloetzchen.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B113DF6CA300B2F0DB /* farbkloetzchen.png */; };
 		41A114B513DF6EF100B2F0DB /* farbkloetzchen-jengo.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B313DF6EF100B2F0DB /* farbkloetzchen-jengo.png */; };
 		41A114B613DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B413DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png */; };
@@ -191,6 +147,14 @@
 		412BFEBB13DE14F300159AD4 /* ledertextur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ledertextur.png; sourceTree = "<group>"; };
 		412BFEF713DE242300159AD4 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		412BFEF813DE242300159AD4 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		4136352D14584E5100D01E1D /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = "de.lproj/GewonnenView~ipad.xib"; sourceTree = "<group>"; };
+		4136352F14584E5B00D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/GewonnenView~ipad.xib"; sourceTree = "<group>"; };
+		4136353214584E9D00D01E1D /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = "de.lproj/SettingsViewController~ipad.xib"; sourceTree = "<group>"; };
+		4136353414584E9D00D01E1D /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = "de.lproj/StatistikView~ipad.xib"; sourceTree = "<group>"; };
+		4136353814584EA600D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/FarbspielViewController~ipad.xib"; sourceTree = "<group>"; };
+		4136353A14584EA600D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/MainWindow~ipad.xib"; sourceTree = "<group>"; };
+		4136353B14584EA600D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/SettingsViewController~ipad.xib"; sourceTree = "<group>"; };
+		4136353C14584EA600D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/StatistikView~ipad.xib"; sourceTree = "<group>"; };
 		413A1E6D13E360D600DAD8A3 /* UIAlertView-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView-BKAdditions.h"; sourceTree = "<group>"; };
 		413A1E6E13E360D600DAD8A3 /* UIAlertView-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView-BKAdditions.m"; sourceTree = "<group>"; };
 		413A1E7013E360EF00DAD8A3 /* BKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTypes.h; sourceTree = "<group>"; };
@@ -199,6 +163,7 @@
 		415A1F1F14277D9700328122 /* StatistikViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatistikViewController.h; sourceTree = "<group>"; };
 		415A1F2014277D9800328122 /* StatistikViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatistikViewController.m; sourceTree = "<group>"; };
 		415A8A4B13DF58A100FF0F3A /* farbkloetzchen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen@2x.png"; sourceTree = "<group>"; };
+		416C11AC145849DC0034F3EC /* IconIpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconIpad.png; path = ../IconIpad.png; sourceTree = "<group>"; };
 		4184564B1428D76700C9A68E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FarbspielViewController.xib; sourceTree = "<group>"; };
 		4184564C1428D76700C9A68E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StatistikView.xib; sourceTree = "<group>"; };
 		4184565B1428DD5300C9A68E /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/StatistikView.xib; sourceTree = "<group>"; };
@@ -219,16 +184,7 @@
 		418F3C46142A170D006B1556 /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKIF.a; path = "../../cc/SharedBuildOutput/Release-iphoneos/libKIF.a"; sourceTree = "<group>"; };
 		419DCB2413DA5FB500745241 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
 		419DCB2813DA60EF00745241 /* speaker_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_off.png; sourceTree = "<group>"; };
-		419F0F551433836F009AF98E /* Farbspiel-iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Farbspiel-iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		419F0F5814338370009AF98E /* Farbspiel copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Farbspiel copy-Info.plist"; path = "/Users/ds/Documents/Privat/Farbspiel/Farbspiel copy-Info.plist"; sourceTree = "<absolute>"; };
-		419F0F9B143384C1009AF98E /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = "de.lproj/GewonnenView~iPad.xib"; sourceTree = "<group>"; };
-		419F0F9D143384C1009AF98E /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = "de.lproj/SettingsViewController~iPad.xib"; sourceTree = "<group>"; };
-		419F0F9F143384C1009AF98E /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = "de.lproj/StatistikView~iPad.xib"; sourceTree = "<group>"; };
-		419F0FA1143384C1009AF98E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/FarbspielViewController~iPad.xib"; sourceTree = "<group>"; };
-		419F0FA2143384C1009AF98E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/GewonnenView~iPad.xib"; sourceTree = "<group>"; };
-		419F0FA4143384C1009AF98E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/MainWindow~iPad.xib"; sourceTree = "<group>"; };
-		419F0FA5143384C1009AF98E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/SettingsViewController~iPad.xib"; sourceTree = "<group>"; };
-		419F0FA6143384C1009AF98E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/StatistikView~iPad.xib"; sourceTree = "<group>"; };
 		41A114B113DF6CA300B2F0DB /* farbkloetzchen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = farbkloetzchen.png; sourceTree = "<group>"; };
 		41A114B313DF6EF100B2F0DB /* farbkloetzchen-jengo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen-jengo.png"; sourceTree = "<group>"; };
 		41A114B413DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen-jengo@2x.png"; sourceTree = "<group>"; };
@@ -294,19 +250,6 @@
 				418812A31429D54F00F2BBE8 /* UIKit.framework in Frameworks */,
 				418812A41429D54F00F2BBE8 /* Foundation.framework in Frameworks */,
 				418812A51429D54F00F2BBE8 /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		419F0F2F1433836F009AF98E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				419F0F301433836F009AF98E /* CoreData.framework in Frameworks */,
-				419F0F311433836F009AF98E /* AudioToolbox.framework in Frameworks */,
-				419F0F321433836F009AF98E /* QuartzCore.framework in Frameworks */,
-				419F0F331433836F009AF98E /* UIKit.framework in Frameworks */,
-				419F0F341433836F009AF98E /* Foundation.framework in Frameworks */,
-				419F0F351433836F009AF98E /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +349,7 @@
 			children = (
 				41156F391451B226002642CD /* Default-Portrait~ipad.png */,
 				41065C6A13E216C400725686 /* IconRetina.png */,
+				416C11AC145849DC0034F3EC /* IconIpad.png */,
 				41065C6813E216A600725686 /* Icon.png */,
 				41065C6213E20D7200725686 /* Default@2x.png */,
 				41065C6013E20D6B00725686 /* Default.png */,
@@ -470,11 +414,11 @@
 		419F0F99143384C1009AF98E /* Resources-iPad */ = {
 			isa = PBXGroup;
 			children = (
-				419F0F9A143384C1009AF98E /* GewonnenView~iPad.xib */,
-				419F0F9C143384C1009AF98E /* SettingsViewController~iPad.xib */,
-				419F0F9E143384C1009AF98E /* StatistikView~iPad.xib */,
-				419F0FA0143384C1009AF98E /* FarbspielViewController~iPad.xib */,
-				419F0FA3143384C1009AF98E /* MainWindow~iPad.xib */,
+				4136353714584EA600D01E1D /* FarbspielViewController~ipad.xib */,
+				4136353914584EA600D01E1D /* MainWindow~ipad.xib */,
+				4136353114584E9D00D01E1D /* SettingsViewController~ipad.xib */,
+				4136353314584E9D00D01E1D /* StatistikView~ipad.xib */,
+				4136352C14584E5100D01E1D /* GewonnenView~ipad.xib */,
 			);
 			name = "Resources-iPad";
 			path = "Resources-iPad/Farbspiel";
@@ -497,7 +441,6 @@
 				41D925CC13D8A76B007612E6 /* Farbspiel.app */,
 				41D925F013D8A76B007612E6 /* FarbspielTests.octest */,
 				418812C51429D54F00F2BBE8 /* Farbspiel (KIF Tests).app */,
-				419F0F551433836F009AF98E /* Farbspiel-iPad.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -647,23 +590,6 @@
 			productReference = 418812C51429D54F00F2BBE8 /* Farbspiel (KIF Tests).app */;
 			productType = "com.apple.product-type.application";
 		};
-		419F0F191433836F009AF98E /* Farbspiel-iPad */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 419F0F521433836F009AF98E /* Build configuration list for PBXNativeTarget "Farbspiel-iPad" */;
-			buildPhases = (
-				419F0F1A1433836F009AF98E /* Sources */,
-				419F0F2F1433836F009AF98E /* Frameworks */,
-				419F0F361433836F009AF98E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Farbspiel-iPad";
-			productName = Farbspiel;
-			productReference = 419F0F551433836F009AF98E /* Farbspiel-iPad.app */;
-			productType = "com.apple.product-type.application";
-		};
 		41D925CB13D8A76B007612E6 /* Farbspiel */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41D9260413D8A76B007612E6 /* Build configuration list for PBXNativeTarget "Farbspiel" */;
@@ -707,6 +633,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "codecentric AG";
 			};
 			buildConfigurationList = 41D925C613D8A76B007612E6 /* Build configuration list for PBXProject "Farbspiel" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -724,7 +651,6 @@
 				41D925CB13D8A76B007612E6 /* Farbspiel */,
 				41D925EF13D8A76B007612E6 /* FarbspielTests */,
 				418812891429D54F00F2BBE8 /* KIF Tests */,
-				419F0F191433836F009AF98E /* Farbspiel-iPad */,
 			);
 		};
 /* End PBXProject section */
@@ -761,41 +687,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		419F0F361433836F009AF98E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				419F0F381433836F009AF98E /* StatistikView.xib in Resources */,
-				419F0F391433836F009AF98E /* SettingsViewController.xib in Resources */,
-				419F0F3B1433836F009AF98E /* 210.caf in Resources */,
-				419F0F3C1433836F009AF98E /* 215.caf in Resources */,
-				419F0F3D1433836F009AF98E /* 225.caf in Resources */,
-				419F0F3E1433836F009AF98E /* InfoPlist.strings in Resources */,
-				419F0F3F1433836F009AF98E /* speaker.png in Resources */,
-				419F0F401433836F009AF98E /* speaker_off.png in Resources */,
-				419F0F411433836F009AF98E /* ledertextur@2x.png in Resources */,
-				419F0F421433836F009AF98E /* ledertextur.png in Resources */,
-				419F0F431433836F009AF98E /* farbkloetzchen@2x.png in Resources */,
-				419F0F441433836F009AF98E /* farbkloetzchen.png in Resources */,
-				419F0F451433836F009AF98E /* farbkloetzchen-jengo.png in Resources */,
-				419F0F461433836F009AF98E /* farbkloetzchen-jengo@2x.png in Resources */,
-				419F0F471433836F009AF98E /* Default.png in Resources */,
-				419F0F481433836F009AF98E /* Default@2x.png in Resources */,
-				419F0F491433836F009AF98E /* Icon.png in Resources */,
-				419F0F4A1433836F009AF98E /* IconRetina.png in Resources */,
-				419F0F4B1433836F009AF98E /* smalltrash.png in Resources */,
-				419F0F4C1433836F009AF98E /* Localizable.strings in Resources */,
-				419F0F4D1433836F009AF98E /* GewonnenView.xib in Resources */,
-				419F0F511433836F009AF98E /* smalltrash@2x.png in Resources */,
-				419F0FA7143384C1009AF98E /* GewonnenView~iPad.xib in Resources */,
-				419F0FA8143384C1009AF98E /* SettingsViewController~iPad.xib in Resources */,
-				419F0FA9143384C1009AF98E /* StatistikView~iPad.xib in Resources */,
-				419F0FAA143384C1009AF98E /* FarbspielViewController~iPad.xib in Resources */,
-				419F0FAB143384C1009AF98E /* MainWindow~iPad.xib in Resources */,
-				41156F3A1451B226002642CD /* Default-Portrait~ipad.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		41D925CA13D8A76B007612E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -824,6 +715,16 @@
 				41EBBD351428D1600019D98A /* Localizable.strings in Resources */,
 				418456501428D76700C9A68E /* GewonnenView.xib in Resources */,
 				4184566B1428E86100C9A68E /* smalltrash@2x.png in Resources */,
+				416C11A9145849670034F3EC /* Default-Portrait~ipad.png in Resources */,
+				416C11AD145849DD0034F3EC /* IconIpad.png in Resources */,
+				4136352E14584E5100D01E1D /* GewonnenView~ipad.xib in Resources */,
+				4136353014584E5B00D01E1D /* GewonnenView~ipad.xib in Resources */,
+				4136353514584E9D00D01E1D /* SettingsViewController~ipad.xib in Resources */,
+				4136353614584E9D00D01E1D /* StatistikView~ipad.xib in Resources */,
+				4136353D14584EA600D01E1D /* FarbspielViewController~ipad.xib in Resources */,
+				4136353E14584EA600D01E1D /* MainWindow~ipad.xib in Resources */,
+				4136353F14584EA600D01E1D /* SettingsViewController~ipad.xib in Resources */,
+				4136354014584EA600D01E1D /* StatistikView~ipad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -883,33 +784,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		419F0F1A1433836F009AF98E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				419F0F1B1433836F009AF98E /* FarbspielAppDelegate.m in Sources */,
-				419F0F1C1433836F009AF98E /* FarbspielViewController.m in Sources */,
-				419F0F1D1433836F009AF98E /* ColorfulButton.m in Sources */,
-				419F0F1E1433836F009AF98E /* Farbmapping.m in Sources */,
-				419F0F1F1433836F009AF98E /* main.m in Sources */,
-				419F0F201433836F009AF98E /* NSMutableArray+StackMethods.m in Sources */,
-				419F0F211433836F009AF98E /* Pair.m in Sources */,
-				419F0F221433836F009AF98E /* Spielmodel.m in Sources */,
-				419F0F231433836F009AF98E /* SpielrasterView.m in Sources */,
-				419F0F241433836F009AF98E /* SpielrasterViewController.m in Sources */,
-				419F0F251433836F009AF98E /* UIColor+Tools.m in Sources */,
-				419F0F261433836F009AF98E /* SoundManager.m in Sources */,
-				419F0F271433836F009AF98E /* Datenhaltung.m in Sources */,
-				419F0F281433836F009AF98E /* SettingsViewController.m in Sources */,
-				419F0F291433836F009AF98E /* UIAlertView-BKAdditions.m in Sources */,
-				419F0F2A1433836F009AF98E /* JengoColor.xcdatamodeld in Sources */,
-				419F0F2B1433836F009AF98E /* Spiel.m in Sources */,
-				419F0F2C1433836F009AF98E /* StatistikView.m in Sources */,
-				419F0F2D1433836F009AF98E /* StatistikViewController.m in Sources */,
-				419F0F2E1433836F009AF98E /* UIActionSheet-BKAdditions.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		41D925C813D8A76B007612E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -955,6 +829,49 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4136352C14584E5100D01E1D /* GewonnenView~ipad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4136352D14584E5100D01E1D /* de */,
+				4136352F14584E5B00D01E1D /* en */,
+			);
+			name = "GewonnenView~ipad.xib";
+			sourceTree = "<group>";
+		};
+		4136353114584E9D00D01E1D /* SettingsViewController~ipad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4136353214584E9D00D01E1D /* de */,
+				4136353B14584EA600D01E1D /* en */,
+			);
+			name = "SettingsViewController~ipad.xib";
+			sourceTree = "<group>";
+		};
+		4136353314584E9D00D01E1D /* StatistikView~ipad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4136353414584E9D00D01E1D /* de */,
+				4136353C14584EA600D01E1D /* en */,
+			);
+			name = "StatistikView~ipad.xib";
+			sourceTree = "<group>";
+		};
+		4136353714584EA600D01E1D /* FarbspielViewController~ipad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4136353814584EA600D01E1D /* en */,
+			);
+			name = "FarbspielViewController~ipad.xib";
+			sourceTree = "<group>";
+		};
+		4136353914584EA600D01E1D /* MainWindow~ipad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4136353A14584EA600D01E1D /* en */,
+			);
+			name = "MainWindow~ipad.xib";
+			sourceTree = "<group>";
+		};
 		418456471428D76700C9A68E /* FarbspielViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -970,49 +887,6 @@
 				4184565B1428DD5300C9A68E /* de */,
 			);
 			name = StatistikView.xib;
-			sourceTree = "<group>";
-		};
-		419F0F9A143384C1009AF98E /* GewonnenView~iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				419F0F9B143384C1009AF98E /* de */,
-				419F0FA2143384C1009AF98E /* en */,
-			);
-			name = "GewonnenView~iPad.xib";
-			sourceTree = "<group>";
-		};
-		419F0F9C143384C1009AF98E /* SettingsViewController~iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				419F0F9D143384C1009AF98E /* de */,
-				419F0FA5143384C1009AF98E /* en */,
-			);
-			name = "SettingsViewController~iPad.xib";
-			sourceTree = "<group>";
-		};
-		419F0F9E143384C1009AF98E /* StatistikView~iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				419F0F9F143384C1009AF98E /* de */,
-				419F0FA6143384C1009AF98E /* en */,
-			);
-			name = "StatistikView~iPad.xib";
-			sourceTree = "<group>";
-		};
-		419F0FA0143384C1009AF98E /* FarbspielViewController~iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				419F0FA1143384C1009AF98E /* en */,
-			);
-			name = "FarbspielViewController~iPad.xib";
-			sourceTree = "<group>";
-		};
-		419F0FA3143384C1009AF98E /* MainWindow~iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				419F0FA4143384C1009AF98E /* en */,
-			);
-			name = "MainWindow~iPad.xib";
 			sourceTree = "<group>";
 		};
 		41D925E213D8A76B007612E6 /* MainWindow.xib */ = {
@@ -1102,34 +976,6 @@
 			};
 			name = Release;
 		};
-		419F0F531433836F009AF98E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Farbspiel/Farbspiel-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "Farbspiel copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = "Farbspiel-iPad";
-				TARGETED_DEVICE_FAMILY = 2;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		419F0F541433836F009AF98E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Farbspiel/Farbspiel-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "Farbspiel copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = "Farbspiel-iPad";
-				TARGETED_DEVICE_FAMILY = 2;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 		41D9260213D8A76B007612E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1180,7 +1026,9 @@
 				GCC_PREFIX_HEADER = "Farbspiel/Farbspiel-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Farbspiel/Farbspiel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1192,7 +1040,9 @@
 				GCC_PREFIX_HEADER = "Farbspiel/Farbspiel-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Farbspiel/Farbspiel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1241,15 +1091,6 @@
 			buildConfigurations = (
 				418812C31429D54F00F2BBE8 /* Debug */,
 				418812C41429D54F00F2BBE8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		419F0F521433836F009AF98E /* Build configuration list for PBXNativeTarget "Farbspiel-iPad" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				419F0F531433836F009AF98E /* Debug */,
-				419F0F541433836F009AF98E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

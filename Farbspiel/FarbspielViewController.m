@@ -297,10 +297,18 @@
 }
 
 
+#define IPAD() UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
+
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if (IPAD()) {
+        return ((interfaceOrientation == UIInterfaceOrientationPortrait)
+                || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
+    } else {
+        return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    }
 }
 
 
