@@ -59,15 +59,4 @@
     [[self layer] setNeedsDisplay];
 }
 
-- (void)dealloc {
-    [_lowColor release];
-    _lowColor = nil;
-    
-    [_highColor release];
-    _highColor = nil;
-    
-    // Release our gradient layer
-    [gradientLayer release];
-    [super dealloc];
-}
 @end

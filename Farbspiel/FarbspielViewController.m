@@ -12,42 +12,22 @@
 #import "Datenhaltung.h"
 #import "UIColor+Tools.h" 
 #import "SettingsViewController.h"
+#import "LambdaAlert.h"
 
 @implementation FarbspielViewController
 
 @synthesize rasterController;
 @synthesize undoManager;
 @synthesize defaultLevel = defaultLevel_;
-
+@synthesize settingsPopoverController;
+@synthesize neuesSpielAlert;
 
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];    
 
-    for (ColorfulButton* b in allColorButtons) {
-        [b release];
-    }
 
-    [spielrasterView_ release];
-    [rasterController release];
-    [gewonnenView release];
-    [neuesSpielButton_ release];
-    [gewonnenInXZuegenLabel release];
-    [debugButtonVerlieren release];
-    [gewonnenVerlorenLabel release];
-    [spieldauerLabel release];
-    [levelLabel release];
-    [blurLayer_ release];
-    [uhrLabel release];
     
-    [soundAnAusButton_ release];
-    [einstellungenButton release];
-    [debugButtonGewinnen release];
-    [statistikPlaceholder_ release];
-    [statistikViewController_ release];
-    [allColorButtons release];
-    [settingsToggleButton release];
-    [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,7 +51,6 @@
         blurLayer_ = [CAGradientLayer layer];
         blurLayer_.frame = self.view.bounds;
         blurLayer_.colors = [NSArray arrayWithObjects:(id)[[[UIColor darkGrayColor] colorByChangingAlphaTo:0.7f] CGColor], (id)[[[[UIColor darkGrayColor] colorByDarkeningColor] colorByChangingAlphaTo:0.7f] CGColor], nil];
-        [blurLayer_ retain];
     }
     return blurLayer_;
 }
@@ -82,7 +61,6 @@
     
     Spielmodel* model = [[Spielmodel alloc] initWithLevel:level];
     self.rasterController.model = model;
-    [model release];
 }
 
 
@@ -146,7 +124,6 @@
     UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
     recognizer.direction = UISwipeGestureRecognizerDirectionLeft;
     [spielrasterView_ addGestureRecognizer:recognizer];
-    [recognizer release];
     
     NSUndoManager *manager = [[NSUndoManager alloc] init];
     self.undoManager = manager;
@@ -156,7 +133,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(undoManagerDidUndo:)
                 name:NSUndoManagerDidUndoChangeNotification object:manager];
     
-    [manager release];
     
      // Set the layer's corner radius
      [[spielrasterView_ layer] setCornerRadius:8.0f];
@@ -218,22 +194,17 @@
             !rasterController.model.spielLaeuft) {
             [self starteNeuesSpielMitLevel:storedLevel];
         } else {
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Q_NEUE_EINSTELLUNGEN_TITEL", @"Title for question after settings change")  message:NSLocalizedString(@"Q_NEUE_EINSTELLUNGEN_ERKLAERUNG", @"New Game now -> Current is counted as lost!") delegate:nil cancelButtonTitle:NSLocalizedString(@"B_WEITERSPIELEN", @"Button text for -continue game-") otherButtonTitles:NSLocalizedString(@"B_NEUES_SPIEL", @"Button text for -new game-"), nil];
-            
-            [alert showUsingButtonBlock:^(NSInteger buttonIndex) {
-                // NO = 0, YES = 1
-                if(buttonIndex == 1) {
-                    [self.rasterController spielAbbrechen];
-                }
-            }];
-            [alert release];
+            LambdaAlert *alert = [[LambdaAlert alloc]
+                                  initWithTitle:NSLocalizedString(@"Q_NEUE_EINSTELLUNGEN_TITEL", @"Title for question after settings change")  message:NSLocalizedString(@"Q_NEUE_EINSTELLUNGEN_ERKLAERUNG", @"New Game now -> Current is counted as lost!")];
+            [alert addButtonWithTitle:NSLocalizedString(@"B_NEUES_SPIEL", @"Button text for -new game-") block:^{ [self.rasterController spielAbbrechen]; }];
+            [alert addButtonWithTitle:NSLocalizedString(@"B_WEITERSPIELEN", @"Button text for -continue game-") block:NULL];
+            [alert show];
         }
     }
 
 }
 
 -(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
-    [popoverController release];
     [self updateGUIAusSettings];
     [self pruefeObLevelGewechseltWurde];
 }
@@ -245,51 +216,29 @@
 
 - (void)viewDidUnload
 {
-    [rasterController release];
     rasterController = nil;
     
-    for (ColorfulButton* b in allColorButtons) {
-        [b release];
-    }
     
-    [spielrasterView_ release];
     spielrasterView_ = nil;
-    [rasterController release];
     rasterController = nil;
-    [gewonnenView release];
     gewonnenView = nil;
-    [neuesSpielButton_ release];
     neuesSpielButton_ = nil;
-    [gewonnenInXZuegenLabel release];
     gewonnenInXZuegenLabel = nil;
-    [debugButtonVerlieren release];
     debugButtonVerlieren = nil;
-    [gewonnenVerlorenLabel release];
     gewonnenVerlorenLabel = nil;
-    [spieldauerLabel release];
     spieldauerLabel = nil;
-    [levelLabel release];
     levelLabel = nil;
-    [blurLayer_ release];
     blurLayer_ = nil;
-    [uhrLabel release];
     uhrLabel = nil;
     
-    [soundAnAusButton_ release];
     soundAnAusButton_ = nil;
-    [einstellungenButton release];
     einstellungenButton = nil;
-    [debugButtonGewinnen release];
     debugButtonGewinnen = nil;
-    [statistikPlaceholder_ release];
     statistikPlaceholder_ = nil;
-    [statistikViewController_ release];
     statistikViewController_ = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     self.undoManager = nil;
-    [allColorButtons release];
     allColorButtons = nil;
-    [settingsToggleButton release];
     settingsToggleButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -320,7 +269,6 @@
                          NSLog(@"Fade Out Animation Finished");
 
                          [gewonnenView removeFromSuperview];
-                         [gewonnenView release];
                          [[self blurLayer] removeFromSuperlayer];
                          gewonnenView = nil;
                      }];
@@ -348,7 +296,6 @@
         [statistikPlaceholder_ addSubview:statistikView];
         statistikViewController_.statistikView = statistikView;
         
-        [gewonnenView retain];
         
 
         
@@ -464,16 +411,16 @@
 
 - (IBAction)settingsButtonPressed:(id)sender {
     [self loadAndInitGewonnenView];
-    SettingsViewController* settingsController = [[[SettingsViewController alloc] initWithNibName:nil bundle:nil] autorelease];
+    SettingsViewController* settingsController = [[SettingsViewController alloc] initWithNibName:nil bundle:nil];
     
     settingsController.passedInModel = self.rasterController.model;
     settingsController.aufrufenderController = self;
     
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        UIPopoverController* popController = [[UIPopoverController alloc] initWithContentViewController:settingsController];
-        popController.delegate = self;
-        [popController presentPopoverFromRect:settingsToggleButton.frame 
+        self.settingsPopoverController = [[UIPopoverController alloc] initWithContentViewController:settingsController];
+        self.settingsPopoverController.delegate = self;
+        [self.settingsPopoverController presentPopoverFromRect:settingsToggleButton.frame 
                                        inView:self.view
                      permittedArrowDirections:UIPopoverArrowDirectionAny 
                                      animated:YES];

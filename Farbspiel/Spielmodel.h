@@ -43,7 +43,7 @@ typedef enum {
     
 }
 
-@property (nonatomic, retain) NSMutableArray*   farbfelder;
+@property (nonatomic, strong) NSMutableArray*   farbfelder;
 @property (assign)            SpielLevel        level;
 @property (readonly)          NSUInteger        felderProKante;
 @property (assign)            NSUInteger        zuege;

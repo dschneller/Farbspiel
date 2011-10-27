@@ -32,11 +32,4 @@
 }
 */
 
-- (void)dealloc {
-    [_anzahlSpiele release];
-    [_anzahlGewonnen release];
-    [_anzahlVerloren release];
-    [_anzahlSpiele release];
-    [super dealloc];
-}
 @end

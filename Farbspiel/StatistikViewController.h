@@ -20,7 +20,7 @@
     NSUInteger anzahlGewonnen_;
 }
 
-@property (nonatomic, retain) StatistikView* statistikView;
+@property (nonatomic, strong) StatistikView* statistikView;
 @property (nonatomic) NSUInteger anzahlSpiele;
 @property (nonatomic) NSUInteger anzahlGewonnen;
 @property (nonatomic,readonly) NSUInteger anzahlVerloren;

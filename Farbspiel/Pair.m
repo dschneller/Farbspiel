@@ -23,7 +23,7 @@
 }
 
 +(Pair*)pairWithX:(NSUInteger )x Y:(NSUInteger )y {
-    Pair* p = [[[Pair alloc] initWithX:x Y:y] autorelease];
+    Pair* p = [[Pair alloc] initWithX:x Y:y];
     return p;
 }
 

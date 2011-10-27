@@ -20,10 +20,10 @@
     UILabel *zuegeLabel;
 }
 
-@property (nonatomic, retain) IBOutlet UILabel *zuegeLabel;
-@property (nonatomic, retain) SpielrasterView* view;
-@property (nonatomic, retain) Spielmodel* model;
-@property (nonatomic, retain) id<SpielrasterViewControllerDelegate> delegate;
+@property (nonatomic, strong) IBOutlet UILabel *zuegeLabel;
+@property (nonatomic, strong) SpielrasterView* view;
+@property (nonatomic, strong) Spielmodel* model;
+@property (nonatomic, strong) id<SpielrasterViewControllerDelegate> delegate;
 
 -(void) colorClicked:(NSUInteger)colorNumber;
 -(void) spielAbbrechen;

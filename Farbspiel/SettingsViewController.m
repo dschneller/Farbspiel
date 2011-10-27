@@ -9,6 +9,7 @@
 #import "SettingsViewController.h"
 #import "Farbmapping.h"
 #import "Datenhaltung.h"
+#import "LambdaSheet.h"
 
 @implementation SettingsViewController
 
@@ -154,18 +155,12 @@
 }
 
 - (IBAction)resetStats:(id)sender {
-    UIActionSheet* sheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"Q_STATISTIK_LOESCHEN", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"Q_STATISTIK_LOESCHEN_NEIN",nil) destructiveButtonTitle:NSLocalizedString(@"Q_STATISTIK_LOESCHEN_JA",nil) otherButtonTitles:nil];
-    
-    [sheet showFromView:self.view buttonBlock:^(NSInteger buttonIndex) {
-        // NO = 1, YES = 0
-        if(buttonIndex == 1) {
-            NSLog(@"Statistik erhalten gewuenscht");
-        } else {
-            [[Datenhaltung sharedInstance] resetLevel:self.schwierigkeitsGrad.selectedSegmentIndex];
-            [self updateStatsView];
-        }
-    }];
-    [sheet release];
+    LambdaSheet *sheet = [[LambdaSheet alloc] initWithTitle:NSLocalizedString(@"Q_STATISTIK_LOESCHEN", nil)];
+    [sheet addDestructiveButtonWithTitle:NSLocalizedString(@"Q_STATISTIK_LOESCHEN_JA",nil) block:^{ [[Datenhaltung sharedInstance] resetLevel:self.schwierigkeitsGrad.selectedSegmentIndex];
+        [self updateStatsView];
+ }];
+    [sheet addCancelButtonWithTitle:NSLocalizedString(@"Q_STATISTIK_LOESCHEN_NEIN",nil)];
+    [sheet showInView:self.view];
 }
 
 
@@ -175,7 +170,7 @@
     // Do any additional setup after loading the view from its nib.
     
     NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"StatistikView" owner:statistikViewController_ options:nil];
-    StatistikView *statistikView = [(StatistikView *)[views objectAtIndex:0] retain];
+    StatistikView *statistikView = (StatistikView *)[views objectAtIndex:0];
     
     statistikPlaceholderView_.backgroundColor = [UIColor clearColor];
     [statistikPlaceholderView_ addSubview:statistikView];
@@ -220,11 +215,8 @@
     [self setFarbe5bg:nil];
     [self setFarbe6bg:nil];
     [self setRasterSwitch:nil];
-    [statistikViewController_ release];
     statistikViewController_ = nil;
-    [statistikPlaceholderView_ release];
     statistikPlaceholderView_ = nil;
-    [statistikLoeschenButton_ release];
     statistikLoeschenButton_ = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -237,33 +229,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)dealloc {
-    [schwierigkeitsGrad release];
-    [feldgroesseLabel release];
-    [anzahlZuegeLabel release];
-    [soundEffekteSwitch release];
-    [farbPreviewRahmen_ release];
-    [farbschema release];
-    [farbe1_ release];
-    [farbe2_ release];
-    [farbe3_ release];
-    [farbe4_ release];
-    [farbe5_ release];
-    [farbe6_ release];
-    [farbe1bg_ release];
-    [farbe2bg_ release];
-    [farbe3bg_ release];
-    [farbe4bg_ release];
-    [farbe5bg_ release];
-    [farbe6bg_ release];
-    [rasterSwitch_ release];
-    [passedInModel_ release];
-    [aufrufenderController_ release];
-    [statistikViewController_ release];
-    [statistikPlaceholderView_ release];
-    [statistikLoeschenButton_ release];
-    [super dealloc];
-}
 
 - (IBAction)zurueckZumSpiel:(id)sender {
     [UIView beginAnimations:nil context:NULL];
@@ -285,7 +250,7 @@
     SpielLevel level = (SpielLevel) self.schwierigkeitsGrad.selectedSegmentIndex;
     [self updateLevelDetailViewFuerLevel:level];
     [[Datenhaltung sharedInstance] setInteger:level fuerKey:PREFKEY_SPIELLEVEL];
-    Spielmodel* newModel = [[[Spielmodel alloc] initWithLevel:level] autorelease];
+    Spielmodel* newModel = [[Spielmodel alloc] initWithLevel:level];
     [self.aufrufenderController settingsGeaendert:newModel];
     [self updateStatsView];
 }

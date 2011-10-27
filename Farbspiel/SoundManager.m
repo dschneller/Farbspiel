@@ -54,7 +54,7 @@ static SoundManager *sharedSingleton;
         NSString *path  = [[NSBundle mainBundle] pathForResource:filename ofType:ext];
         if ([[NSFileManager defaultManager] fileExistsAtPath : path]) {
             NSURL *pathURL = [NSURL fileURLWithPath : path];
-            AudioServicesCreateSystemSoundID((CFURLRef) pathURL, &newSoundId);
+            AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &newSoundId);
             sounds_[type] = newSoundId;
         } else {
             NSLog(@"error, sound file not found: %@", path);
@@ -105,7 +105,6 @@ static SoundManager *sharedSingleton;
 
 - (void)dealloc {
     [self disposeSoundEffects];
-    [super dealloc];
 }
 
 @end

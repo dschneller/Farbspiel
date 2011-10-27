@@ -15,19 +15,17 @@
 		412BFEBD13DE14F400159AD4 /* ledertextur.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBB13DE14F300159AD4 /* ledertextur.png */; };
 		412BFEFA13DE242400159AD4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412BFEF813DE242300159AD4 /* SettingsViewController.m */; };
 		4136352E14584E5100D01E1D /* GewonnenView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136352C14584E5100D01E1D /* GewonnenView~ipad.xib */; };
-		4136353014584E5B00D01E1D /* GewonnenView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136352C14584E5100D01E1D /* GewonnenView~ipad.xib */; };
 		4136353514584E9D00D01E1D /* SettingsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353114584E9D00D01E1D /* SettingsViewController~ipad.xib */; };
 		4136353614584E9D00D01E1D /* StatistikView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353314584E9D00D01E1D /* StatistikView~ipad.xib */; };
 		4136353D14584EA600D01E1D /* FarbspielViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353714584EA600D01E1D /* FarbspielViewController~ipad.xib */; };
 		4136353E14584EA600D01E1D /* MainWindow~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353914584EA600D01E1D /* MainWindow~ipad.xib */; };
-		4136353F14584EA600D01E1D /* SettingsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353114584E9D00D01E1D /* SettingsViewController~ipad.xib */; };
-		4136354014584EA600D01E1D /* StatistikView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353314584E9D00D01E1D /* StatistikView~ipad.xib */; };
-		413A1E6F13E360D600DAD8A3 /* UIAlertView-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 413A1E6E13E360D600DAD8A3 /* UIAlertView-BKAdditions.m */; };
 		415A1F1E14276BCD00328122 /* StatistikView.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F1D14276BCD00328122 /* StatistikView.m */; };
 		415A1F2114277D9800328122 /* StatistikViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F2014277D9800328122 /* StatistikViewController.m */; };
 		415A8A4C13DF58A100FF0F3A /* farbkloetzchen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 415A8A4B13DF58A100FF0F3A /* farbkloetzchen@2x.png */; };
 		416C11A9145849670034F3EC /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 41156F391451B226002642CD /* Default-Portrait~ipad.png */; };
 		416C11AD145849DD0034F3EC /* IconIpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 416C11AC145849DC0034F3EC /* IconIpad.png */; };
+		4170EAB91459ACE100D93ED1 /* LambdaAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4170EAB61459ACE100D93ED1 /* LambdaAlert.m */; };
+		4170EABA1459ACE100D93ED1 /* LambdaSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4170EAB81459ACE100D93ED1 /* LambdaSheet.m */; };
 		418456501428D76700C9A68E /* GewonnenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD3F1428D3B70019D98A /* GewonnenView.xib */; };
 		418456561428D83500C9A68E /* FarbspielViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418456471428D76700C9A68E /* FarbspielViewController.xib */; };
 		418456571428D83500C9A68E /* StatistikView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418456491428D76700C9A68E /* StatistikView.xib */; };
@@ -48,12 +46,10 @@
 		418812961429D54F00F2BBE8 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613613D9C2260028A3D9 /* SoundManager.m */; };
 		418812971429D54F00F2BBE8 /* Datenhaltung.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613A13D9CE290028A3D9 /* Datenhaltung.m */; };
 		418812981429D54F00F2BBE8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412BFEF813DE242300159AD4 /* SettingsViewController.m */; };
-		418812991429D54F00F2BBE8 /* UIAlertView-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 413A1E6E13E360D600DAD8A3 /* UIAlertView-BKAdditions.m */; };
 		4188129A1429D54F00F2BBE8 /* JengoColor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41FE192713F06D7700BF4656 /* JengoColor.xcdatamodeld */; };
 		4188129B1429D54F00F2BBE8 /* Spiel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FE196213F0845900BF4656 /* Spiel.m */; };
 		4188129C1429D54F00F2BBE8 /* StatistikView.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F1D14276BCD00328122 /* StatistikView.m */; };
 		4188129D1429D54F00F2BBE8 /* StatistikViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F2014277D9800328122 /* StatistikViewController.m */; };
-		4188129E1429D54F00F2BBE8 /* UIActionSheet-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C61E3014289D4700B513EB /* UIActionSheet-BKAdditions.m */; };
 		418812A01429D54F00F2BBE8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FE195913F0740A00BF4656 /* CoreData.framework */; };
 		418812A11429D54F00F2BBE8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D9264D13D8ED4F007612E6 /* AudioToolbox.framework */; };
 		418812A21429D54F00F2BBE8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D9264813D8AAE8007612E6 /* QuartzCore.framework */; };
@@ -95,7 +91,6 @@
 		41A114B513DF6EF100B2F0DB /* farbkloetzchen-jengo.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B313DF6EF100B2F0DB /* farbkloetzchen-jengo.png */; };
 		41A114B613DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B413DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png */; };
 		41C61E2D142898FA00B513EB /* smalltrash.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C61E2C142898FA00B513EB /* smalltrash.png */; };
-		41C61E3114289D4700B513EB /* UIActionSheet-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C61E3014289D4700B513EB /* UIActionSheet-BKAdditions.m */; };
 		41D925D113D8A76B007612E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D013D8A76B007612E6 /* UIKit.framework */; };
 		41D925D313D8A76B007612E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D213D8A76B007612E6 /* Foundation.framework */; };
 		41D925D513D8A76B007612E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D413D8A76B007612E6 /* CoreGraphics.framework */; };
@@ -155,15 +150,16 @@
 		4136353A14584EA600D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/MainWindow~ipad.xib"; sourceTree = "<group>"; };
 		4136353B14584EA600D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/SettingsViewController~ipad.xib"; sourceTree = "<group>"; };
 		4136353C14584EA600D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/StatistikView~ipad.xib"; sourceTree = "<group>"; };
-		413A1E6D13E360D600DAD8A3 /* UIAlertView-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView-BKAdditions.h"; sourceTree = "<group>"; };
-		413A1E6E13E360D600DAD8A3 /* UIAlertView-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView-BKAdditions.m"; sourceTree = "<group>"; };
-		413A1E7013E360EF00DAD8A3 /* BKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTypes.h; sourceTree = "<group>"; };
 		415A1F1C14276BCD00328122 /* StatistikView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatistikView.h; sourceTree = "<group>"; };
 		415A1F1D14276BCD00328122 /* StatistikView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatistikView.m; sourceTree = "<group>"; };
 		415A1F1F14277D9700328122 /* StatistikViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatistikViewController.h; sourceTree = "<group>"; };
 		415A1F2014277D9800328122 /* StatistikViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatistikViewController.m; sourceTree = "<group>"; };
 		415A8A4B13DF58A100FF0F3A /* farbkloetzchen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen@2x.png"; sourceTree = "<group>"; };
 		416C11AC145849DC0034F3EC /* IconIpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconIpad.png; path = ../IconIpad.png; sourceTree = "<group>"; };
+		4170EAB51459ACE100D93ED1 /* LambdaAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LambdaAlert.h; sourceTree = "<group>"; };
+		4170EAB61459ACE100D93ED1 /* LambdaAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LambdaAlert.m; sourceTree = "<group>"; };
+		4170EAB71459ACE100D93ED1 /* LambdaSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LambdaSheet.h; sourceTree = "<group>"; };
+		4170EAB81459ACE100D93ED1 /* LambdaSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LambdaSheet.m; sourceTree = "<group>"; };
 		4184564B1428D76700C9A68E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FarbspielViewController.xib; sourceTree = "<group>"; };
 		4184564C1428D76700C9A68E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StatistikView.xib; sourceTree = "<group>"; };
 		4184565B1428DD5300C9A68E /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/StatistikView.xib; sourceTree = "<group>"; };
@@ -184,13 +180,10 @@
 		418F3C46142A170D006B1556 /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKIF.a; path = "../../cc/SharedBuildOutput/Release-iphoneos/libKIF.a"; sourceTree = "<group>"; };
 		419DCB2413DA5FB500745241 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
 		419DCB2813DA60EF00745241 /* speaker_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_off.png; sourceTree = "<group>"; };
-		419F0F5814338370009AF98E /* Farbspiel copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Farbspiel copy-Info.plist"; path = "/Users/ds/Documents/Privat/Farbspiel/Farbspiel copy-Info.plist"; sourceTree = "<absolute>"; };
 		41A114B113DF6CA300B2F0DB /* farbkloetzchen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = farbkloetzchen.png; sourceTree = "<group>"; };
 		41A114B313DF6EF100B2F0DB /* farbkloetzchen-jengo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen-jengo.png"; sourceTree = "<group>"; };
 		41A114B413DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen-jengo@2x.png"; sourceTree = "<group>"; };
 		41C61E2C142898FA00B513EB /* smalltrash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smalltrash.png; sourceTree = "<group>"; };
-		41C61E2F14289D4700B513EB /* UIActionSheet-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet-BKAdditions.h"; sourceTree = "<group>"; };
-		41C61E3014289D4700B513EB /* UIActionSheet-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet-BKAdditions.m"; sourceTree = "<group>"; };
 		41D925CC13D8A76B007612E6 /* Farbspiel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Farbspiel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D925D013D8A76B007612E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		41D925D213D8A76B007612E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -322,6 +315,17 @@
 			name = StatistikView;
 			sourceTree = "<group>";
 		};
+		4170EAB21459AB3B00D93ED1 /* LambdaAlert */ = {
+			isa = PBXGroup;
+			children = (
+				4170EAB51459ACE100D93ED1 /* LambdaAlert.h */,
+				4170EAB61459ACE100D93ED1 /* LambdaAlert.m */,
+				4170EAB71459ACE100D93ED1 /* LambdaSheet.h */,
+				4170EAB81459ACE100D93ED1 /* LambdaSheet.m */,
+			);
+			name = LambdaAlert;
+			sourceTree = "<group>";
+		};
 		418456611428DFC700C9A68E /* GUIs */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,7 +435,6 @@
 				41D925F813D8A76B007612E6 /* FarbspielTests */,
 				41D925CF13D8A76B007612E6 /* Frameworks */,
 				41D925CD13D8A76B007612E6 /* Products */,
-				419F0F5814338370009AF98E /* Farbspiel copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -463,6 +466,7 @@
 		41D925D613D8A76B007612E6 /* Farbspiel */ = {
 			isa = PBXGroup;
 			children = (
+				4170EAB21459AB3B00D93ED1 /* LambdaAlert */,
 				419F0F99143384C1009AF98E /* Resources-iPad */,
 				41D925D713D8A76B007612E6 /* Supporting Files */,
 				418812791428EA2D00F2BBE8 /* Model */,
@@ -528,11 +532,6 @@
 		41D9264513D8A9C3007612E6 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				41C61E2F14289D4700B513EB /* UIActionSheet-BKAdditions.h */,
-				41C61E3014289D4700B513EB /* UIActionSheet-BKAdditions.m */,
-				413A1E7013E360EF00DAD8A3 /* BKTypes.h */,
-				413A1E6D13E360D600DAD8A3 /* UIAlertView-BKAdditions.h */,
-				413A1E6E13E360D600DAD8A3 /* UIAlertView-BKAdditions.m */,
 				41D9262613D8A8C3007612E6 /* NSMutableArray+StackMethods.h */,
 				41D9262713D8A8C3007612E6 /* NSMutableArray+StackMethods.m */,
 				41D9263013D8A8C3007612E6 /* UIColor+Tools.h */,
@@ -718,13 +717,10 @@
 				416C11A9145849670034F3EC /* Default-Portrait~ipad.png in Resources */,
 				416C11AD145849DD0034F3EC /* IconIpad.png in Resources */,
 				4136352E14584E5100D01E1D /* GewonnenView~ipad.xib in Resources */,
-				4136353014584E5B00D01E1D /* GewonnenView~ipad.xib in Resources */,
 				4136353514584E9D00D01E1D /* SettingsViewController~ipad.xib in Resources */,
 				4136353614584E9D00D01E1D /* StatistikView~ipad.xib in Resources */,
 				4136353D14584EA600D01E1D /* FarbspielViewController~ipad.xib in Resources */,
 				4136353E14584EA600D01E1D /* MainWindow~ipad.xib in Resources */,
-				4136353F14584EA600D01E1D /* SettingsViewController~ipad.xib in Resources */,
-				4136354014584EA600D01E1D /* StatistikView~ipad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,12 +769,10 @@
 				418812961429D54F00F2BBE8 /* SoundManager.m in Sources */,
 				418812971429D54F00F2BBE8 /* Datenhaltung.m in Sources */,
 				418812981429D54F00F2BBE8 /* SettingsViewController.m in Sources */,
-				418812991429D54F00F2BBE8 /* UIAlertView-BKAdditions.m in Sources */,
 				4188129A1429D54F00F2BBE8 /* JengoColor.xcdatamodeld in Sources */,
 				4188129B1429D54F00F2BBE8 /* Spiel.m in Sources */,
 				4188129C1429D54F00F2BBE8 /* StatistikView.m in Sources */,
 				4188129D1429D54F00F2BBE8 /* StatistikViewController.m in Sources */,
-				4188129E1429D54F00F2BBE8 /* UIActionSheet-BKAdditions.m in Sources */,
 				418F3C44142A16C8006B1556 /* KIFTestScenario+FarbspielAdditions.m in Sources */,
 				418F3C45142A16CC006B1556 /* FarbspielTestController.m in Sources */,
 			);
@@ -802,12 +796,12 @@
 				418E613713D9C2260028A3D9 /* SoundManager.m in Sources */,
 				418E613B13D9CE290028A3D9 /* Datenhaltung.m in Sources */,
 				412BFEFA13DE242400159AD4 /* SettingsViewController.m in Sources */,
-				413A1E6F13E360D600DAD8A3 /* UIAlertView-BKAdditions.m in Sources */,
 				41FE192913F06D7700BF4656 /* JengoColor.xcdatamodeld in Sources */,
 				41FE196313F0845900BF4656 /* Spiel.m in Sources */,
 				415A1F1E14276BCD00328122 /* StatistikView.m in Sources */,
 				415A1F2114277D9800328122 /* StatistikViewController.m in Sources */,
-				41C61E3114289D4700B513EB /* UIActionSheet-BKAdditions.m in Sources */,
+				4170EAB91459ACE100D93ED1 /* LambdaAlert.m in Sources */,
+				4170EABA1459ACE100D93ED1 /* LambdaSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1022,6 +1016,7 @@
 		41D9260513D8A76B007612E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Farbspiel/Farbspiel-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1036,6 +1031,7 @@
 		41D9260613D8A76B007612E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Farbspiel/Farbspiel-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;

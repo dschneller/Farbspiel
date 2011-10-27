@@ -15,8 +15,8 @@
     id<SpielrasterViewDatasource> dataSource_;
 }
 
-@property (nonatomic,retain) IBOutlet UIView* raster;
-@property (nonatomic,retain) id<SpielrasterViewDatasource> dataSource;
+@property (nonatomic,strong) IBOutlet UIView* raster;
+@property (nonatomic,strong) id<SpielrasterViewDatasource> dataSource;
 @end
 
 

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIAlertView-BKAdditions.h"
 #import "SpielrasterView.h"
 #import "SpielrasterViewController.h"
 #import "ColorfulButton.h"
@@ -42,11 +41,11 @@
     SpielLevel defaultLevel_;
 }
 
-@property (nonatomic,retain) SpielrasterViewController* rasterController;
+@property (nonatomic,strong) SpielrasterViewController* rasterController;
 @property (nonatomic,assign) SpielLevel defaultLevel;
-
-@property (retain) NSUndoManager *undoManager; // override to enable writing
-
+@property (nonatomic,strong) UIPopoverController* settingsPopoverController;
+@property (strong) NSUndoManager *undoManager; // override to enable writing
+@property (nonatomic,strong) UIAlertView* neuesSpielAlert;
 - (IBAction)neuesSpiel:(id)sender;
 - (IBAction)colorButtonPressed:(id)sender;
 - (IBAction)settingsButtonPressed:(id)sender;

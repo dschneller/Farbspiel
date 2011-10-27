@@ -13,12 +13,12 @@
 @interface Spiel : NSManagedObject {
 @private
 }
-@property (nonatomic, retain) NSNumber * dauer;
-@property (nonatomic, retain) NSNumber * gewonnen;
-@property (nonatomic, retain) NSNumber * level;
-@property (nonatomic, retain) NSNumber * zuege;
-@property (nonatomic, retain) NSNumber * abgebrochen;
-@property (nonatomic, retain) NSNumber * undos;
-@property (nonatomic, retain) NSDate * datum;
+@property (nonatomic, strong) NSNumber * dauer;
+@property (nonatomic, strong) NSNumber * gewonnen;
+@property (nonatomic, strong) NSNumber * level;
+@property (nonatomic, strong) NSNumber * zuege;
+@property (nonatomic, strong) NSNumber * abgebrochen;
+@property (nonatomic, strong) NSNumber * undos;
+@property (nonatomic, strong) NSDate * datum;
 
 @end

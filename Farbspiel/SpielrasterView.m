@@ -102,11 +102,6 @@
 }
 
 
-- (void)dealloc {
-    [raster_ release];
-    [dataSource_ release];
-    [super dealloc];
-}
 
 
 @end

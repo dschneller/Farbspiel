@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import "UIActionSheet-BKAdditions.h"
 #import "FarbspielViewController.h"
 
 @interface SettingsViewController : UIViewController {
@@ -40,28 +39,28 @@
 }
 
 
-@property (nonatomic, retain) Spielmodel *passedInModel;
-@property (nonatomic, retain) FarbspielViewController *aufrufenderController;
-@property (nonatomic, retain) IBOutlet UISegmentedControl *schwierigkeitsGrad;
-@property (nonatomic, retain) IBOutlet UILabel *feldgroesseLabel;
-@property (nonatomic, retain) IBOutlet UILabel *anzahlZuegeLabel;
-@property (nonatomic, retain) IBOutlet UISwitch *soundEffekteSwitch;
-@property (nonatomic, retain) IBOutlet UISegmentedControl *farbschema;
-@property (nonatomic, retain) IBOutlet UISwitch *rasterSwitch;
+@property (nonatomic, strong) Spielmodel *passedInModel;
+@property (nonatomic, strong) FarbspielViewController *aufrufenderController;
+@property (nonatomic, strong) IBOutlet UISegmentedControl *schwierigkeitsGrad;
+@property (nonatomic, strong) IBOutlet UILabel *feldgroesseLabel;
+@property (nonatomic, strong) IBOutlet UILabel *anzahlZuegeLabel;
+@property (nonatomic, strong) IBOutlet UISwitch *soundEffekteSwitch;
+@property (nonatomic, strong) IBOutlet UISegmentedControl *farbschema;
+@property (nonatomic, strong) IBOutlet UISwitch *rasterSwitch;
 
-@property (nonatomic, retain) IBOutlet UIView *farbe1;
-@property (nonatomic, retain) IBOutlet UIView *farbe2;
-@property (nonatomic, retain) IBOutlet UIView *farbe3;
-@property (nonatomic, retain) IBOutlet UIView *farbe4;
-@property (nonatomic, retain) IBOutlet UIView *farbe5;
-@property (nonatomic, retain) IBOutlet UIView *farbe6;
-@property (nonatomic, retain) IBOutlet UIView *farbPreviewRahmen;
-@property (nonatomic, retain) IBOutlet UIView *farbe1bg;
-@property (nonatomic, retain) IBOutlet UIView *farbe2bg;
-@property (nonatomic, retain) IBOutlet UIView *farbe3bg;
-@property (nonatomic, retain) IBOutlet UIView *farbe4bg;
-@property (nonatomic, retain) IBOutlet UIView *farbe5bg;
-@property (nonatomic, retain) IBOutlet UIView *farbe6bg;
+@property (nonatomic, strong) IBOutlet UIView *farbe1;
+@property (nonatomic, strong) IBOutlet UIView *farbe2;
+@property (nonatomic, strong) IBOutlet UIView *farbe3;
+@property (nonatomic, strong) IBOutlet UIView *farbe4;
+@property (nonatomic, strong) IBOutlet UIView *farbe5;
+@property (nonatomic, strong) IBOutlet UIView *farbe6;
+@property (nonatomic, strong) IBOutlet UIView *farbPreviewRahmen;
+@property (nonatomic, strong) IBOutlet UIView *farbe1bg;
+@property (nonatomic, strong) IBOutlet UIView *farbe2bg;
+@property (nonatomic, strong) IBOutlet UIView *farbe3bg;
+@property (nonatomic, strong) IBOutlet UIView *farbe4bg;
+@property (nonatomic, strong) IBOutlet UIView *farbe5bg;
+@property (nonatomic, strong) IBOutlet UIView *farbe6bg;
 
 - (IBAction)zurueckZumSpiel:(id)sender;
 - (IBAction)soundAnAus:(id)sender;

@@ -9,9 +9,9 @@
     CAGradientLayer *gradientLayer;
 }
 
-@property (nonatomic,retain) UIColor *_highColor;
-@property (nonatomic,retain) UIColor *_lowColor;
-@property (nonatomic, retain) CAGradientLayer *gradientLayer;
+@property (nonatomic,strong) UIColor *_highColor;
+@property (nonatomic,strong) UIColor *_lowColor;
+@property (nonatomic, strong) CAGradientLayer *gradientLayer;
 
 - (void)setHighColor:(UIColor*)color;
 - (void)setLowColor:(UIColor*)color;

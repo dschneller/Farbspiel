@@ -15,9 +15,9 @@
     UILabel *_prozentGewonnen;
 }
 
-@property (nonatomic, retain) IBOutlet UILabel *anzahlSpiele;
-@property (nonatomic, retain) IBOutlet UILabel *anzahlGewonnen;
-@property (nonatomic, retain) IBOutlet UILabel *anzahlVerloren;
-@property (nonatomic, retain) IBOutlet UILabel *prozentGewonnen;
+@property (nonatomic, strong) IBOutlet UILabel *anzahlSpiele;
+@property (nonatomic, strong) IBOutlet UILabel *anzahlGewonnen;
+@property (nonatomic, strong) IBOutlet UILabel *anzahlVerloren;
+@property (nonatomic, strong) IBOutlet UILabel *prozentGewonnen;
 
 @end

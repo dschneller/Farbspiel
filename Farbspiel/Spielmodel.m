@@ -222,10 +222,5 @@
     return self;
 }
 
--(void)dealloc {
-    [farbfelder_ release];
-    farbfelder_ = nil;
-    [super dealloc];
-}
 
 @end

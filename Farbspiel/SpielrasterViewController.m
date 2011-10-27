@@ -25,9 +25,9 @@
 }
 
 -(void) setModel:(Spielmodel *)model {
-    [model_ release]; // altes loslassen
+     // altes loslassen
     model_ = model; // neues setzen
-    [model_ retain]; // neues halten
+     // neues halten
     [self.delegate spielrasterViewController:self modelDidChange:model];
     self.view.dataSource = self;
     [self updateZuegeDisplay];
@@ -44,7 +44,6 @@
 - (void)stopAndClearTimer {
     if (timer_) {
         [timer_ invalidate];
-        [timer_ release];
         timer_ = nil;
     }
 }
@@ -52,7 +51,6 @@
 - (void)startTimer {
     if (!timer_) {
         timer_ = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tick) userInfo:nil repeats:YES];
-        [timer_ retain];
     }
 }
 
@@ -141,12 +139,6 @@
 - (void)dealloc
 {
     [self stopAndClearTimer];
-    [zuegeLabel release];
-    [view_ release];
-    [model_ release];
-    [delegate_ release];
-    [model_ release];
-    [super dealloc];
 }
 
 

@@ -71,7 +71,6 @@ static Datenhaltung *sharedSingleton;
     
     NSError *error = nil;
     NSArray *spiele = [ctx executeFetchRequest:fetchRequest error:&error];
-    [fetchRequest release];
     
     if (error) {
         NSLog(@"Fehler beim Zuruecksetzen der Statistik fuer Level %d: %@", level, error);
@@ -131,7 +130,6 @@ static Datenhaltung *sharedSingleton;
     if (error) {
         NSLog(@"Fehler beim Zaehlen der Spiele fuer Level %d: %@", level, error);
     }
-    [fetchRequest release];
     
     return count;
 }
@@ -158,7 +156,6 @@ static Datenhaltung *sharedSingleton;
     if (error) {
         NSLog(@"Fehler beim Zaehlen der %@ Spiele fuer Level %d: %@", (gewonnen ? @"gewonnenen" : @"verlorenen"), level, error);
     }
-    [fetchRequest release];
     
     return count;
 

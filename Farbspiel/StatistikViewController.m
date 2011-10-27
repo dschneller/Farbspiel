@@ -26,14 +26,6 @@
     return self;
 }
 
-- (void)dealloc {
-    [statistikView_ release];
-    [lAnzahlSpiele_ release];
-    [lAnzahlGewonnen_ release];
-    [lAnzahlVerloren_ release];
-    [lProzentGewonnen_ release];
-    [super dealloc];
-}
 
 -(NSUInteger) anzahlVerloren {
     return self.anzahlSpiele - self.anzahlGewonnen;
