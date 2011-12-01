@@ -14,38 +14,42 @@
 #import "StatistikView.h"
 #import "StatistikViewController.h"
 
-@interface FarbspielViewController : UIViewController <SpielrasterViewControllerDelegate, UIPopoverControllerDelegate> {
+@interface FarbspielViewController : UIViewController
+<SpielrasterViewControllerDelegate, UIPopoverControllerDelegate> {
     
-    IBOutletCollection(ColorfulButton) NSArray *allColorButtons;
     
-    IBOutlet UIButton *debugButtonVerlieren;
-    IBOutlet UIButton *debugButtonGewinnen;
-    IBOutlet UIView *gewonnenView;
-    
-    IBOutlet UILabel *gewonnenVerlorenLabel;
-    IBOutlet UILabel *gewonnenInXZuegenLabel;
-    IBOutlet UILabel *spieldauerLabel;
-    IBOutlet UILabel *uhrLabel;
-    IBOutlet UILabel *levelLabel;
-
-    IBOutlet UIButton *settingsToggleButton;
-    IBOutlet StatistikViewController *statistikViewController_;
-    IBOutlet StatistikView *statistikPlaceholder_;
-    IBOutlet ColorfulButton *einstellungenButton;
-    IBOutlet ColorfulButton *neuesSpielButton_;
-    IBOutlet SpielrasterViewController *rasterController;
-    IBOutlet SpielrasterView *spielrasterView_;
-    IBOutlet UIButton *soundAnAusButton_;
-    CAGradientLayer *blurLayer_;
-
-    SpielLevel defaultLevel_;
+    SpielLevel _defaultLevel;
 }
 
-@property (nonatomic,strong) SpielrasterViewController* rasterController;
-@property (nonatomic,assign) SpielLevel defaultLevel;
-@property (nonatomic,strong) UIPopoverController* settingsPopoverController;
-@property (strong) NSUndoManager *undoManager; // override to enable writing
-@property (nonatomic,strong) UIAlertView* neuesSpielAlert;
+@property (strong, nonatomic) IBOutletCollection(ColorfulButton) NSArray *allColorButtons;
+
+@property (weak, nonatomic) IBOutlet UIButton *debugButtonVerlieren;
+@property (weak, nonatomic) IBOutlet UIButton *debugButtonGewinnen;
+@property (weak, nonatomic) IBOutlet UILabel *gewonnenInXZuegenLabel;
+@property (weak, nonatomic) IBOutlet UILabel *gewonnenVerlorenLabel;
+@property (weak, nonatomic) IBOutlet UIView *gewonnenView;
+@property (weak, nonatomic) IBOutlet UILabel *levelLabel;
+@property (weak, nonatomic) IBOutlet SpielrasterViewController *rasterController;
+@property (weak, nonatomic) IBOutlet UIButton *settingsToggleButton;
+@property (weak, nonatomic) IBOutlet UIButton *soundAnAusButton;
+@property (weak, nonatomic) IBOutlet UILabel *spieldauerLabel;
+@property (weak, nonatomic) IBOutlet SpielrasterView *spielrasterView;
+@property (weak, nonatomic) IBOutlet UILabel *uhrLabel;
+@property (weak, nonatomic) IBOutlet UISwipeGestureRecognizer *undoSwipeGestureRecognizer;
+
+@property (assign, nonatomic) SpielLevel defaultLevel;
+@property (strong, nonatomic) ColorfulButton *einstellungenButton;
+@property (strong, nonatomic) UIAlertView* neuesSpielAlert;
+@property (strong, nonatomic) ColorfulButton *neuesSpielButton;
+@property (strong, nonatomic) UIPopoverController* settingsPopoverController;
+@property (strong, nonatomic) StatistikView *statistikPlaceholder;
+@property (strong, nonatomic) StatistikViewController *statistikViewController;
+@property (strong, nonatomic) NSUndoManager *undoManager; // override to enable writing
+
+
+
+
+
 - (IBAction)neuesSpiel:(id)sender;
 - (IBAction)colorButtonPressed:(id)sender;
 - (IBAction)settingsButtonPressed:(id)sender;

@@ -193,7 +193,7 @@
 		41D925DF13D8A76B007612E6 /* FarbspielAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FarbspielAppDelegate.h; sourceTree = "<group>"; };
 		41D925E013D8A76B007612E6 /* FarbspielAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarbspielAppDelegate.m; sourceTree = "<group>"; };
 		41D925E313D8A76B007612E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		41D925E513D8A76B007612E6 /* FarbspielViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FarbspielViewController.h; sourceTree = "<group>"; };
+		41D925E513D8A76B007612E6 /* FarbspielViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FarbspielViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		41D925E613D8A76B007612E6 /* FarbspielViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarbspielViewController.m; sourceTree = "<group>"; };
 		41D925F013D8A76B007612E6 /* FarbspielTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarbspielTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D925F113D8A76B007612E6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -1021,7 +1021,7 @@
 				GCC_PREFIX_HEADER = "Farbspiel/Farbspiel-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Farbspiel/Farbspiel-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -1036,7 +1036,7 @@
 				GCC_PREFIX_HEADER = "Farbspiel/Farbspiel-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Farbspiel/Farbspiel-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

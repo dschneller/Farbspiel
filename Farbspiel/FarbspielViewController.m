@@ -14,49 +14,25 @@
 #import "SettingsViewController.h"
 #import "LambdaAlert.h"
 
+@interface FarbspielViewController()
+    @property (weak, nonatomic, readonly) CAGradientLayer* blurLayer;
+@end
+
 @implementation FarbspielViewController
 
-@synthesize rasterController;
-@synthesize undoManager;
-@synthesize defaultLevel = defaultLevel_;
-@synthesize settingsPopoverController;
-@synthesize neuesSpielAlert;
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];    
-
-
-    
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
-- (CAGradientLayer*) makeBackgroundGradientLayer {
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = self.view.bounds;
-    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor darkGrayColor] CGColor], (id)[[UIColor lightGrayColor] CGColor],(id)[[UIColor darkGrayColor] CGColor], nil];
-    return gradient;
-
-}
-
+@synthesize blurLayer = _blurLayer;
 - (CAGradientLayer*) blurLayer {
-    if (!blurLayer_) {
-        blurLayer_ = [CAGradientLayer layer];
-        blurLayer_.frame = self.view.bounds;
-        blurLayer_.colors = [NSArray arrayWithObjects:(id)[[[UIColor darkGrayColor] colorByChangingAlphaTo:0.7f] CGColor], (id)[[[[UIColor darkGrayColor] colorByDarkeningColor] colorByChangingAlphaTo:0.7f] CGColor], nil];
+    if (!_blurLayer) {
+        _blurLayer = [CAGradientLayer layer];
+        _blurLayer.frame = self.view.bounds;
+        _blurLayer.colors = [NSArray arrayWithObjects:(id)[[[UIColor darkGrayColor] colorByChangingAlphaTo:0.7f] CGColor], (id)[[[[UIColor darkGrayColor] colorByDarkeningColor] colorByChangingAlphaTo:0.7f] CGColor], nil];
     }
-    return blurLayer_;
+    return _blurLayer;
 }
+
 
 -(void) starteNeuesSpielMitLevel:(SpielLevel)level {
-    self.rasterController.view = spielrasterView_;
+    self.rasterController.view = self.spielrasterView;
     self.rasterController.delegate = self;
     
     Spielmodel* model = [[Spielmodel alloc] initWithLevel:level];
@@ -68,9 +44,9 @@
 
 - (void)updateSoundButton:(BOOL)an {
     if (an) {
-        [soundAnAusButton_ setImage:[UIImage imageNamed:@"speaker"] forState:UIControlStateNormal];
+        [self.soundAnAusButton setImage:[UIImage imageNamed:@"speaker"] forState:UIControlStateNormal];
     } else {
-        [soundAnAusButton_ setImage:[UIImage imageNamed:@"speaker_off"] forState:UIControlStateNormal];
+        [self.soundAnAusButton setImage:[UIImage imageNamed:@"speaker_off"] forState:UIControlStateNormal];
     }
 }
 
@@ -98,14 +74,7 @@
         }
     }];
 }
--(void) handleSwipeFrom:(UISwipeGestureRecognizer*)recognizer {
-    if (![self.undoManager canUndo]) {
-        [self shakeView:self.rasterController.view];
-    } else {
-        [self.undoManager undo];
-    }
-    
-}
+
 
 
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
@@ -121,10 +90,6 @@
 {
     [super viewDidLoad];
     
-    UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
-    recognizer.direction = UISwipeGestureRecognizerDirectionLeft;
-    [spielrasterView_ addGestureRecognizer:recognizer];
-    
     NSUndoManager *manager = [[NSUndoManager alloc] init];
     self.undoManager = manager;
     self.undoManager.levelsOfUndo = 1;
@@ -135,12 +100,12 @@
     
     
      // Set the layer's corner radius
-     [[spielrasterView_ layer] setCornerRadius:8.0f];
+     [[self.spielrasterView layer] setCornerRadius:8.0f];
      // Turn on masking
-     [[spielrasterView_ layer] setMasksToBounds:YES];
+     [[self.spielrasterView layer] setMasksToBounds:YES];
      // Display a border around the button 
      // with a 1.0 pixel width
-     [[spielrasterView_ layer] setBorderWidth:1.0f];
+     [[self.spielrasterView layer] setBorderWidth:1.0f];
     
 #if !DEBUG
     [debugButtonVerlieren removeFromSuperview];
@@ -164,7 +129,7 @@
 -(void) updateGUIAusSettings {
     [self updateSoundButton:[SoundManager sharedManager].soundAn];
     
-    for (ColorfulButton *b in allColorButtons) {
+    for (ColorfulButton *b in self.allColorButtons) {
         [b setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:b.tag]];
         [b setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:b.tag]];
     }
@@ -189,9 +154,9 @@
     if (self.rasterController.model.level != storedLevel) {
         NSLog(@"Neues Model mit Level %d", storedLevel);
         
-        if (rasterController.model.siegErreicht ||
-            rasterController.model.verloren ||
-            !rasterController.model.spielLaeuft) {
+        if (self.rasterController.model.siegErreicht ||
+            self.rasterController.model.verloren ||
+            !self.rasterController.model.spielLaeuft) {
             [self starteNeuesSpielMitLevel:storedLevel];
         } else {
             LambdaAlert *alert = [[LambdaAlert alloc]
@@ -216,33 +181,8 @@
 
 - (void)viewDidUnload
 {
-    rasterController = nil;
-    
-    
-    spielrasterView_ = nil;
-    rasterController = nil;
-    gewonnenView = nil;
-    neuesSpielButton_ = nil;
-    gewonnenInXZuegenLabel = nil;
-    debugButtonVerlieren = nil;
-    gewonnenVerlorenLabel = nil;
-    spieldauerLabel = nil;
-    levelLabel = nil;
-    blurLayer_ = nil;
-    uhrLabel = nil;
-    
-    soundAnAusButton_ = nil;
-    einstellungenButton = nil;
-    debugButtonGewinnen = nil;
-    statistikPlaceholder_ = nil;
-    statistikViewController_ = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    self.undoManager = nil;
-    allColorButtons = nil;
-    settingsToggleButton = nil;
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 
@@ -260,47 +200,50 @@
 
 - (void) fadeOutGewonnenView {
     [UIView animateWithDuration:0.5
-                     animations:^{ 
+                     animations:^{
                          NSLog(@"Fade Out Animation Began");
-                         gewonnenView.alpha = 0;
-                         [gewonnenView setFrame:CGRectMake(gewonnenView.frame.origin.x, -gewonnenView.frame.size.height, gewonnenView.frame.size.width, gewonnenView.frame.size.height)];
+                         CGRect f = self.gewonnenView.frame;
+                         CGRect nf = CGRectMake(f.origin.x, -f.size.height, f.size.width, f.size.height);
+                         self.gewonnenView.alpha = 0;
+                         self.gewonnenView.frame = nf;
                      } 
                      completion:^(BOOL finished){
                          NSLog(@"Fade Out Animation Finished");
 
-                         [gewonnenView removeFromSuperview];
+                         [self.gewonnenView removeFromSuperview];
                          [[self blurLayer] removeFromSuperlayer];
-                         gewonnenView = nil;
+                         self.gewonnenView = nil;
                      }];
 
 }
 
 - (void) loadAndInitGewonnenView {
-    if (!gewonnenView) {
+    if (!self.gewonnenView) {
+        UIView* newGewonnenView;
         UINib* nib = [UINib nibWithNibName:@"GewonnenView" bundle:[NSBundle mainBundle]];
         NSArray* nibContents = [nib instantiateWithOwner:self options:nil];
-        gewonnenView = [nibContents objectAtIndex:0];
+        newGewonnenView = [nibContents objectAtIndex:0];
         
         
-        [[gewonnenView layer] setCornerRadius:8.0f];
+        [[newGewonnenView layer] setCornerRadius:8.0f];
         // Turn on masking
-        [[gewonnenView layer] setMasksToBounds:YES];
+        [[newGewonnenView layer] setMasksToBounds:YES];
         // Display a border around the button 
         // with a 1.0 pixel width
-        [[gewonnenView layer] setBorderWidth:1.0f];
-        [[gewonnenView layer] setBorderColor:[[[UIColor whiteColor] colorByChangingAlphaTo:0.8f] CGColor]];
+        [[newGewonnenView layer] setBorderWidth:1.0f];
+        [[newGewonnenView layer] setBorderColor:[[[UIColor whiteColor] colorByChangingAlphaTo:0.8f] CGColor]];
         
-        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"StatistikView" owner:statistikViewController_ options:nil];
+        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"StatistikView" owner:self.statistikViewController options:nil];
         StatistikView *statistikView = (StatistikView *)[views objectAtIndex:0];
 
-        [statistikPlaceholder_ addSubview:statistikView];
-        statistikViewController_.statistikView = statistikView;
+        [self.statistikPlaceholder addSubview:statistikView];
+        self.statistikViewController.statistikView = statistikView;
         
         
 
         
-        [neuesSpielButton_ setHighColor:[UIColor greenColor]];
-        [neuesSpielButton_ setLowColor:[[UIColor greenColor] colorByDarkeningColor]];
+        [self.neuesSpielButton setHighColor:[UIColor greenColor]];
+        [self.neuesSpielButton setLowColor:[[UIColor greenColor] colorByDarkeningColor]];
     }
 
 }
@@ -334,30 +277,30 @@
     NSUInteger anzahlGewonnen = [[Datenhaltung sharedInstance] anzahlSpieleGewonnen:YES fuerLevel:model.level];
     
     
-    statistikViewController_.anzahlSpiele = anzahlSpiele;
-    statistikViewController_.anzahlGewonnen = anzahlGewonnen;
+    self.statistikViewController.anzahlSpiele = anzahlSpiele;
+    self.statistikViewController.anzahlGewonnen = anzahlGewonnen;
     
     long dauer = model.spieldauer;
     int minuten = dauer / 60;
     int sekunden = dauer % 60;
     
-    gewonnenView.alpha = 0;
-    gewonnenView.center = CGPointMake(self.view.center.x, -gewonnenView.frame.size.height);
+    self.gewonnenView.alpha = 0;
+    self.gewonnenView.center = CGPointMake(self.view.center.x, -self.gewonnenView.frame.size.height);
 
-    gewonnenVerlorenLabel.text = gewonnenVerloren;
-    gewonnenInXZuegenLabel.text = [NSString stringWithFormat:@"%d", zuege, nil];
+    self.gewonnenVerlorenLabel.text = gewonnenVerloren;
+    self.gewonnenInXZuegenLabel.text = [NSString stringWithFormat:@"%d", zuege, nil];
     
-    spieldauerLabel.text = [NSString stringWithFormat:@"%d:%02d", minuten, sekunden];
-    levelLabel.text = level;
+    self.spieldauerLabel.text = [NSString stringWithFormat:@"%d:%02d", minuten, sekunden];
+    self.levelLabel.text = level;
 
     [self.view.layer addSublayer:[self blurLayer]];
 
-    [self.view addSubview:gewonnenView];
+    [self.view addSubview:self.gewonnenView];
     
     [UIView animateWithDuration:0.5 animations:^{
         NSLog(@"Fade In Animation Began");
-        gewonnenView.alpha = 0.85f;
-        gewonnenView.center = CGPointMake(self.view.center.x, self.view.center.y - 30);
+        self.gewonnenView.alpha = 0.85f;
+        self.gewonnenView.center = CGPointMake(self.view.center.x, self.view.center.y - 30);
         if (model.siegErreicht) {
             [[SoundManager sharedManager] playSound:GEWONNEN];
         } else {
@@ -368,19 +311,26 @@
     }];
 }
 
+
 - (void) setColorButtonState:(BOOL)state {
-    for (ColorfulButton* b in allColorButtons) {
+    for (ColorfulButton* b in self.allColorButtons) {
         b.enabled = state;
     }
 }
 
-- (void) disableColorButtons {
-    [self setColorButtonState:NO];
+- (void) setAllButtonState:(BOOL)state {
+    [self setColorButtonState:state];    
+    self.settingsToggleButton.enabled = state;
+    self.soundAnAusButton.enabled = state;
+#if DEBUG
+    self.debugButtonGewinnen.enabled = state;
+    self.debugButtonVerlieren.enabled = state;
+#endif
+    if (self.undoSwipeGestureRecognizer) {
+        self.undoSwipeGestureRecognizer.enabled = state;
+    }
 }
-     
-- (void) enableColorButtons {
-    [self setColorButtonState:YES];
-}
+
 
 #pragma mark - Notification Center
 
@@ -397,7 +347,7 @@
 - (IBAction)neuesSpiel:(id)sender {
     [self starteNeuesSpielMitLevel:[[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL]];
     [self fadeOutGewonnenView];
-    [self enableColorButtons];
+    [self setAllButtonState:YES];
 }
 
 - (IBAction)colorButtonPressed:(id)sender {
@@ -409,7 +359,7 @@
     [self.rasterController colorClicked:(NSUInteger)colorNumber];
 }
 
-- (IBAction)settingsButtonPressed:(id)sender {
+- (IBAction)settingsButtonPressed:(UIButton*)sender {
     [self loadAndInitGewonnenView];
     SettingsViewController* settingsController = [[SettingsViewController alloc] initWithNibName:nil bundle:nil];
     
@@ -420,8 +370,16 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         self.settingsPopoverController = [[UIPopoverController alloc] initWithContentViewController:settingsController];
         self.settingsPopoverController.delegate = self;
-        [self.settingsPopoverController presentPopoverFromRect:settingsToggleButton.frame 
-                                       inView:self.view
+        
+        UIView* popoverReferenceView;
+        if (self.gewonnenView.window) {
+            popoverReferenceView = self.gewonnenView;
+        } else {
+            popoverReferenceView = self.view;
+        }
+        
+        [self.settingsPopoverController presentPopoverFromRect:sender.frame 
+                                       inView:popoverReferenceView
                      permittedArrowDirections:UIPopoverArrowDirectionAny 
                                      animated:YES];
         
@@ -450,6 +408,15 @@
 }
 
 
+- (IBAction)undoSwipe:(UISwipeGestureRecognizer*)sender {
+    if (![self.undoManager canUndo]) {
+        [self shakeView:self.rasterController.view];
+    } else {
+        [self.undoManager undo];
+    }
+}
+
+
 
 #pragma mark - SpielrasterViewControllerDelegate protocol
 
@@ -458,17 +425,53 @@
     int minuten = dauer / 60;
     int sekunden = dauer % 60;
     
-    uhrLabel.text = [NSString stringWithFormat:@"%d:%02d", minuten, sekunden];
+    self.uhrLabel.text = [NSString stringWithFormat:@"%d:%02d", minuten, sekunden];
 
 }
 
 -(void)spielrasterViewController:(SpielrasterViewController*)controller spielEndeMitModel:(Spielmodel*)model {
-    [self disableColorButtons]; // TODO ALLE BUTTONS
+    [self setAllButtonState:NO];
     [self zeigeGewonnenInZuegen:model];
 }
 
 #pragma mark - SettingsViewcontroller callback
 - (void)settingsGeaendert:(Spielmodel*)modelAusSettings {
 }
+
+
+
+#pragma mark - Memory Management / Notification Center
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];    
+}
+
+#pragma mark - Synthesize Properties
+
+@synthesize allColorButtons         = _allColorButtons;
+@synthesize debugButtonGewinnen     = _debugButtonGewinnen;
+@synthesize debugButtonVerlieren    = _debugButtonVerlieren;
+@synthesize gewonnenInXZuegenLabel  = _gewonnenInXZuegenLabel;
+@synthesize gewonnenVerlorenLabel   = _gewonnenVerlorenLabel;
+@synthesize gewonnenView            = _gewonnenView;
+@synthesize levelLabel              = _levelLabel;
+@synthesize rasterController        = _rasterController;
+@synthesize settingsToggleButton    = _settingsToggleButton;
+@synthesize soundAnAusButton        = _soundAnAusButton;
+@synthesize spieldauerLabel         = _spieldauerLabel;
+@synthesize spielrasterView         = _spielrasterView;
+@synthesize uhrLabel                = _uhrLabel;
+@synthesize undoSwipeGestureRecognizer = _undoSwipeGestureRecognizer;
+
+@synthesize defaultLevel            = _defaultLevel;
+@synthesize einstellungenButton     = _einstellungenButton;
+@synthesize neuesSpielAlert         = _neuesSpielAlert;
+@synthesize neuesSpielButton        = _neuesSpielButton;
+@synthesize settingsPopoverController = _settingsPopoverController;
+@synthesize statistikPlaceholder    = _statistikPlaceholder;
+@synthesize statistikViewController = _statistikViewController;
+@synthesize undoManager             = _undoManager;
+
 
 @end
