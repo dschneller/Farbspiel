@@ -17,6 +17,12 @@
 		4136353514584E9D00D01E1D /* SettingsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353114584E9D00D01E1D /* SettingsViewController~ipad.xib */; };
 		4136353D14584EA600D01E1D /* FarbspielViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353714584EA600D01E1D /* FarbspielViewController~ipad.xib */; };
 		4136353E14584EA600D01E1D /* MainWindow~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353914584EA600D01E1D /* MainWindow~ipad.xib */; };
+		413A7ADC148913AA00CB33FF /* GewonnenView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413A7AD6148913AA00CB33FF /* GewonnenView.strings */; };
+		413A7ADD148913AA00CB33FF /* SettingsViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413A7AD8148913AA00CB33FF /* SettingsViewController.strings */; };
+		413A7ADE148913AA00CB33FF /* StatistikView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413A7ADA148913AA00CB33FF /* StatistikView.strings */; };
+		413A7AE5148915BF00CB33FF /* GewonnenView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413A7AD6148913AA00CB33FF /* GewonnenView.strings */; };
+		413A7AE6148915BF00CB33FF /* StatistikView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413A7ADA148913AA00CB33FF /* StatistikView.strings */; };
+		413A7AE7148915BF00CB33FF /* FarbspielViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418456471428D76700C9A68E /* FarbspielViewController.xib */; };
 		415A1F1E14276BCD00328122 /* StatistikView.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F1D14276BCD00328122 /* StatistikView.m */; };
 		415A1F2114277D9800328122 /* StatistikViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F2014277D9800328122 /* StatistikViewController.m */; };
 		415A8A4C13DF58A100FF0F3A /* farbkloetzchen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 415A8A4B13DF58A100FF0F3A /* farbkloetzchen@2x.png */; };
@@ -147,6 +153,12 @@
 		4136353814584EA600D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/FarbspielViewController~ipad.xib"; sourceTree = "<group>"; };
 		4136353A14584EA600D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/MainWindow~ipad.xib"; sourceTree = "<group>"; };
 		4136353B14584EA600D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/SettingsViewController~ipad.xib"; sourceTree = "<group>"; };
+		413A7AD7148913AA00CB33FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GewonnenView.strings; sourceTree = "<group>"; };
+		413A7AD9148913AA00CB33FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SettingsViewController.strings; sourceTree = "<group>"; };
+		413A7ADB148913AA00CB33FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/StatistikView.strings; sourceTree = "<group>"; };
+		413A7ADF148915BF00CB33FF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/GewonnenView.strings; sourceTree = "<group>"; };
+		413A7AE2148915BF00CB33FF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SettingsViewController.strings; sourceTree = "<group>"; };
+		413A7AE3148915BF00CB33FF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/StatistikView.strings; sourceTree = "<group>"; };
 		415A1F1C14276BCD00328122 /* StatistikView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatistikView.h; sourceTree = "<group>"; };
 		415A1F1D14276BCD00328122 /* StatistikView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatistikView.m; sourceTree = "<group>"; };
 		415A1F1F14277D9700328122 /* StatistikViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatistikViewController.h; sourceTree = "<group>"; };
@@ -332,6 +344,9 @@
 		418456611428DFC700C9A68E /* GUIs */ = {
 			isa = PBXGroup;
 			children = (
+				413A7AD6148913AA00CB33FF /* GewonnenView.strings */,
+				413A7ADA148913AA00CB33FF /* StatistikView.strings */,
+				413A7AD8148913AA00CB33FF /* SettingsViewController.strings */,
 				418456471428D76700C9A68E /* FarbspielViewController.xib */,
 				418456491428D76700C9A68E /* StatistikView.xib */,
 				41EBBD3B1428D2EF0019D98A /* SettingsViewController.xib */,
@@ -726,6 +741,12 @@
 				4136353514584E9D00D01E1D /* SettingsViewController~ipad.xib in Resources */,
 				4136353D14584EA600D01E1D /* FarbspielViewController~ipad.xib in Resources */,
 				4136353E14584EA600D01E1D /* MainWindow~ipad.xib in Resources */,
+				413A7ADC148913AA00CB33FF /* GewonnenView.strings in Resources */,
+				413A7ADD148913AA00CB33FF /* SettingsViewController.strings in Resources */,
+				413A7ADE148913AA00CB33FF /* StatistikView.strings in Resources */,
+				413A7AE5148915BF00CB33FF /* GewonnenView.strings in Resources */,
+				413A7AE6148915BF00CB33FF /* StatistikView.strings in Resources */,
+				413A7AE7148915BF00CB33FF /* FarbspielViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,6 +875,33 @@
 				4136353A14584EA600D01E1D /* en */,
 			);
 			name = "MainWindow~ipad.xib";
+			sourceTree = "<group>";
+		};
+		413A7AD6148913AA00CB33FF /* GewonnenView.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				413A7AD7148913AA00CB33FF /* en */,
+				413A7ADF148915BF00CB33FF /* de */,
+			);
+			name = GewonnenView.strings;
+			sourceTree = "<group>";
+		};
+		413A7AD8148913AA00CB33FF /* SettingsViewController.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				413A7AD9148913AA00CB33FF /* en */,
+				413A7AE2148915BF00CB33FF /* de */,
+			);
+			name = SettingsViewController.strings;
+			sourceTree = "<group>";
+		};
+		413A7ADA148913AA00CB33FF /* StatistikView.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				413A7ADB148913AA00CB33FF /* en */,
+				413A7AE3148915BF00CB33FF /* de */,
+			);
+			name = StatistikView.strings;
 			sourceTree = "<group>";
 		};
 		418456471428D76700C9A68E /* FarbspielViewController.xib */ = {
