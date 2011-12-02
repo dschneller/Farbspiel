@@ -14,9 +14,7 @@
 		412BFEBC13DE14F400159AD4 /* ledertextur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBA13DE14F300159AD4 /* ledertextur@2x.png */; };
 		412BFEBD13DE14F400159AD4 /* ledertextur.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBB13DE14F300159AD4 /* ledertextur.png */; };
 		412BFEFA13DE242400159AD4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412BFEF813DE242300159AD4 /* SettingsViewController.m */; };
-		4136352E14584E5100D01E1D /* GewonnenView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136352C14584E5100D01E1D /* GewonnenView~ipad.xib */; };
 		4136353514584E9D00D01E1D /* SettingsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353114584E9D00D01E1D /* SettingsViewController~ipad.xib */; };
-		4136353614584E9D00D01E1D /* StatistikView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353314584E9D00D01E1D /* StatistikView~ipad.xib */; };
 		4136353D14584EA600D01E1D /* FarbspielViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353714584EA600D01E1D /* FarbspielViewController~ipad.xib */; };
 		4136353E14584EA600D01E1D /* MainWindow~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4136353914584EA600D01E1D /* MainWindow~ipad.xib */; };
 		415A1F1E14276BCD00328122 /* StatistikView.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F1D14276BCD00328122 /* StatistikView.m */; };
@@ -145,14 +143,10 @@
 		412BFEBB13DE14F300159AD4 /* ledertextur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ledertextur.png; sourceTree = "<group>"; };
 		412BFEF713DE242300159AD4 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		412BFEF813DE242300159AD4 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		4136352D14584E5100D01E1D /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = "de.lproj/GewonnenView~ipad.xib"; sourceTree = "<group>"; };
-		4136352F14584E5B00D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/GewonnenView~ipad.xib"; sourceTree = "<group>"; };
 		4136353214584E9D00D01E1D /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = "de.lproj/SettingsViewController~ipad.xib"; sourceTree = "<group>"; };
-		4136353414584E9D00D01E1D /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = "de.lproj/StatistikView~ipad.xib"; sourceTree = "<group>"; };
 		4136353814584EA600D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/FarbspielViewController~ipad.xib"; sourceTree = "<group>"; };
 		4136353A14584EA600D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/MainWindow~ipad.xib"; sourceTree = "<group>"; };
 		4136353B14584EA600D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/SettingsViewController~ipad.xib"; sourceTree = "<group>"; };
-		4136353C14584EA600D01E1D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/StatistikView~ipad.xib"; sourceTree = "<group>"; };
 		415A1F1C14276BCD00328122 /* StatistikView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatistikView.h; sourceTree = "<group>"; };
 		415A1F1D14276BCD00328122 /* StatistikView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatistikView.m; sourceTree = "<group>"; };
 		415A1F1F14277D9700328122 /* StatistikViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatistikViewController.h; sourceTree = "<group>"; };
@@ -430,8 +424,6 @@
 				4136353714584EA600D01E1D /* FarbspielViewController~ipad.xib */,
 				4136353914584EA600D01E1D /* MainWindow~ipad.xib */,
 				4136353114584E9D00D01E1D /* SettingsViewController~ipad.xib */,
-				4136353314584E9D00D01E1D /* StatistikView~ipad.xib */,
-				4136352C14584E5100D01E1D /* GewonnenView~ipad.xib */,
 			);
 			name = "Resources-iPad";
 			path = "Resources-iPad/Farbspiel";
@@ -731,9 +723,7 @@
 				4184566B1428E86100C9A68E /* smalltrash@2x.png in Resources */,
 				416C11A9145849670034F3EC /* Default-Portrait~ipad.png in Resources */,
 				416C11AD145849DD0034F3EC /* IconIpad.png in Resources */,
-				4136352E14584E5100D01E1D /* GewonnenView~ipad.xib in Resources */,
 				4136353514584E9D00D01E1D /* SettingsViewController~ipad.xib in Resources */,
-				4136353614584E9D00D01E1D /* StatistikView~ipad.xib in Resources */,
 				4136353D14584EA600D01E1D /* FarbspielViewController~ipad.xib in Resources */,
 				4136353E14584EA600D01E1D /* MainWindow~ipad.xib in Resources */,
 			);
@@ -841,15 +831,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4136352C14584E5100D01E1D /* GewonnenView~ipad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4136352D14584E5100D01E1D /* de */,
-				4136352F14584E5B00D01E1D /* en */,
-			);
-			name = "GewonnenView~ipad.xib";
-			sourceTree = "<group>";
-		};
 		4136353114584E9D00D01E1D /* SettingsViewController~ipad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -857,15 +838,6 @@
 				4136353B14584EA600D01E1D /* en */,
 			);
 			name = "SettingsViewController~ipad.xib";
-			sourceTree = "<group>";
-		};
-		4136353314584E9D00D01E1D /* StatistikView~ipad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4136353414584E9D00D01E1D /* de */,
-				4136353C14584EA600D01E1D /* en */,
-			);
-			name = "StatistikView~ipad.xib";
 			sourceTree = "<group>";
 		};
 		4136353714584EA600D01E1D /* FarbspielViewController~ipad.xib */ = {
