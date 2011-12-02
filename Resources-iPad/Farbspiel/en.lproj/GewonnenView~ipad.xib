@@ -4717,67 +4717,11 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 			<array class="NSMutableArray" key="connectionRecords">
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">gewonnenView</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="191373211"/>
-					</object>
-					<int key="connectionID">6</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">gewonnenInXZuegenLabel</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="667281367"/>
-					</object>
-					<int key="connectionID">9</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">gewonnenVerlorenLabel</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="66998412"/>
-					</object>
-					<int key="connectionID">10</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">spieldauerLabel</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="485344182"/>
-					</object>
-					<int key="connectionID">25</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">levelLabel</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="956950"/>
-					</object>
-					<int key="connectionID">26</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">einstellungenButton</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="633476519"/>
-					</object>
-					<int key="connectionID">35</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">neuesSpielButton</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="890338423"/>
-					</object>
-					<int key="connectionID">46</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">statistikPlaceholder</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="310071572"/>
 					</object>
-					<int key="connectionID">47</int>
+					<int key="connectionID">49</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -4785,7 +4729,63 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="11549521"/>
 					</object>
-					<int key="connectionID">48</int>
+					<int key="connectionID">50</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">neuesSpielButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="890338423"/>
+					</object>
+					<int key="connectionID">51</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">einstellungenButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="633476519"/>
+					</object>
+					<int key="connectionID">52</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">view</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="191373211"/>
+					</object>
+					<int key="connectionID">53</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">gewonnenInXZuegenLabel</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="667281367"/>
+					</object>
+					<int key="connectionID">54</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">levelLabel</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="956950"/>
+					</object>
+					<int key="connectionID">56</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">spieldauerLabel</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="485344182"/>
+					</object>
+					<int key="connectionID">57</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">gewonnenVerlorenLabel</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="66998412"/>
+					</object>
+					<int key="connectionID">58</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -4794,7 +4794,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">7</int>
+					<int key="connectionID">60</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -4803,7 +4803,15 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">34</int>
+					<int key="connectionID">61</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">statistikView</string>
+						<reference key="source" ref="11549521"/>
+						<reference key="destination" ref="310071572"/>
+					</object>
+					<int key="connectionID">63</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -4914,10 +4922,11 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
-				<string key="-1.CustomClassName">FarbspielViewController</string>
+				<string key="-1.CustomClassName">GewonnenVerlorenController</string>
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="1.CustomClassName">GewonnenVerlorenView</string>
 				<string key="1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="19.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="20.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -4940,7 +4949,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">48</int>
+			<int key="maxID">63</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4958,7 +4967,6 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="colorButtonPressed:">id</string>
 						<string key="gitterAnAus:">id</string>
-						<string key="neuesSpiel:">id</string>
 						<string key="settingsButtonPressed:">id</string>
 						<string key="soundAnAus:">id</string>
 					</dictionary>
@@ -4969,10 +4977,6 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						</object>
 						<object class="IBActionInfo" key="gitterAnAus:">
 							<string key="name">gitterAnAus:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="neuesSpiel:">
-							<string key="name">neuesSpiel:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="settingsButtonPressed:">
@@ -4987,20 +4991,14 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="debugButtonGewinnen">UIButton</string>
 						<string key="debugButtonVerlieren">UIButton</string>
-						<string key="einstellungenButton">ColorfulButton</string>
-						<string key="gewonnenInXZuegenLabel">UILabel</string>
-						<string key="gewonnenVerlorenLabel">UILabel</string>
+						<string key="gewonnenVerlorenController">GewonnenVerlorenController</string>
 						<string key="gewonnenView">UIView</string>
-						<string key="levelLabel">UILabel</string>
-						<string key="neuesSpielButton_">ColorfulButton</string>
 						<string key="rasterController">SpielrasterViewController</string>
 						<string key="settingsToggleButton">UIButton</string>
-						<string key="soundAnAusButton_">UIButton</string>
-						<string key="spieldauerLabel">UILabel</string>
-						<string key="spielrasterView_">SpielrasterView</string>
-						<string key="statistikPlaceholder_">StatistikView</string>
-						<string key="statistikViewController_">StatistikViewController</string>
+						<string key="soundAnAusButton">UIButton</string>
+						<string key="spielrasterView">SpielrasterView</string>
 						<string key="uhrLabel">UILabel</string>
+						<string key="undoSwipeGestureRecognizer">UISwipeGestureRecognizer</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="debugButtonGewinnen">
@@ -5011,29 +5009,13 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 							<string key="name">debugButtonVerlieren</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="einstellungenButton">
-							<string key="name">einstellungenButton</string>
-							<string key="candidateClassName">ColorfulButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="gewonnenInXZuegenLabel">
-							<string key="name">gewonnenInXZuegenLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="gewonnenVerlorenLabel">
-							<string key="name">gewonnenVerlorenLabel</string>
-							<string key="candidateClassName">UILabel</string>
+						<object class="IBToOneOutletInfo" key="gewonnenVerlorenController">
+							<string key="name">gewonnenVerlorenController</string>
+							<string key="candidateClassName">GewonnenVerlorenController</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="gewonnenView">
 							<string key="name">gewonnenView</string>
 							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="levelLabel">
-							<string key="name">levelLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="neuesSpielButton_">
-							<string key="name">neuesSpielButton_</string>
-							<string key="candidateClassName">ColorfulButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="rasterController">
 							<string key="name">rasterController</string>
@@ -5043,29 +5025,21 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 							<string key="name">settingsToggleButton</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="soundAnAusButton_">
-							<string key="name">soundAnAusButton_</string>
+						<object class="IBToOneOutletInfo" key="soundAnAusButton">
+							<string key="name">soundAnAusButton</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="spieldauerLabel">
-							<string key="name">spieldauerLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="spielrasterView_">
-							<string key="name">spielrasterView_</string>
+						<object class="IBToOneOutletInfo" key="spielrasterView">
+							<string key="name">spielrasterView</string>
 							<string key="candidateClassName">SpielrasterView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="statistikPlaceholder_">
-							<string key="name">statistikPlaceholder_</string>
-							<string key="candidateClassName">StatistikView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="statistikViewController_">
-							<string key="name">statistikViewController_</string>
-							<string key="candidateClassName">StatistikViewController</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="uhrLabel">
 							<string key="name">uhrLabel</string>
 							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="undoSwipeGestureRecognizer">
+							<string key="name">undoSwipeGestureRecognizer</string>
+							<string key="candidateClassName">UISwipeGestureRecognizer</string>
 						</object>
 					</dictionary>
 					<object class="NSMutableDictionary" key="toManyOutletInfosByName">
@@ -5079,6 +5053,90 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/FarbspielViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">GewonnenVerlorenController</string>
+					<string key="superclassName">NSObject</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="neuesSpiel:">id</string>
+						<string key="settingsButtonPressed:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="neuesSpiel:">
+							<string key="name">neuesSpiel:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="settingsButtonPressed:">
+							<string key="name">settingsButtonPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="delegate">FarbspielViewController</string>
+						<string key="einstellungenButton">ColorfulButton</string>
+						<string key="gewonnenInXZuegenLabel">UILabel</string>
+						<string key="gewonnenVerlorenLabel">UILabel</string>
+						<string key="levelLabel">UILabel</string>
+						<string key="neuesSpielButton">ColorfulButton</string>
+						<string key="spieldauerLabel">UILabel</string>
+						<string key="statistikPlaceholder">StatistikView</string>
+						<string key="statistikViewController">StatistikViewController</string>
+						<string key="view">GewonnenVerlorenView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="delegate">
+							<string key="name">delegate</string>
+							<string key="candidateClassName">FarbspielViewController</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="einstellungenButton">
+							<string key="name">einstellungenButton</string>
+							<string key="candidateClassName">ColorfulButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="gewonnenInXZuegenLabel">
+							<string key="name">gewonnenInXZuegenLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="gewonnenVerlorenLabel">
+							<string key="name">gewonnenVerlorenLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="levelLabel">
+							<string key="name">levelLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="neuesSpielButton">
+							<string key="name">neuesSpielButton</string>
+							<string key="candidateClassName">ColorfulButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spieldauerLabel">
+							<string key="name">spieldauerLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="statistikPlaceholder">
+							<string key="name">statistikPlaceholder</string>
+							<string key="candidateClassName">StatistikView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="statistikViewController">
+							<string key="name">statistikViewController</string>
+							<string key="candidateClassName">StatistikViewController</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="view">
+							<string key="name">view</string>
+							<string key="candidateClassName">GewonnenVerlorenView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/GewonnenVerlorenController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">GewonnenVerlorenView</string>
+					<string key="superclassName">UIView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/GewonnenVerlorenView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

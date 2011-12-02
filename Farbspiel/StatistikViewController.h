@@ -10,17 +10,16 @@
 #import "StatistikView.h"
 
 @interface StatistikViewController : NSObject {
-    IBOutlet StatistikView *statistikView_;
-    IBOutlet UILabel *lAnzahlSpiele_;
-    IBOutlet UILabel *lAnzahlGewonnen_;
-    IBOutlet UILabel *lAnzahlVerloren_;
-    IBOutlet UILabel *lProzentGewonnen_;
-    
-    NSUInteger anzahlSpiele_;
-    NSUInteger anzahlGewonnen_;
 }
 
-@property (nonatomic, strong) StatistikView* statistikView;
+
+@property (weak, nonatomic) IBOutlet StatistikView *statistikView;
+@property (weak, nonatomic) IBOutlet UILabel *anzahlSpieleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *anzahlGewonnenLabel;
+@property (weak, nonatomic) IBOutlet UILabel *anzahlVerlorenLabel;
+@property (weak, nonatomic) IBOutlet UILabel *prozentGewonnenLabel;
+
+
 @property (nonatomic) NSUInteger anzahlSpiele;
 @property (nonatomic) NSUInteger anzahlGewonnen;
 @property (nonatomic,readonly) NSUInteger anzahlVerloren;

@@ -32,7 +32,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 			<object class="IBUIView" id="633673278">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUILabel" id="208091431">
@@ -40,6 +40,7 @@
 						<int key="NSvFlags">288</int>
 						<string key="NSFrame">{{20, 1}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="633673278"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="506994475"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -50,7 +51,7 @@
 							<integer value="64" key="IBUIAccessibilityTraits"/>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">10</string>
+						<string key="IBUIText">XX</string>
 						<object class="NSColor" key="IBUITextColor" id="308792480">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -81,6 +82,7 @@
 						<int key="NSvFlags">288</int>
 						<string key="NSFrame">{{105, 1}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="633673278"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="163200661"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -90,7 +92,7 @@
 							<string key="IBUIAccessibilityLabel">Number of Victories</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">4</string>
+						<string key="IBUIText">YY</string>
 						<reference key="IBUITextColor" ref="308792480"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="1069067174"/>
@@ -106,6 +108,7 @@
 						<int key="NSvFlags">288</int>
 						<string key="NSFrame">{{190, 1}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="633673278"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="838675122"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -115,7 +118,7 @@
 							<string key="IBUIAccessibilityLabel">Number of Losses</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">6</string>
+						<string key="IBUIText">ZZ</string>
 						<reference key="IBUITextColor" ref="308792480"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="1069067174"/>
@@ -131,6 +134,7 @@
 						<int key="NSvFlags">288</int>
 						<string key="NSFrame">{{105, 31}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="633673278"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="816163169"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -140,7 +144,7 @@
 							<string key="IBUIAccessibilityLabel">Victory Percentage</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">(40%)</string>
+						<string key="IBUIText">(QQ%)</string>
 						<reference key="IBUITextColor" ref="308792480"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="1069067174"/>
@@ -165,6 +169,7 @@
 						<int key="NSvFlags">288</int>
 						<string key="NSFrame">{{20, 14}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="633673278"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="903143820"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -187,6 +192,7 @@
 						<int key="NSvFlags">288</int>
 						<string key="NSFrame">{{105, 14}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="633673278"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="264572265"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -209,6 +215,8 @@
 						<int key="NSvFlags">288</int>
 						<string key="NSFrame">{{190, 14}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="633673278"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -227,6 +235,8 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{280, 55}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="208091431"/>
 				<string key="NSReuseIdentifierKey">_NS:180</string>
 				<object class="NSColor" key="IBUIBackgroundColor">
@@ -240,43 +250,43 @@
 			<array class="NSMutableArray" key="connectionRecords">
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">statistikView_</string>
+						<string key="label">statistikView</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="633673278"/>
 					</object>
-					<int key="connectionID">24</int>
+					<int key="connectionID">37</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">lAnzahlGewonnen_</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="903143820"/>
-					</object>
-					<int key="connectionID">33</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">lAnzahlSpiele_</string>
+						<string key="label">anzahlSpieleLabel</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="208091431"/>
 					</object>
-					<int key="connectionID">34</int>
+					<int key="connectionID">38</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">lAnzahlVerloren_</string>
+						<string key="label">anzahlGewonnenLabel</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="903143820"/>
+					</object>
+					<int key="connectionID">39</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">anzahlVerlorenLabel</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="264572265"/>
 					</object>
-					<int key="connectionID">35</int>
+					<int key="connectionID">40</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">lProzentGewonnen_</string>
+						<string key="label">prozentGewonnenLabel</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="838675122"/>
 					</object>
-					<int key="connectionID">36</int>
+					<int key="connectionID">41</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -405,7 +415,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">36</int>
+			<int key="maxID">41</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -445,31 +455,31 @@
 					<string key="className">StatistikViewController</string>
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="lAnzahlGewonnen_">UILabel</string>
-						<string key="lAnzahlSpiele_">UILabel</string>
-						<string key="lAnzahlVerloren_">UILabel</string>
-						<string key="lProzentGewonnen_">UILabel</string>
-						<string key="statistikView_">StatistikView</string>
+						<string key="anzahlGewonnenLabel">UILabel</string>
+						<string key="anzahlSpieleLabel">UILabel</string>
+						<string key="anzahlVerlorenLabel">UILabel</string>
+						<string key="prozentGewonnenLabelssssssss">UILabel</string>
+						<string key="statistikView">StatistikView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="lAnzahlGewonnen_">
-							<string key="name">lAnzahlGewonnen_</string>
+						<object class="IBToOneOutletInfo" key="anzahlGewonnenLabel">
+							<string key="name">anzahlGewonnenLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="lAnzahlSpiele_">
-							<string key="name">lAnzahlSpiele_</string>
+						<object class="IBToOneOutletInfo" key="anzahlSpieleLabel">
+							<string key="name">anzahlSpieleLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="lAnzahlVerloren_">
-							<string key="name">lAnzahlVerloren_</string>
+						<object class="IBToOneOutletInfo" key="anzahlVerlorenLabel">
+							<string key="name">anzahlVerlorenLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="lProzentGewonnen_">
-							<string key="name">lProzentGewonnen_</string>
+						<object class="IBToOneOutletInfo" key="prozentGewonnenLabelssssssss">
+							<string key="name">prozentGewonnenLabelssssssss</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="statistikView_">
-							<string key="name">statistikView_</string>
+						<object class="IBToOneOutletInfo" key="statistikView">
+							<string key="name">statistikView</string>
 							<string key="candidateClassName">StatistikView</string>
 						</object>
 					</dictionary>

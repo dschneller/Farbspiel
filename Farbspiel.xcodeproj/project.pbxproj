@@ -87,6 +87,9 @@
 		418F3C47142A170D006B1556 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F3C46142A170D006B1556 /* libKIF.a */; };
 		419DCB2613DA5FB500745241 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2413DA5FB500745241 /* speaker.png */; };
 		419DCB2913DA60EF00745241 /* speaker_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2813DA60EF00745241 /* speaker_off.png */; };
+		419F350A1488C923009173A5 /* BlurLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 419F35091488C923009173A5 /* BlurLayer.m */; };
+		419F350E1488CD03009173A5 /* GewonnenVerlorenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 419F350D1488CD03009173A5 /* GewonnenVerlorenView.m */; };
+		419F35111488CD28009173A5 /* GewonnenVerlorenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 419F35101488CD28009173A5 /* GewonnenVerlorenController.m */; };
 		41A114B213DF6CA300B2F0DB /* farbkloetzchen.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B113DF6CA300B2F0DB /* farbkloetzchen.png */; };
 		41A114B513DF6EF100B2F0DB /* farbkloetzchen-jengo.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B313DF6EF100B2F0DB /* farbkloetzchen-jengo.png */; };
 		41A114B613DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B413DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png */; };
@@ -180,6 +183,12 @@
 		418F3C46142A170D006B1556 /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKIF.a; path = "../../cc/SharedBuildOutput/Release-iphoneos/libKIF.a"; sourceTree = "<group>"; };
 		419DCB2413DA5FB500745241 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
 		419DCB2813DA60EF00745241 /* speaker_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_off.png; sourceTree = "<group>"; };
+		419F35081488C923009173A5 /* BlurLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurLayer.h; sourceTree = "<group>"; };
+		419F35091488C923009173A5 /* BlurLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurLayer.m; sourceTree = "<group>"; };
+		419F350C1488CD03009173A5 /* GewonnenVerlorenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GewonnenVerlorenView.h; sourceTree = "<group>"; };
+		419F350D1488CD03009173A5 /* GewonnenVerlorenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GewonnenVerlorenView.m; sourceTree = "<group>"; };
+		419F350F1488CD28009173A5 /* GewonnenVerlorenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GewonnenVerlorenController.h; sourceTree = "<group>"; };
+		419F35101488CD28009173A5 /* GewonnenVerlorenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GewonnenVerlorenController.m; sourceTree = "<group>"; };
 		41A114B113DF6CA300B2F0DB /* farbkloetzchen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = farbkloetzchen.png; sourceTree = "<group>"; };
 		41A114B313DF6EF100B2F0DB /* farbkloetzchen-jengo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen-jengo.png"; sourceTree = "<group>"; };
 		41A114B413DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen-jengo@2x.png"; sourceTree = "<group>"; };
@@ -545,6 +554,12 @@
 			children = (
 				41D925E513D8A76B007612E6 /* FarbspielViewController.h */,
 				41D925E613D8A76B007612E6 /* FarbspielViewController.m */,
+				419F35081488C923009173A5 /* BlurLayer.h */,
+				419F35091488C923009173A5 /* BlurLayer.m */,
+				419F350C1488CD03009173A5 /* GewonnenVerlorenView.h */,
+				419F350D1488CD03009173A5 /* GewonnenVerlorenView.m */,
+				419F350F1488CD28009173A5 /* GewonnenVerlorenController.h */,
+				419F35101488CD28009173A5 /* GewonnenVerlorenController.m */,
 			);
 			name = FarbspielViewController;
 			sourceTree = "<group>";
@@ -802,6 +817,9 @@
 				415A1F2114277D9800328122 /* StatistikViewController.m in Sources */,
 				4170EAB91459ACE100D93ED1 /* LambdaAlert.m in Sources */,
 				4170EABA1459ACE100D93ED1 /* LambdaSheet.m in Sources */,
+				419F350A1488C923009173A5 /* BlurLayer.m in Sources */,
+				419F350E1488CD03009173A5 /* GewonnenVerlorenView.m in Sources */,
+				419F35111488CD28009173A5 /* GewonnenVerlorenController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

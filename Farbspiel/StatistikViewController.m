@@ -11,16 +11,22 @@
 
 @implementation StatistikViewController
 
-@synthesize anzahlSpiele = anzahlSpiele_;
-@synthesize anzahlGewonnen = anzahlGewonnen_;
-@synthesize statistikView = statistikView_;
+@synthesize anzahlSpiele = _anzahlSpiele;
+@synthesize anzahlGewonnen = _anzahlGewonnen;
+
+@synthesize statistikView = _statistikView;
+@synthesize anzahlSpieleLabel = _anzahlSpieleLabel;
+@synthesize anzahlGewonnenLabel = _anzahlGewonnenLabel;
+@synthesize anzahlVerlorenLabel = _anzahlVerlorenLabel;
+@synthesize prozentGewonnenLabel = _prozentGewonnenLabel;
+
 
 - (id)init
 {
     self = [super init];
     if (self) {
-        self.anzahlSpiele = 0;
-        self.anzahlGewonnen = 0;
+        _anzahlSpiele = 0;
+        _anzahlGewonnen = 0;
     }
     
     return self;
@@ -40,27 +46,25 @@
 }
 
 - (void) updateStatsDisplay {
-    lAnzahlSpiele_.text = [NSString stringWithFormat:@"%d", self.anzahlSpiele];
-    lAnzahlGewonnen_.text = [NSString stringWithFormat:@"%d", self.anzahlGewonnen];
-    lAnzahlVerloren_.text = [NSString stringWithFormat:@"%d",self.anzahlVerloren];
-    lProzentGewonnen_.text = [NSString stringWithFormat:@"(%2.1f%%)", self.prozentGewonnen];
+    self.anzahlSpieleLabel.text = [NSString stringWithFormat:@"%d", self.anzahlSpiele];
+    self.anzahlGewonnenLabel.text = [NSString stringWithFormat:@"%d", self.anzahlGewonnen];
+    self.anzahlVerlorenLabel.text = [NSString stringWithFormat:@"%d",self.anzahlVerloren];
+    self.prozentGewonnenLabel.text = [NSString stringWithFormat:@"(%2.1f%%)", self.prozentGewonnen];
     
     if (self.anzahlSpiele>0) {
-        lProzentGewonnen_.hidden = NO;
+        self.prozentGewonnenLabel.hidden = NO;
     } else {
-        lProzentGewonnen_.hidden = YES;
+        self.prozentGewonnenLabel.hidden = YES;
     }
-//    [self.statistikView setNeedsDisplay];
-
 }
 
 -(void) setAnzahlSpiele:(NSUInteger)anzahl {
-    anzahlSpiele_ = anzahl;
+    _anzahlSpiele = anzahl;
     [self updateStatsDisplay];
 }
 
 -(void) setAnzahlGewonnen:(NSUInteger)anzahl {
-    anzahlGewonnen_ = anzahl;
+    _anzahlGewonnen = anzahl;
     [self updateStatsDisplay];
 }
 
