@@ -198,6 +198,7 @@
 		41A114B113DF6CA300B2F0DB /* farbkloetzchen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = farbkloetzchen.png; sourceTree = "<group>"; };
 		41A114B313DF6EF100B2F0DB /* farbkloetzchen-jengo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen-jengo.png"; sourceTree = "<group>"; };
 		41A114B413DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen-jengo@2x.png"; sourceTree = "<group>"; };
+		41B67436148CE4B100ADFC2F /* GewonnenVerlorenControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GewonnenVerlorenControllerDelegate.h; sourceTree = "<group>"; };
 		41C61E2C142898FA00B513EB /* smalltrash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smalltrash.png; sourceTree = "<group>"; };
 		41D925CC13D8A76B007612E6 /* Farbspiel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Farbspiel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D925D013D8A76B007612E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -567,6 +568,7 @@
 				419F350D1488CD03009173A5 /* GewonnenVerlorenView.m */,
 				419F350F1488CD28009173A5 /* GewonnenVerlorenController.h */,
 				419F35101488CD28009173A5 /* GewonnenVerlorenController.m */,
+				41B67436148CE4B100ADFC2F /* GewonnenVerlorenControllerDelegate.h */,
 			);
 			name = FarbspielViewController;
 			sourceTree = "<group>";

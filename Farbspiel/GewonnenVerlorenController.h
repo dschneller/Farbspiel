@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "ColorfulButton.h"
 #import "GewonnenVerlorenView.h"
+#import "GewonnenVerlorenControllerDelegate.h"
 #import "StatistikView.h"
 #import "StatistikViewController.h"
 #import "Spielmodel.h"
 
 @class FarbspielViewController;
 
-@interface GewonnenVerlorenController : NSObject
+@interface GewonnenVerlorenController : NSObject <UIPopoverControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet StatistikView *statistikPlaceholder;
 @property (strong, nonatomic) IBOutlet StatistikViewController *statistikViewController;
@@ -27,10 +28,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *gewonnenVerlorenLabel;
 @property (weak, nonatomic) IBOutlet UILabel *levelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *spieldauerLabel;
-@property (weak, nonatomic) IBOutlet FarbspielViewController* delegate;
+@property (weak, nonatomic) IBOutlet id<GewonnenVerlorenControllerDelegate> delegate;
 
 @property (strong, nonatomic, readonly) CAGradientLayer* blurLayer;
-
+@property (strong, nonatomic) UIPopoverController* popoverController;
 
 - (IBAction)neuesSpiel:(id)sender;
 - (IBAction)settingsButtonPressed:(id)sender;
@@ -40,3 +41,4 @@
 
 
 @end
+

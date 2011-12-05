@@ -12,9 +12,10 @@
 #import "ColorfulButton.h"
 #import "SoundManager.h"
 #import "GewonnenVerlorenController.h"
+#import "GewonnenVerlorenControllerDelegate.h"
 
 @interface FarbspielViewController : UIViewController
-<SpielrasterViewControllerDelegate, UIPopoverControllerDelegate> {
+<SpielrasterViewControllerDelegate, GewonnenVerlorenControllerDelegate, UIPopoverControllerDelegate> {
     
     
     SpielLevel _defaultLevel;
@@ -44,7 +45,5 @@
 - (IBAction)settingsButtonPressed:(id)sender;
 - (IBAction)soundAnAus:(id)sender;
 - (IBAction)gitterAnAus:(id)sender;
-
-- (void)settingsGeaendert:(Spielmodel*)modelAusSettings;
 
 @end

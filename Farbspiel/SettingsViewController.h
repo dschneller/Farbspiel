@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import "FarbspielViewController.h"
+#import "StatistikViewController.h"
+#import "StatistikView.h"
+#import "Spielmodel.h"
+#import "SoundManager.h"
 
 @interface SettingsViewController : UIViewController {
     UISegmentedControl *schwierigkeitsGrad;
@@ -29,7 +32,6 @@
     IBOutlet StatistikViewController *statistikViewController_;
     IBOutlet StatistikView *statistikPlaceholderView_;
     Spielmodel* passedInModel_;
-    FarbspielViewController *aufrufenderController_;
     UIView *farbe1bg_;
     UIView *farbe2bg_;
     UIView *farbe3bg_;
@@ -40,7 +42,6 @@
 
 
 @property (nonatomic, strong) Spielmodel *passedInModel;
-@property (nonatomic, strong) FarbspielViewController *aufrufenderController;
 @property (nonatomic, strong) IBOutlet UISegmentedControl *schwierigkeitsGrad;
 @property (nonatomic, strong) IBOutlet UILabel *feldgroesseLabel;
 @property (nonatomic, strong) IBOutlet UILabel *anzahlZuegeLabel;

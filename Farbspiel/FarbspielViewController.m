@@ -151,11 +151,6 @@
 }
 
 
-- (void) neuesSpiel {
-    [self starteNeuesSpielMitLevel:[[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL]];
-    [self setAllButtonState:YES];
-}
-
 
 
 
@@ -177,8 +172,6 @@
     SettingsViewController* settingsController = [[SettingsViewController alloc] initWithNibName:nil bundle:nil];
     
     settingsController.passedInModel = self.rasterController.model;
-    settingsController.aufrufenderController = self;
-    
     
     if (IPAD()) {
         self.settingsPopoverController = [[UIPopoverController alloc] initWithContentViewController:settingsController];
@@ -239,27 +232,35 @@
 
 
 
+#pragma mark - GewonnenVerlorenControllerDelegate
 
-
-
-#pragma mark - SettingsViewcontroller callback
-- (void)settingsGeaendert:(Spielmodel*)modelAusSettings {
-}
-
-
-
-
-
-
-
-
-#pragma mark - View Life Cycle
-
--(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+-(void)didReturnFromSettings {
     [self updateGUIAusSettings];
     [self pruefeObLevelGewechseltWurde];
 }
 
+- (void) neuesSpiel {
+    [self didReturnFromSettings];
+
+    [self starteNeuesSpielMitLevel:[[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL]];
+    [self setAllButtonState:YES];
+}
+
+-(Spielmodel*)spielModel {
+    return self.rasterController.model;
+}
+
+
+
+
+#pragma mark - UIPopoverControllerDelegate
+
+-(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    [self didReturnFromSettings];
+}
+
+
+#pragma mark - View Life Cycle
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

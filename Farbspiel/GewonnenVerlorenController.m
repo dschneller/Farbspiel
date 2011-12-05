@@ -30,7 +30,7 @@
 @synthesize blurLayer = _blurLayer;
 
 @synthesize delegate = _delegate;
-
+@synthesize popoverController = _popoverController;
 
 - (CAGradientLayer*) blurLayerForView:(UIView*)view {
     if (!_blurLayer) { 
@@ -169,15 +169,14 @@
 - (IBAction)settingsButtonPressed:(UIButton*)sender {
     SettingsViewController* settingsController = [[SettingsViewController alloc] initWithNibName:nil bundle:nil];
     
-    settingsController.passedInModel = self.delegate.rasterController.model;
-    settingsController.aufrufenderController = self.delegate;
-    
+    settingsController.passedInModel = [self.delegate spielModel];
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        self.delegate.settingsPopoverController = [[UIPopoverController alloc] initWithContentViewController:settingsController];
-        self.delegate.settingsPopoverController.delegate = self.delegate;
+        self.popoverController = [[UIPopoverController alloc] initWithContentViewController:settingsController];
         
-        [self.delegate.settingsPopoverController presentPopoverFromRect:sender.frame 
+        self.popoverController.delegate = self;
+        
+        [self.popoverController presentPopoverFromRect:sender.frame 
                                                                  inView:self.view
                                                permittedArrowDirections:UIPopoverArrowDirectionAny 
                                                                animated:YES];
@@ -187,8 +186,8 @@
         [UIView setAnimationDuration:0.5];
         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
         [UIView setAnimationTransition: UIViewAnimationTransitionFlipFromRight 
-                               forView:self.delegate.navigationController.view cache:YES];
-        [self.delegate.navigationController 
+                               forView:[self.delegate navigationController].view cache:YES];
+        [[self.delegate navigationController ]
          pushViewController:settingsController animated:NO];
         [UIView commitAnimations];
     }

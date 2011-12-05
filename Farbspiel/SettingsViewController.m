@@ -14,7 +14,6 @@
 @implementation SettingsViewController
 
 @synthesize passedInModel = passedInModel_;
-@synthesize aufrufenderController = aufrufenderController_;
 
 @synthesize schwierigkeitsGrad;
 @synthesize feldgroesseLabel;
@@ -250,8 +249,6 @@
     SpielLevel level = (SpielLevel) self.schwierigkeitsGrad.selectedSegmentIndex;
     [self updateLevelDetailViewFuerLevel:level];
     [[Datenhaltung sharedInstance] setInteger:level fuerKey:PREFKEY_SPIELLEVEL];
-    Spielmodel* newModel = [[Spielmodel alloc] initWithLevel:level];
-    [self.aufrufenderController settingsGeaendert:newModel];
     [self updateStatsView];
 }
 
