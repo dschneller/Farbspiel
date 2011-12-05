@@ -13,45 +13,6 @@
 
 @implementation SettingsViewController
 
-@synthesize passedInModel = passedInModel_;
-
-@synthesize schwierigkeitsGrad;
-@synthesize feldgroesseLabel;
-@synthesize anzahlZuegeLabel;
-@synthesize soundEffekteSwitch;
-@synthesize rasterSwitch = rasterSwitch_;
-@synthesize farbschema;
-
-@synthesize farbPreviewRahmen = farbPreviewRahmen_;
-@synthesize farbe1 = farbe1_;
-@synthesize farbe2 = farbe2_;
-@synthesize farbe3 = farbe3_;
-@synthesize farbe4 = farbe4_;
-@synthesize farbe5 = farbe5_;
-@synthesize farbe6 = farbe6_;
-@synthesize farbe1bg = farbe1bg_;
-@synthesize farbe2bg = farbe2bg_;
-@synthesize farbe3bg = farbe3bg_;
-@synthesize farbe4bg = farbe4bg_;
-@synthesize farbe5bg = farbe5bg_;
-@synthesize farbe6bg = farbe6bg_;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
 
 #pragma mark - View lifecycle
 
@@ -110,9 +71,9 @@
     NSUInteger anzahlSpiele = [[Datenhaltung sharedInstance] anzahlSpieleGesamtFuerLevel:self.schwierigkeitsGrad.selectedSegmentIndex];
     NSUInteger anzahlGewonnen = [[Datenhaltung sharedInstance] anzahlSpieleGewonnen:YES fuerLevel:self.schwierigkeitsGrad.selectedSegmentIndex];
     
-    statistikViewController_.anzahlSpiele = anzahlSpiele;
-    statistikViewController_.anzahlGewonnen = anzahlGewonnen;
-    statistikLoeschenButton_.hidden = anzahlSpiele == 0;
+    self.statistikViewController.anzahlSpiele = anzahlSpiele;
+    self.statistikViewController.anzahlGewonnen = anzahlGewonnen;
+    self.statistikLoeschenButton.hidden = anzahlSpiele == 0;
 
 }
 
@@ -162,20 +123,22 @@
     [sheet showInView:self.view];
 }
 
+#pragma mark - View Life Cycle
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"StatistikView" owner:statistikViewController_ options:nil];
+    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"StatistikView" owner:self.statistikViewController options:nil];
     StatistikView *statistikView = (StatistikView *)[views objectAtIndex:0];
     
-    statistikPlaceholderView_.backgroundColor = [UIColor clearColor];
-    [statistikPlaceholderView_ addSubview:statistikView];
-    statistikViewController_.statistikView = statistikView;
+    self.statistikPlaceholderView.backgroundColor = [UIColor clearColor];
+    [self.statistikPlaceholderView addSubview:statistikView];
+    self.statistikViewController.statistikView = statistikView;
 
-    [self setupLayerPropsForView:farbPreviewRahmen_ showBorder:YES];
+    [self setupLayerPropsForView:self.farbPreviewRahmen showBorder:YES];
     
     self.contentSizeForViewInPopover = CGSizeMake(320,480);
     
@@ -193,41 +156,14 @@
 }
 
 
-- (void)viewDidUnload
-{
-    [self setSchwierigkeitsGrad:nil];
-    [self setFeldgroesseLabel:nil];
-    [self setAnzahlZuegeLabel:nil];
-    [self setSoundEffekteSwitch:nil];
-    [self setFarbschema:nil];
-    [self setFarbe1:nil];
-    [self setFarbe2:nil];
-    [self setFarbe3:nil];
-    [self setFarbe4:nil];
-    [self setFarbe5:nil];
-    [self setFarbe6:nil];
-    [self setFarbPreviewRahmen:nil];
-    [self setFarbe1bg:nil];
-    [self setFarbe2bg:nil];
-    [self setFarbe3bg:nil];
-    [self setFarbe4bg:nil];
-    [self setFarbe5bg:nil];
-    [self setFarbe6bg:nil];
-    [self setRasterSwitch:nil];
-    statistikViewController_ = nil;
-    statistikPlaceholderView_ = nil;
-    statistikLoeschenButton_ = nil;
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+
+#pragma mark - IBActions
 
 - (IBAction)zurueckZumSpiel:(id)sender {
     [UIView beginAnimations:nil context:NULL];
@@ -239,7 +175,6 @@
     [UIView commitAnimations];
     
 }
-
 
 - (IBAction)soundAnAus:(id)sender {
     [[SoundManager sharedManager] setSoundAn:self.soundEffekteSwitch.on];
@@ -263,4 +198,35 @@
     [[Datenhaltung sharedInstance] setBool:!raster forKey:PREFKEY_GITTER_AN];
     [self updateFarbschemaPreview];
 }
+
+
+
+#pragma mark - Synthesize Properties
+
+@synthesize passedInModel = _passedInModel;
+@synthesize schwierigkeitsGrad = _schwierigkeitsGrad;
+@synthesize feldgroesseLabel = _feldgroesseLabel;
+@synthesize anzahlZuegeLabel = _anzahlZuegeLabel;
+@synthesize soundEffekteSwitch = _soundEffekteSwitch;
+@synthesize rasterSwitch = _rasterSwitch;
+@synthesize farbschema = _farbschema;
+
+@synthesize farbPreviewRahmen = _farbPreviewRahmen;
+@synthesize farbe1 = _farbe1;
+@synthesize farbe2 = _farbe2;
+@synthesize farbe3 = _farbe3;
+@synthesize farbe4 = _farbe4;
+@synthesize farbe5 = _farbe5;
+@synthesize farbe6 = _farbe6;
+@synthesize farbe1bg = _farbe1bg;
+@synthesize farbe2bg = _farbe2bg;
+@synthesize farbe3bg = _farbe3bg;
+@synthesize farbe4bg = _farbe4bg;
+@synthesize farbe5bg = _farbe5bg;
+@synthesize farbe6bg = _farbe6bg;
+
+@synthesize statistikLoeschenButton = _statistikLoeschenButton;
+@synthesize statistikViewController = _statistikViewController;
+@synthesize statistikPlaceholderView = _statistikPlaceholderView;
+
 @end

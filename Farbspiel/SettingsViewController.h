@@ -14,54 +14,32 @@
 #import "SoundManager.h"
 
 @interface SettingsViewController : UIViewController {
-    UISegmentedControl *schwierigkeitsGrad;
-    UILabel *feldgroesseLabel;
-    UILabel *anzahlZuegeLabel;
-    UISwitch *soundEffekteSwitch;
-    UISegmentedControl *farbschema;
-    UIView *farbPreviewRahmen_;
-    UIView *farbe1_;
-    UIView *farbe2_;
-    UIView *farbe3_;
-    UIView *farbe4_;
-    UIView *farbe5_;
-    UIView *farbe6_;
-    UISwitch *rasterSwitch_;
-    IBOutlet UIButton *statistikLoeschenButton_;
-    
-    IBOutlet StatistikViewController *statistikViewController_;
-    IBOutlet StatistikView *statistikPlaceholderView_;
-    Spielmodel* passedInModel_;
-    UIView *farbe1bg_;
-    UIView *farbe2bg_;
-    UIView *farbe3bg_;
-    UIView *farbe4bg_;
-    UIView *farbe5bg_;
-    UIView *farbe6bg_;
 }
 
-
+@property (nonatomic, weak) IBOutlet UIButton *statistikLoeschenButton;
+@property (nonatomic, strong) IBOutlet StatistikViewController *statistikViewController;
+@property (nonatomic, weak) IBOutlet StatistikView *statistikPlaceholderView;
 @property (nonatomic, strong) Spielmodel *passedInModel;
-@property (nonatomic, strong) IBOutlet UISegmentedControl *schwierigkeitsGrad;
-@property (nonatomic, strong) IBOutlet UILabel *feldgroesseLabel;
-@property (nonatomic, strong) IBOutlet UILabel *anzahlZuegeLabel;
-@property (nonatomic, strong) IBOutlet UISwitch *soundEffekteSwitch;
-@property (nonatomic, strong) IBOutlet UISegmentedControl *farbschema;
-@property (nonatomic, strong) IBOutlet UISwitch *rasterSwitch;
+@property (nonatomic, weak) IBOutlet UISegmentedControl *schwierigkeitsGrad;
+@property (nonatomic, weak) IBOutlet UILabel *feldgroesseLabel;
+@property (nonatomic, weak) IBOutlet UILabel *anzahlZuegeLabel;
+@property (nonatomic, weak) IBOutlet UISwitch *soundEffekteSwitch;
+@property (nonatomic, weak) IBOutlet UISegmentedControl *farbschema;
+@property (nonatomic, weak) IBOutlet UISwitch *rasterSwitch;
 
-@property (nonatomic, strong) IBOutlet UIView *farbe1;
-@property (nonatomic, strong) IBOutlet UIView *farbe2;
-@property (nonatomic, strong) IBOutlet UIView *farbe3;
-@property (nonatomic, strong) IBOutlet UIView *farbe4;
-@property (nonatomic, strong) IBOutlet UIView *farbe5;
-@property (nonatomic, strong) IBOutlet UIView *farbe6;
-@property (nonatomic, strong) IBOutlet UIView *farbPreviewRahmen;
-@property (nonatomic, strong) IBOutlet UIView *farbe1bg;
-@property (nonatomic, strong) IBOutlet UIView *farbe2bg;
-@property (nonatomic, strong) IBOutlet UIView *farbe3bg;
-@property (nonatomic, strong) IBOutlet UIView *farbe4bg;
-@property (nonatomic, strong) IBOutlet UIView *farbe5bg;
-@property (nonatomic, strong) IBOutlet UIView *farbe6bg;
+@property (nonatomic, weak) IBOutlet UIView *farbe1;
+@property (nonatomic, weak) IBOutlet UIView *farbe2;
+@property (nonatomic, weak) IBOutlet UIView *farbe3;
+@property (nonatomic, weak) IBOutlet UIView *farbe4;
+@property (nonatomic, weak) IBOutlet UIView *farbe5;
+@property (nonatomic, weak) IBOutlet UIView *farbe6;
+@property (nonatomic, weak) IBOutlet UIView *farbPreviewRahmen;
+@property (nonatomic, weak) IBOutlet UIView *farbe1bg;
+@property (nonatomic, weak) IBOutlet UIView *farbe2bg;
+@property (nonatomic, weak) IBOutlet UIView *farbe3bg;
+@property (nonatomic, weak) IBOutlet UIView *farbe4bg;
+@property (nonatomic, weak) IBOutlet UIView *farbe5bg;
+@property (nonatomic, weak) IBOutlet UIView *farbe6bg;
 
 - (IBAction)zurueckZumSpiel:(id)sender;
 - (IBAction)soundAnAus:(id)sender;

@@ -64,7 +64,7 @@
 						<float key="IBUIAlpha">0.5</float>
 						<int key="IBUIContentMode">4</int>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Zurück zum Spiel</string>
+							<string key="IBUIAccessibilityLabel">Back to Game</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -83,7 +83,7 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="417095570">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="701534943">
 							<string key="name">Helvetica-Bold</string>
 							<string key="family">Helvetica</string>
 							<int key="traits">2</int>
@@ -106,7 +106,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Feldgröße</string>
+							<string key="IBUIAccessibilityLabel">Grid Size</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">12x12</string>
@@ -120,7 +120,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<int key="IBUITextAlignment">1</int>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="332950653">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="641688453">
 							<string key="name">Helvetica-Bold</string>
 							<string key="family">Helvetica</string>
 							<int key="traits">2</int>
@@ -143,7 +143,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Erlaubte Züge</string>
+							<string key="IBUIAccessibilityLabel">Allowed moves</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">22</string>
@@ -154,7 +154,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<int key="IBUITextAlignment">1</int>
-						<reference key="IBUIFontDescription" ref="332950653"/>
+						<reference key="IBUIFontDescription" ref="641688453"/>
 						<reference key="IBUIFont" ref="576036696"/>
 					</object>
 					<object class="IBUILabel" id="398762464">
@@ -167,9 +167,6 @@
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<boolean value="NO" key="IBUIIsAccessibilityElement"/>
-						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">Feldgröße</string>
 						<reference key="IBUITextColor" ref="207695856"/>
@@ -179,7 +176,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<int key="IBUITextAlignment">1</int>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="894881304">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="784254514">
 							<string key="name">Helvetica</string>
 							<string key="family">Helvetica</string>
 							<int key="traits">0</int>
@@ -210,7 +207,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<int key="IBUITextAlignment">1</int>
-						<reference key="IBUIFontDescription" ref="894881304"/>
+						<reference key="IBUIFontDescription" ref="784254514"/>
 						<reference key="IBUIFont" ref="250621439"/>
 					</object>
 					<object class="IBUILabel" id="172337850">
@@ -232,7 +229,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<int key="IBUITextAlignment">1</int>
-						<reference key="IBUIFontDescription" ref="894881304"/>
+						<reference key="IBUIFontDescription" ref="784254514"/>
 						<reference key="IBUIFont" ref="250621439"/>
 					</object>
 					<object class="IBUILabel" id="879039765">
@@ -254,7 +251,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<int key="IBUITextAlignment">1</int>
-						<reference key="IBUIFontDescription" ref="894881304"/>
+						<reference key="IBUIFontDescription" ref="784254514"/>
 						<reference key="IBUIFont" ref="250621439"/>
 					</object>
 					<object class="IBUILabel" id="1010867743">
@@ -267,9 +264,6 @@
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<boolean value="NO" key="IBUIIsAccessibilityElement"/>
-						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">Züge</string>
 						<reference key="IBUITextColor" ref="207695856"/>
@@ -279,7 +273,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<int key="IBUITextAlignment">1</int>
-						<reference key="IBUIFontDescription" ref="894881304"/>
+						<reference key="IBUIFontDescription" ref="784254514"/>
 						<reference key="IBUIFont" ref="250621439"/>
 					</object>
 					<object class="IBUILabel" id="827754782">
@@ -307,7 +301,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<int key="IBUITextAlignment">1</int>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="914148319">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="800745325">
 							<string key="name">Helvetica</string>
 							<string key="family">Helvetica</string>
 							<int key="traits">0</int>
@@ -338,7 +332,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<int key="IBUITextAlignment">1</int>
-						<reference key="IBUIFontDescription" ref="914148319"/>
+						<reference key="IBUIFontDescription" ref="800745325"/>
 						<reference key="IBUIFont" ref="304476208"/>
 					</object>
 					<object class="IBUILabel" id="624167523">
@@ -360,7 +354,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<int key="IBUITextAlignment">1</int>
-						<reference key="IBUIFontDescription" ref="914148319"/>
+						<reference key="IBUIFontDescription" ref="800745325"/>
 						<reference key="IBUIFont" ref="304476208"/>
 					</object>
 					<object class="IBUISegmentedControl" id="986548308">
@@ -450,7 +444,7 @@
 						<string key="NSReuseIdentifierKey">_NS:590</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Gitternetz anzeigen</string>
+							<string key="IBUIAccessibilityLabel">Show Gridlines</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -703,7 +697,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 						<string key="NSReuseIdentifierKey">_NS:222</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Statistik für aktuelle Schwierigkeit löschen</string>
+							<string key="IBUIAccessibilityLabel">Reset Current Level Statistics</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -718,7 +712,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">smalltrash.png</string>
 						</object>
-						<reference key="IBUIFontDescription" ref="417095570"/>
+						<reference key="IBUIFontDescription" ref="701534943"/>
 						<reference key="IBUIFont" ref="647764227"/>
 					</object>
 					<object class="IBUIView" id="853561509">
@@ -913,27 +907,27 @@ AAgACAAIAAEAAQABAAE</bytes>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">statistikViewController_</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="533452879"/>
-					</object>
-					<int key="connectionID">88</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">statistikPlaceholderView_</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="747054828"/>
-					</object>
-					<int key="connectionID">89</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">statistikLoeschenButton_</string>
+						<string key="label">statistikLoeschenButton</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="671311764"/>
 					</object>
-					<int key="connectionID">96</int>
+					<int key="connectionID">97</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">statistikPlaceholderView</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="747054828"/>
+					</object>
+					<int key="connectionID">98</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">statistikViewController</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="533452879"/>
+					</object>
+					<int key="connectionID">99</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -1298,9 +1292,237 @@ AAgACAAIAAEAAQABAAE</bytes>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">96</int>
+			<int key="maxID">99</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">SettingsViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="farbschemaGewaehlt:">id</string>
+						<string key="levelGewaehlt:">id</string>
+						<string key="rasterAnAus:">id</string>
+						<string key="resetStats:">id</string>
+						<string key="soundAnAus:">id</string>
+						<string key="zurueckZumSpiel:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="farbschemaGewaehlt:">
+							<string key="name">farbschemaGewaehlt:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="levelGewaehlt:">
+							<string key="name">levelGewaehlt:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="rasterAnAus:">
+							<string key="name">rasterAnAus:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="resetStats:">
+							<string key="name">resetStats:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="soundAnAus:">
+							<string key="name">soundAnAus:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="zurueckZumSpiel:">
+							<string key="name">zurueckZumSpiel:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="anzahlZuegeLabel">UILabel</string>
+						<string key="farbPreviewRahmen">UIView</string>
+						<string key="farbe1">UIView</string>
+						<string key="farbe1bg">UIView</string>
+						<string key="farbe2">UIView</string>
+						<string key="farbe2bg">UIView</string>
+						<string key="farbe3">UIView</string>
+						<string key="farbe3bg">UIView</string>
+						<string key="farbe4">UIView</string>
+						<string key="farbe4bg">UIView</string>
+						<string key="farbe5">UIView</string>
+						<string key="farbe5bg">UIView</string>
+						<string key="farbe6">UIView</string>
+						<string key="farbe6bg">UIView</string>
+						<string key="farbschema">UISegmentedControl</string>
+						<string key="feldgroesseLabel">UILabel</string>
+						<string key="rasterSwitch">UISwitch</string>
+						<string key="schwierigkeitsGrad">UISegmentedControl</string>
+						<string key="soundEffekteSwitch">UISwitch</string>
+						<string key="statistikLoeschenButton">UIButton</string>
+						<string key="statistikPlaceholderView">StatistikView</string>
+						<string key="statistikViewController">StatistikViewController</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="anzahlZuegeLabel">
+							<string key="name">anzahlZuegeLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="farbPreviewRahmen">
+							<string key="name">farbPreviewRahmen</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="farbe1">
+							<string key="name">farbe1</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="farbe1bg">
+							<string key="name">farbe1bg</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="farbe2">
+							<string key="name">farbe2</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="farbe2bg">
+							<string key="name">farbe2bg</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="farbe3">
+							<string key="name">farbe3</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="farbe3bg">
+							<string key="name">farbe3bg</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="farbe4">
+							<string key="name">farbe4</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="farbe4bg">
+							<string key="name">farbe4bg</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="farbe5">
+							<string key="name">farbe5</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="farbe5bg">
+							<string key="name">farbe5bg</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="farbe6">
+							<string key="name">farbe6</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="farbe6bg">
+							<string key="name">farbe6bg</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="farbschema">
+							<string key="name">farbschema</string>
+							<string key="candidateClassName">UISegmentedControl</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="feldgroesseLabel">
+							<string key="name">feldgroesseLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="rasterSwitch">
+							<string key="name">rasterSwitch</string>
+							<string key="candidateClassName">UISwitch</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="schwierigkeitsGrad">
+							<string key="name">schwierigkeitsGrad</string>
+							<string key="candidateClassName">UISegmentedControl</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="soundEffekteSwitch">
+							<string key="name">soundEffekteSwitch</string>
+							<string key="candidateClassName">UISwitch</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="statistikLoeschenButton">
+							<string key="name">statistikLoeschenButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="statistikPlaceholderView">
+							<string key="name">statistikPlaceholderView</string>
+							<string key="candidateClassName">StatistikView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="statistikViewController">
+							<string key="name">statistikViewController</string>
+							<string key="candidateClassName">StatistikViewController</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/SettingsViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">StatistikView</string>
+					<string key="superclassName">UIView</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="anzahlGewonnen">UILabel</string>
+						<string key="anzahlSpiele">UILabel</string>
+						<string key="anzahlVerloren">UILabel</string>
+						<string key="prozentGewonnen">UILabel</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="anzahlGewonnen">
+							<string key="name">anzahlGewonnen</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="anzahlSpiele">
+							<string key="name">anzahlSpiele</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="anzahlVerloren">
+							<string key="name">anzahlVerloren</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="prozentGewonnen">
+							<string key="name">prozentGewonnen</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/StatistikView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">StatistikViewController</string>
+					<string key="superclassName">NSObject</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="anzahlGewonnenLabel">UILabel</string>
+						<string key="anzahlSpieleLabel">UILabel</string>
+						<string key="anzahlVerlorenLabel">UILabel</string>
+						<string key="prozentGewonnenLabel">UILabel</string>
+						<string key="statistikView">StatistikView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="anzahlGewonnenLabel">
+							<string key="name">anzahlGewonnenLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="anzahlSpieleLabel">
+							<string key="name">anzahlSpieleLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="anzahlVerlorenLabel">
+							<string key="name">anzahlVerlorenLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="prozentGewonnenLabel">
+							<string key="name">prozentGewonnenLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="statistikView">
+							<string key="name">statistikView</string>
+							<string key="candidateClassName">StatistikView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/StatistikViewController.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
