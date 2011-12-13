@@ -36,7 +36,7 @@
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
 			<object class="IBUIView" id="774585933">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">298</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIImageView" id="1057867828">
@@ -44,7 +44,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrameSize">{768, 1004}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="650387509"/>
 						<string key="NSReuseIdentifierKey">_NS:541</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -59,7 +58,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{15, 581}, {66, 66}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="496218386"/>
 						<object class="NSColor" key="IBUIBackgroundColor" id="350083186">
 							<int key="NSColorSpace">1</int>
@@ -67,7 +65,7 @@
 						</object>
 						<bool key="IBUIOpaque">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Fill Red</string>
+							<string key="IBUIAccessibilityLabel">Rot füllen</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -105,7 +103,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{15, 669}, {66, 66}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="657193476"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -114,7 +111,7 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUITag">1</int>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Fill Green</string>
+							<string key="IBUIAccessibilityLabel">Grün füllen</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -137,7 +134,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{15, 754}, {66, 66}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="275033628"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -146,7 +142,7 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUITag">2</int>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Fill Blue</string>
+							<string key="IBUIAccessibilityLabel">Blau füllen</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -169,12 +165,11 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{96, 902}, {66, 66}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="533000843"/>
 						<reference key="IBUIBackgroundColor" ref="350083186"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Fill Red</string>
+							<string key="IBUIAccessibilityLabel">Rot füllen</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -194,7 +189,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{198, 902}, {66, 66}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="515250857"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -203,7 +197,7 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUITag">1</int>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Fill Green</string>
+							<string key="IBUIAccessibilityLabel">Grün füllen</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -223,7 +217,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{300, 902}, {66, 66}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="387636309"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -232,7 +225,7 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUITag">2</int>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Fill Blue</string>
+							<string key="IBUIAccessibilityLabel">Blau füllen</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -252,7 +245,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{688, 581}, {66, 66}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="635044671"/>
 						<object class="NSColor" key="IBUIBackgroundColor" id="568271909">
 							<int key="NSColorSpace">1</int>
@@ -261,7 +253,7 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUITag">3</int>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Fill Magenta</string>
+							<string key="IBUIAccessibilityLabel">Magenta füllen</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -284,7 +276,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{688, 669}, {66, 66}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="330284983"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -293,7 +284,7 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUITag">4</int>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Fill Cyan</string>
+							<string key="IBUIAccessibilityLabel">Cyan füllen</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -316,7 +307,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{688, 754}, {66, 66}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1031978951"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -325,7 +315,7 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUITag">5</int>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Fill Yellow</string>
+							<string key="IBUIAccessibilityLabel">Gelb füllen</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -348,13 +338,12 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{402, 902}, {66, 66}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="60727392"/>
 						<reference key="IBUIBackgroundColor" ref="568271909"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUITag">3</int>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Fill Magenta</string>
+							<string key="IBUIAccessibilityLabel">Magenta füllen</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -374,7 +363,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{504, 902}, {66, 66}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="335322748"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -383,7 +371,7 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUITag">4</int>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Fill Cyan</string>
+							<string key="IBUIAccessibilityLabel">Cyan füllen</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -403,7 +391,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{606, 902}, {66, 66}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="365764361"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -412,7 +399,7 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUITag">5</int>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Fill Yellow</string>
+							<string key="IBUIAccessibilityLabel">Gelb füllen</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -432,14 +419,13 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{583, 172}, {104, 52}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="703597665"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Number of Moves</string>
+							<string key="IBUIAccessibilityLabel">Anzahl Züge</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">a / bb</string>
@@ -474,14 +460,13 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{82, 172}, {118, 52}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="96384328"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Game Duration</string>
+							<string key="IBUIAccessibilityLabel">Spieldauer</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">0:54</string>
@@ -500,12 +485,11 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{35, 927}, {41, 41}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="422043033"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<float key="IBUIAlpha">0.5</float>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Sound Toggle</string>
+							<string key="IBUIAccessibilityLabel">Ton an oder aus</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -528,7 +512,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{96, 235}, {576, 576}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="590399538"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">10</int>
@@ -4926,7 +4909,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						</object>
 						<array key="IBUIGestureRecognizers" id="0"/>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Game Grid</string>
+							<string key="IBUIAccessibilityLabel">Spielraster</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
@@ -4935,12 +4918,10 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{704, 938}, {18, 19}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<float key="IBUIAlpha">0.5</float>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<string key="IBUIAccessibilityLabel">Settings</string>
+							<string key="IBUIAccessibilityLabel">Einstellungen</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -4961,7 +4942,6 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{386, 828}, {48, 37}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="764025275"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
@@ -4986,7 +4966,6 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{289, 828}, {50, 37}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="347547491"/>
 						<string key="NSReuseIdentifierKey">_NS:222</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -5012,7 +4991,6 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{82, 155}, {104, 21}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="388522704"/>
 						<string key="NSReuseIdentifierKey">_NS:345</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -5020,7 +4998,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Elapsed Time</string>
+						<string key="IBUIText">Spielzeit</string>
 						<reference key="IBUITextColor" ref="937785279"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="320539777"/>
@@ -5042,7 +5020,6 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{583, 155}, {104, 21}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="902999538"/>
 						<string key="NSReuseIdentifierKey">_NS:345</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -5050,7 +5027,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Moves / Max</string>
+						<string key="IBUIText">Züge / Maximal</string>
 						<reference key="IBUITextColor" ref="937785279"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="320539777"/>
@@ -5063,8 +5040,6 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {768, 1004}}</string>
-				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="1057867828"/>
 				<reference key="IBUIBackgroundColor" ref="937785279"/>
 				<bool key="IBUIAutoresizesSubviews">NO</bool>
@@ -5073,7 +5048,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					<int key="IBUIStatusBarStyle">2</int>
 				</object>
 				<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-					<string key="IBUIAccessibilityLabel">JengoColor Game View</string>
+					<string key="IBUIAccessibilityLabel">Spielfeld</string>
 				</object>
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
