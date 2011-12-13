@@ -25,39 +25,8 @@
 }
 
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (void)zeichneGitter:(CGFloat)fieldHeight fieldWidth:(CGFloat)fieldWidth numCols:(int)numCols numRows:(int)numRows
 {
-    if (!self.dataSource) {
-        return;
-    }
-  
-    int numRows = [self.dataSource rasterZeilen];
-    int numCols = [self.dataSource rasterSpalten];
-    
-    CGFloat fieldWidth = rect.size.width / numCols;
-    int fieldWidthI = [[NSNumber numberWithFloat:fieldWidth] intValue];
-    
-    CGFloat fieldHeight = rect.size.height / numRows;
-    int fieldHeightI = [[NSNumber numberWithFloat:fieldHeight] intValue];
-
-    
-    for (NSUInteger row=0; row<numRows; row++) {
-        for (NSUInteger col=0; col<numCols; col++) {
-            CGFloat x = col * fieldWidthI;
-            CGFloat y = row * fieldHeightI;
-            
-            int colorNum = [[self.dataSource farbeFuerRasterfeldZeile:row spalte:col] intValue];
-            
-            CGRect rectangle = CGRectMake(x,y,fieldWidthI,fieldHeightI);
-            UIColor* color = [[Farbmapping sharedInstance] farbeMitNummer:colorNum]; 
-            [color setFill];
-            [color setStroke];
-            UIRectFill(rectangle);
-        }
-    }
-    
     // Gitter zeichnen
     if ([[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN]) {
         
@@ -99,6 +68,65 @@
         }
         
     }
+}
+
+
+- (void)drawTileWithColor:(NSUInteger)colorNum inRect:(CGRect)rectangle {
+    NSString* imgName = [[Farbmapping sharedInstance] imageNameForColor:colorNum andSize:[[NSNumber numberWithFloat:rectangle.size.width] unsignedIntegerValue]];
+    
+    UIImage *img = [UIImage imageNamed:imgName];
+    if (!img) {
+        LOG_UI(1, @"Cannot find image named %@", imgName);
+        UIColor* color = [[Farbmapping sharedInstance] farbeMitNummer:colorNum]; 
+        [color setFill];
+        [color setStroke];
+        UIRectFill(rectangle);
+    } else {
+        
+        if (rectangle.size.width != img.size.width) {
+            LOG_UI(2, @"Tile width %g not matching image file width %f for image %@", rectangle.size.width, img.size.width, imgName);
+        }
+        
+        if (rectangle.size.height != img.size.height) {
+            LOG_UI(2, @"Tile height %g not matching image file width %f for image %@", rectangle.size.height, img.size.height, imgName);
+        }
+        LOG_UI(3, @"Using image %@ for tile (%g,%g/%g,%g)", imgName, rectangle.origin.x, rectangle.origin.y, rectangle.size.width, rectangle.size.height);
+        [img drawInRect:rectangle];
+    }
+
+}
+
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect
+{
+    if (!self.dataSource) {
+        return;
+    }
+    int numRows = [self.dataSource rasterZeilen];
+    int numCols = [self.dataSource rasterSpalten];
+    
+    CGFloat fieldWidthF = rect.size.width / numCols;
+    NSUInteger fieldWidth = [[NSNumber numberWithFloat:fieldWidthF] intValue];
+    
+    CGFloat fieldHeightF = rect.size.height / numRows;
+    NSUInteger fieldHeight = [[NSNumber numberWithFloat:fieldHeightF] intValue];
+
+    
+    for (NSUInteger row=0; row<numRows; row++) {
+        for (NSUInteger col=0; col<numCols; col++) {
+            CGFloat x = col * fieldWidth;
+            CGFloat y = row * fieldHeight;
+            
+            NSUInteger colorNum = [[self.dataSource farbeFuerRasterfeldZeile:row spalte:col] intValue];
+            
+            CGRect rectangle = CGRectMake(x,y,fieldWidth,fieldHeight);
+            [self drawTileWithColor:colorNum inRect:rectangle];
+
+        }
+    }
+    
+    [self zeichneGitter:fieldHeight fieldWidth:fieldWidth numCols:numCols numRows:numRows];
 }
 
 

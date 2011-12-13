@@ -79,8 +79,15 @@
     [self updateSoundButton:[SoundManager sharedManager].soundAn];
     
     for (ColorfulButton *b in self.allColorButtons) {
-        [b setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:b.tag]];
-        [b setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:b.tag]];
+        
+        NSString* imgName = [[Farbmapping sharedInstance] imageNameForColor:b.tag andSize:24];
+        UIImage *img = [UIImage imageNamed:imgName];
+        if (img) {
+            [b setBackgroundImage:img forState:UIControlStateNormal];
+        } else {
+            [b setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:b.tag]];
+            [b setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:b.tag]];
+        }
     }
     
     [self.rasterController.view setNeedsDisplay];

@@ -126,4 +126,11 @@ static Farbmapping *sharedSingleton;
 }
 
 
+-(NSString*) imageNameForColor:(NSUInteger)color andSize:(NSUInteger)width {
+    NSUInteger schema = self.farbschema + 1;
+    
+    return [NSString stringWithFormat:@"spielstein%d-CS%d-%d", width, schema, color];
+}
+
+
 @end

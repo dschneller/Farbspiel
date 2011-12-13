@@ -18,5 +18,6 @@
 
 -(UIColor*) farbeMitNummer:(int)farbnummer;
 -(UIColor*) shadeFarbeMitNummer:(int)farbnummer;
+-(NSString*) imageNameForColor:(NSUInteger)color andSize:(NSUInteger)width;
 
 @end
