@@ -43,14 +43,14 @@
 - (void) fadeOut {
     [UIView animateWithDuration:0.5
                      animations:^{
-                         NSLog(@"Fade Out Animation Began");
+                         LOG_GAME(1,@"Fade Out Animation Began");
                          CGRect f = self.view.frame;
                          CGRect nf = CGRectMake(f.origin.x, -f.size.height, f.size.width, f.size.height);
                          self.view.alpha = 0;
                          self.view.frame = nf;
                      } 
                      completion:^(BOOL finished){
-                         NSLog(@"Fade Out Animation Finished");
+                         LOG_GAME(1, @"Fade Out Animation Finished");
                          
                          [self.view removeFromSuperview];
                          [self.blurLayer removeFromSuperlayer];
@@ -121,7 +121,7 @@
     NSUInteger anzahlGewonnen = [[Datenhaltung sharedInstance] anzahlSpieleGewonnen:YES fuerLevel:model.level];
     
     
-    NSLog(@"GewonnenVerlorenController.statistikViewController = %@ ", self.statistikViewController);
+    LOG_GAME(1, @"GewonnenVerlorenController.statistikViewController = %@ ", self.statistikViewController);
     
     self.statistikViewController.anzahlSpiele = anzahlSpiele;
     self.statistikViewController.anzahlGewonnen = anzahlGewonnen;
@@ -144,11 +144,11 @@
     [parentView addSubview:self.view];
     
     [UIView animateWithDuration:0.5 animations:^{
-        NSLog(@"Fade In Animation Began");
-        NSLog(@"GewonnenView Center: %g, %g", self.view.center.x, self.view.center.y);
+        LOG_GAME(1, @"Fade In Animation Began");
+        LOG_GAME(1, @"GewonnenView Center: %g, %g", self.view.center.x, self.view.center.y);
         self.view.alpha = 0.85f;
         self.view.center = CGPointMake(parentView.center.x, parentView.center.y - 30);
-        NSLog(@"GewonnenView CenterNeu: %g, %g", self.view.center.x, self.view.center.y);
+        LOG_GAME(1, @"GewonnenView CenterNeu: %g, %g", self.view.center.x, self.view.center.y);
         
         if (model.siegErreicht) {
             [[SoundManager sharedManager] playSound:GEWONNEN];
@@ -156,7 +156,7 @@
             [[SoundManager sharedManager] playSound:VERLOREN];
         }
     } completion:^(BOOL finished) {
-        NSLog(@"Fade In Animation Done");
+        LOG_GAME(1, @"Fade In Animation Done");
     }];
 }
 

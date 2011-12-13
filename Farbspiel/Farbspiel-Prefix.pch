@@ -15,3 +15,19 @@
 #endif
 
 #define IPAD() UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
+
+
+#ifdef DEBUG
+#import "LoggerClient.h"
+#define LOG_PREFS(level, ...)      LogMessageF(__FILE__,__LINE__,__FUNCTION__,@"prefs",level,__VA_ARGS__)
+#define LOG_GAME(level, ...)       LogMessageF(__FILE__,__LINE__,__FUNCTION__,@"game",level,__VA_ARGS__)
+#define LOG_SETTINGS(level, ...)   LogMessageF(__FILE__,__LINE__,__FUNCTION__,@"settings",level,__VA_ARGS__)
+#define LOG_TICK(level, ...)       LogMessageF(__FILE__,__LINE__,__FUNCTION__,@"tick",level,__VA_ARGS__)
+#define LOG_UI(level, ...)       LogMessageF(__FILE__,__LINE__,__FUNCTION__,@"UI",level,__VA_ARGS__)
+#else
+#define LOG_PREFS(...)      do{}while(0)
+#define LOG_GAME(...)       do{}while(0)
+#define LOG_SETTINGS(...)   do{}while(0)
+#define LOG_TICK(...)       do{}while(0)
+#define LOG_UI(...)         do{}while(0)
+#endif

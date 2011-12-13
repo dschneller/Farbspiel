@@ -36,7 +36,7 @@
 
 
 -(void) tick {
-//    NSLog(@"TICK %ld", self.model.spieldauer);
+    LOG_TICK(2, @"TICK %ld", self.model.spieldauer);
     self.model.spieldauer = self.model.spieldauer+1;
     [self.delegate spielrasterViewController:self modelDidChange:self.model];
 }
@@ -56,7 +56,7 @@
 
 -(void)neuesSpielZaehlenFuerLevel:(SpielLevel)level {
     NSString* key = [NSString stringWithFormat:PREFKEY_SPIELZAEHLER_FORMAT, level];
-    NSLog(@"Gezaehlt: Level %d, Count %d", self.model.level, [[Datenhaltung sharedInstance] erhoeheIntegerFuerKey:key]);
+    LOG_GAME(0, @"Gezaehlt: Level %d, Count %d", self.model.level, [[Datenhaltung sharedInstance] erhoeheIntegerFuerKey:key]);
 }
 
 

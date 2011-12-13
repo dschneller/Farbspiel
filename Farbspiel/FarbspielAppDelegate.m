@@ -71,7 +71,7 @@
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
      */
-    NSLog(@"Synced defaults: %d", [[NSUserDefaults standardUserDefaults] synchronize]);
+    LOG_PREFS(0, @"Synced defaults: %d", [[NSUserDefaults standardUserDefaults] synchronize]);
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -114,7 +114,7 @@
              
              abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
              */
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            LOG_PREFS(0, @"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         } 
     }
@@ -197,7 +197,7 @@
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
          
          */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        LOG_PREFS(0, @"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }    
     

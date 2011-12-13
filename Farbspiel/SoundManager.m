@@ -57,7 +57,7 @@ static SoundManager *sharedSingleton;
             AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &newSoundId);
             sounds_[type] = newSoundId;
         } else {
-            NSLog(@"error, sound file not found: %@", path);
+            LOG_GAME(0, @"error, sound file not found: %@", path);
         }
     }
     AudioServicesPlayAlertSound(sounds_[type]);

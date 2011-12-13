@@ -73,7 +73,7 @@ static Datenhaltung *sharedSingleton;
     NSArray *spiele = [ctx executeFetchRequest:fetchRequest error:&error];
     
     if (error) {
-        NSLog(@"Fehler beim Zuruecksetzen der Statistik fuer Level %d: %@", level, error);
+        LOG_PREFS(0, @"Fehler beim Zuruecksetzen der Statistik fuer Level %d: %@", level, error);
         return;
     }
     
@@ -104,7 +104,7 @@ static Datenhaltung *sharedSingleton;
     
     [ctx save:&error];
     if (error) {
-        NSLog(@"Fehler beim Speichern des Spielausgangs: %@", error.description);
+        LOG_GAME(0, @"Fehler beim Speichern des Spielausgangs: %@", error.description);
     }
 }
 
@@ -128,7 +128,7 @@ static Datenhaltung *sharedSingleton;
         count = 0;
     }
     if (error) {
-        NSLog(@"Fehler beim Zaehlen der Spiele fuer Level %d: %@", level, error);
+        LOG_GAME(0, @"Fehler beim Zaehlen der Spiele fuer Level %d: %@", level, error);
     }
     
     return count;
@@ -154,7 +154,7 @@ static Datenhaltung *sharedSingleton;
         count = 0;
     }
     if (error) {
-        NSLog(@"Fehler beim Zaehlen der %@ Spiele fuer Level %d: %@", (gewonnen ? @"gewonnenen" : @"verlorenen"), level, error);
+        LOG_GAME(0, @"Fehler beim Zaehlen der %@ Spiele fuer Level %d: %@", (gewonnen ? @"gewonnenen" : @"verlorenen"), level, error);
     }
     
     return count;

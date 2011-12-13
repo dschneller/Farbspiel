@@ -97,6 +97,9 @@
 		41A114B213DF6CA300B2F0DB /* farbkloetzchen.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B113DF6CA300B2F0DB /* farbkloetzchen.png */; };
 		41A114B513DF6EF100B2F0DB /* farbkloetzchen-jengo.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B313DF6EF100B2F0DB /* farbkloetzchen-jengo.png */; };
 		41A114B613DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B413DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png */; };
+		41B6743B148E2BE200ADFC2F /* LoggerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B67439148E2BE200ADFC2F /* LoggerClient.m */; };
+		41B6743E148E2C7500ADFC2F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B6743D148E2C7500ADFC2F /* CFNetwork.framework */; };
+		41B67440148E2C7D00ADFC2F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B6743F148E2C7D00ADFC2F /* SystemConfiguration.framework */; };
 		41C61E2D142898FA00B513EB /* smalltrash.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C61E2C142898FA00B513EB /* smalltrash.png */; };
 		41D925D113D8A76B007612E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D013D8A76B007612E6 /* UIKit.framework */; };
 		41D925D313D8A76B007612E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D213D8A76B007612E6 /* Foundation.framework */; };
@@ -199,6 +202,11 @@
 		41A114B313DF6EF100B2F0DB /* farbkloetzchen-jengo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen-jengo.png"; sourceTree = "<group>"; };
 		41A114B413DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "farbkloetzchen-jengo@2x.png"; sourceTree = "<group>"; };
 		41B67436148CE4B100ADFC2F /* GewonnenVerlorenControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GewonnenVerlorenControllerDelegate.h; sourceTree = "<group>"; };
+		41B67438148E2BE200ADFC2F /* LoggerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggerClient.h; path = "nslogger/Client Logger/iOS/LoggerClient.h"; sourceTree = "<group>"; };
+		41B67439148E2BE200ADFC2F /* LoggerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoggerClient.m; path = "nslogger/Client Logger/iOS/LoggerClient.m"; sourceTree = "<group>"; };
+		41B6743A148E2BE200ADFC2F /* LoggerCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggerCommon.h; path = "nslogger/Client Logger/iOS/LoggerCommon.h"; sourceTree = "<group>"; };
+		41B6743D148E2C7500ADFC2F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		41B6743F148E2C7D00ADFC2F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		41C61E2C142898FA00B513EB /* smalltrash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smalltrash.png; sourceTree = "<group>"; };
 		41D925CC13D8A76B007612E6 /* Farbspiel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Farbspiel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D925D013D8A76B007612E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -266,6 +274,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B67440148E2C7D00ADFC2F /* SystemConfiguration.framework in Frameworks */,
+				41B6743E148E2C7500ADFC2F /* CFNetwork.framework in Frameworks */,
 				41FE195A13F0740A00BF4656 /* CoreData.framework in Frameworks */,
 				41D9264E13D8ED4F007612E6 /* AudioToolbox.framework in Frameworks */,
 				41D9264913D8AAE8007612E6 /* QuartzCore.framework in Frameworks */,
@@ -445,6 +455,17 @@
 			path = "Resources-iPad/Farbspiel";
 			sourceTree = SOURCE_ROOT;
 		};
+		41B6743C148E2BF000ADFC2F /* NSLogger */ = {
+			isa = PBXGroup;
+			children = (
+				41B67438148E2BE200ADFC2F /* LoggerClient.h */,
+				41B67439148E2BE200ADFC2F /* LoggerClient.m */,
+				41B6743A148E2BE200ADFC2F /* LoggerCommon.h */,
+			);
+			name = NSLogger;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		41D925C113D8A76B007612E6 = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +489,8 @@
 		41D925CF13D8A76B007612E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41B6743F148E2C7D00ADFC2F /* SystemConfiguration.framework */,
+				41B6743D148E2C7500ADFC2F /* CFNetwork.framework */,
 				418F3C46142A170D006B1556 /* libKIF.a */,
 				41FE195913F0740A00BF4656 /* CoreData.framework */,
 				41D9264D13D8ED4F007612E6 /* AudioToolbox.framework */,
@@ -483,6 +506,7 @@
 		41D925D613D8A76B007612E6 /* Farbspiel */ = {
 			isa = PBXGroup;
 			children = (
+				41B6743C148E2BF000ADFC2F /* NSLogger */,
 				4170EAB21459AB3B00D93ED1 /* LambdaAlert */,
 				419F0F99143384C1009AF98E /* Resources-iPad */,
 				41D925D713D8A76B007612E6 /* Supporting Files */,
@@ -833,6 +857,7 @@
 				419F350A1488C923009173A5 /* BlurLayer.m in Sources */,
 				419F350E1488CD03009173A5 /* GewonnenVerlorenView.m in Sources */,
 				419F35111488CD28009173A5 /* GewonnenVerlorenController.m in Sources */,
+				41B6743B148E2BE200ADFC2F /* LoggerClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

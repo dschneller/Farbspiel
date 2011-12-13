@@ -113,7 +113,7 @@
     SpielLevel storedLevel = (SpielLevel) [[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL];
     // Neuer Level gewaehlt?
     if (self.rasterController.model.level != storedLevel) {
-        NSLog(@"Neues Model mit Level %d", storedLevel);
+        LOG_GAME(0, @"Neues Model mit Level %d", storedLevel);
         
         if (self.rasterController.model.siegErreicht ||
             self.rasterController.model.verloren ||
@@ -319,7 +319,7 @@
 
 
 -(void)viewDidAppear:(BOOL)animated {
-    NSLog(@"Became first responder: %d", [self becomeFirstResponder]);
+    LOG_GAME(1, @"Became first responder: %d", [self becomeFirstResponder]);
     [self pruefeObLevelGewechseltWurde];
 }
 

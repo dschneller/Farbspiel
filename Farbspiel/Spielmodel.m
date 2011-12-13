@@ -36,7 +36,7 @@
 -(void) debugMatrix {
     if (NO) {
         for (NSUInteger row = 0; row<12; row++) {
-            NSLog(@"%@ %@ %@ %@ %@ %@ %@ %@ %@ %@ %@ %@", 
+            LOG_GAME(2, @"%@ %@ %@ %@ %@ %@ %@ %@ %@ %@ %@ %@", 
                   [self farbeAnPositionZeile:row spalte:0], 
                   [self farbeAnPositionZeile:row spalte:1], 
                   [self farbeAnPositionZeile:row spalte:2], 
