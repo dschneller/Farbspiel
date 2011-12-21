@@ -10,6 +10,7 @@
 #import "Farbmapping.h"
 #import "Datenhaltung.h"
 
+
 @implementation SpielrasterView
 
 @synthesize raster = raster_;
@@ -100,6 +101,10 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"contents"];
+    animation.duration = 0.1f;
+    [self.layer addAnimation:animation forKey:@"contents"];
+    
     if (!self.dataSource) {
         return;
     }
