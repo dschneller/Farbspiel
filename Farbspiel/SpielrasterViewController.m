@@ -99,6 +99,19 @@
     if ([self.model siegErreicht] || self.model.zuege >= self.model.maximaleZuege) {
         [self spielende];
     }
+    
+    
+    /*
+    [UIView transitionWithView:containerView duration:0.2
+                       options:UIViewAnimationOptionTransitionFlipFromLeft                  animations:^{
+                           [fromView removeFromSuperview];
+                           [containerView addSubview:toView]
+                       }
+                    completion:NULL];
+    
+    */
+    
+    
     [self.view setNeedsDisplay];
 }
 
