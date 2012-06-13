@@ -63,7 +63,21 @@
 
 -(void) randomizeSpielfeld {
     for (int i=0; i<self.felderProKante * self.felderProKante; i++) {
-        int x =  arc4random() % 6;
+        int x; 
+        switch (self.level) {
+            case MEDIUM:
+                if (i % 3 != 0) { x = arc4random() % 5; }
+                else { x = arc4random() % 6; }
+                break;
+            case HARD:
+                if (i % 4 != 0) { x = arc4random() % 5; }
+                else { x = arc4random() % 6; }
+                break;
+            case EASY:
+            default:
+                x = arc4random() % 6;
+                break;
+        }
         [self.farbfelder addObject:[NSNumber numberWithInt:x]];
     }
 }
