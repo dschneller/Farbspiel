@@ -288,6 +288,7 @@
 		41E169E91588E9250043EE89 /* spielstein66-CS3-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D71588E9250043EE89 /* spielstein66-CS3-2.png */; };
 		41E169EA1588E9250043EE89 /* spielstein66-CS3-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D81588E9250043EE89 /* spielstein66-CS3-1.png */; };
 		41E169EB1588E9250043EE89 /* spielstein66-CS3-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D91588E9250043EE89 /* spielstein66-CS3-0.png */; };
+		41E169ED158951530043EE89 /* spielstein48-CS1-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169EC158951530043EE89 /* spielstein48-CS1-0.png */; };
 		41EBBD351428D1600019D98A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD371428D1600019D98A /* Localizable.strings */; };
 		41FE192913F06D7700BF4656 /* JengoColor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41FE192713F06D7700BF4656 /* JengoColor.xcdatamodeld */; };
 		41FE195A13F0740A00BF4656 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FE195913F0740A00BF4656 /* CoreData.framework */; };
@@ -572,6 +573,7 @@
 		41E169D71588E9250043EE89 /* spielstein66-CS3-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS3-2.png"; sourceTree = "<group>"; };
 		41E169D81588E9250043EE89 /* spielstein66-CS3-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS3-1.png"; sourceTree = "<group>"; };
 		41E169D91588E9250043EE89 /* spielstein66-CS3-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS3-0.png"; sourceTree = "<group>"; };
+		41E169EC158951530043EE89 /* spielstein48-CS1-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein48-CS1-0.png"; sourceTree = "<group>"; };
 		41EBBD361428D1600019D98A /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41EBBD3A1428D2EF0019D98A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
 		41EBBD3E1428D3B70019D98A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GewonnenView.xib; sourceTree = "<group>"; };
@@ -678,6 +680,7 @@
 		4129A84214976D4700516A42 /* Spielstein Easy (48, iPad) */ = {
 			isa = PBXGroup;
 			children = (
+				41E169EC158951530043EE89 /* spielstein48-CS1-0.png */,
 				4129A87F149772BF00516A42 /* spielstein48-CS1-1.png */,
 				4129A880149772BF00516A42 /* spielstein48-CS1-2.png */,
 				4129A881149772BF00516A42 /* spielstein48-CS1-3.png */,
@@ -1518,6 +1521,7 @@
 				41E169E91588E9250043EE89 /* spielstein66-CS3-2.png in Resources */,
 				41E169EA1588E9250043EE89 /* spielstein66-CS3-1.png in Resources */,
 				41E169EB1588E9250043EE89 /* spielstein66-CS3-0.png in Resources */,
+				41E169ED158951530043EE89 /* spielstein48-CS1-0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
