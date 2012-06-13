@@ -223,4 +223,24 @@
 }
 
 
++(NSString*) levelNameFor:(SpielLevel)level {
+    NSString* levelName;
+    switch (level) {
+        case HARD:
+            levelName = NSLocalizedString(@"L_SCHWER", @"Level name for -hard-");
+            break;
+            
+        case MEDIUM:
+            levelName = NSLocalizedString(@"L_MITTEL", @"Level name for -medium-");
+            break;
+            
+        case EASY:
+        default:
+            levelName = NSLocalizedString(@"L_EASY", @"Level name for -easy-");
+            break;
+    }
+    return levelName;
+}
+
+
 @end

@@ -64,4 +64,5 @@ typedef enum {
 -(int) maximaleZuegeFuerLevel:(SpielLevel)level;
 -(BOOL) spielLaeuft;
 
++(NSString*) levelNameFor:(SpielLevel)level;
 @end

@@ -101,21 +101,6 @@
     int zuege = model.zuege;
     
     NSString* gewonnenVerloren = (model.siegErreicht) ? NSLocalizedString(@"L_GEWONNEN", @"Label for -won-") : NSLocalizedString(@"L_VERLOREN", @"Label for -lost-");
-    NSString* level;
-    switch (model.level) {
-        case HARD:
-            level = NSLocalizedString(@"L_SCHWER", @"Level name for -hard-");
-            break;
-            
-        case MEDIUM:
-            level = NSLocalizedString(@"L_MITTEL", @"Level name for -medium-");
-            break;
-            
-        case EASY:
-        default:
-            level = NSLocalizedString(@"L_EASY", @"Level name for -easy-");
-            break;
-    }
     
     NSUInteger anzahlSpiele = [[Datenhaltung sharedInstance] anzahlSpieleGesamtFuerLevel:model.level];
     NSUInteger anzahlGewonnen = [[Datenhaltung sharedInstance] anzahlSpieleGewonnen:YES fuerLevel:model.level];
@@ -137,7 +122,7 @@
     self.gewonnenInXZuegenLabel.text = [NSString stringWithFormat:@"%d", zuege, nil];
     
     self.spieldauerLabel.text = [NSString stringWithFormat:@"%d:%02d", minuten, sekunden];
-    self.levelLabel.text = level;
+    self.levelLabel.text = [Spielmodel levelNameFor:model.level];
     
     [parentView.layer addSublayer:[self blurLayerForView:parentView]];
     

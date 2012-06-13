@@ -115,7 +115,12 @@
 }
 
 - (IBAction)resetStats:(id)sender {
-    LambdaSheet *sheet = [[LambdaSheet alloc] initWithTitle:NSLocalizedString(@"Q_STATISTIK_LOESCHEN", nil)];
+    SpielLevel level = (SpielLevel)[[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL];
+    LambdaSheet *sheet = [[LambdaSheet alloc] 
+                          initWithTitle:[NSString stringWithFormat:
+                                         NSLocalizedString(@"Q_STATISTIK_LOESCHEN", nil), 
+                                         [Spielmodel levelNameFor:level]]];
+    
     [sheet addDestructiveButtonWithTitle:NSLocalizedString(@"Q_STATISTIK_LOESCHEN_JA",nil) block:^{ [[Datenhaltung sharedInstance] resetLevel:self.schwierigkeitsGrad.selectedSegmentIndex];
         [self updateStatsView];
  }];
