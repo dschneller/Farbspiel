@@ -22,6 +22,7 @@
 
 @property (nonatomic, strong) IBOutlet UILabel *zuegeLabel;
 @property (nonatomic, strong) SpielrasterView* view;
+@property (weak, nonatomic) IBOutlet UIView *shadowView;
 @property (nonatomic, strong) Spielmodel* model;
 @property (nonatomic, strong) id<SpielrasterViewControllerDelegate> delegate;
 

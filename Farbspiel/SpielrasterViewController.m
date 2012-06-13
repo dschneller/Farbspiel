@@ -16,6 +16,7 @@
 
 @synthesize zuegeLabel;
 @synthesize view = view_;
+@synthesize shadowView;
 @synthesize model = model_;
 @synthesize delegate = delegate_;
 

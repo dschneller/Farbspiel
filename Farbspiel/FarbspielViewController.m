@@ -306,12 +306,20 @@
     
     
     // Set the layer's corner radius
-    [[self.spielrasterView layer] setCornerRadius:8.0f];
+    self.spielrasterView.layer.cornerRadius = 8.0f;
     // Turn on masking
-    [[self.spielrasterView layer] setMasksToBounds:YES];
-    // Display a border around the button 
+    self.spielrasterView.layer.masksToBounds = YES;
+    // Display a border around the grid 
     // with a 1.0 pixel width
-    [[self.spielrasterView layer] setBorderWidth:1.0f];
+    self.spielrasterView.layer.borderWidth = 1.0f;
+    self.spielrasterView.layer.borderColor = [[UIColor darkGrayColor] CGColor];
+    
+    self.shadowView.layer.shadowColor = [[UIColor greenColor] CGColor];
+    self.shadowView.layer.shadowOpacity = 0.7f;
+    //    self.shadowView.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
+    self.shadowView.layer.shadowRadius = 12.0f;
+    self.shadowView.layer.masksToBounds = NO;
+    self.shadowView.layer.cornerRadius = 8.0f;
     
 #if !DEBUG
     [self.debugButtonVerlieren removeFromSuperview];
@@ -347,6 +355,7 @@
 - (void)viewDidUnload
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self setShadowView:nil];
     [super viewDidUnload];
 }
 
@@ -370,6 +379,7 @@
 @synthesize settingsToggleButton    = _settingsToggleButton;
 @synthesize soundAnAusButton        = _soundAnAusButton;
 @synthesize spielrasterView         = _spielrasterView;
+@synthesize shadowView = _shadowView;
 @synthesize uhrLabel                = _uhrLabel;
 @synthesize undoSwipeGestureRecognizer = _undoSwipeGestureRecognizer;
 

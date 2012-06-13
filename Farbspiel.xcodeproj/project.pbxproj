@@ -755,6 +755,10 @@
 		418456611428DFC700C9A68E /* GUIs */ = {
 			isa = PBXGroup;
 			children = (
+				4129A8A2149773B000516A42 /* FarbspielViewController~ipad.strings */,
+				4136353714584EA600D01E1D /* FarbspielViewController~ipad.xib */,
+				4136353914584EA600D01E1D /* MainWindow~ipad.xib */,
+				4136353114584E9D00D01E1D /* SettingsViewController~ipad.xib */,
 				413A7AD6148913AA00CB33FF /* GewonnenView.strings */,
 				413A7ADA148913AA00CB33FF /* StatistikView.strings */,
 				413A7AD8148913AA00CB33FF /* SettingsViewController.strings */,
@@ -850,18 +854,6 @@
 			name = "Helper Classes";
 			sourceTree = "<group>";
 		};
-		419F0F99143384C1009AF98E /* Resources-iPad */ = {
-			isa = PBXGroup;
-			children = (
-				4129A8A2149773B000516A42 /* FarbspielViewController~ipad.strings */,
-				4136353714584EA600D01E1D /* FarbspielViewController~ipad.xib */,
-				4136353914584EA600D01E1D /* MainWindow~ipad.xib */,
-				4136353114584E9D00D01E1D /* SettingsViewController~ipad.xib */,
-			);
-			name = "Resources-iPad";
-			path = "Resources-iPad/Farbspiel";
-			sourceTree = SOURCE_ROOT;
-		};
 		41B6743C148E2BF000ADFC2F /* NSLogger */ = {
 			isa = PBXGroup;
 			children = (
@@ -924,7 +916,6 @@
 			children = (
 				41B6743C148E2BF000ADFC2F /* NSLogger */,
 				4170EAB21459AB3B00D93ED1 /* LambdaAlert */,
-				419F0F99143384C1009AF98E /* Resources-iPad */,
 				41D925D713D8A76B007612E6 /* Supporting Files */,
 				418812791428EA2D00F2BBE8 /* Model */,
 				418456611428DFC700C9A68E /* GUIs */,
@@ -1640,6 +1631,7 @@
 				4129A8A5149773B900516A42 /* de */,
 			);
 			name = "FarbspielViewController~ipad.strings";
+			path = "../Resources-iPad/Farbspiel";
 			sourceTree = "<group>";
 		};
 		4136353114584E9D00D01E1D /* SettingsViewController~ipad.xib */ = {
@@ -1649,6 +1641,7 @@
 				4136353B14584EA600D01E1D /* en */,
 			);
 			name = "SettingsViewController~ipad.xib";
+			path = "../Resources-iPad/Farbspiel";
 			sourceTree = "<group>";
 		};
 		4136353714584EA600D01E1D /* FarbspielViewController~ipad.xib */ = {
@@ -1658,6 +1651,7 @@
 				4129A8A11497730000516A42 /* de */,
 			);
 			name = "FarbspielViewController~ipad.xib";
+			path = "../Resources-iPad/Farbspiel";
 			sourceTree = "<group>";
 		};
 		4136353914584EA600D01E1D /* MainWindow~ipad.xib */ = {
@@ -1666,6 +1660,7 @@
 				4136353A14584EA600D01E1D /* en */,
 			);
 			name = "MainWindow~ipad.xib";
+			path = "../Resources-iPad/Farbspiel";
 			sourceTree = "<group>";
 		};
 		413A7AD6148913AA00CB33FF /* GewonnenView.strings */ = {
