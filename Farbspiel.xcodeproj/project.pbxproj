@@ -270,6 +270,24 @@
 		41E169C31588728B0043EE89 /* spielstein32-CS1-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169B11588728B0043EE89 /* spielstein32-CS1-2.png */; };
 		41E169C41588728B0043EE89 /* spielstein32-CS1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169B21588728B0043EE89 /* spielstein32-CS1-1.png */; };
 		41E169C51588728B0043EE89 /* spielstein32-CS1-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169B31588728B0043EE89 /* spielstein32-CS1-0.png */; };
+		41E169DA1588E9250043EE89 /* spielstein66-CS1-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169C81588E9250043EE89 /* spielstein66-CS1-5.png */; };
+		41E169DB1588E9250043EE89 /* spielstein66-CS1-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169C91588E9250043EE89 /* spielstein66-CS1-4.png */; };
+		41E169DC1588E9250043EE89 /* spielstein66-CS1-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169CA1588E9250043EE89 /* spielstein66-CS1-3.png */; };
+		41E169DD1588E9250043EE89 /* spielstein66-CS1-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169CB1588E9250043EE89 /* spielstein66-CS1-2.png */; };
+		41E169DE1588E9250043EE89 /* spielstein66-CS1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169CC1588E9250043EE89 /* spielstein66-CS1-1.png */; };
+		41E169DF1588E9250043EE89 /* spielstein66-CS1-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169CD1588E9250043EE89 /* spielstein66-CS1-0.png */; };
+		41E169E01588E9250043EE89 /* spielstein66-CS2-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169CE1588E9250043EE89 /* spielstein66-CS2-5.png */; };
+		41E169E11588E9250043EE89 /* spielstein66-CS2-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169CF1588E9250043EE89 /* spielstein66-CS2-4.png */; };
+		41E169E21588E9250043EE89 /* spielstein66-CS2-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D01588E9250043EE89 /* spielstein66-CS2-3.png */; };
+		41E169E31588E9250043EE89 /* spielstein66-CS2-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D11588E9250043EE89 /* spielstein66-CS2-2.png */; };
+		41E169E41588E9250043EE89 /* spielstein66-CS2-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D21588E9250043EE89 /* spielstein66-CS2-1.png */; };
+		41E169E51588E9250043EE89 /* spielstein66-CS2-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D31588E9250043EE89 /* spielstein66-CS2-0.png */; };
+		41E169E61588E9250043EE89 /* spielstein66-CS3-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D41588E9250043EE89 /* spielstein66-CS3-5.png */; };
+		41E169E71588E9250043EE89 /* spielstein66-CS3-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D51588E9250043EE89 /* spielstein66-CS3-4.png */; };
+		41E169E81588E9250043EE89 /* spielstein66-CS3-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D61588E9250043EE89 /* spielstein66-CS3-3.png */; };
+		41E169E91588E9250043EE89 /* spielstein66-CS3-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D71588E9250043EE89 /* spielstein66-CS3-2.png */; };
+		41E169EA1588E9250043EE89 /* spielstein66-CS3-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D81588E9250043EE89 /* spielstein66-CS3-1.png */; };
+		41E169EB1588E9250043EE89 /* spielstein66-CS3-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D91588E9250043EE89 /* spielstein66-CS3-0.png */; };
 		41EBBD351428D1600019D98A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD371428D1600019D98A /* Localizable.strings */; };
 		41FE192913F06D7700BF4656 /* JengoColor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41FE192713F06D7700BF4656 /* JengoColor.xcdatamodeld */; };
 		41FE195A13F0740A00BF4656 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FE195913F0740A00BF4656 /* CoreData.framework */; };
@@ -536,6 +554,24 @@
 		41E169B11588728B0043EE89 /* spielstein32-CS1-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein32-CS1-2.png"; sourceTree = "<group>"; };
 		41E169B21588728B0043EE89 /* spielstein32-CS1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein32-CS1-1.png"; sourceTree = "<group>"; };
 		41E169B31588728B0043EE89 /* spielstein32-CS1-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein32-CS1-0.png"; sourceTree = "<group>"; };
+		41E169C81588E9250043EE89 /* spielstein66-CS1-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS1-5.png"; sourceTree = "<group>"; };
+		41E169C91588E9250043EE89 /* spielstein66-CS1-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS1-4.png"; sourceTree = "<group>"; };
+		41E169CA1588E9250043EE89 /* spielstein66-CS1-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS1-3.png"; sourceTree = "<group>"; };
+		41E169CB1588E9250043EE89 /* spielstein66-CS1-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS1-2.png"; sourceTree = "<group>"; };
+		41E169CC1588E9250043EE89 /* spielstein66-CS1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS1-1.png"; sourceTree = "<group>"; };
+		41E169CD1588E9250043EE89 /* spielstein66-CS1-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS1-0.png"; sourceTree = "<group>"; };
+		41E169CE1588E9250043EE89 /* spielstein66-CS2-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS2-5.png"; sourceTree = "<group>"; };
+		41E169CF1588E9250043EE89 /* spielstein66-CS2-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS2-4.png"; sourceTree = "<group>"; };
+		41E169D01588E9250043EE89 /* spielstein66-CS2-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS2-3.png"; sourceTree = "<group>"; };
+		41E169D11588E9250043EE89 /* spielstein66-CS2-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS2-2.png"; sourceTree = "<group>"; };
+		41E169D21588E9250043EE89 /* spielstein66-CS2-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS2-1.png"; sourceTree = "<group>"; };
+		41E169D31588E9250043EE89 /* spielstein66-CS2-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS2-0.png"; sourceTree = "<group>"; };
+		41E169D41588E9250043EE89 /* spielstein66-CS3-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS3-5.png"; sourceTree = "<group>"; };
+		41E169D51588E9250043EE89 /* spielstein66-CS3-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS3-4.png"; sourceTree = "<group>"; };
+		41E169D61588E9250043EE89 /* spielstein66-CS3-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS3-3.png"; sourceTree = "<group>"; };
+		41E169D71588E9250043EE89 /* spielstein66-CS3-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS3-2.png"; sourceTree = "<group>"; };
+		41E169D81588E9250043EE89 /* spielstein66-CS3-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS3-1.png"; sourceTree = "<group>"; };
+		41E169D91588E9250043EE89 /* spielstein66-CS3-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS3-0.png"; sourceTree = "<group>"; };
 		41EBBD361428D1600019D98A /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41EBBD3A1428D2EF0019D98A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
 		41EBBD3E1428D3B70019D98A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GewonnenView.xib; sourceTree = "<group>"; };
@@ -780,6 +816,7 @@
 		418812781428E9E900F2BBE8 /* Icons and Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				41E169C61588E9040043EE89 /* Buttons (66, iPad) */,
 				41E169A1158872690043EE89 /* Spielstein (32, iPad) */,
 				41E1694A158859110043EE89 /* Spielstein Medium (16) */,
 				41BC8FA2158851A7002D856A /* Spielstein Hard (12) */,
@@ -1130,6 +1167,39 @@
 			name = "Spielstein (32, iPad)";
 			sourceTree = "<group>";
 		};
+		41E169C61588E9040043EE89 /* Buttons (66, iPad) */ = {
+			isa = PBXGroup;
+			children = (
+				41E169C71588E9120043EE89 /* Classic */,
+			);
+			name = "Buttons (66, iPad)";
+			sourceTree = "<group>";
+		};
+		41E169C71588E9120043EE89 /* Classic */ = {
+			isa = PBXGroup;
+			children = (
+				41E169C81588E9250043EE89 /* spielstein66-CS1-5.png */,
+				41E169C91588E9250043EE89 /* spielstein66-CS1-4.png */,
+				41E169CA1588E9250043EE89 /* spielstein66-CS1-3.png */,
+				41E169CB1588E9250043EE89 /* spielstein66-CS1-2.png */,
+				41E169CC1588E9250043EE89 /* spielstein66-CS1-1.png */,
+				41E169CD1588E9250043EE89 /* spielstein66-CS1-0.png */,
+				41E169CE1588E9250043EE89 /* spielstein66-CS2-5.png */,
+				41E169CF1588E9250043EE89 /* spielstein66-CS2-4.png */,
+				41E169D01588E9250043EE89 /* spielstein66-CS2-3.png */,
+				41E169D11588E9250043EE89 /* spielstein66-CS2-2.png */,
+				41E169D21588E9250043EE89 /* spielstein66-CS2-1.png */,
+				41E169D31588E9250043EE89 /* spielstein66-CS2-0.png */,
+				41E169D41588E9250043EE89 /* spielstein66-CS3-5.png */,
+				41E169D51588E9250043EE89 /* spielstein66-CS3-4.png */,
+				41E169D61588E9250043EE89 /* spielstein66-CS3-3.png */,
+				41E169D71588E9250043EE89 /* spielstein66-CS3-2.png */,
+				41E169D81588E9250043EE89 /* spielstein66-CS3-1.png */,
+				41E169D91588E9250043EE89 /* spielstein66-CS3-0.png */,
+			);
+			name = Classic;
+			sourceTree = "<group>";
+		};
 		41EDA4781497478200AF3ABC /* Spielstein Easy (24) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1439,6 +1509,24 @@
 				41E169C31588728B0043EE89 /* spielstein32-CS1-2.png in Resources */,
 				41E169C41588728B0043EE89 /* spielstein32-CS1-1.png in Resources */,
 				41E169C51588728B0043EE89 /* spielstein32-CS1-0.png in Resources */,
+				41E169DA1588E9250043EE89 /* spielstein66-CS1-5.png in Resources */,
+				41E169DB1588E9250043EE89 /* spielstein66-CS1-4.png in Resources */,
+				41E169DC1588E9250043EE89 /* spielstein66-CS1-3.png in Resources */,
+				41E169DD1588E9250043EE89 /* spielstein66-CS1-2.png in Resources */,
+				41E169DE1588E9250043EE89 /* spielstein66-CS1-1.png in Resources */,
+				41E169DF1588E9250043EE89 /* spielstein66-CS1-0.png in Resources */,
+				41E169E01588E9250043EE89 /* spielstein66-CS2-5.png in Resources */,
+				41E169E11588E9250043EE89 /* spielstein66-CS2-4.png in Resources */,
+				41E169E21588E9250043EE89 /* spielstein66-CS2-3.png in Resources */,
+				41E169E31588E9250043EE89 /* spielstein66-CS2-2.png in Resources */,
+				41E169E41588E9250043EE89 /* spielstein66-CS2-1.png in Resources */,
+				41E169E51588E9250043EE89 /* spielstein66-CS2-0.png in Resources */,
+				41E169E61588E9250043EE89 /* spielstein66-CS3-5.png in Resources */,
+				41E169E71588E9250043EE89 /* spielstein66-CS3-4.png in Resources */,
+				41E169E81588E9250043EE89 /* spielstein66-CS3-3.png in Resources */,
+				41E169E91588E9250043EE89 /* spielstein66-CS3-2.png in Resources */,
+				41E169EA1588E9250043EE89 /* spielstein66-CS3-1.png in Resources */,
+				41E169EB1588E9250043EE89 /* spielstein66-CS3-0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

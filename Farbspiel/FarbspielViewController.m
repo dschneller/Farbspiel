@@ -77,10 +77,17 @@
 
 -(void) updateGUIAusSettings {
     [self updateSoundButton:[SoundManager sharedManager].soundAn];
+    NSUInteger s;
+    
+    if (IPAD()) {
+        s = 66;
+    } else {
+        s = 32;
+    }
     
     for (ColorfulButton *b in self.allColorButtons) {
         
-        NSString* imgName = [[Farbmapping sharedInstance] imageNameForColor:b.tag andSize:24];
+        NSString* imgName = [[Farbmapping sharedInstance] imageNameForColor:b.tag andSize:s];
         UIImage *img = [UIImage imageNamed:imgName];
         if (img) {
             [b setBackgroundImage:img forState:UIControlStateNormal];
