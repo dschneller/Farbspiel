@@ -47,6 +47,10 @@
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="827754782"/>
 						<string key="NSReuseIdentifierKey">_NS:541</string>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MAA</bytes>
+						</object>
 						<int key="IBUIContentMode">4</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -194,7 +198,7 @@
 						<int key="NSvFlags">288</int>
 						<string key="NSFrame">{{55, 309}, {70, 22}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSNextKeyView" ref="24031928"/>
+						<reference key="NSNextKeyView" ref="617539536"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -211,7 +215,7 @@
 						<reference key="IBUIFontDescription" ref="784254514"/>
 						<reference key="IBUIFont" ref="250621439"/>
 					</object>
-					<object class="IBUILabel" id="878012573">
+					<object class="IBUILabel" id="477422079">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">288</int>
 						<string key="NSFrame">{{197, 309}, {70, 22}}</string>
@@ -417,7 +421,10 @@
 							<reference ref="4"/>
 							<reference ref="4"/>
 						</array>
-						<reference key="IBTintColor" ref="44497214"/>
+						<object class="NSColor" key="IBTintColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC40MDM4NTg0MTg0IDAuNDAzODU4NDE4NCAwLjQwMzg1ODQxODQAA</bytes>
+						</object>
 					</object>
 					<object class="IBUISegmentedControl" id="667382982">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -456,7 +463,10 @@
 							<reference ref="4"/>
 							<reference ref="4"/>
 						</array>
-						<reference key="IBTintColor" ref="44497214"/>
+						<object class="NSColor" key="IBTintColor" id="894918336">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC40MDM4NTg0MTg0IDAuNDAzODU4NDE4NCAwLjQwMzg1ODQxODQAA</bytes>
+						</object>
 					</object>
 					<object class="IBUISwitch" id="42147416">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -473,7 +483,7 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<bool key="IBUIOn">YES</bool>
-						<reference key="IBUIOnTintColor" ref="44497214"/>
+						<reference key="IBUIOnTintColor" ref="894918336"/>
 					</object>
 					<object class="IBUIView" id="747054828">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -761,12 +771,12 @@ AAgACAAIAAEAAQABAAE</bytes>
 						<float key="IBUIAlpha">0.60000002384185791</float>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUISegmentedControl" id="24031928">
+					<object class="IBUISegmentedControl" id="617539536">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{172, 280}, {121, 30}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSNextKeyView" ref="878012573"/>
+						<reference key="NSNextKeyView" ref="477422079"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -793,7 +803,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 							<reference ref="4"/>
 							<reference ref="4"/>
 						</array>
-						<reference key="IBTintColor" ref="44497214"/>
+						<reference key="IBTintColor" ref="894918336"/>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
@@ -992,7 +1002,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">fuellmodus</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="24031928"/>
+						<reference key="destination" ref="617539536"/>
 					</object>
 					<int key="connectionID">102</int>
 				</object>
@@ -1044,7 +1054,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">fillModeSelected:</string>
-						<reference key="source" ref="24031928"/>
+						<reference key="source" ref="617539536"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">13</int>
 					</object>
@@ -1081,8 +1091,8 @@ AAgACAAIAAEAAQABAAE</bytes>
 							<reference ref="596049218"/>
 							<reference ref="671311764"/>
 							<reference ref="624167523"/>
-							<reference ref="24031928"/>
-							<reference ref="878012573"/>
+							<reference ref="617539536"/>
+							<reference ref="477422079"/>
 							<reference ref="879039765"/>
 							<reference ref="42147416"/>
 						</array>
@@ -1323,13 +1333,13 @@ AAgACAAIAAEAAQABAAE</bytes>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100</int>
-						<reference key="object" ref="24031928"/>
+						<reference key="object" ref="617539536"/>
 						<reference key="parent" ref="191373211"/>
 						<string key="objectName">fillSelection</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">101</int>
-						<reference key="object" ref="878012573"/>
+						<reference key="object" ref="477422079"/>
 						<reference key="parent" ref="191373211"/>
 						<string key="objectName">fillSelectionLabel</string>
 					</object>
