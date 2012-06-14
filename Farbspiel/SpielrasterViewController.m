@@ -95,7 +95,7 @@
     [[SoundManager sharedManager] playSound:BUTTON];
     [self.view.undoManager registerUndoWithTarget:self selector:@selector(doUndo:) object:[[Spielmodel alloc] initWithModel:self.model]];
     
-    [self.model farbeGewaehlt:colorNumber];
+    [self.model farbeGewaehlt2:colorNumber]; // XXX
     [self updateZuegeDisplay];
     if ([self.model siegErreicht] || self.model.zuege >= self.model.maximaleZuege) {
         [self spielende];

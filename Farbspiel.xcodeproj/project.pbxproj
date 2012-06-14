@@ -289,6 +289,9 @@
 		41E169EA1588E9250043EE89 /* spielstein66-CS3-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D81588E9250043EE89 /* spielstein66-CS3-1.png */; };
 		41E169EB1588E9250043EE89 /* spielstein66-CS3-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D91588E9250043EE89 /* spielstein66-CS3-0.png */; };
 		41E169ED158951530043EE89 /* spielstein48-CS1-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169EC158951530043EE89 /* spielstein48-CS1-0.png */; };
+		41E169F01589AA340043EE89 /* SpielModelTestsModus1.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E169EF1589AA340043EE89 /* SpielModelTestsModus1.m */; };
+		41E169F31589BE290043EE89 /* PairTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E169F21589BE290043EE89 /* PairTests.m */; };
+		41E169F61589D1ED0043EE89 /* SpielmodelTestsModus2.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E169F51589D1ED0043EE89 /* SpielmodelTestsModus2.m */; };
 		41EBBD351428D1600019D98A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD371428D1600019D98A /* Localizable.strings */; };
 		41FE192913F06D7700BF4656 /* JengoColor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41FE192713F06D7700BF4656 /* JengoColor.xcdatamodeld */; };
 		41FE195A13F0740A00BF4656 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FE195913F0740A00BF4656 /* CoreData.framework */; };
@@ -574,6 +577,12 @@
 		41E169D81588E9250043EE89 /* spielstein66-CS3-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS3-1.png"; sourceTree = "<group>"; };
 		41E169D91588E9250043EE89 /* spielstein66-CS3-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS3-0.png"; sourceTree = "<group>"; };
 		41E169EC158951530043EE89 /* spielstein48-CS1-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein48-CS1-0.png"; sourceTree = "<group>"; };
+		41E169EE1589AA340043EE89 /* SpielModelTestsModus1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpielModelTestsModus1.h; sourceTree = "<group>"; };
+		41E169EF1589AA340043EE89 /* SpielModelTestsModus1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpielModelTestsModus1.m; sourceTree = "<group>"; };
+		41E169F11589BE290043EE89 /* PairTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairTests.h; sourceTree = "<group>"; };
+		41E169F21589BE290043EE89 /* PairTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PairTests.m; sourceTree = "<group>"; };
+		41E169F41589D1ED0043EE89 /* SpielmodelTestsModus2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpielmodelTestsModus2.h; sourceTree = "<group>"; };
+		41E169F51589D1ED0043EE89 /* SpielmodelTestsModus2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpielmodelTestsModus2.m; sourceTree = "<group>"; };
 		41EBBD361428D1600019D98A /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41EBBD3A1428D2EF0019D98A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
 		41EBBD3E1428D3B70019D98A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GewonnenView.xib; sourceTree = "<group>"; };
@@ -958,6 +967,12 @@
 				418F3C3F142A13D7006B1556 /* KIFTestScenario+FarbspielAdditions.m */,
 				418F3C41142A158F006B1556 /* FarbspielTestController.h */,
 				418F3C42142A158F006B1556 /* FarbspielTestController.m */,
+				41E169F11589BE290043EE89 /* PairTests.h */,
+				41E169EE1589AA340043EE89 /* SpielModelTestsModus1.h */,
+				41E169F41589D1ED0043EE89 /* SpielmodelTestsModus2.h */,
+				41E169F21589BE290043EE89 /* PairTests.m */,
+				41E169EF1589AA340043EE89 /* SpielModelTestsModus1.m */,
+				41E169F51589D1ED0043EE89 /* SpielmodelTestsModus2.m */,
 			);
 			path = FarbspielTests;
 			sourceTree = "<group>";
@@ -1614,6 +1629,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41E169F01589AA340043EE89 /* SpielModelTestsModus1.m in Sources */,
+				41E169F31589BE290043EE89 /* PairTests.m in Sources */,
+				41E169F61589D1ED0043EE89 /* SpielmodelTestsModus2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
