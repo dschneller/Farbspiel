@@ -26,9 +26,7 @@
 }
 
 -(void) setModel:(Spielmodel *)model {
-     // altes loslassen
-    model_ = model; // neues setzen
-     // neues halten
+    model_ = model;
     [self.delegate spielrasterViewController:self modelDidChange:model];
     self.view.dataSource = self;
     [self updateZuegeDisplay];
@@ -93,7 +91,9 @@
         return;
     }
     [[SoundManager sharedManager] playSound:BUTTON];
-    [self.view.undoManager registerUndoWithTarget:self selector:@selector(doUndo:) object:[[Spielmodel alloc] initWithModel:self.model]];
+
+    Spielmodel* oldModel = [[Spielmodel alloc] initWithModel:self.model];
+    [self.view.undoManager registerUndoWithTarget:self selector:@selector(doUndo:) object:oldModel];
     
     [self.model farbeGewaehlt2:colorNumber]; // XXX
     [self updateZuegeDisplay];
