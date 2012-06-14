@@ -10,7 +10,7 @@
 #import "SoundManager.h"
 #import "Datenhaltung.h"
 #import "Farbmapping.h"
-
+#import "Pair.h"
 
 @implementation SpielrasterViewController
 
@@ -29,6 +29,7 @@
     model_ = model;
     [self.delegate spielrasterViewController:self modelDidChange:model];
     self.view.dataSource = self;
+    [self.view prepareSublayers];
     [self updateZuegeDisplay];
     [self.view setNeedsDisplay];
 }
@@ -100,6 +101,26 @@
     if ([self.model siegErreicht] || self.model.zuege >= self.model.maximaleZuege) {
         [self spielende];
     }
+    
+    // LAYERS updaten
+    // 1. differenz zwischen neuem und altem model finden
+    NSSet* differenz = [self.model unterschiedeZuModel:oldModel];
+    // 2. Entsprechende Layers raussuchen und aendern
+    for (Pair* p in differenz) {
+        CALayer *tileLayer = [self.view.layerDict objectForKey:p];
+        NSNumber *farbe = [self farbeFuerRasterfeldZeile:p.y spalte:p.x];
+        NSString* imgName = [[Farbmapping sharedInstance] imageNameForColor:[farbe intValue] andSize:tileLayer.bounds.size.width];
+        
+        UIImage *img = [UIImage imageNamed:imgName];
+        tileLayer.contents = (id)[img CGImage];
+        if ([[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN]) {
+            tileLayer.borderWidth = 0.5f;
+            tileLayer.borderColor = [[UIColor darkGrayColor] CGColor];
+        } else {
+            tileLayer.borderWidth = 0.0f;
+        }
+    }
+    
     [self.view setNeedsDisplay];
 }
 

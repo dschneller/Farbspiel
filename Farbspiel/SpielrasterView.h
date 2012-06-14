@@ -14,10 +14,16 @@
 @interface SpielrasterView : UIView {
     UIView* raster_;
     id<SpielrasterViewDatasource> dataSource_;
+    CALayer* _gridLayer;
+    NSMutableDictionary* _layerDict;
 }
 
 @property (nonatomic,strong) IBOutlet UIView* raster;
 @property (nonatomic,strong) id<SpielrasterViewDatasource> dataSource;
+@property (nonatomic,strong) NSMutableDictionary* layerDict;
+@property (nonatomic,strong) CALayer* gridLayer;
+- (void) prepareSublayers;
+
 @end
 
 

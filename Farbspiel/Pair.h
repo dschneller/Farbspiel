@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Pair : NSObject {
+@interface Pair : NSObject <NSCopying> {
     NSUInteger x_;
     NSUInteger y_;
 }

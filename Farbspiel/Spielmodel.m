@@ -324,5 +324,19 @@
     return levelName;
 }
 
+-(NSSet*)unterschiedeZuModel:(Spielmodel*)other {
+    NSMutableSet* result = [NSMutableSet set];
+    for (NSUInteger row = 0; row < self.felderProKante; row ++) {
+        for (NSUInteger col = 0; col < self.felderProKante; col ++) {
+            NSNumber* mine = [self farbeAnPositionZeile:row spalte:col];
+            NSNumber* others = [other farbeAnPositionZeile:row spalte:col];
+            
+            if (![mine isEqualToNumber:others]) {
+                [result addObject:[Pair pairWithX:col Y:row]];
+            }
+        }
+    }
+    return [NSSet setWithSet:result];
+}
 
 @end

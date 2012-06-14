@@ -63,6 +63,7 @@ typedef enum {
 -(int) spaltenFuerLevel:(SpielLevel)level;
 -(int) maximaleZuegeFuerLevel:(SpielLevel)level;
 -(BOOL) spielLaeuft;
+-(NSSet*)unterschiedeZuModel:(Spielmodel*)other;
 
 +(NSString*) levelNameFor:(SpielLevel)level;
 @end

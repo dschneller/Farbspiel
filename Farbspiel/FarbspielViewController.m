@@ -96,6 +96,10 @@
             [b setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:b.tag]];
         }
     }
+    [self.rasterController.view.gridLayer removeFromSuperlayer];
+    if ([[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN]) {
+        [self.rasterController.view.layer addSublayer:self.rasterController.view.gridLayer];
+    }
     [self.rasterController.view setNeedsDisplay];
 }
 
