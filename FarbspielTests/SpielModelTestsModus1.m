@@ -8,13 +8,15 @@
 
 #import "SpielModelTestsModus1.h"
 #import "Spielmodel.h"
-
+#import "Datenhaltung.h"
 
 @implementation SpielModelTestsModus1
 
 Spielmodel* _model;
 
 -(void)setUp {
+    [[Datenhaltung sharedInstance] setInteger:1 fuerKey:PREFKEY_FUELLMODYS];
+    
     _model = [[Spielmodel alloc] initWithLevel:EASY];
     for (int i=0; i<144; i++) {
         [_model.farbfelder replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:0]];        

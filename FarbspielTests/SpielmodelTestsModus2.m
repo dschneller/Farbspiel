@@ -8,12 +8,14 @@
 
 #import "SpielmodelTestsModus2.h"
 #import "Spielmodel.h"
+#import "Datenhaltung.h"
 
 @implementation SpielmodelTestsModus2
 
 Spielmodel* _model;
 
 -(void)setUp {
+    [[Datenhaltung sharedInstance] setInteger:2 fuerKey:PREFKEY_FUELLMODYS];
     _model = [[Spielmodel alloc] initWithLevel:EASY];
     for (int i=0; i<144; i++) {
         [_model.farbfelder replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:0]];        
@@ -21,7 +23,7 @@ Spielmodel* _model;
 }
 
 -(void)testFuellen2KeineAngrenzenden {
-    [_model farbeGewaehlt2:2];
+    [_model farbeGewaehlt:2];
     for (int i=0; i<144; i++) {
         STAssertEquals([[_model.farbfelder objectAtIndex:i] intValue], 0, @"");
     }
@@ -31,7 +33,7 @@ Spielmodel* _model;
     for (int i=0; i<12; i++) {
         [_model.farbfelder replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:1]];
     }
-    [_model farbeGewaehlt2:1];
+    [_model farbeGewaehlt:1];
     for (int i=0; i<12; i++) {
         STAssertEquals([[_model.farbfelder objectAtIndex:i] intValue], 1, @"%d", i);
     }
@@ -49,7 +51,7 @@ Spielmodel* _model;
         [_model.farbfelder replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:1]];
     }
     
-    [_model farbeGewaehlt2:1];
+    [_model farbeGewaehlt:1];
     for (int i=0; i<24; i++) {
         STAssertEquals([[_model.farbfelder objectAtIndex:i] intValue], 2, @"%d", i);
     }
@@ -67,7 +69,7 @@ Spielmodel* _model;
         [_model.farbfelder replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:1]];
     }
     
-    [_model farbeGewaehlt2:1];
+    [_model farbeGewaehlt:1];
     for (int i=0; i<12; i++) {
         STAssertEquals([[_model.farbfelder objectAtIndex:i] intValue], 2, @"%d", i);
     }
@@ -88,7 +90,7 @@ Spielmodel* _model;
     for (int i=12; i<24; i++) {
         [_model.farbfelder replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:1]];
     }
-    [_model farbeGewaehlt2:1];
+    [_model farbeGewaehlt:1];
     for (int i=0; i<12; i+=2) {
         STAssertEquals([[_model.farbfelder objectAtIndex:i] intValue], 2, @"%d", i);
         STAssertEquals([[_model.farbfelder objectAtIndex:i+1] intValue], 0, @"%d", i+1);
@@ -108,7 +110,7 @@ Spielmodel* _model;
     for (int i=12; i<24; i+=2) {
         [_model.farbfelder replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:1]];
     }
-    [_model farbeGewaehlt2:1];
+    [_model farbeGewaehlt:1];
     for (int i=0; i<12; i+=2) {
         STAssertEquals([[_model.farbfelder objectAtIndex:i] intValue], 2, @"%d", i);
         STAssertEquals([[_model.farbfelder objectAtIndex:i+1] intValue], 0, @"%d", i);

@@ -109,6 +109,7 @@
     self.schwierigkeitsGrad.selectedSegmentIndex = level;
     self.farbschema.selectedSegmentIndex = [Farbmapping sharedInstance].farbschema;
     self.rasterSwitch.on = [[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN];
+    self.fuellmodus.selectedSegmentIndex = [[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_FUELLMODYS];
     [self updateLevelDetailViewFuerLevel:level];
     [self updateFarbschemaPreview];
     [self updateStatsView];
@@ -204,7 +205,9 @@
     [self updateFarbschemaPreview];
 }
 
-
+- (IBAction)fillModeSelected:(id)sender {
+    [[Datenhaltung sharedInstance] setInteger:self.fuellmodus.selectedSegmentIndex fuerKey:PREFKEY_FUELLMODYS];
+}
 
 #pragma mark - Synthesize Properties
 
@@ -214,6 +217,7 @@
 @synthesize anzahlZuegeLabel = _anzahlZuegeLabel;
 @synthesize soundEffekteSwitch = _soundEffekteSwitch;
 @synthesize rasterSwitch = _rasterSwitch;
+@synthesize fuellmodus = _fuellmodus;
 @synthesize farbschema = _farbschema;
 
 @synthesize farbPreviewRahmen = _farbPreviewRahmen;

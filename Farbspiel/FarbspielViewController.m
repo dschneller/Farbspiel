@@ -96,7 +96,6 @@
             [b setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:b.tag]];
         }
     }
-    
     [self.rasterController.view setNeedsDisplay];
 }
 

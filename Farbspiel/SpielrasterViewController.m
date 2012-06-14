@@ -95,7 +95,7 @@
     Spielmodel* oldModel = [[Spielmodel alloc] initWithModel:self.model];
     [self.view.undoManager registerUndoWithTarget:self selector:@selector(doUndo:) object:oldModel];
     
-    [self.model farbeGewaehlt2:colorNumber]; // XXX
+    [self.model farbeGewaehlt:colorNumber];
     [self updateZuegeDisplay];
     if ([self.model siegErreicht] || self.model.zuege >= self.model.maximaleZuege) {
         [self spielende];

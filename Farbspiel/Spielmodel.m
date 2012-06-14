@@ -9,6 +9,7 @@
 #import "Spielmodel.h"
 #import "Pair.h"
 #import "NSMutableArray+StackMethods.h"
+#import "Datenhaltung.h"
 
 @implementation Spielmodel
 
@@ -221,15 +222,23 @@
     }
 }
 
-
 -(void)farbeGewaehlt:(NSUInteger)colorNum {
+    int fuellModus = [[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_FUELLMODYS];
+    if (fuellModus == 1) {
+        [self farbeGewaehltModus1:colorNum];
+    } else {
+        [self farbeGewaehltModus2:colorNum];
+    }
+}
+
+-(void)farbeGewaehltModus1:(NSUInteger)colorNum {
     NSUInteger alt = [[self farbeAnPositionZeile:0 spalte:0] unsignedIntValue];
     if ([self faerbeVonX:0 Y:0 alteFarbe:alt neueFarbe:colorNum]) {
         [self zaehleSpielzug];
     }
 }
 
--(void)farbeGewaehlt2:(NSUInteger)colorNum {
+-(void)farbeGewaehltModus2:(NSUInteger)colorNum {
     NSUInteger neu = [[self farbeAnPositionZeile:0 spalte:0] unsignedIntValue];
     NSSet* zuFaerben = [self findeAngrenzendeVonX:0 Y:0 inFarbe:colorNum];
     
