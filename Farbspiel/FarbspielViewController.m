@@ -13,6 +13,7 @@
 #import "UIColor+Tools.h" 
 #import "SettingsViewController.h"
 #import "LambdaAlert.h"
+#import "Pair.h"
 
 
 
@@ -121,6 +122,10 @@
 -(void) starteNeuesSpielMitLevel:(SpielLevel)level {
     self.rasterController.view = self.spielrasterView;
     self.rasterController.delegate = self;
+    for (id p in self.rasterController.view.layerDict) {
+        [[self.rasterController.view.layerDict objectForKey:p] removeFromSuperlayer];
+    }
+
     
     Spielmodel* model = [[Spielmodel alloc] initWithLevel:level];
     self.rasterController.model = model;
@@ -317,12 +322,12 @@
     self.spielrasterView.layer.borderWidth = 1.0f;
     self.spielrasterView.layer.borderColor = [[UIColor darkGrayColor] CGColor];
     
-    self.shadowView.layer.shadowColor = [[UIColor greenColor] CGColor];
-    self.shadowView.layer.shadowOpacity = 0.7f;
-    //    self.shadowView.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
-    self.shadowView.layer.shadowRadius = 12.0f;
-    self.shadowView.layer.masksToBounds = NO;
-    self.shadowView.layer.cornerRadius = 8.0f;
+//    self.shadowView.layer.shadowColor = [[UIColor greenColor] CGColor];
+//    self.shadowView.layer.shadowOpacity = 0.7f;
+//    //    self.shadowView.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
+//    self.shadowView.layer.shadowRadius = 12.0f;
+//    self.shadowView.layer.masksToBounds = NO;
+//    self.shadowView.layer.cornerRadius = 8.0f;
     
 #if !DEBUG
     [self.debugButtonVerlieren removeFromSuperview];

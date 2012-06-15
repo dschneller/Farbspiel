@@ -35,7 +35,7 @@
 }
 
 -(void) debugMatrix {
-    if (YES) {
+    if (NO) {
         for (NSUInteger row = 0; row<12; row++) {
             LOG_GAME(2, @"%@ %@ %@ %@ %@ %@ %@ %@ %@ %@ %@ %@", 
                   [self farbeAnPositionZeile:row spalte:0], 
@@ -76,7 +76,7 @@
                 break;
             case EASY:
             default:
-                x = arc4random() % 6;
+                x = arc4random() % 3; // 6;
                 break;
         }
         [self.farbfelder addObject:[NSNumber numberWithInt:x]];

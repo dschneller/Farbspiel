@@ -37,28 +37,22 @@
     [self zeichneGitter:h fieldWidth:w numCols:cols numRows:rows];
     UIImage *gitter = UIGraphicsGetImageFromCurrentImageContext();
     self.gridLayer.contents=(id)[gitter CGImage];
+    self.gridLayer.shouldRasterize=YES;
     UIGraphicsEndImageContext();
     
-    static int flip = 0;
     for (NSUInteger row = 0; row < rows; row ++) {
-        for (NSUInteger col = 0; col < cols; col ++) {
+        for (NSUInteger col = 0; col < cols ; col ++) {
             Pair *p = [Pair pairWithX:col Y:row];
             CALayer *tileLayer = [[CALayer alloc] init];
             CGRect f = CGRectMake(col * w, row * h, w, h);
             tileLayer.frame = f;
             LOG_UI(1, @"x,y,w,h: %f,%f,%f,%f", f.origin.x, f.origin.y, f.size.width, f.size.height);
-            if (flip++ % 2 == 0) {
-                tileLayer.backgroundColor = [[UIColor redColor] CGColor];
-            } else {
-                tileLayer.backgroundColor = [[UIColor greenColor] CGColor];
-            }
-            
             NSNumber* farbe = [self.dataSource farbeFuerRasterfeldZeile:row spalte:col];
             NSString* imgName = [[Farbmapping sharedInstance] imageNameForColor:[farbe intValue] andSize:w];
             
             UIImage *img = [UIImage imageNamed:imgName];
             tileLayer.contents = (id)[img CGImage];
-
+            tileLayer.opaque=YES;
             
             [self.layer addSublayer:tileLayer];
             [self.layerDict setObject:tileLayer forKey:p];
@@ -66,7 +60,7 @@
     }
 
     if ([[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN]) {
-        [self.layer addSublayer:self.gridLayer];
+//        [self.layer addSublayer:self.gridLayer];
     }
 
 }
