@@ -21,25 +21,18 @@
 
 
 - (void) prepareSublayers {
-    if (!_layerDict) {
-        _layerDict = [NSMutableDictionary dictionary];
+    if (_layerDict) {
+        for (id p in _layerDict) {
+            [[_layerDict objectForKey:p] removeFromSuperlayer];
+        }
     }
+    _layerDict = [NSMutableDictionary dictionary];
+
     NSUInteger rows = [self.dataSource rasterZeilen];
     NSUInteger cols = [self.dataSource rasterSpalten];
     CGFloat w = self.bounds.size.width / cols;
     CGFloat h = self.bounds.size.height / rows;
 
-    // Gitterlayer
-    self.gridLayer = [[CALayer alloc] init];
-    CGRect gridLayerFrame = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
-    self.gridLayer.frame = gridLayerFrame;
-    UIGraphicsBeginImageContextWithOptions(gridLayerFrame.size, NO, [UIScreen mainScreen].scale);
-    [self zeichneGitter:h fieldWidth:w numCols:cols numRows:rows];
-    UIImage *gitter = UIGraphicsGetImageFromCurrentImageContext();
-    self.gridLayer.contents=(id)[gitter CGImage];
-    self.gridLayer.shouldRasterize=YES;
-    UIGraphicsEndImageContext();
-    
     for (NSUInteger row = 0; row < rows; row ++) {
         for (NSUInteger col = 0; col < cols ; col ++) {
             Pair *p = [Pair pairWithX:col Y:row];
@@ -59,8 +52,18 @@
         }
     }
 
+    // Gitterlayer
+    self.gridLayer = [CALayer layer];
+    CGRect gridLayerFrame = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
+    self.gridLayer.frame = gridLayerFrame;
+    UIGraphicsBeginImageContextWithOptions(gridLayerFrame.size, NO, [UIScreen mainScreen].scale);
+    [self zeichneGitter:h fieldWidth:w numCols:cols numRows:rows];
+    UIImage *gitter = UIGraphicsGetImageFromCurrentImageContext();
+    self.gridLayer.contents=(id)[gitter CGImage];
+    UIGraphicsEndImageContext();
+
     if ([[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN]) {
-//        [self.layer addSublayer:self.gridLayer];
+        [self.layer addSublayer:self.gridLayer];
     }
 
 }

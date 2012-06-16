@@ -82,8 +82,25 @@
         [[newGewonnenView layer] setBorderWidth:1.0f];
         [[newGewonnenView layer] setBorderColor:[[[UIColor whiteColor] colorByChangingAlphaTo:0.8f] CGColor]];
         
-        [self.neuesSpielButton setHighColor:[UIColor greenColor]];
-        [self.neuesSpielButton setLowColor:[[UIColor greenColor] colorByDarkeningColor]];
+        
+        UIImage *greenButtonImage = [UIImage imageNamed:@"greenButton.png"];
+        UIImage *stretchableGreenButton = [greenButtonImage stretchableImageWithLeftCapWidth:12 topCapHeight:0];
+        [self.neuesSpielButton setBackgroundImage:stretchableGreenButton forState:UIControlStateNormal];
+        
+        UIImage *darkGreenButtonImage = [UIImage imageNamed:@"greenButtonActivated.png"];
+        UIImage *stretchabledarkGreenButton = [darkGreenButtonImage stretchableImageWithLeftCapWidth:12 topCapHeight:0];
+        [self.neuesSpielButton setBackgroundImage:stretchabledarkGreenButton forState:UIControlStateHighlighted];
+        
+
+        UIImage *yellowButtonImage = [UIImage imageNamed:@"yellowButton.png"];
+        UIImage *stretchableYellowButton = [yellowButtonImage stretchableImageWithLeftCapWidth:12 topCapHeight:0];
+        [self.einstellungenButton setBackgroundImage:stretchableYellowButton forState:UIControlStateNormal];
+        
+        UIImage *darkYellowButtonImage = [UIImage imageNamed:@"yellowButtonActivated.png"];
+        UIImage *stretchabledarkYellowButton = [darkYellowButtonImage stretchableImageWithLeftCapWidth:12 topCapHeight:0];
+        [self.einstellungenButton setBackgroundImage:stretchabledarkYellowButton forState:UIControlStateHighlighted];
+        
+        
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"StatistikView" owner:self.statistikViewController options:nil];
         StatistikView *statistikView = (StatistikView *)[views objectAtIndex:0];
         
@@ -124,14 +141,14 @@
     self.spieldauerLabel.text = [NSString stringWithFormat:@"%d:%02d", minuten, sekunden];
     self.levelLabel.text = [Spielmodel levelNameFor:model.level];
     
-    [parentView.layer addSublayer:[self blurLayerForView:parentView]];
+//    [parentView.layer addSublayer:[self blurLayerForView:parentView]];
     
     [parentView addSubview:self.view];
     
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3f animations:^{
         LOG_GAME(1, @"Fade In Animation Began");
         LOG_GAME(1, @"GewonnenView Center: %g, %g", self.view.center.x, self.view.center.y);
-        self.view.alpha = 0.85f;
+        self.view.alpha = 1.0f;
         self.view.center = CGPointMake(parentView.center.x, parentView.center.y - 30);
         LOG_GAME(1, @"GewonnenView CenterNeu: %g, %g", self.view.center.x, self.view.center.y);
         

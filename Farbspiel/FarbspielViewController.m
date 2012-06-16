@@ -58,7 +58,10 @@
     if (![self.undoManager canUndo]) {
         [self shakeView:self.rasterController.view];
     } else {
+        Spielmodel* oldModel = [[Spielmodel alloc] initWithModel:self.rasterController.model];
         [self.undoManager undo];
+        [self.rasterController updateLayersFromOldModel:oldModel];
+        
     }
 }
 
@@ -86,21 +89,18 @@
         s = 32;
     }
     
-    for (ColorfulButton *b in self.allColorButtons) {
-        
+    for (UIButton *b in self.allColorButtons) {
         NSString* imgName = [[Farbmapping sharedInstance] imageNameForColor:b.tag andSize:s];
         UIImage *img = [UIImage imageNamed:imgName];
-        if (img) {
-            [b setBackgroundImage:img forState:UIControlStateNormal];
-        } else {
-            [b setHighColor:[[Farbmapping sharedInstance] farbeMitNummer:b.tag]];
-            [b setLowColor:[[Farbmapping sharedInstance] shadeFarbeMitNummer:b.tag]];
-        }
+        [b setBackgroundImage:img forState:UIControlStateNormal];
+        b.opaque = YES;
+        b.alpha = 1.0f;
     }
     [self.rasterController.view.gridLayer removeFromSuperlayer];
     if ([[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN]) {
         [self.rasterController.view.layer addSublayer:self.rasterController.view.gridLayer];
     }
+    [self.rasterController.view prepareSublayers];
     [self.rasterController.view setNeedsDisplay];
 }
 
@@ -122,13 +122,9 @@
 -(void) starteNeuesSpielMitLevel:(SpielLevel)level {
     self.rasterController.view = self.spielrasterView;
     self.rasterController.delegate = self;
-    for (id p in self.rasterController.view.layerDict) {
-        [[self.rasterController.view.layerDict objectForKey:p] removeFromSuperlayer];
-    }
-
-    
     Spielmodel* model = [[Spielmodel alloc] initWithLevel:level];
     self.rasterController.model = model;
+    [self.rasterController.view prepareSublayers];
 }
 
 -(void)pruefeObLevelGewechseltWurde {
@@ -154,7 +150,7 @@
 
 
 - (void) setColorButtonState:(BOOL)state {
-    for (ColorfulButton* b in self.allColorButtons) {
+    for (UIButton* b in self.allColorButtons) {
         b.enabled = state;
     }
 }
@@ -262,7 +258,7 @@
 }
 
 - (void) neuesSpiel {
-    [self didReturnFromSettings];
+    [self updateGUIAusSettings];
 
     [self starteNeuesSpielMitLevel:[[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_SPIELLEVEL]];
     [self setAllButtonState:YES];
@@ -303,7 +299,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     NSUndoManager *manager = [[NSUndoManager alloc] init];
     self.undoManager = manager;
     self.undoManager.levelsOfUndo = 1;
@@ -312,6 +308,14 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(undoManagerDidUndo:)
                                                  name:NSUndoManagerDidUndoChangeNotification object:manager];
     
+
+    for (UIButton* b in self.allColorButtons)
+    {
+        b.layer.cornerRadius = 4.0f;
+        b.layer.borderColor = [[UIColor blackColor] CGColor];
+        b.layer.borderWidth = 1.0f;
+        b.layer.masksToBounds = YES;
+    }
     
     // Set the layer's corner radius
     self.spielrasterView.layer.cornerRadius = 8.0f;
@@ -327,7 +331,7 @@
 //    //    self.shadowView.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
 //    self.shadowView.layer.shadowRadius = 12.0f;
 //    self.shadowView.layer.masksToBounds = NO;
-//    self.shadowView.layer.cornerRadius = 8.0f;
+    self.shadowView.layer.cornerRadius = 8.0f;
     
 #if !DEBUG
     [self.debugButtonVerlieren removeFromSuperview];

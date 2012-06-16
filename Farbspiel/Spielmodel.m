@@ -76,7 +76,7 @@
                 break;
             case EASY:
             default:
-                x = arc4random() % 3; // 6;
+                x = arc4random() % 6;
                 break;
         }
         [self.farbfelder addObject:[NSNumber numberWithInt:x]];

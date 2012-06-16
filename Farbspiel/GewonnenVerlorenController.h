@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ColorfulButton.h"
 #import "GewonnenVerlorenView.h"
 #import "GewonnenVerlorenControllerDelegate.h"
 #import "StatistikView.h"
@@ -20,8 +19,8 @@
 
 @property (weak, nonatomic) IBOutlet StatistikView *statistikPlaceholder;
 @property (strong, nonatomic) IBOutlet StatistikViewController *statistikViewController;
-@property (weak, nonatomic) IBOutlet ColorfulButton *neuesSpielButton;
-@property (weak, nonatomic) IBOutlet ColorfulButton *einstellungenButton;
+@property (weak, nonatomic) IBOutlet UIButton *neuesSpielButton;
+@property (weak, nonatomic) IBOutlet UIButton *einstellungenButton;
 
 @property (strong, nonatomic) IBOutlet GewonnenVerlorenView* view;
 @property (weak, nonatomic) IBOutlet UILabel *gewonnenInXZuegenLabel;

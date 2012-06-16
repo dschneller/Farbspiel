@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "SpielrasterView.h"
 #import "SpielrasterViewController.h"
-#import "ColorfulButton.h"
 #import "SoundManager.h"
 #import "GewonnenVerlorenController.h"
 #import "GewonnenVerlorenControllerDelegate.h"
@@ -21,7 +20,7 @@
     SpielLevel _defaultLevel;
 }
 
-@property (strong, nonatomic) IBOutletCollection(ColorfulButton) NSArray *allColorButtons;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *allColorButtons;
 
 @property (weak, nonatomic) IBOutlet UIButton *debugButtonVerlieren;
 @property (weak, nonatomic) IBOutlet UIButton *debugButtonGewinnen;

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="8.00">
 	<data>
-		<int key="IBDocument.SystemTarget">1280</int>
-		<string key="IBDocument.SystemVersion">11C74</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1938</string>
-		<string key="IBDocument.AppKitVersion">1138.23</string>
-		<string key="IBDocument.HIToolboxVersion">567.00</string>
+		<int key="IBDocument.SystemTarget">1536</int>
+		<string key="IBDocument.SystemVersion">11E53</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2541</string>
+		<string key="IBDocument.AppKitVersion">1138.47</string>
+		<string key="IBDocument.HIToolboxVersion">569.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">933</string>
+			<string key="NS.object.0">1875</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
+			<string>IBUIButton</string>
+			<string>IBUICustomObject</string>
 			<string>IBUIImageView</string>
 			<string>IBUILabel</string>
-			<string>IBUISwitch</string>
-			<string>IBUICustomObject</string>
-			<string>IBUIButton</string>
 			<string>IBUISegmentedControl</string>
+			<string>IBUISwitch</string>
 			<string>IBUIView</string>
 		</array>
 		<array key="IBDocument.PluginDependencies">
@@ -71,11 +71,6 @@
 							<string key="IBUIAccessibilityLabel">Grid Size</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">12x12</string>
-						<object class="NSColor" key="IBUITextColor" id="207695856">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MQA</bytes>
-						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<object class="NSColor" key="IBUIShadowColor" id="514644013">
 							<int key="NSColorSpace">1</int>
@@ -83,7 +78,12 @@
 						</object>
 						<string key="IBUIShadowOffset">{-1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">12x12</string>
+						<object class="NSColor" key="IBUITextColor" id="207695856">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
+						</object>
 						<int key="IBUITextAlignment">1</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="985956913">
 							<string key="name">Helvetica-Bold</string>
@@ -96,6 +96,8 @@
 							<double key="NSSize">13</double>
 							<int key="NSfFlags">16</int>
 						</object>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="702528021">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -112,16 +114,18 @@
 							<string key="IBUIAccessibilityLabel">Allowed moves</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">22</string>
-						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="514644013"/>
 						<string key="IBUIShadowOffset">{-1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">22</string>
+						<reference key="IBUITextColor" ref="207695856"/>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="985956913"/>
 						<reference key="IBUIFont" ref="576036696"/>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="398762464">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -135,13 +139,13 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Grid Size</string>
-						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="514644013"/>
 						<string key="IBUIShadowOffset">{-1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Grid Size</string>
+						<reference key="IBUITextColor" ref="207695856"/>
 						<int key="IBUITextAlignment">1</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="646007833">
 							<string key="name">Helvetica</string>
@@ -154,6 +158,8 @@
 							<double key="NSSize">12</double>
 							<int key="NSfFlags">16</int>
 						</object>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="994553759">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -167,16 +173,18 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Color Scheme</string>
-						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="514644013"/>
 						<string key="IBUIShadowOffset">{-1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Color Scheme</string>
+						<reference key="IBUITextColor" ref="207695856"/>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="646007833"/>
 						<reference key="IBUIFont" ref="250621439"/>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="172337850">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -189,16 +197,18 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Preview</string>
-						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="514644013"/>
 						<string key="IBUIShadowOffset">{-1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Preview</string>
+						<reference key="IBUITextColor" ref="207695856"/>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="646007833"/>
 						<reference key="IBUIFont" ref="250621439"/>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="879039765">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -212,16 +222,18 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Grid</string>
-						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="514644013"/>
 						<string key="IBUIShadowOffset">{-1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Grid</string>
+						<reference key="IBUITextColor" ref="207695856"/>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="646007833"/>
 						<reference key="IBUIFont" ref="250621439"/>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="1010867743">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -235,16 +247,18 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Moves</string>
-						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="514644013"/>
 						<string key="IBUIShadowOffset">{-1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Moves</string>
+						<reference key="IBUITextColor" ref="207695856"/>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="646007833"/>
 						<reference key="IBUIFont" ref="250621439"/>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="827754782">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -258,11 +272,6 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Difficulty</string>
-						<object class="NSColor" key="IBUITextColor" id="782204761">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MSAxIDEAA</bytes>
-						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<object class="NSColor" key="IBUIShadowColor" id="44497214">
 							<int key="NSColorSpace">3</int>
@@ -270,7 +279,12 @@
 						</object>
 						<string key="IBUIShadowOffset">{1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Difficulty</string>
+						<object class="NSColor" key="IBUITextColor" id="782204761">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MSAxIDEAA</bytes>
+						</object>
 						<int key="IBUITextAlignment">1</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="203505646">
 							<string key="name">Helvetica</string>
@@ -283,6 +297,8 @@
 							<double key="NSSize">17</double>
 							<int key="NSfFlags">16</int>
 						</object>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="951489085">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -296,16 +312,18 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Appearance</string>
-						<reference key="IBUITextColor" ref="782204761"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="44497214"/>
 						<string key="IBUIShadowOffset">{1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Appearance</string>
+						<reference key="IBUITextColor" ref="782204761"/>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="203505646"/>
 						<reference key="IBUIFont" ref="304476208"/>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="624167523">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -319,16 +337,18 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Statistics</string>
-						<reference key="IBUITextColor" ref="782204761"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="44497214"/>
 						<string key="IBUIShadowOffset">{1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Statistics</string>
+						<reference key="IBUITextColor" ref="782204761"/>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="203505646"/>
 						<reference key="IBUIFont" ref="304476208"/>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUISegmentedControl" id="986548308">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -1240,6 +1260,7 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="farbschemaGewaehlt:">id</string>
+						<string key="fillModeSelected:">id</string>
 						<string key="levelGewaehlt:">id</string>
 						<string key="rasterAnAus:">id</string>
 						<string key="resetStats:">id</string>
@@ -1249,6 +1270,10 @@
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="farbschemaGewaehlt:">
 							<string key="name">farbschemaGewaehlt:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="fillModeSelected:">
+							<string key="name">fillModeSelected:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="levelGewaehlt:">
@@ -1289,6 +1314,7 @@
 						<string key="farbe6bg">UIView</string>
 						<string key="farbschema">UISegmentedControl</string>
 						<string key="feldgroesseLabel">UILabel</string>
+						<string key="fuellmodus">UISegmentedControl</string>
 						<string key="rasterSwitch">UISwitch</string>
 						<string key="schwierigkeitsGrad">UISegmentedControl</string>
 						<string key="soundEffekteSwitch">UISwitch</string>
@@ -1360,6 +1386,10 @@
 						<object class="IBToOneOutletInfo" key="feldgroesseLabel">
 							<string key="name">feldgroesseLabel</string>
 							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="fuellmodus">
+							<string key="name">fuellmodus</string>
+							<string key="candidateClassName">UISegmentedControl</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="rasterSwitch">
 							<string key="name">rasterSwitch</string>
@@ -1474,6 +1504,6 @@
 			<string key="ledertextur.png">{320, 480}</string>
 			<string key="smalltrash.png">{13, 19}</string>
 		</dictionary>
-		<string key="IBCocoaTouchPluginVersion">933</string>
+		<string key="IBCocoaTouchPluginVersion">1875</string>
 	</data>
 </archive>

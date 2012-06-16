@@ -74,9 +74,6 @@
 		413A7ADC148913AA00CB33FF /* GewonnenView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413A7AD6148913AA00CB33FF /* GewonnenView.strings */; };
 		413A7ADD148913AA00CB33FF /* SettingsViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413A7AD8148913AA00CB33FF /* SettingsViewController.strings */; };
 		413A7ADE148913AA00CB33FF /* StatistikView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413A7ADA148913AA00CB33FF /* StatistikView.strings */; };
-		413A7AE5148915BF00CB33FF /* GewonnenView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413A7AD6148913AA00CB33FF /* GewonnenView.strings */; };
-		413A7AE6148915BF00CB33FF /* StatistikView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413A7ADA148913AA00CB33FF /* StatistikView.strings */; };
-		413A7AE7148915BF00CB33FF /* FarbspielViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418456471428D76700C9A68E /* FarbspielViewController.xib */; };
 		415A1F1E14276BCD00328122 /* StatistikView.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F1D14276BCD00328122 /* StatistikView.m */; };
 		415A1F2114277D9800328122 /* StatistikViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F2014277D9800328122 /* StatistikViewController.m */; };
 		415A8A4C13DF58A100FF0F3A /* farbkloetzchen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 415A8A4B13DF58A100FF0F3A /* farbkloetzchen@2x.png */; };
@@ -92,7 +89,6 @@
 		4184566B1428E86100C9A68E /* smalltrash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4184566A1428E86100C9A68E /* smalltrash@2x.png */; };
 		4188128B1429D54F00F2BBE8 /* FarbspielAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D925E013D8A76B007612E6 /* FarbspielAppDelegate.m */; };
 		4188128C1429D54F00F2BBE8 /* FarbspielViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D925E613D8A76B007612E6 /* FarbspielViewController.m */; };
-		4188128D1429D54F00F2BBE8 /* ColorfulButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9261A13D8A8C3007612E6 /* ColorfulButton.m */; };
 		4188128E1429D54F00F2BBE8 /* Farbmapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9261C13D8A8C3007612E6 /* Farbmapping.m */; };
 		4188128F1429D54F00F2BBE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262513D8A8C3007612E6 /* main.m */; };
 		418812901429D54F00F2BBE8 /* NSMutableArray+StackMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262713D8A8C3007612E6 /* NSMutableArray+StackMethods.m */; };
@@ -154,6 +150,18 @@
 		41B6743B148E2BE200ADFC2F /* LoggerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B67439148E2BE200ADFC2F /* LoggerClient.m */; };
 		41B6743E148E2C7500ADFC2F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B6743D148E2C7500ADFC2F /* CFNetwork.framework */; };
 		41B67440148E2C7D00ADFC2F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B6743F148E2C7D00ADFC2F /* SystemConfiguration.framework */; };
+		41BC5162158C6D8E00FBD3C1 /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5156158C6D8E00FBD3C1 /* greenButton.png */; };
+		41BC5163158C6D8E00FBD3C1 /* greenButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5157158C6D8E00FBD3C1 /* greenButton@2x.png */; };
+		41BC5164158C6D8E00FBD3C1 /* greenButtonActivated.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5158158C6D8E00FBD3C1 /* greenButtonActivated.png */; };
+		41BC5165158C6D8E00FBD3C1 /* greenButtonActivated@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5159158C6D8E00FBD3C1 /* greenButtonActivated@2x.png */; };
+		41BC5166158C6D8E00FBD3C1 /* redButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC515A158C6D8E00FBD3C1 /* redButton.png */; };
+		41BC5167158C6D8E00FBD3C1 /* redButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC515B158C6D8E00FBD3C1 /* redButton@2x.png */; };
+		41BC5168158C6D8E00FBD3C1 /* redButtonActivated.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC515C158C6D8E00FBD3C1 /* redButtonActivated.png */; };
+		41BC5169158C6D8E00FBD3C1 /* redButtonActivated@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC515D158C6D8E00FBD3C1 /* redButtonActivated@2x.png */; };
+		41BC516A158C6D8E00FBD3C1 /* yellowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC515E158C6D8E00FBD3C1 /* yellowButton.png */; };
+		41BC516B158C6D8E00FBD3C1 /* yellowButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC515F158C6D8E00FBD3C1 /* yellowButton@2x.png */; };
+		41BC516C158C6D8E00FBD3C1 /* yellowButtonActivated.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5160158C6D8E00FBD3C1 /* yellowButtonActivated.png */; };
+		41BC516D158C6D8E00FBD3C1 /* yellowButtonActivated@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5161158C6D8E00FBD3C1 /* yellowButtonActivated@2x.png */; };
 		41BC8F9B15885194002D856A /* spielstein12-CS1-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC8F951588517F002D856A /* spielstein12-CS1-0@2x.png */; };
 		41BC8F9C15885194002D856A /* spielstein12-CS1-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC8F9615885183002D856A /* spielstein12-CS1-1@2x.png */; };
 		41BC8F9D15885194002D856A /* spielstein12-CS1-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC8F9715885186002D856A /* spielstein12-CS1-2@2x.png */; };
@@ -171,7 +179,6 @@
 		41D925F413D8A76B007612E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D213D8A76B007612E6 /* Foundation.framework */; };
 		41D925F513D8A76B007612E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D413D8A76B007612E6 /* CoreGraphics.framework */; };
 		41D925FD13D8A76B007612E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D925FB13D8A76B007612E6 /* InfoPlist.strings */; };
-		41D9263513D8A8C3007612E6 /* ColorfulButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9261A13D8A8C3007612E6 /* ColorfulButton.m */; };
 		41D9263613D8A8C3007612E6 /* Farbmapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9261C13D8A8C3007612E6 /* Farbmapping.m */; };
 		41D9263C13D8A8C3007612E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262513D8A8C3007612E6 /* main.m */; };
 		41D9263D13D8A8C3007612E6 /* NSMutableArray+StackMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262713D8A8C3007612E6 /* NSMutableArray+StackMethods.m */; };
@@ -429,6 +436,18 @@
 		41B6743A148E2BE200ADFC2F /* LoggerCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggerCommon.h; path = "nslogger/Client Logger/iOS/LoggerCommon.h"; sourceTree = "<group>"; };
 		41B6743D148E2C7500ADFC2F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		41B6743F148E2C7D00ADFC2F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		41BC5156158C6D8E00FBD3C1 /* greenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButton.png; sourceTree = "<group>"; };
+		41BC5157158C6D8E00FBD3C1 /* greenButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButton@2x.png"; sourceTree = "<group>"; };
+		41BC5158158C6D8E00FBD3C1 /* greenButtonActivated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButtonActivated.png; sourceTree = "<group>"; };
+		41BC5159158C6D8E00FBD3C1 /* greenButtonActivated@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButtonActivated@2x.png"; sourceTree = "<group>"; };
+		41BC515A158C6D8E00FBD3C1 /* redButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redButton.png; sourceTree = "<group>"; };
+		41BC515B158C6D8E00FBD3C1 /* redButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redButton@2x.png"; sourceTree = "<group>"; };
+		41BC515C158C6D8E00FBD3C1 /* redButtonActivated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redButtonActivated.png; sourceTree = "<group>"; };
+		41BC515D158C6D8E00FBD3C1 /* redButtonActivated@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redButtonActivated@2x.png"; sourceTree = "<group>"; };
+		41BC515E158C6D8E00FBD3C1 /* yellowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowButton.png; sourceTree = "<group>"; };
+		41BC515F158C6D8E00FBD3C1 /* yellowButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowButton@2x.png"; sourceTree = "<group>"; };
+		41BC5160158C6D8E00FBD3C1 /* yellowButtonActivated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowButtonActivated.png; sourceTree = "<group>"; };
+		41BC5161158C6D8E00FBD3C1 /* yellowButtonActivated@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowButtonActivated@2x.png"; sourceTree = "<group>"; };
 		41BC8F951588517F002D856A /* spielstein12-CS1-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein12-CS1-0@2x.png"; sourceTree = "<group>"; };
 		41BC8F9615885183002D856A /* spielstein12-CS1-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein12-CS1-1@2x.png"; sourceTree = "<group>"; };
 		41BC8F9715885186002D856A /* spielstein12-CS1-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein12-CS1-2@2x.png"; sourceTree = "<group>"; };
@@ -451,8 +470,6 @@
 		41D925F113D8A76B007612E6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		41D925FA13D8A76B007612E6 /* FarbspielTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FarbspielTests-Info.plist"; sourceTree = "<group>"; };
 		41D925FC13D8A76B007612E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		41D9261913D8A8C3007612E6 /* ColorfulButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorfulButton.h; sourceTree = "<group>"; };
-		41D9261A13D8A8C3007612E6 /* ColorfulButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorfulButton.m; sourceTree = "<group>"; };
 		41D9261B13D8A8C3007612E6 /* Farbmapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Farbmapping.h; sourceTree = "<group>"; };
 		41D9261C13D8A8C3007612E6 /* Farbmapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Farbmapping.m; sourceTree = "<group>"; };
 		41D9262513D8A8C3007612E6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -832,6 +849,7 @@
 		418812781428E9E900F2BBE8 /* Icons and Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				41BC5155158C6D8E00FBD3C1 /* Stretchable UIButton PNG's */,
 				41E169C61588E9040043EE89 /* Buttons (66, iPad) */,
 				41E169A1158872690043EE89 /* Spielstein (32, iPad) */,
 				41E1694A158859110043EE89 /* Spielstein Medium (16) */,
@@ -875,6 +893,25 @@
 			);
 			name = NSLogger;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		41BC5155158C6D8E00FBD3C1 /* Stretchable UIButton PNG's */ = {
+			isa = PBXGroup;
+			children = (
+				41BC5156158C6D8E00FBD3C1 /* greenButton.png */,
+				41BC5157158C6D8E00FBD3C1 /* greenButton@2x.png */,
+				41BC5158158C6D8E00FBD3C1 /* greenButtonActivated.png */,
+				41BC5159158C6D8E00FBD3C1 /* greenButtonActivated@2x.png */,
+				41BC515A158C6D8E00FBD3C1 /* redButton.png */,
+				41BC515B158C6D8E00FBD3C1 /* redButton@2x.png */,
+				41BC515C158C6D8E00FBD3C1 /* redButtonActivated.png */,
+				41BC515D158C6D8E00FBD3C1 /* redButtonActivated@2x.png */,
+				41BC515E158C6D8E00FBD3C1 /* yellowButton.png */,
+				41BC515F158C6D8E00FBD3C1 /* yellowButton@2x.png */,
+				41BC5160158C6D8E00FBD3C1 /* yellowButtonActivated.png */,
+				41BC5161158C6D8E00FBD3C1 /* yellowButtonActivated@2x.png */,
+			);
+			path = "Stretchable UIButton PNG's";
 			sourceTree = "<group>";
 		};
 		41BC8FA2158851A7002D856A /* Spielstein Hard (12) */ = {
@@ -933,7 +970,6 @@
 				418456611428DFC700C9A68E /* GUIs */,
 				413A1E7113E5CC9F00DAD8A3 /* Resources */,
 				41D9264513D8A9C3007612E6 /* Categories */,
-				41D9264413D8A8D1007612E6 /* Colorful Button */,
 				41D9264613D8AA09007612E6 /* FarbspielViewController */,
 				4188127A1428EA4300F2BBE8 /* Helper Classes */,
 				413A1E6713E3503300DAD8A3 /* Persistenz */,
@@ -984,15 +1020,6 @@
 				41D925FB13D8A76B007612E6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		41D9264413D8A8D1007612E6 /* Colorful Button */ = {
-			isa = PBXGroup;
-			children = (
-				41D9261913D8A8C3007612E6 /* ColorfulButton.h */,
-				41D9261A13D8A8C3007612E6 /* ColorfulButton.m */,
-			);
-			name = "Colorful Button";
 			sourceTree = "<group>";
 		};
 		41D9264513D8A9C3007612E6 /* Categories */ = {
@@ -1280,7 +1307,7 @@
 		41D925C313D8A76B007612E6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "codecentric AG";
 			};
 			buildConfigurationList = 41D925C613D8A76B007612E6 /* Build configuration list for PBXProject "Farbspiel" */;
@@ -1371,9 +1398,6 @@
 				413A7ADC148913AA00CB33FF /* GewonnenView.strings in Resources */,
 				413A7ADD148913AA00CB33FF /* SettingsViewController.strings in Resources */,
 				413A7ADE148913AA00CB33FF /* StatistikView.strings in Resources */,
-				413A7AE5148915BF00CB33FF /* GewonnenView.strings in Resources */,
-				413A7AE6148915BF00CB33FF /* StatistikView.strings in Resources */,
-				413A7AE7148915BF00CB33FF /* FarbspielViewController.xib in Resources */,
 				4129A81C14976A6900516A42 /* spielstein24-CS1-0.png in Resources */,
 				4129A81D14976A6900516A42 /* spielstein24-CS1-0@2x.png in Resources */,
 				4129A81E14976A6900516A42 /* spielstein24-CS1-1.png in Resources */,
@@ -1537,6 +1561,18 @@
 				41E169EA1588E9250043EE89 /* spielstein66-CS3-1.png in Resources */,
 				41E169EB1588E9250043EE89 /* spielstein66-CS3-0.png in Resources */,
 				41E169ED158951530043EE89 /* spielstein48-CS1-0.png in Resources */,
+				41BC5162158C6D8E00FBD3C1 /* greenButton.png in Resources */,
+				41BC5163158C6D8E00FBD3C1 /* greenButton@2x.png in Resources */,
+				41BC5164158C6D8E00FBD3C1 /* greenButtonActivated.png in Resources */,
+				41BC5165158C6D8E00FBD3C1 /* greenButtonActivated@2x.png in Resources */,
+				41BC5166158C6D8E00FBD3C1 /* redButton.png in Resources */,
+				41BC5167158C6D8E00FBD3C1 /* redButton@2x.png in Resources */,
+				41BC5168158C6D8E00FBD3C1 /* redButtonActivated.png in Resources */,
+				41BC5169158C6D8E00FBD3C1 /* redButtonActivated@2x.png in Resources */,
+				41BC516A158C6D8E00FBD3C1 /* yellowButton.png in Resources */,
+				41BC516B158C6D8E00FBD3C1 /* yellowButton@2x.png in Resources */,
+				41BC516C158C6D8E00FBD3C1 /* yellowButtonActivated.png in Resources */,
+				41BC516D158C6D8E00FBD3C1 /* yellowButtonActivated@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1573,7 +1609,6 @@
 			files = (
 				4188128B1429D54F00F2BBE8 /* FarbspielAppDelegate.m in Sources */,
 				4188128C1429D54F00F2BBE8 /* FarbspielViewController.m in Sources */,
-				4188128D1429D54F00F2BBE8 /* ColorfulButton.m in Sources */,
 				4188128E1429D54F00F2BBE8 /* Farbmapping.m in Sources */,
 				4188128F1429D54F00F2BBE8 /* main.m in Sources */,
 				418812901429D54F00F2BBE8 /* NSMutableArray+StackMethods.m in Sources */,
@@ -1600,7 +1635,6 @@
 			files = (
 				41D925E113D8A76B007612E6 /* FarbspielAppDelegate.m in Sources */,
 				41D925E713D8A76B007612E6 /* FarbspielViewController.m in Sources */,
-				41D9263513D8A8C3007612E6 /* ColorfulButton.m in Sources */,
 				41D9263613D8A8C3007612E6 /* Farbmapping.m in Sources */,
 				41D9263C13D8A8C3007612E6 /* main.m in Sources */,
 				41D9263D13D8A8C3007612E6 /* NSMutableArray+StackMethods.m in Sources */,
