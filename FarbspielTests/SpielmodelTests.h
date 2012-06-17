@@ -8,6 +8,6 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface SpielmodelTestsModus2 : SenTestCase
+@interface SpielmodelTests : SenTestCase
 
 @end

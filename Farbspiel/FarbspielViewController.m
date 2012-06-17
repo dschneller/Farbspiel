@@ -93,6 +93,7 @@
         NSString* imgName = [[Farbmapping sharedInstance] imageNameForColor:b.tag andSize:s];
         UIImage *img = [UIImage imageNamed:imgName];
         [b setBackgroundImage:img forState:UIControlStateNormal];
+        b.adjustsImageWhenDisabled = NO;
         b.opaque = YES;
         b.alpha = 1.0f;
     }

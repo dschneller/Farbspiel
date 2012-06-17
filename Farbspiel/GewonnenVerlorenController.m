@@ -145,7 +145,7 @@
     
     [parentView addSubview:self.view];
     
-    [UIView animateWithDuration:0.3f animations:^{
+    [UIView animateWithDuration:0.5f animations:^{
         LOG_GAME(1, @"Fade In Animation Began");
         LOG_GAME(1, @"GewonnenView Center: %g, %g", self.view.center.x, self.view.center.y);
         self.view.alpha = 1.0f;

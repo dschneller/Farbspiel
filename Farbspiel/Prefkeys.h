@@ -4,4 +4,3 @@
 #define PREFKEY_GITTER_AN @"gitterAn"
 #define PREFKEY_SPIELLEVEL @"spielLevel"
 #define PREFKEY_FARBSCHEMA @"farbschema"
-#define PREFKEY_FUELLMODYS @"fuellmodus"

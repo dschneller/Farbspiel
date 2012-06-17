@@ -6,21 +6,49 @@
 //  Copyright (c) 2012 codecentric AG. All rights reserved.
 //
 
-#import "SpielmodelTestsModus2.h"
+#import "SpielmodelTests.h"
 #import "Spielmodel.h"
-#import "Datenhaltung.h"
 
-@implementation SpielmodelTestsModus2
+@implementation SpielmodelTests
 
 Spielmodel* _model;
 
 -(void)setUp {
-    [[Datenhaltung sharedInstance] setInteger:2 fuerKey:PREFKEY_FUELLMODYS];
     _model = [[Spielmodel alloc] initWithLevel:EASY];
     for (int i=0; i<144; i++) {
         [_model.farbfelder replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:0]];        
     }
 }
+
+-(void)testFuellen {
+    
+    [_model farbeGewaehlt:1];
+    for (int i=0; i<144; i++) {
+        STAssertEquals([[_model.farbfelder objectAtIndex:i] intValue], 0, @"");
+    }
+}
+
+-(void)testFuellenXY {
+    for (int i=0; i<12; i++) {
+        [_model.farbfelder replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:1]];
+    }
+    
+    [_model farbeGewaehlt:2 fuerPositionX:1 Y:0];
+    for (int i=0; i<12; i++) {
+        STAssertEquals([[_model.farbfelder objectAtIndex:i] intValue], 1, @"");
+    }
+    for (int i=12; i<144; i++) {
+        STAssertEquals([[_model.farbfelder objectAtIndex:i] intValue], 2, @"");        
+    }
+}
+
+-(void)testFuellenXY2 {
+    [_model farbeGewaehlt:2 fuerPositionX:5 Y:5];
+    for (int i=0; i<144; i++) {
+        STAssertEquals([[_model.farbfelder objectAtIndex:i] intValue], 2, @"");
+    }
+}
+
 
 -(void)testFuellen2KeineAngrenzenden {
     [_model farbeGewaehlt:2];

@@ -48,6 +48,5 @@
 - (IBAction)farbschemaGewaehlt:(id)sender;
 - (IBAction)rasterAnAus:(id)sender;
 - (IBAction)resetStats:(id)sender;
-- (IBAction)fillModeSelected:(id)sender;
 
 @end
