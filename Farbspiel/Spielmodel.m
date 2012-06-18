@@ -13,25 +13,12 @@
 
 @implementation Spielmodel
 
-@synthesize farbfelder = farbfelder_;
-@synthesize level = level_;
-@synthesize felderProKante = felderProKante_;
-@synthesize zuege = zuege_;
-@synthesize maximaleZuege = maximaleZuege_;
-@synthesize spieldauer = spieldauer_;
-@synthesize abgebrochen = abgebrochen_;
-#if DEBUG
-@synthesize debugErzwungenerSieg = debugErzwungenerSieg_;
-#endif
-
-
-
 
 -(NSUInteger) arrayIndexFuerZeile:(NSUInteger)row spalte:(NSUInteger)col {
     return row+col*self.felderProKante;
 }
 -(NSNumber *) farbeAnPositionZeile:(NSUInteger)row spalte:(NSUInteger)col {
-    return [self.farbfelder objectAtIndex:[self arrayIndexFuerZeile:row spalte:col]];
+    return (self.farbfelder)[[self arrayIndexFuerZeile:row spalte:col]];
 }
 
 -(void) debugMatrix {
@@ -58,7 +45,7 @@
 -(void) faerbePositionZeile:(NSUInteger)row spalte:(NSUInteger)col mitFarbe:(NSUInteger)farbNummer {
     NSUInteger idx = [self arrayIndexFuerZeile:row spalte:col];
     NSNumber* neueFarbe = [NSNumber numberWithInt:farbNummer];
-    [self.farbfelder replaceObjectAtIndex:idx withObject:neueFarbe];
+    (self.farbfelder)[idx] = neueFarbe;
 }
 
 
@@ -79,7 +66,7 @@
                 x = arc4random() % 6;
                 break;
         }
-        [self.farbfelder addObject:[NSNumber numberWithInt:x]];
+        [self.farbfelder addObject:@(x)];
     }
 }
 
@@ -245,23 +232,23 @@
         self.level = level;
         switch (self.level) {
             case MEDIUM:
-                felderProKante_ = SPALTEN_MEDIUM;
-                maximaleZuege_  = ZUEGE_MEDIUM;
+                _felderProKante = SPALTEN_MEDIUM;
+                _maximaleZuege  = ZUEGE_MEDIUM;
                 break;
                 
             case HARD:
-                felderProKante_ = SPALTEN_HARD;
-                maximaleZuege_  = ZUEGE_HARD;
+                _felderProKante = SPALTEN_HARD;
+                _maximaleZuege  = ZUEGE_HARD;
                 break;
                 
             case EASY:
             default:
-                felderProKante_ = SPALTEN_EASY;
-                maximaleZuege_  = ZUEGE_EASY;
+                _felderProKante = SPALTEN_EASY;
+                _maximaleZuege  = ZUEGE_EASY;
                 break;
         }
         
-        self.farbfelder = [NSMutableArray arrayWithCapacity:(NSUInteger) (felderProKante_*felderProKante_)];
+        self.farbfelder = [NSMutableArray arrayWithCapacity:(NSUInteger) (_felderProKante*_felderProKante)];
         self.zuege = 0;
         self.abgebrochen = NO;
 #if DEBUG
@@ -275,8 +262,8 @@
 
 -(id)initWithModel:(Spielmodel*)templateModel {
     if ((self = [super init])) {
-        felderProKante_ = templateModel.felderProKante;
-        maximaleZuege_ = templateModel.maximaleZuege;
+        _felderProKante = templateModel.felderProKante;
+        _maximaleZuege = templateModel.maximaleZuege;
         self.level = templateModel.level;
         self.zuege = templateModel.zuege;
         self.abgebrochen = templateModel.abgebrochen;

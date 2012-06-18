@@ -13,8 +13,8 @@
 @protocol SpielrasterViewControllerDelegate;
 
 @interface SpielrasterViewController : NSObject <SpielrasterViewDatasource> {
-    Spielmodel* model_;
-    SpielrasterView* view_;
+    Spielmodel* _model;
+    SpielrasterView* _view;
     id<SpielrasterViewControllerDelegate> delegate_;
     NSTimer* timer_;
     UILabel *zuegeLabel;
@@ -22,13 +22,13 @@
 
 @property (nonatomic, strong) IBOutlet UILabel *zuegeLabel;
 @property (nonatomic, strong) SpielrasterView* view;
-@property (weak, nonatomic) IBOutlet UIView *shadowView;
 @property (nonatomic, strong) Spielmodel* model;
 @property (nonatomic, strong) id<SpielrasterViewControllerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIImageView *snapshotVIew;
 
 -(void) colorClicked:(NSUInteger)colorNumber;
 -(void) spielAbbrechen;
--(void)updateLayersFromOldModel:(Spielmodel*)oldModel;
+-(void) updateLayersFromOldModel:(Spielmodel*)oldModel;
 
 - (IBAction)verlieren:(id)sender;
 - (IBAction)gewinnen:(id)sender;

@@ -14,19 +14,12 @@
 
 @implementation SpielrasterViewController
 
-@synthesize zuegeLabel;
-@synthesize view = view_;
-@synthesize shadowView;
-@synthesize model = model_;
-@synthesize delegate = delegate_;
-
-
 -(void) updateZuegeDisplay {
     self.zuegeLabel.text = [NSString stringWithFormat:@"%d / %d", self.model.zuege, self.model.maximaleZuege];
 }
 
 -(void) setModel:(Spielmodel *)model {
-    model_ = model;
+    _model = model;
     [self.delegate spielrasterViewController:self modelDidChange:model];
     self.view.dataSource = self;
     [self.view prepareSublayers];
@@ -73,7 +66,7 @@
 -(void) doUndo:(Spielmodel*)previousModel {
     self.model.zuege = previousModel.zuege;
     for (NSUInteger i=0; i<self.model.farbfelder.count; i++) {
-        [self.model.farbfelder replaceObjectAtIndex:i withObject:[previousModel.farbfelder objectAtIndex:i]];
+        (self.model.farbfelder)[i] = (previousModel.farbfelder)[i];
     }
     [self updateZuegeDisplay];
 //    [self.view setNeedsDisplay];
@@ -90,57 +83,47 @@
         return;
     }
     
-    NSArray* keyTimes = [NSArray arrayWithObjects:     // Relative timing values for the 3 keyframes
-                         [NSNumber numberWithFloat:0], 
-                         [NSNumber numberWithFloat:1.0],
-                         nil]; 
-    NSArray* timingFunctions = [NSArray arrayWithObjects:
-                                [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],        // from keyframe 1 to keyframe 2
-                                nil]; // from keyframe 2 to keyframe 3
+    NSArray* keyTimes = @[@0.0f, 
+                         @1.0f]; 
+    NSArray* timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]]; // from keyframe 2 to keyframe 3
     
     Pair* p1 = [[differenz objectEnumerator] nextObject];
-    CALayer* l1 = [self.view.layerDict objectForKey:p1];
+    CALayer* l1 = (self.view.layerDict)[p1];
     NSNumber *farbe = [self farbeFuerRasterfeldZeile:p1.y spalte:p1.x];
     NSString* imgName = [[Farbmapping sharedInstance] imageNameForColor:[farbe intValue] andSize:l1.bounds.size.width];
     UIImage* img = [UIImage imageNamed:imgName];
     CAKeyframeAnimation *contentAnimation;
     contentAnimation = [CAKeyframeAnimation animationWithKeyPath:@"contents"];
-    contentAnimation.values = [NSArray arrayWithObjects:l1.contents, (id)[img CGImage], nil];
+    contentAnimation.values = @[l1.contents, (id)[img CGImage]];
     contentAnimation.keyTimes = keyTimes;
     contentAnimation.removedOnCompletion = NO;
     contentAnimation.fillMode= kCAFillModeForwards;
     
     CAKeyframeAnimation *rotation;
     rotation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
-    rotation.values = [NSArray arrayWithObjects:           // i.e., Rotation values for the 3 keyframes, in RADIANS
-                       [NSNumber numberWithFloat:0.0 * M_PI], 
-                       [NSNumber numberWithFloat:2 * M_PI], 
-                       nil]; 
+    rotation.values = @[[NSNumber numberWithFloat:0.0 * M_PI], 
+                       [NSNumber numberWithFloat:2 * M_PI]]; 
     rotation.keyTimes = keyTimes;
     rotation.timingFunctions = timingFunctions;
     CAKeyframeAnimation *zoom;
     
     zoom = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
-    zoom.values = [NSArray arrayWithObjects:
-                   [NSNumber numberWithFloat:1.0f],
-                   [NSNumber numberWithFloat:1.5f], 
-                   [NSNumber numberWithFloat:1.0f], 
-                   nil]; 
-    rotation.keyTimes = [NSArray arrayWithObjects:     // Relative timing values for the 3 keyframes
-                         [NSNumber numberWithFloat:0], 
-                         [NSNumber numberWithFloat:0.5f], 
-                         [NSNumber numberWithFloat:1.0f],
-                         nil]; 
+    zoom.values = @[@1.0f,
+                   @1.5f, 
+                   @1.0f]; 
+    rotation.keyTimes = @[@0.0f, 
+                         @0.5f, 
+                         @1.0f]; 
     rotation.timingFunctions = timingFunctions;
     
     CAAnimationGroup *animGroup = [CAAnimationGroup animation];
-    [animGroup setAnimations:[NSArray arrayWithObjects:contentAnimation, /*rotation,*/ zoom, nil]];
+    [animGroup setAnimations:@[contentAnimation, /*rotation,*/ zoom]];
     animGroup.duration = 0.5f;
     animGroup.removedOnCompletion = NO;
     animGroup.fillMode = kCAFillModeForwards;
     
     for (Pair* p in differenz) {
-        CALayer *tileLayer = [self.view.layerDict objectForKey:p];
+        CALayer *tileLayer = (self.view.layerDict)[p];
         [tileLayer addAnimation:animGroup forKey:nil];
     }
 }

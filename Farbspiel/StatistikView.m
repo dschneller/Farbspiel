@@ -9,10 +9,6 @@
 #import "StatistikView.h"
 
 @implementation StatistikView
-@synthesize anzahlSpiele = _anzahlSpiele;
-@synthesize anzahlGewonnen = _anzahlGewonnen;
-@synthesize anzahlVerloren = _anzahlVerloren;
-@synthesize prozentGewonnen = _prozentGewonnen;
 
 - (id)initWithFrame:(CGRect)frame
 {

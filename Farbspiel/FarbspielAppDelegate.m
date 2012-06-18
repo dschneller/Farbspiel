@@ -10,15 +10,10 @@
 
 #import "Prefkeys.h"
 #import "Spielmodel.h"
-#if RUN_KIF_TESTS
-#import "FarbspielTestController.h"
-#endif
 
 @implementation FarbspielAppDelegate
 
 
-@synthesize window=_window;
-@synthesize navigationController = _navigationController;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
@@ -26,20 +21,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSNumber* zero = [NSNumber numberWithInt:0];
     // since no default values have been set (i.e. no preferences file created), create it here		
-    NSDictionary *appDefaults = [NSDictionary dictionaryWithObjectsAndKeys:
-                                 zero, [NSString stringWithFormat:PREFKEY_GEWONNENZAEHLER_FORMAT,EASY],
-                                 zero, [NSString stringWithFormat:PREFKEY_SPIELZAEHLER_FORMAT,EASY],
-                                 zero, [NSString stringWithFormat:PREFKEY_GEWONNENZAEHLER_FORMAT,MEDIUM],
-                                 zero, [NSString stringWithFormat:PREFKEY_SPIELZAEHLER_FORMAT,MEDIUM],
-                                 zero, [NSString stringWithFormat:PREFKEY_GEWONNENZAEHLER_FORMAT,HARD],
-                                 zero, [NSString stringWithFormat:PREFKEY_SPIELZAEHLER_FORMAT,HARD],
-                                 [NSNumber numberWithBool:YES], PREFKEY_SOUND_AN,
-                                 [NSNumber numberWithBool:YES], PREFKEY_GITTER_AN,
-                                 [NSNumber numberWithInt:EASY], PREFKEY_SPIELLEVEL,
-                                 zero, PREFKEY_FARBSCHEMA,
-                                 nil];
+    NSDictionary *appDefaults = @{[NSString stringWithFormat:PREFKEY_GEWONNENZAEHLER_FORMAT,EASY]: @0,
+                                 [NSString stringWithFormat:PREFKEY_SPIELZAEHLER_FORMAT,EASY]: @0,
+                                 [NSString stringWithFormat:PREFKEY_GEWONNENZAEHLER_FORMAT,MEDIUM]: @0,
+                                 [NSString stringWithFormat:PREFKEY_SPIELZAEHLER_FORMAT,MEDIUM]: @0,
+                                 [NSString stringWithFormat:PREFKEY_GEWONNENZAEHLER_FORMAT,HARD]: @0,
+                                 [NSString stringWithFormat:PREFKEY_SPIELZAEHLER_FORMAT,HARD]: @0,
+                                 PREFKEY_SOUND_AN: @YES,
+                                 PREFKEY_GITTER_AN: @YES,
+                                 PREFKEY_SPIELLEVEL: @(EASY),
+                                 PREFKEY_FARBSCHEMA: @0};
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
     [[NSUserDefaults standardUserDefaults] synchronize];

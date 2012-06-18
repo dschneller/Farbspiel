@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Farbmapping : NSObject {
-    int farbschema_;
+    int _farbschema;
 }
 
 +(Farbmapping*) sharedInstance;

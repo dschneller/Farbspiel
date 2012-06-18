@@ -28,17 +28,17 @@ typedef enum {
 
 
 @interface Spielmodel : NSObject {
-    SpielLevel level_;
-    NSMutableArray *farbfelder_;
-    NSUInteger felderProKante_;
-    NSUInteger maximaleZuege_;
+    SpielLevel _level;
+    NSMutableArray* _farbfelder;
+    NSUInteger _felderProKante;
+    NSUInteger _maximaleZuege;
     
-    NSUInteger zuege_;
-    long spieldauer_;
-    BOOL abgebrochen_;
+    NSUInteger _zuege;
+    long _spieldauer;
+    BOOL _abgebrochen;
     
 #if DEBUG
-    BOOL debugErzwungenerSieg_;
+    BOOL _debugErzwungenerSieg;
 #endif
 }
 

@@ -15,8 +15,6 @@
 
 @interface FarbspielViewController : UIViewController
 <SpielrasterViewControllerDelegate, GewonnenVerlorenControllerDelegate, UIPopoverControllerDelegate> {
-    
-    
     SpielLevel _defaultLevel;
 }
 
@@ -28,10 +26,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *settingsToggleButton;
 @property (weak, nonatomic) IBOutlet UIButton *soundAnAusButton;
 @property (weak, nonatomic) IBOutlet SpielrasterView *spielrasterView;
-@property (weak, nonatomic) IBOutlet UIView *shadowView;
 @property (weak, nonatomic) IBOutlet UILabel *uhrLabel;
 @property (weak, nonatomic) IBOutlet UISwipeGestureRecognizer *undoSwipeGestureRecognizer;
 @property (strong, nonatomic) IBOutlet GewonnenVerlorenController* gewonnenVerlorenController;
+@property (weak, nonatomic) IBOutlet UIImageView *snapshotView;
 
 @property (assign, nonatomic) SpielLevel defaultLevel;
 @property (strong, nonatomic) UIAlertView* neuesSpielAlert;

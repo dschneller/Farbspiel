@@ -10,8 +10,8 @@
 
 
 @interface Pair : NSObject <NSCopying> {
-    NSUInteger x_;
-    NSUInteger y_;
+    NSUInteger _x;
+    NSUInteger _y;
 }
 
 

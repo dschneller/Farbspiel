@@ -20,6 +20,7 @@
 @implementation FarbspielViewController
 
 #pragma mark - Undo
+@synthesize undoManager;
 
 -(void)undoManagerDidUndo:(id)object {
     [self.undoManager removeAllActions];
@@ -327,12 +328,6 @@
     self.spielrasterView.layer.borderWidth = 1.0f;
     self.spielrasterView.layer.borderColor = [[UIColor darkGrayColor] CGColor];
     
-//    self.shadowView.layer.shadowColor = [[UIColor greenColor] CGColor];
-//    self.shadowView.layer.shadowOpacity = 0.7f;
-//    //    self.shadowView.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
-//    self.shadowView.layer.shadowRadius = 12.0f;
-//    self.shadowView.layer.masksToBounds = NO;
-    self.shadowView.layer.cornerRadius = 8.0f;
     
 #if !DEBUG
     [self.debugButtonVerlieren removeFromSuperview];
@@ -364,15 +359,10 @@
     [self resignFirstResponder];
 }
 
-
-- (void)viewDidUnload
-{
+- (void)viewDidDisappear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self setShadowView:nil];
-    [super viewDidUnload];
+    [super viewDidDisappear:animated];
 }
-
-
 
 
 
@@ -382,24 +372,5 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];    
 }
-
-#pragma mark - Synthesize Properties
-
-@synthesize allColorButtons         = _allColorButtons;
-@synthesize debugButtonGewinnen     = _debugButtonGewinnen;
-@synthesize debugButtonVerlieren    = _debugButtonVerlieren;
-@synthesize rasterController        = _rasterController;
-@synthesize settingsToggleButton    = _settingsToggleButton;
-@synthesize soundAnAusButton        = _soundAnAusButton;
-@synthesize spielrasterView         = _spielrasterView;
-@synthesize shadowView = _shadowView;
-@synthesize uhrLabel                = _uhrLabel;
-@synthesize undoSwipeGestureRecognizer = _undoSwipeGestureRecognizer;
-
-@synthesize defaultLevel            = _defaultLevel;
-@synthesize neuesSpielAlert         = _neuesSpielAlert;
-@synthesize settingsPopoverController = _settingsPopoverController;
-@synthesize undoManager             = _undoManager;
-@synthesize gewonnenVerlorenController = _gewonnenVerlorenController;
 
 @end

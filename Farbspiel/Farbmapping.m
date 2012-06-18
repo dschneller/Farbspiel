@@ -24,19 +24,16 @@ static Farbmapping *sharedSingleton;
     return sharedSingleton;
 }
 
-@synthesize farbschema = farbschema_;
-
-
 - (id)init {
     self = [super init];
     if (self) {
-        farbschema_ = [[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_FARBSCHEMA];
+        _farbschema = [[Datenhaltung sharedInstance] integerFuerKey:PREFKEY_FARBSCHEMA];
     }
     return self;
 }
 
 -(void)setFarbschema:(int)schema {
-    farbschema_ = schema;
+    _farbschema = schema;
     [[Datenhaltung sharedInstance] setInteger:schema fuerKey:PREFKEY_FARBSCHEMA];
 }
 

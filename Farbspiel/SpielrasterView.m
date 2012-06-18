@@ -14,16 +14,10 @@
 
 @implementation SpielrasterView
 
-@synthesize raster = raster_;
-@synthesize dataSource = dataSource_;
-@synthesize layerDict = _layerDict;
-@synthesize gridLayer = _gridLayer;
-
-
 - (void) prepareSublayers {
     if (_layerDict) {
         for (id p in _layerDict) {
-            [[_layerDict objectForKey:p] removeFromSuperlayer];
+            [_layerDict[p] removeFromSuperlayer];
         }
     }
     _layerDict = [NSMutableDictionary dictionary];
@@ -48,7 +42,7 @@
             tileLayer.opaque=YES;
             
             [self.layer addSublayer:tileLayer];
-            [self.layerDict setObject:tileLayer forKey:p];
+            (self.layerDict)[p] = tileLayer;
         }
     }
 
@@ -65,9 +59,18 @@
     if ([[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN]) {
         [self.layer addSublayer:self.gridLayer];
     }
-
 }
 
+- (UIImage*) snapshot {
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, YES, [[UIScreen mainScreen] scale]);
+    UIImage* img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return img;
+}
+
+- (void) neuenSnapshotInstallieren {
+    
+}
 
 
 - (void)zeichneGitter:(CGFloat)fieldHeight fieldWidth:(CGFloat)fieldWidth numCols:(int)numCols numRows:(int)numRows

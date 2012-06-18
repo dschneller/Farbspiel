@@ -14,7 +14,7 @@
 +(CAGradientLayer*) layerForParentView:(UIView*)view {
     CAGradientLayer* blurLayer = [CAGradientLayer layer];
     blurLayer.frame = view.bounds;
-    blurLayer.colors = [NSArray arrayWithObjects:(id)[[[UIColor darkGrayColor] colorByChangingAlphaTo:0.7f] CGColor], (id)[[[[UIColor darkGrayColor] colorByDarkeningColor] colorByChangingAlphaTo:0.7f] CGColor], nil];
+    blurLayer.colors = @[(id)[[[UIColor darkGrayColor] colorByChangingAlphaTo:0.7f] CGColor], (id)[[[[UIColor darkGrayColor] colorByDarkeningColor] colorByChangingAlphaTo:0.7f] CGColor]];
     
     return blurLayer;
 }

@@ -35,7 +35,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 			<object class="IBUIView" id="191373211">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIImageView" id="1025690975">
@@ -336,7 +336,6 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{300, 231}</string>
-				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="1025690975"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
@@ -587,7 +586,163 @@
 			<nil key="sourceID"/>
 			<int key="maxID">53</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">GewonnenVerlorenController</string>
+					<string key="superclassName">NSObject</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="neuesSpiel:">id</string>
+						<string key="settingsButtonPressed:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="neuesSpiel:">
+							<string key="name">neuesSpiel:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="settingsButtonPressed:">
+							<string key="name">settingsButtonPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="delegate">id</string>
+						<string key="einstellungenButton">UIButton</string>
+						<string key="gewonnenInXZuegenLabel">UILabel</string>
+						<string key="gewonnenVerlorenLabel">UILabel</string>
+						<string key="levelLabel">UILabel</string>
+						<string key="neuesSpielButton">UIButton</string>
+						<string key="spieldauerLabel">UILabel</string>
+						<string key="statistikPlaceholder">StatistikView</string>
+						<string key="statistikViewController">StatistikViewController</string>
+						<string key="view">GewonnenVerlorenView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="delegate">
+							<string key="name">delegate</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="einstellungenButton">
+							<string key="name">einstellungenButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="gewonnenInXZuegenLabel">
+							<string key="name">gewonnenInXZuegenLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="gewonnenVerlorenLabel">
+							<string key="name">gewonnenVerlorenLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="levelLabel">
+							<string key="name">levelLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="neuesSpielButton">
+							<string key="name">neuesSpielButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="spieldauerLabel">
+							<string key="name">spieldauerLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="statistikPlaceholder">
+							<string key="name">statistikPlaceholder</string>
+							<string key="candidateClassName">StatistikView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="statistikViewController">
+							<string key="name">statistikViewController</string>
+							<string key="candidateClassName">StatistikViewController</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="view">
+							<string key="name">view</string>
+							<string key="candidateClassName">GewonnenVerlorenView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/GewonnenVerlorenController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">GewonnenVerlorenView</string>
+					<string key="superclassName">UIView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/GewonnenVerlorenView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">StatistikView</string>
+					<string key="superclassName">UIView</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="anzahlGewonnen">UILabel</string>
+						<string key="anzahlSpiele">UILabel</string>
+						<string key="anzahlVerloren">UILabel</string>
+						<string key="prozentGewonnen">UILabel</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="anzahlGewonnen">
+							<string key="name">anzahlGewonnen</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="anzahlSpiele">
+							<string key="name">anzahlSpiele</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="anzahlVerloren">
+							<string key="name">anzahlVerloren</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="prozentGewonnen">
+							<string key="name">prozentGewonnen</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/StatistikView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">StatistikViewController</string>
+					<string key="superclassName">NSObject</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="anzahlGewonnenLabel">UILabel</string>
+						<string key="anzahlSpieleLabel">UILabel</string>
+						<string key="anzahlVerlorenLabel">UILabel</string>
+						<string key="prozentGewonnenLabel">UILabel</string>
+						<string key="statistikView">StatistikView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="anzahlGewonnenLabel">
+							<string key="name">anzahlGewonnenLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="anzahlSpieleLabel">
+							<string key="name">anzahlSpieleLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="anzahlVerlorenLabel">
+							<string key="name">anzahlVerlorenLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="prozentGewonnenLabel">
+							<string key="name">prozentGewonnenLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="statistikView">
+							<string key="name">statistikView</string>
+							<string key="candidateClassName">StatistikView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/StatistikViewController.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencies">

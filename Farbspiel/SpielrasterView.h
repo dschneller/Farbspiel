@@ -12,8 +12,8 @@
 @protocol SpielrasterViewDatasource; 
 
 @interface SpielrasterView : UIView {
-    UIView* raster_;
-    id<SpielrasterViewDatasource> dataSource_;
+    UIView* _raster;
+    id<SpielrasterViewDatasource> _dataSource;
     CALayer* _gridLayer;
     NSMutableDictionary* _layerDict;
 }

@@ -18,20 +18,6 @@
 
 @implementation GewonnenVerlorenController
 
-@synthesize view = _view;
-@synthesize statistikPlaceholder = _statistikPlaceholder;
-@synthesize statistikViewController= _statistikViewController;
-@synthesize neuesSpielButton = _neuesSpielButton;
-@synthesize einstellungenButton = _einstellungenButton;
-@synthesize gewonnenVerlorenLabel = _gewonnenVerlorenLabel;
-@synthesize gewonnenInXZuegenLabel = _gewonnenInXZuegenLabel;
-@synthesize spieldauerLabel = _spieldauerLabel;
-@synthesize levelLabel = _levelLabel;
-@synthesize blurLayer = _blurLayer;
-
-@synthesize delegate = _delegate;
-@synthesize popoverController = _popoverController;
-
 - (CAGradientLayer*) blurLayerForView:(UIView*)view {
     if (!_blurLayer) { 
         _blurLayer = [BlurLayer layerForParentView:view];
@@ -72,7 +58,7 @@
         UINib* nib = [UINib nibWithNibName:@"GewonnenView" bundle:[NSBundle mainBundle]];
         NSArray* nibContents = [nib instantiateWithOwner:self options:nil];
         
-        newGewonnenView = [nibContents objectAtIndex:0];
+        newGewonnenView = nibContents[0];
         
         [[newGewonnenView layer] setCornerRadius:8.0f];
         // Turn on masking
@@ -102,7 +88,7 @@
         
         
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"StatistikView" owner:self.statistikViewController options:nil];
-        StatistikView *statistikView = (StatistikView *)[views objectAtIndex:0];
+        StatistikView *statistikView = (StatistikView *)views[0];
         
         [self.statistikPlaceholder addSubview:statistikView];
         self.statistikViewController.statistikView = statistikView;

@@ -21,7 +21,7 @@ typedef enum {
 
 @interface SoundManager : NSObject {
     SystemSoundID sounds_[NUMSOUNDS];
-    BOOL soundAn_;
+    BOOL _soundAn;
 }
 
 @property (nonatomic,assign) BOOL soundAn;

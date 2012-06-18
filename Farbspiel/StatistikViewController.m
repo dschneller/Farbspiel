@@ -11,16 +11,6 @@
 
 @implementation StatistikViewController
 
-@synthesize anzahlSpiele = _anzahlSpiele;
-@synthesize anzahlGewonnen = _anzahlGewonnen;
-
-@synthesize statistikView = _statistikView;
-@synthesize anzahlSpieleLabel = _anzahlSpieleLabel;
-@synthesize anzahlGewonnenLabel = _anzahlGewonnenLabel;
-@synthesize anzahlVerlorenLabel = _anzahlVerlorenLabel;
-@synthesize prozentGewonnenLabel = _prozentGewonnenLabel;
-
-
 - (id)init
 {
     self = [super init];

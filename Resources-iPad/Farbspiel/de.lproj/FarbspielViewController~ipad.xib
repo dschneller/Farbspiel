@@ -530,10 +530,23 @@
 					<object class="IBUIView" id="496218386">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
+						<array class="NSMutableArray" key="NSSubviews">
+							<object class="IBUIImageView" id="816120109">
+								<reference key="NSNextResponder" ref="496218386"/>
+								<int key="NSvFlags">274</int>
+								<string key="NSFrameSize">{576, 576}</string>
+								<reference key="NSSuperview" ref="496218386"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="590399538"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+							</object>
+						</array>
 						<string key="NSFrame">{{96, 235}, {576, 576}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="590399538"/>
+						<reference key="NSNextKeyView" ref="816120109"/>
 						<reference key="IBUIBackgroundColor" ref="320539777"/>
 						<array key="IBUIGestureRecognizers" id="0"/>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
@@ -547,7 +560,6 @@
 						<string key="NSFrame">{{704, 938}, {18, 19}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<float key="IBUIAlpha">0.89999997615814209</float>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
@@ -903,6 +915,14 @@
 					<int key="connectionID">104</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">snapshotView</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="816120109"/>
+					</object>
+					<int key="connectionID">112</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">colorButtonPressed:</string>
 						<reference key="source" ref="703597665"/>
@@ -973,6 +993,14 @@
 						<reference key="destination" ref="902999538"/>
 					</object>
 					<int key="connectionID">46</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">snapshotVIew</string>
+						<reference key="source" ref="765027111"/>
+						<reference key="destination" ref="816120109"/>
+					</object>
+					<int key="connectionID">111</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -1168,7 +1196,9 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">33</int>
 						<reference key="object" ref="496218386"/>
-						<array class="NSMutableArray" key="children"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="816120109"/>
+						</array>
 						<reference key="parent" ref="774585933"/>
 						<string key="objectName">SpielrasterView</string>
 					</object>
@@ -1273,6 +1303,11 @@
 						<reference key="object" ref="868605354"/>
 						<reference key="parent" ref="0"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">108</int>
+						<reference key="object" ref="816120109"/>
+						<reference key="parent" ref="496218386"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -1282,6 +1317,7 @@
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="103.CustomClassName">GewonnenVerlorenController</string>
 				<string key="103.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="108.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="14.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -1318,7 +1354,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">107</int>
+			<int key="maxID">112</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1361,6 +1397,7 @@
 						<string key="rasterController">SpielrasterViewController</string>
 						<string key="settingsToggleButton">UIButton</string>
 						<string key="shadowView">UIView</string>
+						<string key="snapshotView">UIImageView</string>
 						<string key="soundAnAusButton">UIButton</string>
 						<string key="spielrasterView">SpielrasterView</string>
 						<string key="uhrLabel">UILabel</string>
@@ -1390,6 +1427,10 @@
 						<object class="IBToOneOutletInfo" key="shadowView">
 							<string key="name">shadowView</string>
 							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="snapshotView">
+							<string key="name">snapshotView</string>
+							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="soundAnAusButton">
 							<string key="name">soundAnAusButton</string>
@@ -1542,13 +1583,13 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="shadowView">UIView</string>
+						<string key="snapshotVIew">UIImageView</string>
 						<string key="zuegeLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="shadowView">
-							<string key="name">shadowView</string>
-							<string key="candidateClassName">UIView</string>
+						<object class="IBToOneOutletInfo" key="snapshotVIew">
+							<string key="name">snapshotVIew</string>
+							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="zuegeLabel">
 							<string key="name">zuegeLabel</string>

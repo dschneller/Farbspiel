@@ -137,7 +137,7 @@
     // Do any additional setup after loading the view from its nib.
     
     NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"StatistikView" owner:self.statistikViewController options:nil];
-    StatistikView *statistikView = (StatistikView *)[views objectAtIndex:0];
+    StatistikView *statistikView = (StatistikView *)views[0];
     
     self.statistikPlaceholderView.backgroundColor = [UIColor clearColor];
     [self.statistikPlaceholderView addSubview:statistikView];
@@ -204,34 +204,5 @@
     [self updateFarbschemaPreview];
 }
 
-
-#pragma mark - Synthesize Properties
-
-@synthesize passedInModel = _passedInModel;
-@synthesize schwierigkeitsGrad = _schwierigkeitsGrad;
-@synthesize feldgroesseLabel = _feldgroesseLabel;
-@synthesize anzahlZuegeLabel = _anzahlZuegeLabel;
-@synthesize soundEffekteSwitch = _soundEffekteSwitch;
-@synthesize rasterSwitch = _rasterSwitch;
-@synthesize fuellmodus = _fuellmodus;
-@synthesize farbschema = _farbschema;
-
-@synthesize farbPreviewRahmen = _farbPreviewRahmen;
-@synthesize farbe1 = _farbe1;
-@synthesize farbe2 = _farbe2;
-@synthesize farbe3 = _farbe3;
-@synthesize farbe4 = _farbe4;
-@synthesize farbe5 = _farbe5;
-@synthesize farbe6 = _farbe6;
-@synthesize farbe1bg = _farbe1bg;
-@synthesize farbe2bg = _farbe2bg;
-@synthesize farbe3bg = _farbe3bg;
-@synthesize farbe4bg = _farbe4bg;
-@synthesize farbe5bg = _farbe5bg;
-@synthesize farbe6bg = _farbe6bg;
-
-@synthesize statistikLoeschenButton = _statistikLoeschenButton;
-@synthesize statistikViewController = _statistikViewController;
-@synthesize statistikPlaceholderView = _statistikPlaceholderView;
 
 @end

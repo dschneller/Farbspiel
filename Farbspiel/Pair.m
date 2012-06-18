@@ -10,14 +10,12 @@
 
 
 @implementation Pair
-@synthesize x = x_;
-@synthesize y = y_;
 
 
 -(id)initWithX:(NSUInteger)x Y:(NSUInteger)y {
     if ((self = [super init])) {
-        x_ = x;
-        y_ = y;
+        _x = x;
+        _y = y;
     }
     return self;
 }

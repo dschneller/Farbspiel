@@ -65,7 +65,7 @@ static Datenhaltung *sharedSingleton;
     fetchRequest.entity = entity;
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"level == %@",
-                              [NSNumber numberWithUnsignedInteger:(NSUInteger)level]];
+                              @((NSUInteger)level)];
     fetchRequest.predicate = predicate;
     fetchRequest.includesPropertyValues = NO;
     
@@ -92,11 +92,11 @@ static Datenhaltung *sharedSingleton;
                                     insertNewObjectForEntityForName:@"Spiel"
                                     inManagedObjectContext:ctx];
 
-    spielAusgang.level = [NSNumber numberWithUnsignedInteger:model.level];
-    spielAusgang.zuege = [NSNumber numberWithUnsignedInteger:model.zuege];
-    spielAusgang.abgebrochen = [NSNumber numberWithBool:model.abgebrochen];
-    spielAusgang.gewonnen = [NSNumber numberWithBool:model.siegErreicht];
-    spielAusgang.dauer = [NSNumber numberWithLong:model.spieldauer];
+    spielAusgang.level = @(model.level);
+    spielAusgang.zuege = @(model.zuege);
+    spielAusgang.abgebrochen = @(model.abgebrochen);
+    spielAusgang.gewonnen = @(model.siegErreicht);
+    spielAusgang.dauer = @(model.spieldauer);
     spielAusgang.datum = [NSDate date];
     
 
@@ -119,7 +119,7 @@ static Datenhaltung *sharedSingleton;
     [fetchRequest setEntity:entity];
 
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"level == %@",
-                              [NSNumber numberWithUnsignedInteger:(NSUInteger)level]];
+                              @((NSUInteger)level)];
     [fetchRequest setPredicate:predicate];
 
     NSError *error = nil;
@@ -145,7 +145,7 @@ static Datenhaltung *sharedSingleton;
     [fetchRequest setEntity:entity];
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"level == %@ && gewonnen = %@",
-                              [NSNumber numberWithUnsignedInteger:(NSUInteger)level], [NSNumber numberWithBool:gewonnen]];
+                              @((NSUInteger)level), @(gewonnen)];
     [fetchRequest setPredicate:predicate];
     
     NSError *error = nil;
