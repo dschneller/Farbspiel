@@ -40,7 +40,6 @@ typedef enum {
 #if DEBUG
     BOOL debugErzwungenerSieg_;
 #endif
-    
 }
 
 @property (nonatomic, strong) NSMutableArray*   farbfelder;
@@ -58,11 +57,13 @@ typedef enum {
 -(id)initWithLevel:(SpielLevel)level;
 -(NSNumber *) farbeAnPositionZeile:(NSUInteger)row spalte:(NSUInteger)col;
 -(void)farbeGewaehlt:(NSUInteger)colorNum;
+-(void)farbeGewaehlt:(NSUInteger)colorNum fuerPositionX:(NSUInteger)x Y:(NSUInteger)y;
 -(BOOL) siegErreicht;
 -(BOOL) verloren;
 -(int) spaltenFuerLevel:(SpielLevel)level;
 -(int) maximaleZuegeFuerLevel:(SpielLevel)level;
 -(BOOL) spielLaeuft;
+-(NSSet*)unterschiedeZuModel:(Spielmodel*)other;
 
 +(NSString*) levelNameFor:(SpielLevel)level;
 @end

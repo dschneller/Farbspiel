@@ -74,9 +74,6 @@
 		413A7ADC148913AA00CB33FF /* GewonnenView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413A7AD6148913AA00CB33FF /* GewonnenView.strings */; };
 		413A7ADD148913AA00CB33FF /* SettingsViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413A7AD8148913AA00CB33FF /* SettingsViewController.strings */; };
 		413A7ADE148913AA00CB33FF /* StatistikView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413A7ADA148913AA00CB33FF /* StatistikView.strings */; };
-		413A7AE5148915BF00CB33FF /* GewonnenView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413A7AD6148913AA00CB33FF /* GewonnenView.strings */; };
-		413A7AE6148915BF00CB33FF /* StatistikView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413A7ADA148913AA00CB33FF /* StatistikView.strings */; };
-		413A7AE7148915BF00CB33FF /* FarbspielViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418456471428D76700C9A68E /* FarbspielViewController.xib */; };
 		415A1F1E14276BCD00328122 /* StatistikView.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F1D14276BCD00328122 /* StatistikView.m */; };
 		415A1F2114277D9800328122 /* StatistikViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F2014277D9800328122 /* StatistikViewController.m */; };
 		415A8A4C13DF58A100FF0F3A /* farbkloetzchen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 415A8A4B13DF58A100FF0F3A /* farbkloetzchen@2x.png */; };
@@ -90,59 +87,8 @@
 		418456581428D83500C9A68E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD3B1428D2EF0019D98A /* SettingsViewController.xib */; };
 		418456591428D83500C9A68E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D925E213D8A76B007612E6 /* MainWindow.xib */; };
 		4184566B1428E86100C9A68E /* smalltrash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4184566A1428E86100C9A68E /* smalltrash@2x.png */; };
-		4188128B1429D54F00F2BBE8 /* FarbspielAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D925E013D8A76B007612E6 /* FarbspielAppDelegate.m */; };
-		4188128C1429D54F00F2BBE8 /* FarbspielViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D925E613D8A76B007612E6 /* FarbspielViewController.m */; };
-		4188128D1429D54F00F2BBE8 /* ColorfulButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9261A13D8A8C3007612E6 /* ColorfulButton.m */; };
-		4188128E1429D54F00F2BBE8 /* Farbmapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9261C13D8A8C3007612E6 /* Farbmapping.m */; };
-		4188128F1429D54F00F2BBE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262513D8A8C3007612E6 /* main.m */; };
-		418812901429D54F00F2BBE8 /* NSMutableArray+StackMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262713D8A8C3007612E6 /* NSMutableArray+StackMethods.m */; };
-		418812911429D54F00F2BBE8 /* Pair.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262913D8A8C3007612E6 /* Pair.m */; };
-		418812921429D54F00F2BBE8 /* Spielmodel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262B13D8A8C3007612E6 /* Spielmodel.m */; };
-		418812931429D54F00F2BBE8 /* SpielrasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262D13D8A8C3007612E6 /* SpielrasterView.m */; };
-		418812941429D54F00F2BBE8 /* SpielrasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262F13D8A8C3007612E6 /* SpielrasterViewController.m */; };
-		418812951429D54F00F2BBE8 /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9263113D8A8C3007612E6 /* UIColor+Tools.m */; };
-		418812961429D54F00F2BBE8 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613613D9C2260028A3D9 /* SoundManager.m */; };
-		418812971429D54F00F2BBE8 /* Datenhaltung.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613A13D9CE290028A3D9 /* Datenhaltung.m */; };
-		418812981429D54F00F2BBE8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412BFEF813DE242300159AD4 /* SettingsViewController.m */; };
-		4188129A1429D54F00F2BBE8 /* JengoColor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41FE192713F06D7700BF4656 /* JengoColor.xcdatamodeld */; };
-		4188129B1429D54F00F2BBE8 /* Spiel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FE196213F0845900BF4656 /* Spiel.m */; };
-		4188129C1429D54F00F2BBE8 /* StatistikView.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F1D14276BCD00328122 /* StatistikView.m */; };
-		4188129D1429D54F00F2BBE8 /* StatistikViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415A1F2014277D9800328122 /* StatistikViewController.m */; };
-		418812A01429D54F00F2BBE8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FE195913F0740A00BF4656 /* CoreData.framework */; };
-		418812A11429D54F00F2BBE8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D9264D13D8ED4F007612E6 /* AudioToolbox.framework */; };
-		418812A21429D54F00F2BBE8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D9264813D8AAE8007612E6 /* QuartzCore.framework */; };
-		418812A31429D54F00F2BBE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D013D8A76B007612E6 /* UIKit.framework */; };
-		418812A41429D54F00F2BBE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D213D8A76B007612E6 /* Foundation.framework */; };
-		418812A51429D54F00F2BBE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D413D8A76B007612E6 /* CoreGraphics.framework */; };
-		418812A71429D54F00F2BBE8 /* FarbspielViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418456471428D76700C9A68E /* FarbspielViewController.xib */; };
-		418812A81429D54F00F2BBE8 /* StatistikView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418456491428D76700C9A68E /* StatistikView.xib */; };
-		418812A91429D54F00F2BBE8 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD3B1428D2EF0019D98A /* SettingsViewController.xib */; };
-		418812AA1429D54F00F2BBE8 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D925E213D8A76B007612E6 /* MainWindow.xib */; };
-		418812AB1429D54F00F2BBE8 /* 210.caf in Resources */ = {isa = PBXBuildFile; fileRef = 41D9264F13D8EE67007612E6 /* 210.caf */; };
-		418812AC1429D54F00F2BBE8 /* 215.caf in Resources */ = {isa = PBXBuildFile; fileRef = 41D9265513D8F703007612E6 /* 215.caf */; };
-		418812AD1429D54F00F2BBE8 /* 225.caf in Resources */ = {isa = PBXBuildFile; fileRef = 41D9265613D8F703007612E6 /* 225.caf */; };
-		418812AE1429D54F00F2BBE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D9265A13D8F9E9007612E6 /* InfoPlist.strings */; };
-		418812AF1429D54F00F2BBE8 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2413DA5FB500745241 /* speaker.png */; };
-		418812B01429D54F00F2BBE8 /* speaker_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2813DA60EF00745241 /* speaker_off.png */; };
-		418812B11429D54F00F2BBE8 /* ledertextur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBA13DE14F300159AD4 /* ledertextur@2x.png */; };
-		418812B21429D54F00F2BBE8 /* ledertextur.png in Resources */ = {isa = PBXBuildFile; fileRef = 412BFEBB13DE14F300159AD4 /* ledertextur.png */; };
-		418812B31429D54F00F2BBE8 /* farbkloetzchen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 415A8A4B13DF58A100FF0F3A /* farbkloetzchen@2x.png */; };
-		418812B41429D54F00F2BBE8 /* farbkloetzchen.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B113DF6CA300B2F0DB /* farbkloetzchen.png */; };
-		418812B51429D54F00F2BBE8 /* farbkloetzchen-jengo.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B313DF6EF100B2F0DB /* farbkloetzchen-jengo.png */; };
-		418812B61429D54F00F2BBE8 /* farbkloetzchen-jengo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A114B413DF6EF100B2F0DB /* farbkloetzchen-jengo@2x.png */; };
-		418812B71429D54F00F2BBE8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 41065C6013E20D6B00725686 /* Default.png */; };
-		418812B81429D54F00F2BBE8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41065C6213E20D7200725686 /* Default@2x.png */; };
-		418812B91429D54F00F2BBE8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 41065C6813E216A600725686 /* Icon.png */; };
-		418812BA1429D54F00F2BBE8 /* IconRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 41065C6A13E216C400725686 /* IconRetina.png */; };
-		418812BB1429D54F00F2BBE8 /* smalltrash.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C61E2C142898FA00B513EB /* smalltrash.png */; };
-		418812BC1429D54F00F2BBE8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD371428D1600019D98A /* Localizable.strings */; };
-		418812BD1429D54F00F2BBE8 /* GewonnenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD3F1428D3B70019D98A /* GewonnenView.xib */; };
-		418812C11429D54F00F2BBE8 /* smalltrash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4184566A1428E86100C9A68E /* smalltrash@2x.png */; };
 		418E613713D9C2260028A3D9 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613613D9C2260028A3D9 /* SoundManager.m */; };
 		418E613B13D9CE290028A3D9 /* Datenhaltung.m in Sources */ = {isa = PBXBuildFile; fileRef = 418E613A13D9CE290028A3D9 /* Datenhaltung.m */; };
-		418F3C44142A16C8006B1556 /* KIFTestScenario+FarbspielAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 418F3C3F142A13D7006B1556 /* KIFTestScenario+FarbspielAdditions.m */; };
-		418F3C45142A16CC006B1556 /* FarbspielTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 418F3C42142A158F006B1556 /* FarbspielTestController.m */; };
-		418F3C47142A170D006B1556 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F3C46142A170D006B1556 /* libKIF.a */; };
 		419DCB2613DA5FB500745241 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2413DA5FB500745241 /* speaker.png */; };
 		419DCB2913DA60EF00745241 /* speaker_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 419DCB2813DA60EF00745241 /* speaker_off.png */; };
 		419F350A1488C923009173A5 /* BlurLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 419F35091488C923009173A5 /* BlurLayer.m */; };
@@ -154,6 +100,18 @@
 		41B6743B148E2BE200ADFC2F /* LoggerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B67439148E2BE200ADFC2F /* LoggerClient.m */; };
 		41B6743E148E2C7500ADFC2F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B6743D148E2C7500ADFC2F /* CFNetwork.framework */; };
 		41B67440148E2C7D00ADFC2F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B6743F148E2C7D00ADFC2F /* SystemConfiguration.framework */; };
+		41BC5162158C6D8E00FBD3C1 /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5156158C6D8E00FBD3C1 /* greenButton.png */; };
+		41BC5163158C6D8E00FBD3C1 /* greenButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5157158C6D8E00FBD3C1 /* greenButton@2x.png */; };
+		41BC5164158C6D8E00FBD3C1 /* greenButtonActivated.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5158158C6D8E00FBD3C1 /* greenButtonActivated.png */; };
+		41BC5165158C6D8E00FBD3C1 /* greenButtonActivated@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5159158C6D8E00FBD3C1 /* greenButtonActivated@2x.png */; };
+		41BC5166158C6D8E00FBD3C1 /* redButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC515A158C6D8E00FBD3C1 /* redButton.png */; };
+		41BC5167158C6D8E00FBD3C1 /* redButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC515B158C6D8E00FBD3C1 /* redButton@2x.png */; };
+		41BC5168158C6D8E00FBD3C1 /* redButtonActivated.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC515C158C6D8E00FBD3C1 /* redButtonActivated.png */; };
+		41BC5169158C6D8E00FBD3C1 /* redButtonActivated@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC515D158C6D8E00FBD3C1 /* redButtonActivated@2x.png */; };
+		41BC516A158C6D8E00FBD3C1 /* yellowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC515E158C6D8E00FBD3C1 /* yellowButton.png */; };
+		41BC516B158C6D8E00FBD3C1 /* yellowButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC515F158C6D8E00FBD3C1 /* yellowButton@2x.png */; };
+		41BC516C158C6D8E00FBD3C1 /* yellowButtonActivated.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5160158C6D8E00FBD3C1 /* yellowButtonActivated.png */; };
+		41BC516D158C6D8E00FBD3C1 /* yellowButtonActivated@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5161158C6D8E00FBD3C1 /* yellowButtonActivated@2x.png */; };
 		41BC8F9B15885194002D856A /* spielstein12-CS1-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC8F951588517F002D856A /* spielstein12-CS1-0@2x.png */; };
 		41BC8F9C15885194002D856A /* spielstein12-CS1-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC8F9615885183002D856A /* spielstein12-CS1-1@2x.png */; };
 		41BC8F9D15885194002D856A /* spielstein12-CS1-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BC8F9715885186002D856A /* spielstein12-CS1-2@2x.png */; };
@@ -171,7 +129,6 @@
 		41D925F413D8A76B007612E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D213D8A76B007612E6 /* Foundation.framework */; };
 		41D925F513D8A76B007612E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D925D413D8A76B007612E6 /* CoreGraphics.framework */; };
 		41D925FD13D8A76B007612E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D925FB13D8A76B007612E6 /* InfoPlist.strings */; };
-		41D9263513D8A8C3007612E6 /* ColorfulButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9261A13D8A8C3007612E6 /* ColorfulButton.m */; };
 		41D9263613D8A8C3007612E6 /* Farbmapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9261C13D8A8C3007612E6 /* Farbmapping.m */; };
 		41D9263C13D8A8C3007612E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262513D8A8C3007612E6 /* main.m */; };
 		41D9263D13D8A8C3007612E6 /* NSMutableArray+StackMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D9262713D8A8C3007612E6 /* NSMutableArray+StackMethods.m */; };
@@ -289,6 +246,8 @@
 		41E169EA1588E9250043EE89 /* spielstein66-CS3-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D81588E9250043EE89 /* spielstein66-CS3-1.png */; };
 		41E169EB1588E9250043EE89 /* spielstein66-CS3-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169D91588E9250043EE89 /* spielstein66-CS3-0.png */; };
 		41E169ED158951530043EE89 /* spielstein48-CS1-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 41E169EC158951530043EE89 /* spielstein48-CS1-0.png */; };
+		41E169F31589BE290043EE89 /* PairTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E169F21589BE290043EE89 /* PairTests.m */; };
+		41E169F61589D1ED0043EE89 /* SpielmodelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E169F51589D1ED0043EE89 /* SpielmodelTests.m */; };
 		41EBBD351428D1600019D98A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41EBBD371428D1600019D98A /* Localizable.strings */; };
 		41FE192913F06D7700BF4656 /* JengoColor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41FE192713F06D7700BF4656 /* JengoColor.xcdatamodeld */; };
 		41FE195A13F0740A00BF4656 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FE195913F0740A00BF4656 /* CoreData.framework */; };
@@ -398,14 +357,11 @@
 		4184565F1428DF8500C9A68E /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/GewonnenView.xib; sourceTree = "<group>"; };
 		418456641428E42600C9A68E /* de */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4184566A1428E86100C9A68E /* smalltrash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smalltrash@2x.png"; sourceTree = "<group>"; };
-		418812C51429D54F00F2BBE8 /* Farbspiel (KIF Tests).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Farbspiel (KIF Tests).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		418E613513D9C2260028A3D9 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
 		418E613613D9C2260028A3D9 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
 		418E613913D9CE290028A3D9 /* Datenhaltung.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Datenhaltung.h; sourceTree = "<group>"; };
 		418E613A13D9CE290028A3D9 /* Datenhaltung.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Datenhaltung.m; sourceTree = "<group>"; };
 		418E613C13D9D4DD0028A3D9 /* Prefkeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefkeys.h; sourceTree = "<group>"; };
-		418F3C3E142A13D7006B1556 /* KIFTestScenario+FarbspielAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestScenario+FarbspielAdditions.h"; sourceTree = "<group>"; };
-		418F3C3F142A13D7006B1556 /* KIFTestScenario+FarbspielAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestScenario+FarbspielAdditions.m"; sourceTree = "<group>"; };
 		418F3C41142A158F006B1556 /* FarbspielTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FarbspielTestController.h; sourceTree = "<group>"; };
 		418F3C42142A158F006B1556 /* FarbspielTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FarbspielTestController.m; sourceTree = "<group>"; };
 		418F3C46142A170D006B1556 /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKIF.a; path = "../../cc/SharedBuildOutput/Release-iphoneos/libKIF.a"; sourceTree = "<group>"; };
@@ -426,6 +382,18 @@
 		41B6743A148E2BE200ADFC2F /* LoggerCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggerCommon.h; path = "nslogger/Client Logger/iOS/LoggerCommon.h"; sourceTree = "<group>"; };
 		41B6743D148E2C7500ADFC2F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		41B6743F148E2C7D00ADFC2F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		41BC5156158C6D8E00FBD3C1 /* greenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButton.png; sourceTree = "<group>"; };
+		41BC5157158C6D8E00FBD3C1 /* greenButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButton@2x.png"; sourceTree = "<group>"; };
+		41BC5158158C6D8E00FBD3C1 /* greenButtonActivated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButtonActivated.png; sourceTree = "<group>"; };
+		41BC5159158C6D8E00FBD3C1 /* greenButtonActivated@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButtonActivated@2x.png"; sourceTree = "<group>"; };
+		41BC515A158C6D8E00FBD3C1 /* redButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redButton.png; sourceTree = "<group>"; };
+		41BC515B158C6D8E00FBD3C1 /* redButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redButton@2x.png"; sourceTree = "<group>"; };
+		41BC515C158C6D8E00FBD3C1 /* redButtonActivated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redButtonActivated.png; sourceTree = "<group>"; };
+		41BC515D158C6D8E00FBD3C1 /* redButtonActivated@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redButtonActivated@2x.png"; sourceTree = "<group>"; };
+		41BC515E158C6D8E00FBD3C1 /* yellowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowButton.png; sourceTree = "<group>"; };
+		41BC515F158C6D8E00FBD3C1 /* yellowButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowButton@2x.png"; sourceTree = "<group>"; };
+		41BC5160158C6D8E00FBD3C1 /* yellowButtonActivated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowButtonActivated.png; sourceTree = "<group>"; };
+		41BC5161158C6D8E00FBD3C1 /* yellowButtonActivated@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowButtonActivated@2x.png"; sourceTree = "<group>"; };
 		41BC8F951588517F002D856A /* spielstein12-CS1-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein12-CS1-0@2x.png"; sourceTree = "<group>"; };
 		41BC8F9615885183002D856A /* spielstein12-CS1-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein12-CS1-1@2x.png"; sourceTree = "<group>"; };
 		41BC8F9715885186002D856A /* spielstein12-CS1-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein12-CS1-2@2x.png"; sourceTree = "<group>"; };
@@ -448,8 +416,6 @@
 		41D925F113D8A76B007612E6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		41D925FA13D8A76B007612E6 /* FarbspielTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FarbspielTests-Info.plist"; sourceTree = "<group>"; };
 		41D925FC13D8A76B007612E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		41D9261913D8A8C3007612E6 /* ColorfulButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorfulButton.h; sourceTree = "<group>"; };
-		41D9261A13D8A8C3007612E6 /* ColorfulButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorfulButton.m; sourceTree = "<group>"; };
 		41D9261B13D8A8C3007612E6 /* Farbmapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Farbmapping.h; sourceTree = "<group>"; };
 		41D9261C13D8A8C3007612E6 /* Farbmapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Farbmapping.m; sourceTree = "<group>"; };
 		41D9262513D8A8C3007612E6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -574,6 +540,10 @@
 		41E169D81588E9250043EE89 /* spielstein66-CS3-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS3-1.png"; sourceTree = "<group>"; };
 		41E169D91588E9250043EE89 /* spielstein66-CS3-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein66-CS3-0.png"; sourceTree = "<group>"; };
 		41E169EC158951530043EE89 /* spielstein48-CS1-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spielstein48-CS1-0.png"; sourceTree = "<group>"; };
+		41E169F11589BE290043EE89 /* PairTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairTests.h; sourceTree = "<group>"; };
+		41E169F21589BE290043EE89 /* PairTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PairTests.m; sourceTree = "<group>"; };
+		41E169F41589D1ED0043EE89 /* SpielmodelTests.h */ = {isa = PBXFileReference; fileEncoding = 4; path = SpielmodelTests.h; sourceTree = "<group>"; };
+		41E169F51589D1ED0043EE89 /* SpielmodelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpielmodelTests.m; sourceTree = "<group>"; };
 		41EBBD361428D1600019D98A /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41EBBD3A1428D2EF0019D98A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsViewController.xib; sourceTree = "<group>"; };
 		41EBBD3E1428D3B70019D98A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GewonnenView.xib; sourceTree = "<group>"; };
@@ -584,20 +554,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4188129F1429D54F00F2BBE8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				418F3C47142A170D006B1556 /* libKIF.a in Frameworks */,
-				418812A01429D54F00F2BBE8 /* CoreData.framework in Frameworks */,
-				418812A11429D54F00F2BBE8 /* AudioToolbox.framework in Frameworks */,
-				418812A21429D54F00F2BBE8 /* QuartzCore.framework in Frameworks */,
-				418812A31429D54F00F2BBE8 /* UIKit.framework in Frameworks */,
-				418812A41429D54F00F2BBE8 /* Foundation.framework in Frameworks */,
-				418812A51429D54F00F2BBE8 /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		41D925C913D8A76B007612E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -823,6 +779,7 @@
 		418812781428E9E900F2BBE8 /* Icons and Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				41BC5155158C6D8E00FBD3C1 /* Stretchable UIButton PNG's */,
 				41E169C61588E9040043EE89 /* Buttons (66, iPad) */,
 				41E169A1158872690043EE89 /* Spielstein (32, iPad) */,
 				41E1694A158859110043EE89 /* Spielstein Medium (16) */,
@@ -868,6 +825,25 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		41BC5155158C6D8E00FBD3C1 /* Stretchable UIButton PNG's */ = {
+			isa = PBXGroup;
+			children = (
+				41BC5156158C6D8E00FBD3C1 /* greenButton.png */,
+				41BC5157158C6D8E00FBD3C1 /* greenButton@2x.png */,
+				41BC5158158C6D8E00FBD3C1 /* greenButtonActivated.png */,
+				41BC5159158C6D8E00FBD3C1 /* greenButtonActivated@2x.png */,
+				41BC515A158C6D8E00FBD3C1 /* redButton.png */,
+				41BC515B158C6D8E00FBD3C1 /* redButton@2x.png */,
+				41BC515C158C6D8E00FBD3C1 /* redButtonActivated.png */,
+				41BC515D158C6D8E00FBD3C1 /* redButtonActivated@2x.png */,
+				41BC515E158C6D8E00FBD3C1 /* yellowButton.png */,
+				41BC515F158C6D8E00FBD3C1 /* yellowButton@2x.png */,
+				41BC5160158C6D8E00FBD3C1 /* yellowButtonActivated.png */,
+				41BC5161158C6D8E00FBD3C1 /* yellowButtonActivated@2x.png */,
+			);
+			path = "Stretchable UIButton PNG's";
+			sourceTree = "<group>";
+		};
 		41BC8FA2158851A7002D856A /* Spielstein Hard (12) */ = {
 			isa = PBXGroup;
 			children = (
@@ -892,7 +868,6 @@
 			children = (
 				41D925CC13D8A76B007612E6 /* Farbspiel.app */,
 				41D925F013D8A76B007612E6 /* FarbspielTests.octest */,
-				418812C51429D54F00F2BBE8 /* Farbspiel (KIF Tests).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -924,7 +899,6 @@
 				418456611428DFC700C9A68E /* GUIs */,
 				413A1E7113E5CC9F00DAD8A3 /* Resources */,
 				41D9264513D8A9C3007612E6 /* Categories */,
-				41D9264413D8A8D1007612E6 /* Colorful Button */,
 				41D9264613D8AA09007612E6 /* FarbspielViewController */,
 				4188127A1428EA4300F2BBE8 /* Helper Classes */,
 				413A1E6713E3503300DAD8A3 /* Persistenz */,
@@ -954,10 +928,12 @@
 			isa = PBXGroup;
 			children = (
 				41D925F913D8A76B007612E6 /* Supporting Files */,
-				418F3C3E142A13D7006B1556 /* KIFTestScenario+FarbspielAdditions.h */,
-				418F3C3F142A13D7006B1556 /* KIFTestScenario+FarbspielAdditions.m */,
 				418F3C41142A158F006B1556 /* FarbspielTestController.h */,
+				41E169F11589BE290043EE89 /* PairTests.h */,
+				41E169F41589D1ED0043EE89 /* SpielmodelTests.h */,
 				418F3C42142A158F006B1556 /* FarbspielTestController.m */,
+				41E169F21589BE290043EE89 /* PairTests.m */,
+				41E169F51589D1ED0043EE89 /* SpielmodelTests.m */,
 			);
 			path = FarbspielTests;
 			sourceTree = "<group>";
@@ -969,15 +945,6 @@
 				41D925FB13D8A76B007612E6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		41D9264413D8A8D1007612E6 /* Colorful Button */ = {
-			isa = PBXGroup;
-			children = (
-				41D9261913D8A8C3007612E6 /* ColorfulButton.h */,
-				41D9261A13D8A8C3007612E6 /* ColorfulButton.m */,
-			);
-			name = "Colorful Button";
 			sourceTree = "<group>";
 		};
 		41D9264513D8A9C3007612E6 /* Categories */ = {
@@ -1206,23 +1173,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		418812891429D54F00F2BBE8 /* KIF Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 418812C21429D54F00F2BBE8 /* Build configuration list for PBXNativeTarget "KIF Tests" */;
-			buildPhases = (
-				4188128A1429D54F00F2BBE8 /* Sources */,
-				4188129F1429D54F00F2BBE8 /* Frameworks */,
-				418812A61429D54F00F2BBE8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "KIF Tests";
-			productName = Farbspiel;
-			productReference = 418812C51429D54F00F2BBE8 /* Farbspiel (KIF Tests).app */;
-			productType = "com.apple.product-type.application";
-		};
 		41D925CB13D8A76B007612E6 /* Farbspiel */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41D9260413D8A76B007612E6 /* Build configuration list for PBXNativeTarget "Farbspiel" */;
@@ -1265,7 +1215,7 @@
 		41D925C313D8A76B007612E6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "codecentric AG";
 			};
 			buildConfigurationList = 41D925C613D8A76B007612E6 /* Build configuration list for PBXProject "Farbspiel" */;
@@ -1283,43 +1233,11 @@
 			targets = (
 				41D925CB13D8A76B007612E6 /* Farbspiel */,
 				41D925EF13D8A76B007612E6 /* FarbspielTests */,
-				418812891429D54F00F2BBE8 /* KIF Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		418812A61429D54F00F2BBE8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				418812A71429D54F00F2BBE8 /* FarbspielViewController.xib in Resources */,
-				418812A81429D54F00F2BBE8 /* StatistikView.xib in Resources */,
-				418812A91429D54F00F2BBE8 /* SettingsViewController.xib in Resources */,
-				418812AA1429D54F00F2BBE8 /* MainWindow.xib in Resources */,
-				418812AB1429D54F00F2BBE8 /* 210.caf in Resources */,
-				418812AC1429D54F00F2BBE8 /* 215.caf in Resources */,
-				418812AD1429D54F00F2BBE8 /* 225.caf in Resources */,
-				418812AE1429D54F00F2BBE8 /* InfoPlist.strings in Resources */,
-				418812AF1429D54F00F2BBE8 /* speaker.png in Resources */,
-				418812B01429D54F00F2BBE8 /* speaker_off.png in Resources */,
-				418812B11429D54F00F2BBE8 /* ledertextur@2x.png in Resources */,
-				418812B21429D54F00F2BBE8 /* ledertextur.png in Resources */,
-				418812B31429D54F00F2BBE8 /* farbkloetzchen@2x.png in Resources */,
-				418812B41429D54F00F2BBE8 /* farbkloetzchen.png in Resources */,
-				418812B51429D54F00F2BBE8 /* farbkloetzchen-jengo.png in Resources */,
-				418812B61429D54F00F2BBE8 /* farbkloetzchen-jengo@2x.png in Resources */,
-				418812B71429D54F00F2BBE8 /* Default.png in Resources */,
-				418812B81429D54F00F2BBE8 /* Default@2x.png in Resources */,
-				418812B91429D54F00F2BBE8 /* Icon.png in Resources */,
-				418812BA1429D54F00F2BBE8 /* IconRetina.png in Resources */,
-				418812BB1429D54F00F2BBE8 /* smalltrash.png in Resources */,
-				418812BC1429D54F00F2BBE8 /* Localizable.strings in Resources */,
-				418812BD1429D54F00F2BBE8 /* GewonnenView.xib in Resources */,
-				418812C11429D54F00F2BBE8 /* smalltrash@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		41D925CA13D8A76B007612E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1356,9 +1274,6 @@
 				413A7ADC148913AA00CB33FF /* GewonnenView.strings in Resources */,
 				413A7ADD148913AA00CB33FF /* SettingsViewController.strings in Resources */,
 				413A7ADE148913AA00CB33FF /* StatistikView.strings in Resources */,
-				413A7AE5148915BF00CB33FF /* GewonnenView.strings in Resources */,
-				413A7AE6148915BF00CB33FF /* StatistikView.strings in Resources */,
-				413A7AE7148915BF00CB33FF /* FarbspielViewController.xib in Resources */,
 				4129A81C14976A6900516A42 /* spielstein24-CS1-0.png in Resources */,
 				4129A81D14976A6900516A42 /* spielstein24-CS1-0@2x.png in Resources */,
 				4129A81E14976A6900516A42 /* spielstein24-CS1-1.png in Resources */,
@@ -1522,6 +1437,18 @@
 				41E169EA1588E9250043EE89 /* spielstein66-CS3-1.png in Resources */,
 				41E169EB1588E9250043EE89 /* spielstein66-CS3-0.png in Resources */,
 				41E169ED158951530043EE89 /* spielstein48-CS1-0.png in Resources */,
+				41BC5162158C6D8E00FBD3C1 /* greenButton.png in Resources */,
+				41BC5163158C6D8E00FBD3C1 /* greenButton@2x.png in Resources */,
+				41BC5164158C6D8E00FBD3C1 /* greenButtonActivated.png in Resources */,
+				41BC5165158C6D8E00FBD3C1 /* greenButtonActivated@2x.png in Resources */,
+				41BC5166158C6D8E00FBD3C1 /* redButton.png in Resources */,
+				41BC5167158C6D8E00FBD3C1 /* redButton@2x.png in Resources */,
+				41BC5168158C6D8E00FBD3C1 /* redButtonActivated.png in Resources */,
+				41BC5169158C6D8E00FBD3C1 /* redButtonActivated@2x.png in Resources */,
+				41BC516A158C6D8E00FBD3C1 /* yellowButton.png in Resources */,
+				41BC516B158C6D8E00FBD3C1 /* yellowButton@2x.png in Resources */,
+				41BC516C158C6D8E00FBD3C1 /* yellowButtonActivated.png in Resources */,
+				41BC516D158C6D8E00FBD3C1 /* yellowButtonActivated@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1552,40 +1479,12 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4188128A1429D54F00F2BBE8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4188128B1429D54F00F2BBE8 /* FarbspielAppDelegate.m in Sources */,
-				4188128C1429D54F00F2BBE8 /* FarbspielViewController.m in Sources */,
-				4188128D1429D54F00F2BBE8 /* ColorfulButton.m in Sources */,
-				4188128E1429D54F00F2BBE8 /* Farbmapping.m in Sources */,
-				4188128F1429D54F00F2BBE8 /* main.m in Sources */,
-				418812901429D54F00F2BBE8 /* NSMutableArray+StackMethods.m in Sources */,
-				418812911429D54F00F2BBE8 /* Pair.m in Sources */,
-				418812921429D54F00F2BBE8 /* Spielmodel.m in Sources */,
-				418812931429D54F00F2BBE8 /* SpielrasterView.m in Sources */,
-				418812941429D54F00F2BBE8 /* SpielrasterViewController.m in Sources */,
-				418812951429D54F00F2BBE8 /* UIColor+Tools.m in Sources */,
-				418812961429D54F00F2BBE8 /* SoundManager.m in Sources */,
-				418812971429D54F00F2BBE8 /* Datenhaltung.m in Sources */,
-				418812981429D54F00F2BBE8 /* SettingsViewController.m in Sources */,
-				4188129A1429D54F00F2BBE8 /* JengoColor.xcdatamodeld in Sources */,
-				4188129B1429D54F00F2BBE8 /* Spiel.m in Sources */,
-				4188129C1429D54F00F2BBE8 /* StatistikView.m in Sources */,
-				4188129D1429D54F00F2BBE8 /* StatistikViewController.m in Sources */,
-				418F3C44142A16C8006B1556 /* KIFTestScenario+FarbspielAdditions.m in Sources */,
-				418F3C45142A16CC006B1556 /* FarbspielTestController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		41D925C813D8A76B007612E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				41D925E113D8A76B007612E6 /* FarbspielAppDelegate.m in Sources */,
 				41D925E713D8A76B007612E6 /* FarbspielViewController.m in Sources */,
-				41D9263513D8A8C3007612E6 /* ColorfulButton.m in Sources */,
 				41D9263613D8A8C3007612E6 /* Farbmapping.m in Sources */,
 				41D9263C13D8A8C3007612E6 /* main.m in Sources */,
 				41D9263D13D8A8C3007612E6 /* NSMutableArray+StackMethods.m in Sources */,
@@ -1614,6 +1513,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41E169F31589BE290043EE89 /* PairTests.m in Sources */,
+				41E169F61589D1ED0043EE89 /* SpielmodelTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1757,47 +1658,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		418812C31429D54F00F2BBE8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Farbspiel/Farbspiel-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"RUN_KIF_TESTS=1",
-					"DEBUG=1",
-				);
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "Farbspiel copy-Info.plist";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-all_load",
-				);
-				PRODUCT_NAME = "Farbspiel (KIF Tests)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		418812C41429D54F00F2BBE8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Farbspiel/Farbspiel-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "Farbspiel copy-Info.plist";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-all_load",
-				);
-				PRODUCT_NAME = "Farbspiel (KIF Tests)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 		41D9260213D8A76B007612E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1817,7 +1677,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1834,7 +1694,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1910,15 +1770,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		418812C21429D54F00F2BBE8 /* Build configuration list for PBXNativeTarget "KIF Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				418812C31429D54F00F2BBE8 /* Debug */,
-				418812C41429D54F00F2BBE8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		41D925C613D8A76B007612E6 /* Build configuration list for PBXProject "Farbspiel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

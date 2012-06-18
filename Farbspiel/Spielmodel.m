@@ -9,6 +9,7 @@
 #import "Spielmodel.h"
 #import "Pair.h"
 #import "NSMutableArray+StackMethods.h"
+#import "Datenhaltung.h"
 
 @implementation Spielmodel
 
@@ -86,12 +87,52 @@
     self.zuege ++;
 }
 
--(void)faerbeVonX:(NSUInteger)startX Y:(NSUInteger)startY alteFarbe:(NSUInteger)alt neueFarbe:(NSUInteger)neu {
+-(NSSet*)findeAngrenzendeVonX:(NSUInteger)startX Y:(NSUInteger)startY inFarbe:(int)farbe {
+    NSMutableArray* stack = [NSMutableArray array];
+    NSMutableSet* zuFaerben = [NSMutableSet set];
+    NSMutableSet* schonBetrachtet = [NSMutableSet set];
+    int ausgangsFarbe = [[self farbeAnPositionZeile:startY spalte:startX] intValue];
+    [stack push:[Pair pairWithX:startX Y:startY]];
+    NSUInteger x,y;
+    while([stack count] > 0) {
+        Pair* p = [stack pop];
+        x = p.x;
+        y = p.y;
+        int aktuelleFarbe = [[self farbeAnPositionZeile:y spalte:x] intValue];
+        
+        if (aktuelleFarbe == farbe) {
+            // dieses feld gehoert geaendert
+            [zuFaerben addObject:p];
+  
+            // von hier aus in dieser Farbe erreichbare suchen
+            //NSSet* erreichbare = [self findeErreichbareFelderVonX:p.x Y:p.y];
+            //[zuFaerben addObjectsFromArray:[erreichbare allObjects]];
+        } else if (aktuelleFarbe == ausgangsFarbe && ![schonBetrachtet member:p]) {
+            // weitersuchen in angrenzenden, betrachtete merken
+            [schonBetrachtet addObject:p];
+            if (y+1 < self.felderProKante) {
+                [stack push:[Pair pairWithX:x Y:(y + 1)]];
+            }
+            if (y>0) {
+                [stack push:[Pair pairWithX:x Y:(y - 1)]];
+            }
+            if (x+1 < self.felderProKante) {
+                [stack push:[Pair pairWithX:(x+1) Y:y]];
+            }
+            if (x>0) {
+                [stack push:[Pair pairWithX:(x-1) Y:y]];
+            }
+        }
+    }    
+    return [NSSet setWithSet:zuFaerben];
+}
+
+
+-(BOOL)faerbeVonX:(NSUInteger)startX Y:(NSUInteger)startY alteFarbe:(NSUInteger)alt neueFarbe:(NSUInteger)neu {
     if (alt == neu) {
-        return;
+        return NO;
     }
     
-    [self zaehleSpielzug];
     [self debugMatrix];
     
     NSMutableArray* stack = [NSMutableArray array];
@@ -123,7 +164,7 @@
             }
         }
     }
-    return;
+    return YES;
 }
 
 
@@ -181,10 +222,21 @@
     }
 }
 
-
 -(void)farbeGewaehlt:(NSUInteger)colorNum {
-    NSUInteger alt = [[self farbeAnPositionZeile:0 spalte:0] unsignedIntValue];
-    [self faerbeVonX:0 Y:0 alteFarbe:alt neueFarbe:colorNum];
+    NSUInteger neu = [[self farbeAnPositionZeile:0 spalte:0] unsignedIntValue];
+    NSSet* zuFaerben = [self findeAngrenzendeVonX:0 Y:0 inFarbe:colorNum];
+    
+    for (Pair* p in zuFaerben) {
+        [self faerbeVonX:p.x Y:p.y alteFarbe:colorNum neueFarbe:neu];
+    }
+    if (zuFaerben.count > 0) {
+        [self zaehleSpielzug];
+    }
+}
+
+-(void)farbeGewaehlt:(NSUInteger)colorNum fuerPositionX:(NSUInteger)x Y:(NSUInteger)y {
+    NSUInteger alt = [[self farbeAnPositionZeile:y spalte:x] unsignedIntValue];
+    [self faerbeVonX:x Y:y alteFarbe:alt neueFarbe:colorNum];
 }
 
 
@@ -256,5 +308,19 @@
     return levelName;
 }
 
+-(NSSet*)unterschiedeZuModel:(Spielmodel*)other {
+    NSMutableSet* result = [NSMutableSet set];
+    for (NSUInteger row = 0; row < self.felderProKante; row ++) {
+        for (NSUInteger col = 0; col < self.felderProKante; col ++) {
+            NSNumber* mine = [self farbeAnPositionZeile:row spalte:col];
+            NSNumber* others = [other farbeAnPositionZeile:row spalte:col];
+            
+            if (![mine isEqualToNumber:others]) {
+                [result addObject:[Pair pairWithX:col Y:row]];
+            }
+        }
+    }
+    return [NSSet setWithSet:result];
+}
 
 @end

@@ -10,6 +10,24 @@
 
 @implementation UIColor (Tools)
 
+- (UIColor *)colorByChangingSaturationTo:(CGFloat)newSat
+{
+    CGFloat hue;
+    CGFloat sat;
+    CGFloat bright;
+    CGFloat alpha; 
+    [self getHue:&hue
+      saturation:&sat
+      brightness:&bright
+           alpha:&alpha
+     ];
+    
+    return [UIColor colorWithHue:hue 
+                      saturation:newSat
+                      brightness:bright 
+                           alpha:alpha];
+}
+
 - (UIColor *)colorByDarkeningColor
 {
 	// oldComponents is the array INSIDE the original color

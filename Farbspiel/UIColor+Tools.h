@@ -11,5 +11,7 @@
 @interface UIColor (Tools)
 - (UIColor *)colorByDarkeningColor;
 - (UIColor *)colorByChangingAlphaTo:(CGFloat)newAlpha;
+- (UIColor *)colorByChangingSaturationTo:(CGFloat)newSat;
+
 @end
 

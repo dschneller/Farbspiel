@@ -26,6 +26,7 @@
 @property (nonatomic, weak) IBOutlet UISwitch *soundEffekteSwitch;
 @property (nonatomic, weak) IBOutlet UISegmentedControl *farbschema;
 @property (nonatomic, weak) IBOutlet UISwitch *rasterSwitch;
+@property (nonatomic, weak) IBOutlet UISegmentedControl *fuellmodus;
 
 @property (nonatomic, weak) IBOutlet UIView *farbe1;
 @property (nonatomic, weak) IBOutlet UIView *farbe2;

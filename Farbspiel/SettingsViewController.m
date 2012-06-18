@@ -205,7 +205,6 @@
 }
 
 
-
 #pragma mark - Synthesize Properties
 
 @synthesize passedInModel = _passedInModel;
@@ -214,6 +213,7 @@
 @synthesize anzahlZuegeLabel = _anzahlZuegeLabel;
 @synthesize soundEffekteSwitch = _soundEffekteSwitch;
 @synthesize rasterSwitch = _rasterSwitch;
+@synthesize fuellmodus = _fuellmodus;
 @synthesize farbschema = _farbschema;
 
 @synthesize farbPreviewRahmen = _farbPreviewRahmen;

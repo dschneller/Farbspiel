@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="8.00">
 	<data>
-		<int key="IBDocument.SystemTarget">1280</int>
-		<string key="IBDocument.SystemVersion">11C74</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1938</string>
-		<string key="IBDocument.AppKitVersion">1138.23</string>
-		<string key="IBDocument.HIToolboxVersion">567.00</string>
+		<int key="IBDocument.SystemTarget">1536</int>
+		<string key="IBDocument.SystemVersion">11E53</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2541</string>
+		<string key="IBDocument.AppKitVersion">1138.47</string>
+		<string key="IBDocument.HIToolboxVersion">569.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">933</string>
+			<string key="NS.object.0">1875</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
+			<string>IBUIButton</string>
+			<string>IBUICustomObject</string>
 			<string>IBUIImageView</string>
 			<string>IBUILabel</string>
-			<string>IBUISwitch</string>
-			<string>IBUICustomObject</string>
-			<string>IBUIButton</string>
 			<string>IBUISegmentedControl</string>
+			<string>IBUISwitch</string>
 			<string>IBUIView</string>
 		</array>
 		<array key="IBDocument.PluginDependencies">
@@ -37,7 +37,7 @@
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
 			<object class="IBUIView" id="191373211">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIImageView" id="138535427">
@@ -69,11 +69,6 @@
 							<string key="IBUIAccessibilityLabel">Grid Size</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">12x12</string>
-						<object class="NSColor" key="IBUITextColor" id="207695856">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MQA</bytes>
-						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<object class="NSColor" key="IBUIShadowColor" id="514644013">
 							<int key="NSColorSpace">1</int>
@@ -81,7 +76,12 @@
 						</object>
 						<string key="IBUIShadowOffset">{-1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">12x12</string>
+						<object class="NSColor" key="IBUITextColor" id="207695856">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
+						</object>
 						<int key="IBUITextAlignment">1</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="985956913">
 							<string key="name">Helvetica-Bold</string>
@@ -94,6 +94,8 @@
 							<double key="NSSize">13</double>
 							<int key="NSfFlags">16</int>
 						</object>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="702528021">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -109,16 +111,18 @@
 							<string key="IBUIAccessibilityLabel">Allowed moves</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">22</string>
-						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="514644013"/>
 						<string key="IBUIShadowOffset">{-1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">22</string>
+						<reference key="IBUITextColor" ref="207695856"/>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="985956913"/>
 						<reference key="IBUIFont" ref="576036696"/>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="398762464">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -131,13 +135,13 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Feldgröße</string>
-						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="514644013"/>
 						<string key="IBUIShadowOffset">{-1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Feldgröße</string>
+						<reference key="IBUITextColor" ref="207695856"/>
 						<int key="IBUITextAlignment">1</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="646007833">
 							<string key="name">Helvetica</string>
@@ -150,6 +154,8 @@
 							<double key="NSSize">12</double>
 							<int key="NSfFlags">16</int>
 						</object>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="994553759">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -162,16 +168,18 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Farbschema</string>
-						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="514644013"/>
 						<string key="IBUIShadowOffset">{-1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Farbschema</string>
+						<reference key="IBUITextColor" ref="207695856"/>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="646007833"/>
 						<reference key="IBUIFont" ref="250621439"/>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="172337850">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -183,16 +191,18 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Vorschau</string>
-						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="514644013"/>
 						<string key="IBUIShadowOffset">{-1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Vorschau</string>
+						<reference key="IBUITextColor" ref="207695856"/>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="646007833"/>
 						<reference key="IBUIFont" ref="250621439"/>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="879039765">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -205,16 +215,18 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Gitter</string>
-						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="514644013"/>
 						<string key="IBUIShadowOffset">{-1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Gitter</string>
+						<reference key="IBUITextColor" ref="207695856"/>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="646007833"/>
 						<reference key="IBUIFont" ref="250621439"/>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="1010867743">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -227,16 +239,18 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Züge</string>
-						<reference key="IBUITextColor" ref="207695856"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="514644013"/>
 						<string key="IBUIShadowOffset">{-1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Züge</string>
+						<reference key="IBUITextColor" ref="207695856"/>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="646007833"/>
 						<reference key="IBUIFont" ref="250621439"/>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="827754782">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -249,11 +263,6 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Schwierigkeit</string>
-						<object class="NSColor" key="IBUITextColor" id="782204761">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MSAxIDEAA</bytes>
-						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<object class="NSColor" key="IBUIShadowColor" id="44497214">
 							<int key="NSColorSpace">3</int>
@@ -261,7 +270,12 @@
 						</object>
 						<string key="IBUIShadowOffset">{1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Schwierigkeit</string>
+						<object class="NSColor" key="IBUITextColor" id="782204761">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MSAxIDEAA</bytes>
+						</object>
 						<int key="IBUITextAlignment">1</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="203505646">
 							<string key="name">Helvetica</string>
@@ -274,6 +288,8 @@
 							<double key="NSSize">17</double>
 							<int key="NSfFlags">16</int>
 						</object>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="951489085">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -286,16 +302,18 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Anzeige</string>
-						<reference key="IBUITextColor" ref="782204761"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="44497214"/>
 						<string key="IBUIShadowOffset">{1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Anzeige</string>
+						<reference key="IBUITextColor" ref="782204761"/>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="203505646"/>
 						<reference key="IBUIFont" ref="304476208"/>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUILabel" id="624167523">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -308,16 +326,18 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Statistik</string>
-						<reference key="IBUITextColor" ref="782204761"/>
 						<nil key="IBUIHighlightedColor"/>
 						<reference key="IBUIShadowColor" ref="44497214"/>
 						<string key="IBUIShadowOffset">{1, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
+						<string key="IBUIText">Statistik</string>
+						<reference key="IBUITextColor" ref="782204761"/>
 						<int key="IBUITextAlignment">1</int>
 						<reference key="IBUIFontDescription" ref="203505646"/>
 						<reference key="IBUIFont" ref="304476208"/>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<int key="IBUIAutoshrinkMode">0</int>
 					</object>
 					<object class="IBUISegmentedControl" id="986548308">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -658,6 +678,7 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{320, 480}</string>
+				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="138535427"/>
 				<reference key="IBUIBackgroundColor" ref="207695856"/>
 				<bool key="IBUIAutoresizesSubviews">NO</bool>
@@ -1200,235 +1221,7 @@
 			<nil key="sourceID"/>
 			<int key="maxID">99</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">SettingsViewController</string>
-					<string key="superclassName">UIViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="farbschemaGewaehlt:">id</string>
-						<string key="levelGewaehlt:">id</string>
-						<string key="rasterAnAus:">id</string>
-						<string key="resetStats:">id</string>
-						<string key="soundAnAus:">id</string>
-						<string key="zurueckZumSpiel:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="farbschemaGewaehlt:">
-							<string key="name">farbschemaGewaehlt:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="levelGewaehlt:">
-							<string key="name">levelGewaehlt:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="rasterAnAus:">
-							<string key="name">rasterAnAus:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="resetStats:">
-							<string key="name">resetStats:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="soundAnAus:">
-							<string key="name">soundAnAus:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="zurueckZumSpiel:">
-							<string key="name">zurueckZumSpiel:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="anzahlZuegeLabel">UILabel</string>
-						<string key="farbPreviewRahmen">UIView</string>
-						<string key="farbe1">UIView</string>
-						<string key="farbe1bg">UIView</string>
-						<string key="farbe2">UIView</string>
-						<string key="farbe2bg">UIView</string>
-						<string key="farbe3">UIView</string>
-						<string key="farbe3bg">UIView</string>
-						<string key="farbe4">UIView</string>
-						<string key="farbe4bg">UIView</string>
-						<string key="farbe5">UIView</string>
-						<string key="farbe5bg">UIView</string>
-						<string key="farbe6">UIView</string>
-						<string key="farbe6bg">UIView</string>
-						<string key="farbschema">UISegmentedControl</string>
-						<string key="feldgroesseLabel">UILabel</string>
-						<string key="rasterSwitch">UISwitch</string>
-						<string key="schwierigkeitsGrad">UISegmentedControl</string>
-						<string key="soundEffekteSwitch">UISwitch</string>
-						<string key="statistikLoeschenButton">UIButton</string>
-						<string key="statistikPlaceholderView">StatistikView</string>
-						<string key="statistikViewController">StatistikViewController</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="anzahlZuegeLabel">
-							<string key="name">anzahlZuegeLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="farbPreviewRahmen">
-							<string key="name">farbPreviewRahmen</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="farbe1">
-							<string key="name">farbe1</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="farbe1bg">
-							<string key="name">farbe1bg</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="farbe2">
-							<string key="name">farbe2</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="farbe2bg">
-							<string key="name">farbe2bg</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="farbe3">
-							<string key="name">farbe3</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="farbe3bg">
-							<string key="name">farbe3bg</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="farbe4">
-							<string key="name">farbe4</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="farbe4bg">
-							<string key="name">farbe4bg</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="farbe5">
-							<string key="name">farbe5</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="farbe5bg">
-							<string key="name">farbe5bg</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="farbe6">
-							<string key="name">farbe6</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="farbe6bg">
-							<string key="name">farbe6bg</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="farbschema">
-							<string key="name">farbschema</string>
-							<string key="candidateClassName">UISegmentedControl</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="feldgroesseLabel">
-							<string key="name">feldgroesseLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="rasterSwitch">
-							<string key="name">rasterSwitch</string>
-							<string key="candidateClassName">UISwitch</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="schwierigkeitsGrad">
-							<string key="name">schwierigkeitsGrad</string>
-							<string key="candidateClassName">UISegmentedControl</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="soundEffekteSwitch">
-							<string key="name">soundEffekteSwitch</string>
-							<string key="candidateClassName">UISwitch</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="statistikLoeschenButton">
-							<string key="name">statistikLoeschenButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="statistikPlaceholderView">
-							<string key="name">statistikPlaceholderView</string>
-							<string key="candidateClassName">StatistikView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="statistikViewController">
-							<string key="name">statistikViewController</string>
-							<string key="candidateClassName">StatistikViewController</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/SettingsViewController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">StatistikView</string>
-					<string key="superclassName">UIView</string>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="anzahlGewonnen">UILabel</string>
-						<string key="anzahlSpiele">UILabel</string>
-						<string key="anzahlVerloren">UILabel</string>
-						<string key="prozentGewonnen">UILabel</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="anzahlGewonnen">
-							<string key="name">anzahlGewonnen</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="anzahlSpiele">
-							<string key="name">anzahlSpiele</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="anzahlVerloren">
-							<string key="name">anzahlVerloren</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="prozentGewonnen">
-							<string key="name">prozentGewonnen</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/StatistikView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">StatistikViewController</string>
-					<string key="superclassName">NSObject</string>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="anzahlGewonnenLabel">UILabel</string>
-						<string key="anzahlSpieleLabel">UILabel</string>
-						<string key="anzahlVerlorenLabel">UILabel</string>
-						<string key="prozentGewonnenLabel">UILabel</string>
-						<string key="statistikView">StatistikView</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="anzahlGewonnenLabel">
-							<string key="name">anzahlGewonnenLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="anzahlSpieleLabel">
-							<string key="name">anzahlSpieleLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="anzahlVerlorenLabel">
-							<string key="name">anzahlVerlorenLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="prozentGewonnenLabel">
-							<string key="name">prozentGewonnenLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="statistikView">
-							<string key="name">statistikView</string>
-							<string key="candidateClassName">StatistikView</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/StatistikViewController.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
@@ -1441,6 +1234,6 @@
 			<string key="ledertextur.png">{320, 480}</string>
 			<string key="smalltrash.png">{13, 19}</string>
 		</dictionary>
-		<string key="IBCocoaTouchPluginVersion">933</string>
+		<string key="IBCocoaTouchPluginVersion">1875</string>
 	</data>
 </archive>

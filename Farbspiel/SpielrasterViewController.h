@@ -28,6 +28,7 @@
 
 -(void) colorClicked:(NSUInteger)colorNumber;
 -(void) spielAbbrechen;
+-(void)updateLayersFromOldModel:(Spielmodel*)oldModel;
 
 - (IBAction)verlieren:(id)sender;
 - (IBAction)gewinnen:(id)sender;
