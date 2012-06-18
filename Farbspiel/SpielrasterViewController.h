@@ -29,6 +29,7 @@
 -(void) colorClicked:(NSUInteger)colorNumber;
 -(void) spielAbbrechen;
 -(void) updateLayersFromOldModel:(Spielmodel*)oldModel;
+-(void) neuenSnapshotInstallieren;
 
 - (IBAction)verlieren:(id)sender;
 - (IBAction)gewinnen:(id)sender;

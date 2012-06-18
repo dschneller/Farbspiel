@@ -22,7 +22,9 @@
 @property (nonatomic,strong) id<SpielrasterViewDatasource> dataSource;
 @property (nonatomic,strong) NSMutableDictionary* layerDict;
 @property (nonatomic,strong) CALayer* gridLayer;
+@property (readonly) CGSize tileSize;
 - (void) prepareSublayers;
+- (UIImage*) snapshot;
 
 @end
 

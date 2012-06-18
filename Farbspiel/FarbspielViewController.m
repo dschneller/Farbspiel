@@ -103,7 +103,7 @@
         [self.rasterController.view.layer addSublayer:self.rasterController.view.gridLayer];
     }
     [self.rasterController.view prepareSublayers];
-    [self.rasterController.view setNeedsDisplay];
+    [self.rasterController neuenSnapshotInstallieren];
 }
 
 -(void) soundStatusDidChange:(NSNotification *)notification {
@@ -127,6 +127,7 @@
     Spielmodel* model = [[Spielmodel alloc] initWithLevel:level];
     self.rasterController.model = model;
     [self.rasterController.view prepareSublayers];
+    [self.rasterController neuenSnapshotInstallieren];
 }
 
 -(void)pruefeObLevelGewechseltWurde {
@@ -169,9 +170,6 @@
         self.undoSwipeGestureRecognizer.enabled = state;
     }
 }
-
-
-
 
 
 

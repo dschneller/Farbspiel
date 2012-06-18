@@ -14,13 +14,27 @@
 
 @implementation SpielrasterView
 
-- (void) prepareSublayers {
+- (CGSize) tileSize
+{
+        NSUInteger rows = [self.dataSource rasterZeilen];
+        NSUInteger cols = [self.dataSource rasterSpalten];
+
+        return CGSizeMake(self.bounds.size.width / cols,
+                          self.bounds.size.height / rows);
+}
+
+- (void) setLayerDict:(NSMutableDictionary *)layerDict
+{
     if (_layerDict) {
         for (id p in _layerDict) {
             [_layerDict[p] removeFromSuperlayer];
         }
     }
-    _layerDict = [NSMutableDictionary dictionary];
+    _layerDict = layerDict;
+}
+
+- (void) prepareSublayers {
+    self.layerDict = [NSMutableDictionary dictionary];
 
     NSUInteger rows = [self.dataSource rasterZeilen];
     NSUInteger cols = [self.dataSource rasterSpalten];
@@ -59,17 +73,16 @@
     if ([[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN]) {
         [self.layer addSublayer:self.gridLayer];
     }
+    
+    
 }
 
 - (UIImage*) snapshot {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, YES, [[UIScreen mainScreen] scale]);
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage* img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return img;
-}
-
-- (void) neuenSnapshotInstallieren {
-    
 }
 
 

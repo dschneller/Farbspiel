@@ -23,10 +23,16 @@
     [self.delegate spielrasterViewController:self modelDidChange:model];
     self.view.dataSource = self;
     [self.view prepareSublayers];
+    //[self neuenSnapshotInstallieren];
     [self updateZuegeDisplay];
-//    [self.view setNeedsDisplay];
 }
 
+-(void) neuenSnapshotInstallieren
+{
+    UIImage* snapshotImg = [self.view snapshot];
+    self.snapshotVIew.image = snapshotImg;
+    self.view.layerDict = nil;
+}
 
 -(void) tick {
     LOG_TICK(2, @"TICK %ld", self.model.spieldauer);
@@ -78,26 +84,53 @@
     // LAYERS updaten
     // 1. differenz zwischen neuem und altem model finden
     NSSet* differenz = [self.model unterschiedeZuModel:oldModel];
-    // 2. Entsprechende Layers raussuchen und aendern
-    if ([differenz count] == 0) {
+
+    // 2. Entsprechende Layers erzeugen und animieren
+    if ([differenz count] == 0)
+    {
         return;
     }
+    CGSize size = self.view.tileSize;
+
+    // alte Farbe ist bei allen gleich
+    Pair *p1 = [[differenz objectEnumerator] nextObject];
+    NSNumber* alteFarbe = [oldModel farbeAnPositionZeile:p1.y spalte:p1.x];
+    NSString* imgNameAlt = [[Farbmapping sharedInstance] imageNameForColor:[alteFarbe intValue] andSize:size.width];
+    UIImage* imgAlt = [UIImage imageNamed:imgNameAlt];
     
-    NSArray* keyTimes = @[@0.0f, 
+    // neue Farbe ist auch bei allen gleich
+    NSNumber* neueFarbe = [self farbeFuerRasterfeldZeile:p1.y spalte:p1.x];
+    NSString* imgNameNeu = [[Farbmapping sharedInstance] imageNameForColor:[neueFarbe intValue] andSize:size.width];
+    UIImage* imgNeu = [UIImage imageNamed:imgNameNeu];
+    
+    
+    // fuer jedes unterschiedliche Feld nun einen Layer anlegen,
+    // der animiert und danach wieder weggeworfen wird, wenn ein
+    // neuer Snapshot vorliegt. Initial ist die alte Farbe drin,
+    // die dann weganimiert wird
+    NSMutableArray* tempLayers = [NSMutableArray array];
+    for (Pair* p in differenz)
+    {
+        CGRect frame = CGRectMake(p.x * size.width, p.y * size.height, size.width, size.height);
+        CALayer *tile = [CALayer layer];
+        tile.frame = frame;
+        tile.contents = (__bridge id)([imgAlt CGImage]);
+        [tempLayers addObject:tile];
+        [self.view.layer addSublayer:tile];
+    }
+
+    // Animationsparameter
+    NSArray* keyTimes = @[@0.0f,
                          @1.0f]; 
     NSArray* timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]]; // from keyframe 2 to keyframe 3
     
-    Pair* p1 = [[differenz objectEnumerator] nextObject];
-    CALayer* l1 = (self.view.layerDict)[p1];
-    NSNumber *farbe = [self farbeFuerRasterfeldZeile:p1.y spalte:p1.x];
-    NSString* imgName = [[Farbmapping sharedInstance] imageNameForColor:[farbe intValue] andSize:l1.bounds.size.width];
-    UIImage* img = [UIImage imageNamed:imgName];
     CAKeyframeAnimation *contentAnimation;
     contentAnimation = [CAKeyframeAnimation animationWithKeyPath:@"contents"];
-    contentAnimation.values = @[l1.contents, (id)[img CGImage]];
+    contentAnimation.values = @[(__bridge id)[imgAlt CGImage], (__bridge id)[imgNeu CGImage]];
     contentAnimation.keyTimes = keyTimes;
     contentAnimation.removedOnCompletion = NO;
     contentAnimation.fillMode= kCAFillModeForwards;
+    
     
     CAKeyframeAnimation *rotation;
     rotation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
@@ -116,16 +149,28 @@
                          @1.0f]; 
     rotation.timingFunctions = timingFunctions;
     
+
+
+    [CATransaction begin];
     CAAnimationGroup *animGroup = [CAAnimationGroup animation];
-    [animGroup setAnimations:@[contentAnimation, /*rotation,*/ zoom]];
-    animGroup.duration = 0.5f;
+    animGroup.animations =@[contentAnimation, /*rotation,*/ zoom];
+    animGroup.duration = 2.5f;
     animGroup.removedOnCompletion = NO;
     animGroup.fillMode = kCAFillModeForwards;
-    
-    for (Pair* p in differenz) {
-        CALayer *tileLayer = (self.view.layerDict)[p];
+
+    for (CALayer* tileLayer in tempLayers)
+    {
         [tileLayer addAnimation:animGroup forKey:nil];
     }
+    [CATransaction commit];
+    [CATransaction setCompletionBlock:^{
+        UIImage *snapshot = [self.view snapshot];
+        self.snapshotVIew.image = snapshot;
+        for (CALayer *tileLayer in tempLayers)
+        {
+            [tileLayer removeFromSuperlayer];
+        }
+    }];
 }
 
 -(void) colorClicked:(NSUInteger)colorNumber {
