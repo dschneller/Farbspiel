@@ -342,6 +342,7 @@
 						<string key="NSFrame">{{275, 420}, {18, 19}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<float key="IBUIAlpha">0.89999997615814209</float>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
@@ -969,7 +970,6 @@
 						<string key="gitterAnAus:">id</string>
 						<string key="settingsButtonPressed:">id</string>
 						<string key="soundAnAus:">id</string>
-						<string key="undoSwipe:">UISwipeGestureRecognizer</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="colorButtonPressed:">
@@ -988,10 +988,6 @@
 							<string key="name">soundAnAus:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="undoSwipe:">
-							<string key="name">undoSwipe:</string>
-							<string key="candidateClassName">UISwipeGestureRecognizer</string>
-						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="debugButtonGewinnen">UIButton</string>
@@ -999,7 +995,7 @@
 						<string key="gewonnenVerlorenController">GewonnenVerlorenController</string>
 						<string key="rasterController">SpielrasterViewController</string>
 						<string key="settingsToggleButton">UIButton</string>
-						<string key="shadowView">UIView</string>
+						<string key="snapshotView">UIImageView</string>
 						<string key="soundAnAusButton">UIButton</string>
 						<string key="spielrasterView">SpielrasterView</string>
 						<string key="uhrLabel">UILabel</string>
@@ -1026,9 +1022,9 @@
 							<string key="name">settingsToggleButton</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="shadowView">
-							<string key="name">shadowView</string>
-							<string key="candidateClassName">UIView</string>
+						<object class="IBToOneOutletInfo" key="snapshotView">
+							<string key="name">snapshotView</string>
+							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="soundAnAusButton">
 							<string key="name">soundAnAusButton</string>
@@ -1181,15 +1177,10 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="shadowView">UIView</string>
 						<string key="snapshotVIew">UIImageView</string>
 						<string key="zuegeLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="shadowView">
-							<string key="name">shadowView</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
 						<object class="IBToOneOutletInfo" key="snapshotVIew">
 							<string key="name">snapshotVIew</string>
 							<string key="candidateClassName">UIImageView</string>
