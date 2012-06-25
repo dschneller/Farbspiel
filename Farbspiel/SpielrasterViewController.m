@@ -114,7 +114,7 @@
         CGRect frame = CGRectMake(p.x * size.width, p.y * size.height, size.width, size.height);
         CALayer *tile = [CALayer layer];
         tile.frame = frame;
-        tile.contents = (__bridge id)([imgAlt CGImage]);
+        tile.contents = (__bridge id)([imgNeu CGImage]);
         [tempLayers addObject:tile];
         [self.view.layer addSublayer:tile];
     }
@@ -134,35 +134,26 @@
     
     CAKeyframeAnimation *rotation;
     rotation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
-    rotation.values = @[[NSNumber numberWithFloat:0.0 * M_PI], 
-                       [NSNumber numberWithFloat:2 * M_PI]]; 
+    rotation.values = @[@(-0.05 * M_PI),
+                       @(0.05 * M_PI),
+                       @0.0f, @0.0f];
     rotation.keyTimes = keyTimes;
+    rotation.keyTimes = @[@0.0f,
+    @0.2f,
+    @0.6f,
+    @1.0f]; 
     rotation.timingFunctions = timingFunctions;
+
     CAKeyframeAnimation *zoom;
-    
     zoom = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
-    zoom.values = @[@1.0f,
-                   @1.5f, 
-                   @1.0f]; 
-    rotation.keyTimes = @[@0.0f, 
-                         @0.5f, 
-                         @1.0f]; 
-    rotation.timingFunctions = timingFunctions;
+    zoom.values = @[@1.5f, 
+                   @1.0f];
+    zoom.keyTimes = keyTimes;
+    zoom.timingFunctions = timingFunctions;
     
 
 
     [CATransaction begin];
-    CAAnimationGroup *animGroup = [CAAnimationGroup animation];
-    animGroup.animations =@[contentAnimation, /*rotation,*/ zoom];
-    animGroup.duration = 2.5f;
-    animGroup.removedOnCompletion = NO;
-    animGroup.fillMode = kCAFillModeForwards;
-
-    for (CALayer* tileLayer in tempLayers)
-    {
-        [tileLayer addAnimation:animGroup forKey:nil];
-    }
-    [CATransaction commit];
     [CATransaction setCompletionBlock:^{
         UIImage *snapshot = [self.view snapshot];
         self.snapshotVIew.image = snapshot;
@@ -171,6 +162,20 @@
             [tileLayer removeFromSuperlayer];
         }
     }];
+
+    CAAnimationGroup *animGroup = [CAAnimationGroup animation];
+    animGroup.animations =@[contentAnimation, rotation, zoom];
+    animGroup.duration = 0.3f;
+    animGroup.removedOnCompletion = NO;
+    animGroup.fillMode = kCAFillModeForwards;
+
+    for (CALayer* tileLayer in tempLayers)
+    {
+        [tileLayer addAnimation:animGroup forKey:nil];
+    }
+    [CATransaction commit];
+
+
 }
 
 -(void) colorClicked:(NSUInteger)colorNumber {
