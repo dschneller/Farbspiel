@@ -73,11 +73,15 @@
 #pragma mark - Sound
 
 - (void)updateSoundButton:(BOOL)an {
+    UIImage* img;
     if (an) {
-        [self.soundAnAusButton setImage:[UIImage imageNamed:@"speaker"] forState:UIControlStateNormal];
+        img = [UIImage imageNamed:@"speaker"];
     } else {
-        [self.soundAnAusButton setImage:[UIImage imageNamed:@"speaker_off"] forState:UIControlStateNormal];
+        img = [UIImage imageNamed:@"speaker_off"];
     }
+    [self.soundAnAusButton setImage:img forState:UIControlStateNormal];
+    [self.soundAnAusButton setImage:img forState:UIControlStateDisabled];
+
 }
 
 -(void) updateGUIAusSettings {
