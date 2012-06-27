@@ -33,7 +33,21 @@
     _layerDict = layerDict;
 }
 
+- (void) showGridIfEnabled
+{
+    if ([[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN]) {
+        [self.layer addSublayer:self.gridLayer];
+    }
+}
+
 - (void) prepareSublayers {
+    if (self.layerDict)
+    {
+        for (CALayer* l in self.layerDict.objectEnumerator) {
+            [l removeFromSuperlayer];
+        }
+    }
+    [self.gridLayer removeFromSuperlayer];
     self.layerDict = [NSMutableDictionary dictionary];
 
     NSUInteger rows = [self.dataSource rasterZeilen];
@@ -70,60 +84,61 @@
     self.gridLayer.contents=(id)[gitter CGImage];
     UIGraphicsEndImageContext();
 
-    if ([[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN]) {
-        [self.layer addSublayer:self.gridLayer];
-    }
-    
+    [self showGridIfEnabled];
     
 }
 
 - (UIImage*) snapshot {
+    [self.gridLayer removeFromSuperlayer];
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, YES, [[UIScreen mainScreen] scale]);
     [self.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage* img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    [self showGridIfEnabled];
     return img;
 }
 
 
 - (void)zeichneGitter:(CGFloat)fieldHeight fieldWidth:(CGFloat)fieldWidth numCols:(int)numCols numRows:(int)numRows
 {
-        //Get the CGContext from this view
-        CGContextRef context = UIGraphicsGetCurrentContext();
-        //Set the stroke (pen) color
-        CGContextSetStrokeColorWithColor(context, [UIColor darkGrayColor].CGColor);
-        //Set the width of the pen mark
-        CGContextSetLineWidth(context, 1.0f);
-        
-        for (NSUInteger row=1; row<numRows; row++) {
-            for (NSUInteger col=1; col<numCols; col++) {
-                CGFloat x = col * fieldWidth;
-                
-                // Draw a line
-                //Start at this point
-                CGContextMoveToPoint(context, x, 0);
-                
-                //Give instructions to the CGContext
-                //(move "pen" around the screen)
-                CGContextAddLineToPoint(context, x, self.bounds.size.height);
-                
-                //Draw it
-                CGContextStrokePath(context);
-            }
-            CGFloat y = row * fieldHeight;
+    //Get the CGContext from this view
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    //Set the stroke (pen) color
+    CGContextSetStrokeColorWithColor(context, [UIColor darkGrayColor].CGColor);
+    //Set the width of the pen mark
+    CGContextSetLineWidth(context, 1.0f);
+    CGFloat dashes[] = {1.0f, 1.0f};
+    CGContextSetLineDash(context, 0.0f, dashes, 2);
+    
+    for (NSUInteger row=1; row<numRows; row++) {
+        for (NSUInteger col=1; col<numCols; col++) {
+            CGFloat x = col * fieldWidth;
             
             // Draw a line
             //Start at this point
-            CGContextMoveToPoint(context, 0, y);
+            CGContextMoveToPoint(context, x, 0);
             
             //Give instructions to the CGContext
             //(move "pen" around the screen)
-            CGContextAddLineToPoint(context, self.bounds.size.width, y);
+            CGContextAddLineToPoint(context, x, self.bounds.size.height);
             
             //Draw it
             CGContextStrokePath(context);
-            
         }
+        CGFloat y = row * fieldHeight;
+        
+        // Draw a line
+        //Start at this point
+        CGContextMoveToPoint(context, 0, y);
+        
+        //Give instructions to the CGContext
+        //(move "pen" around the screen)
+        CGContextAddLineToPoint(context, self.bounds.size.width, y);
+        
+        //Draw it
+        CGContextStrokePath(context);
+        
+    }
 }
 
 @end

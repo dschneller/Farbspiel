@@ -98,16 +98,17 @@
         NSString* imgName = [[Farbmapping sharedInstance] imageNameForColor:b.tag andSize:s];
         UIImage *img = [UIImage imageNamed:imgName];
         [b setBackgroundImage:img forState:UIControlStateNormal];
-        b.adjustsImageWhenDisabled = NO;
+        [b setBackgroundImage:img forState:UIControlStateDisabled];
         b.opaque = YES;
         b.alpha = 1.0f;
     }
     [self.rasterController.view.gridLayer removeFromSuperlayer];
+    [self.rasterController.view prepareSublayers];
+    [self.rasterController neuenSnapshotInstallieren];
     if ([[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN]) {
         [self.rasterController.view.layer addSublayer:self.rasterController.view.gridLayer];
     }
-    [self.rasterController.view prepareSublayers];
-    [self.rasterController neuenSnapshotInstallieren];
+
 }
 
 -(void) soundStatusDidChange:(NSNotification *)notification {
