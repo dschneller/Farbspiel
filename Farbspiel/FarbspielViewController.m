@@ -218,17 +218,6 @@
     [[SoundManager sharedManager] schalteSound];
 }
 
-- (IBAction)gitterAnAus:(id)sender {
-    BOOL an = ![[Datenhaltung sharedInstance] boolFuerKey:PREFKEY_GITTER_AN];
-    [[Datenhaltung sharedInstance] setBool:an forKey:PREFKEY_GITTER_AN];
-    [self.rasterController.view setNeedsDisplay];
-}
-
-
-
-
-
-
 
 #pragma mark - SpielrasterViewControllerDelegate protocol
 
